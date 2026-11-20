@@ -1,0 +1,28 @@
+{
+  "feature": "pdr/christmas-new-year-sale",
+  "folder": "2026-11-20",
+  "received_at": "2026-11-20T07:09:30.668Z",
+  "spec_set_sha256": "0713ab30f419f1b3a996152c87b1f092ad8e60c292daa8822d63631805637159",
+  "files": [
+    {
+      "name": "Christmas New Year Sales - Design Figma 2784-5280.md",
+      "sha256": "843a2dbb0cee4cf7297475a08c653a7465f561652253f405cf46a92bf4c83758",
+      "bytes": 28738
+    },
+    {
+      "name": "Christmas New Year Sales - PM Figma 3226-21364.md",
+      "sha256": "95065bdbc8d4cbd6e5348287dc4cdab6ed779faf2fa4e0e1e5fea2d24e1f83d4",
+      "bytes": 37347
+    }
+  ],
+  "source_priority": [
+    "design",
+    "pm"
+  ],
+  "figma": {
+    "design": "https://www.figma.com/design/HpkQG91Rm4POCXpzjC1QbT/-MX--Christmas---New-Year?node-id=2784-5280",
+    "pm": "https://www.figma.com/design/3urWYejMUP2uaglb4s73M5/PDRM-MX?node-id=3226-21364"
+  },
+  "figma_only": true,
+  "note": "Figma-only spec set (user, 2026-11-20): the two .md files are text snapshots of the Figma reads. Design file page 2651:11 「2026」 holds two sections, 「Christmas」 2784:5280 (the link) and 「New year」 2844:5519 (same layout, New Year visuals); both are read. Frame 「X」 2732:16703 on that page is exploration (older Interstitial / IAP drafts) and is not spec. The PM page 3226:21364 (MX file, PM account) holds sections 「Christmas Sale」 and 「New Year Sale」 plus loose older copies."
+}

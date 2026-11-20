@@ -1,0 +1,3246 @@
+{
+ "spec_folder": "specs/2026-11-20",
+ "platform": "android",
+ "inventory": "specs/2026-11-20/extracted/inventory.json",
+ "entries": [
+  {
+   "group": "K-388168",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-xmas-iap-credit"
+   ],
+   "name": "btn_main_credit_m",
+   "label": "Subscribe for 3000 free credits!",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Credit purchase page",
+    "Google Pixel 2 - 2"
+   ],
+   "controls": [
+    "K-79032c",
+    "K-7d0332",
+    "K-7c081a",
+    "K-800820"
+   ],
+   "app": [],
+   "press": "TC-127, TC-150",
+   "how": "label"
+  },
+  {
+   "group": "K-6fa446",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-xmas-iap-credit"
+   ],
+   "name": "btn_sec_credit_m",
+   "label": "Get 2000 credits for $166.99",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Credit purchase page",
+    "Google Pixel 2 - 2"
+   ],
+   "controls": [
+    "K-809450",
+    "K-7f944f",
+    "K-8f1a6f",
+    "K-921a74"
+   ],
+   "app": [],
+   "press": "TC-122, TC-123, TC-149",
+   "how": "label"
+  },
+  {
+   "group": "K-c647be",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-ny-launcher-dialog",
+    "ds-xmas-iap-credit",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "ic_credit",
+   "label": "",
+   "set": false,
+   "instances": 8,
+   "screens": [
+    "Credit purchase page",
+    "Google Pixel 2 - 2",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-3b6d18",
+    "K-416d22",
+    "K-3fb5b9",
+    "K-067e1c",
+    "K-007e12",
+    "K-e9881b"
+   ],
+   "app": [],
+   "press": "n/a: credit icon, not tappable",
+   "how": "manual"
+  },
+  {
+   "group": "K-4635f0",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-ny-launcher-dialog",
+    "ds-xmas-iap-credit",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "ic_credit",
+   "label": "",
+   "set": false,
+   "instances": 10,
+   "screens": [
+    "Credit purchase page",
+    "Google Pixel 2 - 2",
+    "mine_free",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-b32806",
+    "K-b42807",
+    "K-ea2a6c",
+    "K-e82a69",
+    "K-62fdf8",
+    "K-63fdfa",
+    "K-581630",
+    "K-5a1634"
+   ],
+   "app": [],
+   "press": "n/a: credit icon, not tappable",
+   "how": "manual"
+  },
+  {
+   "group": "C-4f4e1f",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-xmas-iap-credit"
+   ],
+   "name": "ic_credit",
+   "label": "choice of 24",
+   "set": true,
+   "instances": 36,
+   "screens": [
+    "Credit purchase page",
+    "Google Pixel 2 - 2"
+   ],
+   "controls": [
+    "K-b02801",
+    "K-9b045a",
+    "K-d0215a",
+    "K-ab27f9",
+    "K-f30ea9",
+    "K-cb2152",
+    "K-b52809",
+    "K-9e045f",
+    "K-029900",
+    "K-ac27fb",
+    "K-970454",
+    "K-b121f3",
+    "K-67fe00",
+    "K-cc8dc2",
+    "K-5968ff",
+    "K-5afdeb",
+    "K-ccc40e",
+    "K-4c68eb",
+    "K-60fdf5",
+    "K-d38dcd",
+    "K-25ded9",
+    "K-5bfded",
+    "K-c88dbb",
+    "K-7abe7c"
+   ],
+   "app": [],
+   "press": "n/a: credit icon, not tappable",
+   "how": "manual"
+  },
+  {
+   "group": "K-0ded93",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-ny-launcher-dialog",
+    "ds-xmas-iap-credit",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_chevron_left",
+   "label": "",
+   "set": false,
+   "instances": 14,
+   "screens": [
+    "IAP_year",
+    "Google Pixel 2 - 1",
+    "Credit purchase page",
+    "Google Pixel 2 - 2",
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-819d8a",
+    "K-e85dfb",
+    "K-36ce22",
+    "K-e793ad"
+   ],
+   "app": [],
+   "press": "TC-108, TC-130",
+   "how": "manual"
+  },
+  {
+   "group": "K-d48e91",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-ny-launcher-dialog",
+    "ds-xmas-iap-credit"
+   ],
+   "name": "round/ic_clock",
+   "label": "",
+   "set": false,
+   "instances": 15,
+   "screens": [
+    "IAP_year",
+    "Google Pixel 2 - 1",
+    "Credit purchase page",
+    "Google Pixel 2 - 2",
+    "Launcher_2026_09",
+    "mine_free"
+   ],
+   "controls": [
+    "K-ac156e",
+    "K-f7bc4d",
+    "K-a0155b",
+    "K-fcbc54",
+    "K-fc7b56",
+    "K-f2821e",
+    "K-8ba390",
+    "K-f8cb5d",
+    "K-97a3a3",
+    "K-fdcb65"
+   ],
+   "app": [],
+   "press": "n/a: countdown icon, not tappable (countdown rows read it)",
+   "how": "manual"
+  },
+  {
+   "group": "K-d99826",
+   "kind": "button",
+   "board": "ds-ny-iap-credit",
+   "boards": [
+    "ds-ny-iap-credit",
+    "ds-xmas-iap-credit"
+   ],
+   "name": "round/ic_xmark",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "IAP_year",
+    "Google Pixel 2 - 1"
+   ],
+   "controls": [
+    "K-0c678d",
+    "K-0b678c",
+    "K-1ab92a",
+    "K-1db92e"
+   ],
+   "app": [],
+   "press": "n/a: decoration in the plan tag (not a close button)",
+   "how": "manual"
+  },
+  {
+   "group": "K-92c37a",
+   "kind": "button",
+   "board": "ds-ny-interstitial",
+   "boards": [
+    "ds-ny-interstitial",
+    "ds-xmas-interstitial"
+   ],
+   "name": "Button/Action",
+   "label": "Get 7-Day Free Trial",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Interstitial_newyear",
+    "Google Pixel 2 - 3",
+    "Google Pixel 2 - 2",
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-e024b3",
+    "K-dc24ad",
+    "K-70c087",
+    "K-74c08e"
+   ],
+   "app": [],
+   "press": "TC-017, TC-024, TC-104, TC-107, TC-147",
+   "how": "label"
+  },
+  {
+   "group": "K-0c181b",
+   "kind": "button",
+   "board": "ds-ny-interstitial",
+   "boards": [
+    "ds-ny-interstitial",
+    "ds-xmas-interstitial"
+   ],
+   "name": "Button/Link",
+   "label": "More subscription plan",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Interstitial_newyear",
+    "Google Pixel 2 - 3",
+    "Google Pixel 2 - 2",
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-07ae33",
+    "K-0efb2b",
+    "K-ebf860",
+    "K-713d29"
+   ],
+   "app": [],
+   "press": "TC-019, TC-026",
+   "how": "label"
+  },
+  {
+   "group": "K-a637c7",
+   "kind": "button",
+   "board": "ds-ny-interstitial",
+   "boards": [
+    "ds-ny-interstitial",
+    "ds-xmas-interstitial"
+   ],
+   "name": "Nav/Top/Result",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Interstitial_newyear",
+    "Google Pixel 2 - 3",
+    "Google Pixel 2 - 2",
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-692e2c",
+    "K-e509d5"
+   ],
+   "app": [],
+   "press": "TC-015, TC-022",
+   "how": "manual"
+  },
+  {
+   "group": "K-a5d307",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Action Button/main/pro/default",
+   "label": "Grab Discount Now!",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-309bba",
+    "K-410956"
+   ],
+   "app": [],
+   "press": "TC-133, TC-135, TC-137, TC-139",
+   "how": "label"
+  },
+  {
+   "group": "K-c883fa",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "btn",
+   "label": "New Project",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-77b3ec",
+    "K-3de1f5"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-a18d5b",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/Action",
+   "label": "Generate",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-46c7d6",
+    "K-ab4a0c"
+   ],
+   "app": [],
+   "press": "TC-132, TC-134, TC-136, TC-138, TC-140",
+   "how": "label"
+  },
+  {
+   "group": "K-ae28f6",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/Credit/Action",
+   "label": "Claim Holiday Deal",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-7fda4f",
+    "K-ce5ac3"
+   ],
+   "app": [],
+   "press": "TC-096, TC-097",
+   "how": "label"
+  },
+  {
+   "group": "K-0bbb0b",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/Credit/Action",
+   "label": "Get More",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-e48bbd",
+    "K-cb0f52"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-9e418e",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/Credit/Balance",
+   "label": "182",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-e376cd",
+    "K-ec78f6"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-da74af",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/Overlay",
+   "label": "Try Now",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-efc744",
+    "K-73ca52",
+    "K-5164c4",
+    "K-556709"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-b9808e",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/Pill",
+   "label": "My Prompt",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-3fcfda",
+    "K-4edb66"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-8efb18",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Button/ViewMore",
+   "label": "View more",
+   "set": false,
+   "instances": 8,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-1cde05",
+    "K-19dbc1",
+    "K-6a152a",
+    "K-6b12ed"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "C-21f81d",
+   "kind": "item",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Card/Poster/SmartTools",
+   "label": "choice of 3: 「USA Winner」 「Team ARG」 「USA Cam」",
+   "set": true,
+   "instances": 12,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-a9ba9a",
+    "K-1acd65",
+    "K-efc34a",
+    "K-92bbc2",
+    "K-428328",
+    "K-2eebf3"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "C-ed639c",
+   "kind": "item",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "chips",
+   "label": "choice of 2: 「Standard」 「Pro」",
+   "set": true,
+   "instances": 4,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-749d94",
+    "K-16cafa",
+    "K-cd0095",
+    "K-707cc6"
+   ],
+   "app": [],
+   "press": "n/a: Image to Video quality chip (another feature); the label match on 「Pro」 is not a press",
+   "how": "manual"
+  },
+  {
+   "group": "K-100f58",
+   "kind": "item",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "chips",
+   "label": "5s",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-764cbf",
+    "K-9f28d9",
+    "K-54eb41",
+    "K-1e599f"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-ae3e18",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "ic_history_n",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-ad9ff9",
+    "K-d11db9"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "C-f7cbc4",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "menu_list",
+   "label": "choice of 4: 「My Artwork」 「My Cloud」 「Demo Videos」 「User Sign in」",
+   "set": true,
+   "instances": 16,
+   "screens": [
+    "mine_free",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-2aca5a",
+    "K-f1f7b0",
+    "K-6cf1c0",
+    "K-e3cc2e",
+    "K-25ca52",
+    "K-f2f7b2",
+    "K-edf4c9",
+    "K-d4ce55",
+    "K-2dbd2d",
+    "K-345810",
+    "K-7a8b5e",
+    "K-13f2c0",
+    "K-34bd38",
+    "K-31580c",
+    "K-6f8491",
+    "K-98eb43"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-7615ae",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Nav/Bottom",
+   "label": "Home",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-328c48",
+    "K-4fbbe8"
+   ],
+   "app": [],
+   "press": "TC-091, TC-092",
+   "how": "label"
+  },
+  {
+   "group": "C-faf643",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Nav/Bottom/Item",
+   "label": "choice of 2: 「Home」 「Mine」",
+   "set": true,
+   "instances": 10,
+   "screens": [
+    "mine_free",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-efff9f",
+    "K-c3b122",
+    "K-2343e4",
+    "K-87ca09"
+   ],
+   "app": [],
+   "press": "TC-091, TC-092, TC-001, TC-004, TC-089, TC-093",
+   "how": "label"
+  },
+  {
+   "group": "C-f3b3a9",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Nav/Part/Icon",
+   "label": "choice of 4",
+   "set": true,
+   "instances": 8,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-3b1226",
+    "K-3d4ff9",
+    "K-f272a0",
+    "K-2baf20"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "C-5257d6",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Nav/Part/LauncherIcon",
+   "label": "choice of 4: 「Home」 「AI Magic」 「Template」 「Project」",
+   "set": true,
+   "instances": 34,
+   "screens": [
+    "Launcher_2026_09",
+    "mine_free",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-38ccc0",
+    "K-522c09",
+    "K-caca99",
+    "K-db5c45",
+    "K-a47ea0",
+    "K-3be40e",
+    "K-43a3ad",
+    "K-8a6f6a"
+   ],
+   "app": [],
+   "press": "TC-091, TC-092",
+   "how": "label"
+  },
+  {
+   "group": "K-230912",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_4k",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-fabbab",
+    "K-5d6e04"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-82013d",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_ai remove",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-64592f",
+    "K-f46275"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-0d9a3d",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_ai_enhancement",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Launcher_2026_09",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-25a6c7",
+    "K-3f9f6a",
+    "K-4f26b6",
+    "K-b30f03"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-9dd052",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_auto_edit",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-632751",
+    "K-af8ec9"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-0715c0",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_background",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-60f985",
+    "K-c0c421"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-540374",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_body effect",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-79023a",
+    "K-1a7bb9"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-05c98d",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_chevron_right",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "I2V_Custom",
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-f0aec4",
+    "K-4b092d",
+    "K-056039",
+    "K-2da0ee"
+   ],
+   "app": [],
+   "press": "n/a: banner title chevron, target not drawn (Q-7)",
+   "how": "manual"
+  },
+  {
+   "group": "K-283191",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_chevron_right",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "mine_free",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-fbc533",
+    "K-9a0e62",
+    "K-9d0e67",
+    "K-8b9320",
+    "K-69464b",
+    "K-684649"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-793164",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_cinematic_reel_creator",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-0703b9",
+    "K-cfc2b2"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-2ee06d",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_circle_xmark_filled",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-67874e",
+    "K-9d2f98"
+   ],
+   "app": [],
+   "press": "TC-141",
+   "how": "manual"
+  },
+  {
+   "group": "K-59e970",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_cloud",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-60e3b2",
+    "K-b2204e"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-688974",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_crown",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-583ac9",
+    "K-b311d7"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-893892",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_curve_xy",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-e054a0",
+    "K-d7e6ea"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-ff5acf",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_cutout_people",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-033592",
+    "K-362874"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-7ad7ba",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_face_anime",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-f036ee",
+    "K-0ec401"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-cde9d8",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_film_sparkle",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-f02428",
+    "K-abc244"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-405c40",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_filter",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-f8baa3",
+    "K-d811cd"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-20071e",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_image2video",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Launcher_2026_09",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-38c6c7",
+    "K-a9ce35",
+    "K-14e04e",
+    "K-15de11"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-c4d30b",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_info",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-6718cb",
+    "K-f067c0"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "C-3a9986",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_lock_filled",
+   "label": "choice of 8",
+   "set": true,
+   "instances": 8,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-101136",
+    "K-e46296",
+    "K-58e46e",
+    "K-6811bd",
+    "K-2929d7",
+    "K-7cdc9c",
+    "K-283337",
+    "K-730f40"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-494c0f",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_motion tracking",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-f16b2b",
+    "K-8686dc"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-2ea4ee",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_motion_swap",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-a13cf5",
+    "K-296c69"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-76fa36",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_music",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-2c50a2",
+    "K-f5d580"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-c8e262",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_notification_unread",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "mine_free",
+    "mine_vip"
+   ],
+   "controls": [
+    "K-5f92f5",
+    "K-c7af96"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-8c322c",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_rotate_left_right",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-dc4d83",
+    "K-18b0ec"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-c1d860",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_speech_2_text",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-76ede3",
+    "K-c88fb0"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-9c2715",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_sticker",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-f75df1",
+    "K-cfff0b"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-802eee",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_storytelling",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-aee68f",
+    "K-ddfa92"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-452282",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_text_template",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-2524d2",
+    "K-c8cb69"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-a49e76",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_text2video",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-299ebb",
+    "K-32cde6"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-1d81c8",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_transition",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-ce4ce2",
+    "K-75fd55"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-b97b13",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_video effect",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-102778",
+    "K-3be1f3"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-5e9e88",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_video enhancer",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-1e56e5",
+    "K-3daee6"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-35e4ea",
+   "kind": "button",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "round/ic_video_edit_by_chat",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "Launcher_2026_09"
+   ],
+   "controls": [
+    "K-33aff0",
+    "K-e53688"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-e6a7cc",
+   "kind": "toggle",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "Switch/Segment/Light",
+   "label": "Custom",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-2283d2",
+    "K-451d31"
+   ],
+   "app": [],
+   "press": "TC-132, TC-134, TC-136, TC-138, TC-140",
+   "how": "label"
+  },
+  {
+   "group": "C-a4fb3b",
+   "kind": "item",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "thumbnail_ispiration",
+   "label": "choice of 8",
+   "set": true,
+   "instances": 8,
+   "screens": [
+    "I2V_Custom"
+   ],
+   "controls": [
+    "K-af1750",
+    "K-ec45f0",
+    "K-cdbd12",
+    "K-effd3d",
+    "K-bdd639",
+    "K-431550",
+    "K-fd86b0",
+    "K-f4e074"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-358284",
+   "kind": "item",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "usercard",
+   "label": "Free",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-5676ed",
+    "K-060222"
+   ],
+   "app": [],
+   "press": "TC-017, TC-024, TC-087, TC-104, TC-107, TC-127",
+   "how": "label"
+  },
+  {
+   "group": "K-2d269c",
+   "kind": "item",
+   "board": "ds-ny-launcher-dialog",
+   "boards": [
+    "ds-ny-launcher-dialog",
+    "ds-xmas-launcher-dialog"
+   ],
+   "name": "usercard",
+   "label": "VIP",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "mine_vip"
+   ],
+   "controls": [
+    "K-b0d442",
+    "K-70045e"
+   ],
+   "app": [],
+   "press": "TC-114, TC-115, TC-116",
+   "how": "label"
+  },
+  {
+   "group": "K-54784f",
+   "kind": "button",
+   "board": "pm-loose-left",
+   "boards": [
+    "pm-loose-left",
+    "pm-loose-top",
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-launch",
+    "pm-xmas-credit",
+    "pm-xmas-launch"
+   ],
+   "name": "Button/Action",
+   "label": "Get 7-Day Free Trial",
+   "set": false,
+   "instances": 11,
+   "screens": [
+    "Interstitial_christmas",
+    "IAP_T1"
+   ],
+   "controls": [
+    "K-4db7f3",
+    "K-586c4c",
+    "K-95ba6b",
+    "K-dce552",
+    "K-f30331",
+    "K-3e624b",
+    "K-16d364",
+    "K-59a0f4",
+    "K-d07147"
+   ],
+   "app": [],
+   "press": "TC-017, TC-024, TC-104, TC-107, TC-147",
+   "how": "label"
+  },
+  {
+   "group": "K-f218a9",
+   "kind": "button",
+   "board": "pm-loose-left",
+   "boards": [
+    "pm-loose-left",
+    "pm-loose-top",
+    "pm-loose-right"
+   ],
+   "name": "Hyperlink_S",
+   "label": "More subscription plans",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-17f99f",
+    "K-180c17",
+    "K-a0ed87"
+   ],
+   "app": [],
+   "press": "TC-019, TC-026",
+   "how": "manual"
+  },
+  {
+   "group": "K-2d61d7",
+   "kind": "button",
+   "board": "pm-loose-left",
+   "boards": [
+    "pm-loose-left",
+    "pm-loose-right",
+    "pm-ny-iap",
+    "pm-ny-launch",
+    "pm-xmas-iap"
+   ],
+   "name": "round/ic_clock",
+   "label": "",
+   "set": false,
+   "instances": 11,
+   "screens": [
+    "Interstitial_christmas",
+    "Credit purchase page",
+    "Credit IAP_Android",
+    "mine_free",
+    "IAP_T1"
+   ],
+   "controls": [
+    "K-3180e0",
+    "K-1e74ea",
+    "K-1f74ec",
+    "K-2174ef",
+    "K-b2dbb8",
+    "K-2074ed",
+    "K-02645b",
+    "K-e77322",
+    "K-db4003"
+   ],
+   "app": [],
+   "press": "n/a: countdown icon, not tappable (countdown rows read it)",
+   "how": "manual"
+  },
+  {
+   "group": "K-7894fd",
+   "kind": "button",
+   "board": "pm-loose-left",
+   "boards": [
+    "pm-loose-left",
+    "pm-loose-top",
+    "pm-loose-right"
+   ],
+   "name": "round/ic_xmark",
+   "label": "",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-b1b64e",
+    "K-ff50de",
+    "K-264f4e"
+   ],
+   "app": [],
+   "press": "TC-015, TC-022",
+   "how": "manual"
+  },
+  {
+   "group": "C-d87bb3",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "AI Smart Tools",
+   "label": "choice of 3: 「USA Winner」 「Team ARG」 「USA Cam」",
+   "set": true,
+   "instances": 9,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-52417e",
+    "K-5236b1",
+    "K-4b775e",
+    "K-3be22f",
+    "K-b3a9fc",
+    "K-cc83c9",
+    "K-d60632",
+    "K-1f3745",
+    "K-1877f2"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-cd1e5d",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "btn",
+   "label": "New Project",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-fadc48",
+    "K-816184",
+    "K-942e5c"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-046b60",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "btn",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-3cc131",
+    "K-ab0d6c",
+    "K-4ccb6d"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-fc8122",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "btn_credit",
+   "label": "3000",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-fcec3d",
+    "K-44d46c",
+    "K-963e51"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-4689c3",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-xmas-credit"
+   ],
+   "name": "btn_main_credit_m",
+   "label": "Subscribe for 3000 free credits!",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "Credit purchase page"
+   ],
+   "controls": [
+    "K-fbbaaf",
+    "K-8b8933",
+    "K-eb63f4"
+   ],
+   "app": [],
+   "press": "TC-127, TC-150",
+   "how": "label"
+  },
+  {
+   "group": "K-fbf016",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-xmas-credit"
+   ],
+   "name": "btn_main_pro+_m",
+   "label": "Grab Discount Now!",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Not Enough Credit Dialog"
+   ],
+   "controls": [
+    "K-314b8b",
+    "K-699461",
+    "K-fdfa3a"
+   ],
+   "app": [],
+   "press": "TC-133, TC-135, TC-137, TC-139",
+   "how": "label"
+  },
+  {
+   "group": "K-5e0965",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "btn_paid_text_s",
+   "label": "Try Now",
+   "set": false,
+   "instances": 9,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-417052",
+    "K-cb68dc",
+    "K-d168e6",
+    "K-ec7fc5",
+    "K-ee8207",
+    "K-e881fe",
+    "K-0e70e6",
+    "K-986970",
+    "K-9e697a"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-974126",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-iap",
+    "pm-xmas-credit",
+    "pm-xmas-iap"
+   ],
+   "name": "btn_sec_credit_m",
+   "label": "Get 2000 credits for $166.99",
+   "set": false,
+   "instances": 8,
+   "screens": [
+    "Credit purchase page",
+    "Credit IAP_Android"
+   ],
+   "controls": [
+    "K-f6a891",
+    "K-01395a",
+    "K-2d9b44",
+    "K-55d4e9",
+    "K-d6c4ae"
+   ],
+   "app": [],
+   "press": "TC-122, TC-123, TC-149",
+   "how": "label"
+  },
+  {
+   "group": "K-98b5da",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "Button/Credit/Action",
+   "label": "Claim Holiday Deal",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-228492",
+    "K-1dc29f",
+    "K-d8cd2e"
+   ],
+   "app": [],
+   "press": "TC-096, TC-097",
+   "how": "label"
+  },
+  {
+   "group": "K-26b120",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "Button/ViewMore",
+   "label": "View more",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-2a2cff",
+    "K-2b2ac2",
+    "K-c17b15",
+    "K-3e7808",
+    "K-98d45b",
+    "K-99d21e"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-343e3f",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-iap",
+    "pm-xmas-credit",
+    "pm-xmas-iap"
+   ],
+   "name": "Free user",
+   "label": "50",
+   "set": false,
+   "instances": 48,
+   "screens": [
+    "Credit purchase page",
+    "Credit IAP_Android"
+   ],
+   "controls": [
+    "K-145729",
+    "K-4c3856",
+    "K-bfa0d4",
+    "K-d4952c",
+    "K-23a3b7",
+    "K-b4cba8",
+    "K-f2c2f2",
+    "K-d4fd82",
+    "K-3c7e1b",
+    "K-826d2a",
+    "K-5f0818",
+    "K-2b8b43",
+    "K-2ff7d7",
+    "K-eb61a0",
+    "K-6e4e8d",
+    "K-03e445",
+    "K-d21462",
+    "K-ac3d42",
+    "K-b3251b",
+    "K-88d18a",
+    "K-e9b002",
+    "K-4107e9",
+    "K-1acec9",
+    "K-e7778a",
+    "K-45edb9",
+    "K-094c24",
+    "K-3f1161",
+    "K-891721",
+    "K-9cb34b",
+    "K-9f9b24"
+   ],
+   "app": [],
+   "press": "n/a: regular credit packs; the campaign changes only their look (credit page rows), buying a regular pack is not part of it",
+   "how": "manual"
+  },
+  {
+   "group": "K-9aaa0c",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "Hyperlink_S",
+   "label": "View more features",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-a62d70",
+    "K-84fbe0",
+    "K-feee8c"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-46d815",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-iap",
+    "pm-xmas-credit",
+    "pm-xmas-iap"
+   ],
+   "name": "ic_credit",
+   "label": "",
+   "set": false,
+   "instances": 8,
+   "screens": [
+    "Credit purchase page",
+    "Credit IAP_Android"
+   ],
+   "controls": [
+    "K-556ceb",
+    "K-f481b5",
+    "K-268fa7",
+    "K-e35ec7",
+    "K-e10f00"
+   ],
+   "app": [],
+   "press": "n/a: credit icon, not tappable",
+   "how": "manual"
+  },
+  {
+   "group": "K-21f0a1",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-iap",
+    "pm-ny-launch",
+    "pm-xmas-credit",
+    "pm-xmas-iap",
+    "pm-xmas-launch"
+   ],
+   "name": "ic_credit",
+   "label": "",
+   "set": false,
+   "instances": 11,
+   "screens": [
+    "Credit purchase page",
+    "Credit IAP_Android",
+    "mine_free"
+   ],
+   "controls": [
+    "K-f0ff09",
+    "K-5e8d1e",
+    "K-7d4334",
+    "K-52acaf",
+    "K-451fd2",
+    "K-1412d2",
+    "K-a75b52",
+    "K-c4657a"
+   ],
+   "app": [],
+   "press": "n/a: credit icon, not tappable",
+   "how": "manual"
+  },
+  {
+   "group": "C-2d154f",
+   "kind": "item",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "Launcher_icon",
+   "label": "choice of 5: 「Home」 「AI Magic」 「Template」 「Project」 …",
+   "set": true,
+   "instances": 30,
+   "screens": [
+    "Launcher_2026_08",
+    "mine_free"
+   ],
+   "controls": [
+    "K-c4eba4",
+    "K-3c015a",
+    "K-b52209",
+    "K-3459a8",
+    "K-bad61d",
+    "K-f9d399",
+    "K-1dbe06",
+    "K-111fd5",
+    "K-1ff4ab",
+    "K-185c59",
+    "K-0bf380",
+    "K-b2aaf6",
+    "K-2bcba5",
+    "K-2a7b1c",
+    "K-8c3571"
+   ],
+   "app": [],
+   "press": "TC-091, TC-092, TC-001, TC-004, TC-089, TC-093",
+   "how": "label"
+  },
+  {
+   "group": "C-03f356",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "menu_list",
+   "label": "choice of 3: 「My Artwork」 「Demo Videos」 「User Sign in」",
+   "set": true,
+   "instances": 9,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-a2cd17",
+    "K-55cd14",
+    "K-bb6a97",
+    "K-a207e3",
+    "K-8756f4",
+    "K-4956d1",
+    "K-3bde53",
+    "K-4bee88",
+    "K-321433"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-08274b",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "Nav/Bottom",
+   "label": "Home",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-5455d4",
+    "K-11b5b1",
+    "K-eda7e8"
+   ],
+   "app": [],
+   "press": "TC-091, TC-092",
+   "how": "label"
+  },
+  {
+   "group": "K-1417ed",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_ai_enhancement",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-29097a",
+    "K-d6333a",
+    "K-acce2e"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-1eb39a",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_ai_mini_drama",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-1fa027",
+    "K-5e7e80",
+    "K-eca0bb"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-cd9be2",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_auto_edit",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-308735",
+    "K-51879f",
+    "K-01e689"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-f7b44a",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_background",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-dd2f67",
+    "K-c24e98",
+    "K-7640a3"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-c0e21e",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_body effect",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-e20eee",
+    "K-0a11f6",
+    "K-d83062"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-67bd14",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-iap",
+    "pm-ny-launch",
+    "pm-xmas-credit",
+    "pm-xmas-iap",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_chevron_left",
+   "label": "",
+   "set": false,
+   "instances": 20,
+   "screens": [
+    "Credit purchase page",
+    " Pro+ VIP Benefits Page",
+    "Credit IAP_Android",
+    "IAP_T1"
+   ],
+   "controls": [
+    "K-b30439",
+    "K-f95816",
+    "K-2b4477",
+    "K-d90986",
+    "K-24bc1f",
+    "K-e9e0bd",
+    "K-a925ad"
+   ],
+   "app": [],
+   "press": "TC-108, TC-130",
+   "how": "manual"
+  },
+  {
+   "group": "K-f516a5",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_chevron_right",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-c80c5f",
+    "K-08c17a",
+    "K-7ff55b"
+   ],
+   "app": [],
+   "press": "n/a: banner title chevron, target not drawn (Q-7)",
+   "how": "manual"
+  },
+  {
+   "group": "K-95050a",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_chevron_right",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-2bf271",
+    "K-d81598",
+    "K-e3db6d"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-551a6c",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_cinematic_reel_creator",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-d72ac9",
+    "K-f39a7c",
+    "K-0651fd"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-99beb7",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-xmas-credit"
+   ],
+   "name": "round/ic_circle_xmark_filled",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Not Enough Credit Dialog"
+   ],
+   "controls": [
+    "K-e409dc",
+    "K-8b99be",
+    "K-477ba2",
+    "K-8b8c84",
+    "K-fdf390",
+    "K-bc80ba"
+   ],
+   "app": [],
+   "press": "TC-141",
+   "how": "manual"
+  },
+  {
+   "group": "K-6054a0",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_cloud",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-2041a3",
+    "K-d5d59d",
+    "K-b993b7"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-4b0832",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_crown",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "mine_free",
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-cbf085",
+    "K-c611c9",
+    "K-ce306e",
+    "K-a8338e",
+    "K-654299",
+    "K-9813e5"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-5593fa",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_face_anime",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-43636d",
+    "K-652349",
+    "K-cc64db",
+    "K-83b1af",
+    "K-dc74a9",
+    "K-5b44bd"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-46e58f",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_film_sparkle",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-8a7abf",
+    "K-3c4d07",
+    "K-809c33"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-6a0025",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_filter",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-02f673",
+    "K-32ec93",
+    "K-5f2bef"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-5839b7",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_image2video",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Launcher_2026_08",
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-9cb2e4",
+    "K-114d57",
+    "K-f9b6a4",
+    "K-5cea8a",
+    "K-92d458",
+    "K-87f6f3"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "C-9ca439",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_lock_filled",
+   "label": "choice of 12",
+   "set": true,
+   "instances": 12,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-db39c1",
+    "K-2eec86",
+    "K-b740fa",
+    "K-021d03",
+    "K-125bb7",
+    "K-e6fcc9",
+    "K-5eb059",
+    "K-eddcdf",
+    "K-744afd",
+    "K-c7fdc2",
+    "K-ad626e",
+    "K-f83e77"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-0c4f48",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_menu",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-4955cc",
+    "K-6bbc75",
+    "K-100cc0"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-3331a3",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_motion_swap",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-782f90",
+    "K-5fc660",
+    "K-6e5104"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-fc1236",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_music",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-fb3331",
+    "K-8dca27",
+    "K-948545"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-a1e710",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_notification_unread",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Launcher_2026_08",
+    "mine_free"
+   ],
+   "controls": [
+    "K-925cef",
+    "K-915ced",
+    "K-334343",
+    "K-324341",
+    "K-aab8e3"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-f7bf30",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_speech_2_text",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-07cbf3",
+    "K-7cb362",
+    "K-d4cc87"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-ab64da",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_speech_2_text",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-c94489",
+    "K-e5e3e5",
+    "K-3fee25"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-35ae73",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_sticker",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-8f3539",
+    "K-80ab32",
+    "K-d63d15"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-9bfe9c",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_storytelling",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "mine_free"
+   ],
+   "controls": [
+    "K-37f0eb",
+    "K-d71d8d",
+    "K-2e125f"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-fe948c",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_text_template",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-2ed887",
+    "K-9e5a2c",
+    "K-353e4f",
+    "K-2a8d4e",
+    "K-e6c183",
+    "K-6b5ac0"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-6411ff",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_text2video",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-b98c17",
+    "K-a5cc5e",
+    "K-529d53"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-8c100f",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_transition",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-f652d7",
+    "K-699e02",
+    "K-404001",
+    "K-2f08f4",
+    "K-8f6413",
+    "K-5fbf76"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-1588ac",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_video effect",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    " Pro+ VIP Benefits Page"
+   ],
+   "controls": [
+    "K-b25186",
+    "K-96906e",
+    "K-28fb22"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-ea3f34",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_video enhancer",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-86feb2",
+    "K-868bc4",
+    "K-0ac366"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-f8bd86",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_video_edit_by_chat",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Launcher_2026_08"
+   ],
+   "controls": [
+    "K-90c4f1",
+    "K-e652bd",
+    "K-6d41ad"
+   ],
+   "app": [],
+   "press": "n/a: regular app control the campaign does not change (another feature's; its look is covered by the campaign screen rows)",
+   "how": "manual"
+  },
+  {
+   "group": "K-d39bbb",
+   "kind": "button",
+   "board": "pm-loose-right",
+   "boards": [
+    "pm-loose-right",
+    "pm-ny-credit",
+    "pm-ny-launch",
+    "pm-xmas-credit",
+    "pm-xmas-launch"
+   ],
+   "name": "round/ic_xmark",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "IAP_T1"
+   ],
+   "controls": [
+    "K-8e4354",
+    "K-2ca888",
+    "K-26f6c6",
+    "K-3f74b1",
+    "K-ea78d0"
+   ],
+   "app": [],
+   "press": "n/a: decoration in the plan tag (not a close button)",
+   "how": "manual"
+  },
+  {
+   "group": "K-cfb28f",
+   "kind": "button",
+   "board": "pm-ny-launch",
+   "boards": [
+    "pm-ny-launch",
+    "pm-xmas-launch"
+   ],
+   "name": "Button/Link",
+   "label": "More subscription plan",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-58bafb",
+    "K-be0eff"
+   ],
+   "app": [],
+   "press": "TC-019",
+   "how": "arrow"
+  },
+  {
+   "group": "K-872574",
+   "kind": "button",
+   "board": "pm-ny-launch",
+   "boards": [
+    "pm-ny-launch"
+   ],
+   "name": "Nav/Top/IAP",
+   "label": "PowerDirector Pro+",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-1dbdb1"
+   ],
+   "app": [],
+   "press": "n/a: header bar of an older PM interstitial copy (PowerDirector Pro+), no control",
+   "how": "manual"
+  },
+  {
+   "group": "K-7c9487",
+   "kind": "button",
+   "board": "pm-xmas-launch",
+   "boards": [
+    "pm-xmas-launch"
+   ],
+   "name": "Nav/Top/Result",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Interstitial_christmas"
+   ],
+   "controls": [
+    "K-8c7572"
+   ],
+   "app": [],
+   "press": "TC-015, TC-022",
+   "how": "manual"
+  }
+ ]
+}

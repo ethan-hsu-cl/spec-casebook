@@ -1,0 +1,858 @@
+ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,Campaign window,"1. Free account (not subscribed) signed in
+2. Stage server, RD test date 2026-12-10 23:59","1. Launch the app
+2. Open Mine
+3. Open the IAP page","No campaign interstitial
+The Launcher top banner, the Mine tab icon and the IAP page are the regular ones (no 「Christmas Special」, no Christmas tag)
+The New User Offer shows as usual",P1,"R-001, R-003, R-004","Year 2026 (Q-2 ruling, REQ-002).",modified,Q-1 / Q-2 rulings (REQ-002): RD test date on the stage server; the year is 2026.
+TC-002,Campaign window,"1. Free account (not subscribed) signed in
+2. Stage server","1. With the RD test date at 2026-12-10 23:59, launch the app
+2. With the RD test date at 2026-12-11 00:00, close the app fully and launch it again","Step 1: no campaign interstitial
+Step 2: the Christmas interstitial 「Christmas Special」 shows
+Step 2: behind it the Launcher shows the Christmas top banner",P1,"R-001, R-012",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-003,Campaign window,"1. Free account (not subscribed) signed in
+2. Stage server","1. With the RD test date at 2026-12-27 23:59, launch the app
+2. With the RD test date at 2026-12-28 00:00, close the app fully and launch it again","Step 1: the Christmas visuals show
+Step 2: the interstitial is now 「New Year Special」
+Step 2: the Launcher top banner reads 「Bring New Year moments to life」
+Step 2: no Christmas visual is left on Launcher, Mine or IAP",P1,R-002,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-004,Campaign window,"1. Free account (not subscribed) signed in
+2. Stage server","1. With the RD test date at 2027-01-05 23:59, launch the app
+2. With the RD test date at 2027-01-06 00:00, close the app fully and launch it again
+3. Open Mine
+4. Open the IAP page","Step 1: the New Year visuals show
+Steps 2–4: no campaign interstitial
+Steps 2–4: the Launcher, Mine tab icon and IAP page are the regular ones
+Steps 2–4: the New User Offer is back",P1,"R-002, R-003, R-004",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-005,Campaign window,"1. Free account (not subscribed) signed in
+2. Phone time zone UTC+8
+3. Stage server, RD test date 2026-12-11 00:05 in UTC+8 (still 12/10 in UTC)",Launch the app,"The Christmas campaign shows: the window follows the phone's local time, not UTC",P2,R-001,PM: 「User Local Time」.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-006,Campaign window,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. An account that would normally see the New User Offer (new install)","1. Launch the app
+2. Open every subscription entry: interstitial, Launcher pill, Mine 「Claim Holiday Deal」",No New User Offer anywhere during the campaign,P1,R-004,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-007,Campaign window,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. An account that would normally see the New User Offer (new install)","1. Launch the app
+2. Open every subscription entry: interstitial, Launcher pill, Mine 「Claim Holiday Deal」",No New User Offer anywhere during the campaign,P1,R-004,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-008,Interstitial,"1. Fresh install (Android: uninstall, or `pm clear` after pulling logs)
+2. Christmas window: stage server, RD test date 2026-12-15","1. Launch the app
+2. Accept the GDPR screen (「Get Started」)",Right after GDPR the Christmas interstitial shows (before the Launcher),P1,R-010,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-009,Interstitial,"1. The row above done (1st launch over)
+2. Christmas window: stage server, RD test date 2026-12-15","1. Close the app fully
+2. Launch it again (2nd launch)","The Open intro shows first
+After the intro the Christmas interstitial shows",P1,R-011,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-010,Interstitial,"1. 2nd launch over
+2. RD test date moved to the next day inside the window (2026-12-16)","1. Close the app fully
+2. Launch it again (3rd launch)
+3. Close the app fully and launch it again the same day","Step 2: the Christmas interstitial shows directly, with no intro
+Step 3: no interstitial (once a day)
+Step 3: the Launcher shows",P1,R-012,Q-4 ruling (REQ-002): once a day.,modified,Q-4 ruling (REQ-002): the interstitial shows once a day; a same-day launch is now checked.
+TC-011,Interstitial,"1. Free account on the previous app build, already past its first launches
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Install the build under test over it (adb install -r)",Launch the app (1st launch after the update),"The Open intro shows first
+Then the Christmas interstitial",P1,R-013,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-012,Interstitial,"1. The row above done
+2. RD test date moved to the next day inside the window","1. Close the app fully
+2. Launch it again","The Christmas interstitial shows directly, with no intro",P1,R-014,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-013,Interstitial,"1. Free account (not subscribed) signed in
+2. Google Play account in the US store (Play Billing Lab)
+3. Christmas window: stage server, RD test date 2026-12-15
+4. App language English",Launch the app and look at the interstitial,"Title art 「Christmas Special」 (never 「Sale」)
+「SAVE」 「45」 「%」 is the largest element (computed from the US store prices: $45.99 vs $6.99 × 12)
+「vs. paying $6.99/mo × 12」 under it (the US monthly price)
+「$45.99/year」 (the US annual price)
+Yellow CTA 「Get 7-Day Free Trial」
+Trial terms, 「More subscription plan」, 「Terms of Service」 | 「Privacy Policy」 | 「Restore purchase」
+No struck-through price and no countdown",P1,"R-018, R-022","Design 2749:17877; PM 1104 Update. Q-3 ruling (REQ-002): prices from the SKU table, the % computed; the mockups' 57% / $6.79 / $34.99 are not the US store's.",modified,"Q-3 ruling (REQ-002): prices from the SKU table (US $45.99 / $6.99), 「Save xx%」 computed."
+TC-014,Interstitial,"1. Free account (not subscribed) signed in
+2. Google Play account in the US store (Play Billing Lab)
+3. Christmas window: stage server, RD test date 2026-12-15",Read the trial terms under the CTA,"「7 days free, then $45.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged.」, the same annual price as the big price",P2,R-020,Q-6 ruling (REQ-002): the SKU table price; the Design draws $31.99 under $34.99.,modified,Q-6 ruling (REQ-002): the trial terms carry the SKU table's annual price.
+TC-015,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Interstitial showing",Tap X,The interstitial closes and the Launcher shows,P1,"R-015, R-065",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-016,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Interstitial showing",Press system Back,"The interstitial closes and the Launcher shows, as X does",P2,R-025,Q-5 ruling (REQ-002): Back acts like X.,modified,Q-5 ruling (REQ-002): Back acts like X (was an assumption).
+TC-151,Interstitial,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15","1. Close the app fully
+2. Launch the app
+3. RD test date moved to 2026-12-30 (New Year window); launch the app again","Step 2: no subscription interstitial
+Step 2: the Launcher shows directly
+Step 3: no subscription interstitial",P2,R-077,Q-5 ruling (REQ-002).,new,Q-5 ruling (REQ-002): a Pro user gets no subscription interstitial.
+TC-017,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Interstitial showing
+4. Logcat running",Tap 「Get 7-Day Free Trial」,"The Google Play payment panel opens for the annual plan with a 7-day free trial
+The panel is for SKU annualsubscription_christmas_2611 (logcat) at the store's campaign price (SKU table)",P1,"R-016, R-005, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-018,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Payment panel opened from the interstitial CTA",Press system Back,"The panel closes with no purchase
+The interstitial is still there",P2,R-064,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-019,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Interstitial showing",Tap 「More subscription plan」,The IAP page opens in its Christmas version,P1,"R-017, R-066",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-020,Interstitial,"1. Free account (not subscribed) signed in
+2. Google Play account in the US store (Play Billing Lab)
+3. New Year window: stage server, RD test date 2026-12-30
+4. App language English",Launch the app and look at the interstitial,"Title art 「New Year Special」 (never 「Sale」)
+「SAVE」 「45」 「%」 is the largest element (computed from the US store prices: $45.99 vs $6.99 × 12)
+「vs. paying $6.99/mo × 12」 under it (the US monthly price)
+「$45.99/year」 (the US annual price)
+Yellow CTA 「Get 7-Day Free Trial」
+Trial terms, 「More subscription plan」, 「Terms of Service」 | 「Privacy Policy」 | 「Restore purchase」
+No struck-through price and no countdown",P1,"R-019, R-022","Design 2844:27481; PM 1104 Update. Q-3 ruling (REQ-002): prices from the SKU table, the % computed; the mockups' 57% / $6.79 / $34.99 are not the US store's.",modified,"Q-3 ruling (REQ-002): prices from the SKU table (US $45.99 / $6.99), 「Save xx%」 computed."
+TC-021,Interstitial,"1. Free account (not subscribed) signed in
+2. Google Play account in the US store (Play Billing Lab)
+3. New Year window: stage server, RD test date 2026-12-30",Read the trial terms under the CTA,"「7 days free, then $45.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged.」, the same annual price as the big price",P2,R-020,Q-6 ruling (REQ-002): the SKU table price; the Design draws $31.99 under $34.99.,modified,Q-6 ruling (REQ-002): the trial terms carry the SKU table's annual price.
+TC-022,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Interstitial showing",Tap X,The interstitial closes and the Launcher shows,P1,"R-015, R-071",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-023,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Interstitial showing",Press system Back,"The interstitial closes and the Launcher shows, as X does",P2,R-025,Q-5 ruling (REQ-002): Back acts like X.,modified,Q-5 ruling (REQ-002): Back acts like X (was an assumption).
+TC-024,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Interstitial showing
+4. Logcat running",Tap 「Get 7-Day Free Trial」,"The Google Play payment panel opens for the annual plan with a 7-day free trial
+The panel is for SKU annualsubscription_newyear_2611 (logcat) at the store's campaign price (SKU table)",P1,"R-016, R-005, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-025,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Payment panel opened from the interstitial CTA",Press system Back,"The panel closes with no purchase
+The interstitial is still there",P2,R-064,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-026,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Interstitial showing",Tap 「More subscription plan」,The IAP page opens in its New Year version,P1,"R-017, R-072",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-027,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Interstitial showing","1. Tap 「Terms of Service」
+2. Go back
+3. Tap 「Privacy Policy」
+4. Go back","Step 1: the Terms of Service page opens
+Step 2: back on the interstitial
+Step 3: the Privacy Policy page opens
+Step 4: back on the interstitial",P3,R-021,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-028,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Interstitial showing",Tap 「Restore purchase」,"The app checks Google Play for purchases
+With none it says so and stays Free",P3,R-021,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-029,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language English (US) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Christmas Special」
+「Save <xx>%」, xx computed from the store's annual and monthly prices
+「vs. <monthly price>/mo」 with the store's monthly price
+CTA 「Get 7-Day Free Trial」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, Christmas Special, ENG. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-030,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language 中文（台灣） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「聖誕節 限定」
+「現省 <xx>%」, xx computed from the store's annual and monthly prices
+「相較於每月<monthly price>」 with the store's monthly price
+CTA 「７天免費試用」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, Christmas Special, CHT. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-031,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language 中文（简体） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「圣诞节 限定」
+「现省<xx>%」, xx computed from the store's annual and monthly prices
+「相较于每月<monthly price>」 with the store's monthly price
+CTA 「7天免费试用」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, CHS. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-032,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Français (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Vente de Noël」
+「Économisez <xx>%」, xx computed from the store's annual and monthly prices
+「vs. <monthly price>/mo」 with the store's monthly price
+CTA 「Essai gratuit de 7 jours」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, FRA. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-033,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Deutsch (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Weihnachts- Special」
+「<xx>% sparen」, xx computed from the store's annual and monthly prices
+「vs.<monthly price> /Monat」 with the store's monthly price
+CTA 「7 Tage gratis testen」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, DEU. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-034,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language हिन्दी (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「क्रिसमस की विशेष पेशकश」
+「<xx>% बचत करें」, xx computed from the store's annual and monthly prices
+「<monthly price>/महीने की तुलना में」 with the store's monthly price
+CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Hindi. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-035,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Bahasa Indonesia (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Spesial Natal」
+「Hemat <xx>%」, xx computed from the store's annual and monthly prices
+「dibanding <monthly price>/bulan」 with the store's monthly price
+CTA 「Dapatkan Uji Coba Gratis 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, IND. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-036,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Italiano (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Natale Speciale」
+「Sconto <xx>%」, xx computed from the store's annual and monthly prices
+「rispetto a <monthly price>/mese」 with the store's monthly price
+CTA 「Prova Gratis per 7gg.」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, ITA. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-037,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language 日本語 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「クリスマス セール」
+「<xx>% オフ」, xx computed from the store's annual and monthly prices
+「通常月額 <monthly price>」 with the store's monthly price
+CTA 「7 日間無料で試す」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, Christmas Special, JPN. All 27 languages ship (Q-16 ruling, REQ-002). Sheet text 「通常月額 ¥6.79」: the app shows the store price (Q-3 ruling).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-038,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language 한국어 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Christmas Special」
+「<xx>% 세일」, xx computed from the store's annual and monthly prices
+「정가 : 월 <monthly price>」 with the store's monthly price
+CTA 「7일 무료 체험 시작하기」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, KOR. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-039,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Español (España) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial Navidad」
+「Ahorra un <xx> %」, xx computed from the store's annual and monthly prices
+「frente a <monthly price>/mes」 with the store's monthly price
+CTA 「Prueba 7 días gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, ESP. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-040,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Bahasa Melayu (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Hari Natal Istimewa」
+「Jimat <xx>%」, xx computed from the store's annual and monthly prices
+「berbanding <monthly price>/bulan」 with the store's monthly price
+CTA 「Dapatkan Percubaan Percuma 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Malay. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-041,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Português (Brasil) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Natal」
+「Economize <xx>%」, xx computed from the store's annual and monthly prices
+「em vez de <monthly price>/mês」 with the store's monthly price
+CTA 「Obtenha a avaliação gratuita de 7 dias」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, PTB. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-042,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Русский (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Рождественская акция」
+「Экономия <xx>%」, xx computed from the store's annual and monthly prices
+「вместо <monthly price>/мес.」 with the store's monthly price
+CTA 「Попробовать 7 дней бесплатно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, RUS. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-043,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language ไทย (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「คริสต์มาส สุดพิเศษ」
+「ประหยัด <xx>%」, xx computed from the store's annual and monthly prices
+「เทียบกับ <monthly price>/เดือน」 with the store's monthly price
+CTA 「เชิญทดลองใช้ฟรี 7 วัน」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Thai. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-044,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Español (México) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Navidad」
+「Ahorra <xx> %」, xx computed from the store's annual and monthly prices
+「frente a <monthly price>/mes」 with the store's monthly price
+CTA 「Prueba gratis por 7 días」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, ESP (MX). All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-045,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Tiếng Việt (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Ưu đãi Giáng sinh」
+「Tiết kiệm <xx>%」, xx computed from the store's annual and monthly prices
+「so với <monthly price>/tháng」 with the store's monthly price
+CTA 「Dùng thử miễn phí 7 ngày」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Viet. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-046,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Nederlands (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Kerst- aanbieding」
+「Bespaar <xx>%」, xx computed from the store's annual and monthly prices
+「in plaats van <monthly price>/maand」 with the store's monthly price
+CTA 「Probeer 7 dagen gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Dutch. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-047,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Türkçe (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Noel'e Özel」
+「%<xx> Tasarruf」, xx computed from the store's annual and monthly prices
+「<monthly price>/ay yerine」 with the store's monthly price
+CTA 「7 günlük ücretsiz denemeyi başlat」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Turkish. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-048,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language العربية (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「عرض عيد الميلاد الخاص」
+「وفّر <xx>%」, xx computed from the store's annual and monthly prices
+「بدلاً من <monthly price>/شهر」 with the store's monthly price
+CTA 「بدء تجربة مجانية لمدة 7 أيام」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Arabic. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-049,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Polski (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Świąteczna promocja」
+「Zaoszczędź <xx>%」, xx computed from the store's annual and monthly prices
+「zamiast <monthly price>/mies.」 with the store's monthly price
+CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Polish. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-050,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language فارسی (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「کریسمس پیشنهاد ویژه」
+「تخفیف <xx>٪」, xx computed from the store's annual and monthly prices
+「در مقایسه با <monthly price>/ماه」 with the store's monthly price
+CTA 「شروع دوره آزمایشی رایگان ۷ روزه」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Persian. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-051,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language עברית (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「מבצע מיוחד לחג המולד」
+「חסכו <xx>%」, xx computed from the store's annual and monthly prices
+「לעומת <monthly price>/חודש」 with the store's monthly price
+CTA 「ניסיון חינם ל-7 ימים」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Hebrew. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-052,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Svenska (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Julens erbjudande」
+「Spara <xx> %」, xx computed from the store's annual and monthly prices
+「jämfört med <monthly price>/mån」 with the store's monthly price
+CTA 「Prova gratis i 7 dagar」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, SVE. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-053,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Dansk (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Julens Særtilbud」
+「Spar <xx> %」, xx computed from the store's annual and monthly prices
+「mod <monthly price>/måned」 with the store's monthly price
+CTA 「Få 7-dages gratis prøveperiode」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, DAN. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-054,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Norsk bokmål (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Jule- tilbud」
+「Spar <xx> %」, xx computed from the store's annual and monthly prices
+「sammenlignet med <monthly price>/mnd」 with the store's monthly price
+CTA 「Prøv gratis i 7 dager」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, NOR. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-055,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language Українська (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Різдвяна пропозиція」
+「Заощадьте <xx>%」, xx computed from the store's annual and monthly prices
+「замість <monthly price>/міс.」 with the store's monthly price
+CTA 「Спробуйте 7 днів безкоштовно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, UKR. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-056,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language English (US) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「New Year Special」
+「Save <xx>%」, xx computed from the store's annual and monthly prices
+「vs. <monthly price>/mo」 with the store's monthly price
+CTA 「Get 7-Day Free Trial」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, New Year Special, ENG. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-057,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language 中文（台灣） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「新年 限定」
+「現省 <xx>%」, xx computed from the store's annual and monthly prices
+「相較於每月<monthly price>」 with the store's monthly price
+CTA 「７天免費試用」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, New Year Special, CHT. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-058,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language 中文（简体） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「新年 限定」
+「现省<xx>%」, xx computed from the store's annual and monthly prices
+「相较于每月<monthly price>」 with the store's monthly price
+CTA 「7天免费试用」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, CHS. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-059,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Français (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Vente du Nouvel An」
+「Économisez <xx>%」, xx computed from the store's annual and monthly prices
+「vs. <monthly price>/mo」 with the store's monthly price
+CTA 「Essai gratuit de 7 jours」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, FRA. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-060,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Deutsch (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Neujahrs- Special」
+「<xx>% sparen」, xx computed from the store's annual and monthly prices
+「vs.<monthly price> /Monat」 with the store's monthly price
+CTA 「7 Tage gratis testen」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, DEU. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-061,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language हिन्दी (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「नए साल की विशेष पेशकश」
+「<xx>% बचत करें」, xx computed from the store's annual and monthly prices
+「<monthly price>/महीने की तुलना में」 with the store's monthly price
+CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Hindi. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-062,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Bahasa Indonesia (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Spesial Tahun Baru」
+「Hemat <xx>%」, xx computed from the store's annual and monthly prices
+「dibanding <monthly price>/bulan」 with the store's monthly price
+CTA 「Dapatkan Uji Coba Gratis 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, IND. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-063,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Italiano (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Capodanno Speciale」
+「Sconto <xx>%」, xx computed from the store's annual and monthly prices
+「rispetto a <monthly price>/mese」 with the store's monthly price
+CTA 「Prova Gratis per 7gg.」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, ITA. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-064,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language 日本語 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「お正月 セール」
+「<xx>% オフ」, xx computed from the store's annual and monthly prices
+「通常月額 <monthly price>」 with the store's monthly price
+CTA 「7 日間無料で試す」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, New Year Special, JPN. All 27 languages ship (Q-16 ruling, REQ-002). Sheet text 「通常月額 ¥6.79」: the app shows the store price (Q-3 ruling).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-065,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language 한국어 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「New Year Special」
+「<xx>% 세일」, xx computed from the store's annual and monthly prices
+「정가 : 월 <monthly price>」 with the store's monthly price
+CTA 「7일 무료 체험 시작하기」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, KOR. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-066,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Español (España) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial Año Nuevo」
+「Ahorra un <xx> %」, xx computed from the store's annual and monthly prices
+「frente a <monthly price>/mes」 with the store's monthly price
+CTA 「Prueba 7 días gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, ESP. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-067,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Bahasa Melayu (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Tahun Baharu Istimewa」
+「Jimat <xx>%」, xx computed from the store's annual and monthly prices
+「berbanding <monthly price>/bulan」 with the store's monthly price
+CTA 「Dapatkan Percubaan Percuma 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Malay. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-068,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Português (Brasil) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Ano Novo」
+「Economize <xx>%」, xx computed from the store's annual and monthly prices
+「em vez de <monthly price>/mês」 with the store's monthly price
+CTA 「Obtenha a avaliação gratuita de 7 dias」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, PTB. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-069,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Русский (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Новогодняя акция」
+「Экономия <xx>%」, xx computed from the store's annual and monthly prices
+「вместо <monthly price>/мес.」 with the store's monthly price
+CTA 「Попробовать 7 дней бесплатно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, RUS. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-070,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language ไทย (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「ปีใหม่ สุดพิเศษ」
+「ประหยัด <xx>%」, xx computed from the store's annual and monthly prices
+「เทียบกับ <monthly price>/เดือน」 with the store's monthly price
+CTA 「เชิญทดลองใช้ฟรี 7 วัน」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Thai. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-071,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Español (México) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Año Nuevo」
+「Ahorra <xx> %」, xx computed from the store's annual and monthly prices
+「frente a <monthly price>/mes」 with the store's monthly price
+CTA 「Prueba gratis por 7 días」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, ESP (MX). All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-072,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Tiếng Việt (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Ưu đãi Năm mới」
+「Tiết kiệm <xx>%」, xx computed from the store's annual and monthly prices
+「so với <monthly price>/tháng」 with the store's monthly price
+CTA 「Dùng thử miễn phí 7 ngày」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Viet. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-073,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Nederlands (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nieuwjaars- aanbieding」
+「Bespaar <xx>%」, xx computed from the store's annual and monthly prices
+「in plaats van <monthly price>/maand」 with the store's monthly price
+CTA 「Probeer 7 dagen gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Dutch. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-074,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Türkçe (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Yeni Yıla Özel」
+「%<xx> Tasarruf」, xx computed from the store's annual and monthly prices
+「<monthly price>/ay yerine」 with the store's monthly price
+CTA 「7 günlük ücretsiz denemeyi başlat」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Turkish. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-075,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language العربية (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「عرض رأس السنة الخاص」
+「وفّر <xx>%」, xx computed from the store's annual and monthly prices
+「بدلاً من <monthly price>/شهر」 with the store's monthly price
+CTA 「بدء تجربة مجانية لمدة 7 أيام」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Arabic. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-076,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Polski (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Noworoczna promocja」
+「Zaoszczędź <xx>%」, xx computed from the store's annual and monthly prices
+「zamiast <monthly price>/mies.」 with the store's monthly price
+CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Polish. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-077,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language فارسی (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「سال نو پیشنهاد ویژه」
+「تخفیف <xx>٪」, xx computed from the store's annual and monthly prices
+「در مقایسه با <monthly price>/ماه」 with the store's monthly price
+CTA 「شروع دوره آزمایشی رایگان ۷ روزه」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Persian. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-078,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language עברית (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「מבצע מיוחד לשנה החדשה」
+「חסכו <xx>%」, xx computed from the store's annual and monthly prices
+「לעומת <monthly price>/חודש」 with the store's monthly price
+CTA 「ניסיון חינם ל-7 ימים」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Hebrew. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-079,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Svenska (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nyårets erbjudande」
+「Spara <xx> %」, xx computed from the store's annual and monthly prices
+「jämfört med <monthly price>/mån」 with the store's monthly price
+CTA 「Prova gratis i 7 dagar」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, SVE. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-080,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Dansk (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nytårets Særtilbud」
+「Spar <xx> %」, xx computed from the store's annual and monthly prices
+「mod <monthly price>/måned」 with the store's monthly price
+CTA 「Få 7-dages gratis prøveperiode」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, DAN. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-081,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Norsk bokmål (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nyttårs- tilbud」
+「Spar <xx> %」, xx computed from the store's annual and monthly prices
+「sammenlignet med <monthly price>/mnd」 with the store's monthly price
+CTA 「Prøv gratis i 7 dager」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, NOR. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-082,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. App language Українська (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Новорічна пропозиція」
+「Заощадьте <xx>%」, xx computed from the store's annual and monthly prices
+「замість <monthly price>/міс.」 with the store's monthly price
+CTA 「Спробуйте 7 днів безкоштовно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, UKR. All 27 languages ship (Q-16 ruling, REQ-002).",modified,Q-1 / Q-3 / Q-16 rulings (REQ-002): RD test date; the % and monthly price come from the store; all 27 languages ship.
+TC-083,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Phone in dark mode",Close the interstitial and look at the Launcher top,"The Christmas top banner with the title 「Make Christmas magic with AI」 ›
+The banner reads well in dark mode (no white-on-white or black-on-black text)",P1,R-026,PM: 「請design確認可符合dark/light mode的設計」.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-084,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Phone in light mode",Close the interstitial and look at the Launcher top,"The Christmas top banner with the title 「Make Christmas magic with AI」 ›
+The banner reads well in light mode (no white-on-white or black-on-black text)",P1,R-026,PM: 「請design確認可符合dark/light mode的設計」.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-085,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Phone in dark mode",Close the interstitial and look at the Launcher top,"The New Year top banner with the title 「Bring New Year moments to life」 ›
+The banner reads well in dark mode (no white-on-white or black-on-black text)",P1,R-027,PM: 「請design確認可符合dark/light mode的設計」.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-086,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Phone in light mode",Close the interstitial and look at the Launcher top,"The New Year top banner with the title 「Bring New Year moments to life」 ›
+The banner reads well in light mode (no white-on-white or black-on-black text)",P1,R-027,PM: 「請design確認可符合dark/light mode的設計」.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-087,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Launcher showing","1. Look at the top pill
+2. Tap it","The pill reads 「Try Pro 7 days for free」 (Pro, never 「Pro+」) with the Santa-hat icon
+The Christmas IAP page opens",P1,"R-028, R-067",Q-8 ruling (REQ-002): Android says Pro; the Design and PM draw 「Try Pro+ 7 days for free」.,modified,"Q-8 ruling (REQ-002): Android shows Pro wording, no Pro+."
+TC-088,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Launcher showing",Tap the top pill,The New Year IAP page opens,P1,R-073,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-089,Launcher,"1. Free account (not subscribed) signed in
+2. Stage server, RD test date 2027-01-03 12:00","1. Look at the Launcher top pill
+2. Wait 10 seconds
+3. Open Mine and look at its top pill
+4. Open the IAP page from Mine
+5. Go back and open Mine › Credits","Step 1: a clock icon and a countdown 「2D 11:59:59」 or a little less (counting to 2027-01-05 23:59:59, Q-18)
+Step 2: the seconds count down
+Step 3: Mine's pill shows the same countdown
+Step 4: the same countdown under 「Get 7-Day Free Trial」
+Step 5: the same countdown above the CTAs",P2,"R-029, R-038, R-049","Q-9 / Q-11 rulings (REQ-003): the New Year campaign keeps its countdowns. The Design draws 「2D 23:56:18」, the PM 「6D 23:56:18」.",modified,"Q-9 / Q-11 rulings corrected (REQ-003): the New Year campaign keeps its countdowns (pill, IAP, credit page)."
+TC-152,Launcher,"1. Free account (not subscribed) signed in
+2. Stage server, RD test date 2026-12-28 00:05","1. Launch the app and close the interstitial
+2. Look at the Launcher top pill","Step 2: a clock icon and a countdown 「8D 23:54:59」 or a little less (to 2027-01-05 23:59:59, Q-18)
+Step 2: if no countdown shows yet, record when it first appears (Q-18)",P3,R-029,The PM New Year rules say 「12/21 開始倒數 7天」 (Q-18).,new,Q-9 ruling (REQ-003): the New Year countdown is checked at the start of the window too.
+TC-090,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15",Look at the Launcher top pill,The pill reads 「Try Pro 7 days for free」 with no countdown,P3,"R-028, R-029",,modified,"Q-8 / Q-9 rulings (REQ-002, REQ-003): Pro wording; no countdown at Christmas."
+TC-091,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15","1. Look at the Mine tab icon in the bottom bar on Home
+2. Tap Mine
+3. Tap Home","Step 1: the Christmas Mine icon (Santa hat), unselected state
+Step 2: the Christmas icon in its selected state, and Mine opens
+Step 3: back to the unselected icon",P2,"R-030, R-031",Design santa_claus_select / santa_claus_unselect.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-092,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30","1. Look at the Mine tab icon in the bottom bar on Home
+2. Tap Mine
+3. Tap Home","Step 1: the New Year Mine icon, unselected state
+Step 2: the New Year icon in its selected state, and Mine opens
+Step 3: back to the unselected icon",P2,"R-030, R-031",Design santa_claus_select / santa_claus_unselect.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-093,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Launcher showing",Tap Mine in the bottom bar,Mine opens with the Free card,P1,"R-031, R-068",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-094,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Launcher showing",Tap Mine in the bottom bar,Mine opens with the Free card,P2,R-074,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-095,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15",Open Mine,"The Free card shows 「Free」 and 「20+ Benefits」
+A yellow 「Claim Holiday Deal」 button on the card
+The top pill 「Try Pro 7 days for free」",P1,"R-032, R-028",,modified,"Q-8 ruling (REQ-002): the pill says Pro, no Pro+."
+TC-096,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Mine showing",Tap 「Claim Holiday Deal」,The Christmas IAP page opens,P1,"R-032, R-070",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-097,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Mine showing",Tap 「Claim Holiday Deal」,The New Year IAP page opens,P1,R-076,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-098,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Mine showing",Tap the top pill,The Christmas IAP page opens,P2,"R-033, R-069",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-099,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Mine showing",Tap the top pill,The New Year IAP page opens,P2,R-075,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-100,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. IAP page open from Mine",Look at the whole IAP page,"Top banner 「Christmas Special」, the same image in every language
+「PowerDirector Pro」 and 「No Watermark. Unlimited  Assets. No Ads. 50% Off Credit Pack.」
+Feature cards 「Auto Edit」, 「4K Output」, 「Remove Watermark」
+The annual card is selected
+Annual card: seasonal background, top-right tag 「Christmas Treat」 with a small decoration, 「Save <xx>%」 on its right half, 「<annual price>/Year」 and 「with 7-day free trial」
+Monthly card: the original price struck through and the discounted price
+「Receive 35 credits during free trial」 above the CTA
+No countdown on or under 「Get 7-Day Free Trial」
+No 「Offer」 wording anywhere on the page",P1,"R-034, R-035, R-037, R-038, R-039, R-040, R-007","Q-10 ruling (REQ-002): the PM 1104 version; the Design plan card draws Special Offer, 67% OFF and $31.99. Q-11 ruling (REQ-003): no countdown in the Christmas campaign.",modified,"Q-1 / Q-10 / Q-11 rulings (REQ-002, REQ-003): RD test date; PM 1104 version; no countdown at Christmas."
+TC-101,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Google Play account in the US store (Play Billing Lab)
+3. Christmas window: stage server, RD test date 2026-12-15
+4. IAP page open","1. Note the annual price A and the discounted monthly price M on the cards
+2. Read 「Save <xx>%」","A = $45.99 and M = $6.99 (SKU table, US store)
+xx = (M × 12 − A) ÷ (M × 12) × 100, rounded: 「Save 45%」
+A fixed 「Save 57%」 (the mockups) is wrong",P1,"R-036, R-005, R-006","Q-3 ruling (REQ-002): prices from the SKU table, the % computed. Another store follows its own SKU table prices (TW NT$1,210 / NT$240 → 58%).",modified,Q-3 ruling (REQ-002): SKU table prices and a computed %.
+TC-102,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. IAP page open from Mine",Look at the whole IAP page,"Top banner 「New Year Special」, the same image in every language
+「PowerDirector Pro」 and 「No Watermark. Unlimited  Assets. No Ads. 50% Off Credit Pack.」
+Feature cards 「Auto Edit」, 「4K Output」, 「Remove Watermark」
+The annual card is selected
+Annual card: seasonal background, top-right tag 「New Year Treat」 with a small decoration, 「Save <xx>%」 on its right half, 「<annual price>/Year」 and 「with 7-day free trial」
+Monthly card: the original price struck through and the discounted price
+「Receive 35 credits during free trial」 above the CTA
+Under 「Get 7-Day Free Trial」 a clock icon and a countdown 「<d>D hh:mm:ss」 (TC-089 checks its value)
+No 「Offer」 wording anywhere on the page",P1,"R-034, R-035, R-037, R-038, R-039, R-040, R-007","Q-10 ruling (REQ-002): the PM 1104 version; the Design plan card draws Special Offer, 67% OFF and $31.99. Q-11 ruling (REQ-003): the New Year campaign keeps the countdown the Design draws under the CTA (the PM 1104 note removing it is overruled).",modified,"Q-1 / Q-10 / Q-11 rulings (REQ-002, REQ-003): RD test date; PM 1104 version; the New Year IAP keeps its countdown."
+TC-103,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Google Play account in the US store (Play Billing Lab)
+3. New Year window: stage server, RD test date 2026-12-30
+4. IAP page open","1. Note the annual price A and the discounted monthly price M on the cards
+2. Read 「Save <xx>%」","A = $45.99 and M = $6.99 (SKU table, US store)
+xx = (M × 12 − A) ÷ (M × 12) × 100, rounded: 「Save 45%」
+A fixed 「Save 57%」 (the mockups) is wrong",P1,"R-036, R-005, R-006","Q-3 ruling (REQ-002): prices from the SKU table, the % computed. Another store follows its own SKU table prices (TW NT$1,210 / NT$240 → 58%).",modified,Q-3 ruling (REQ-002): SKU table prices and a computed %.
+TC-104,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. IAP page open, annual card selected
+4. Logcat running",Tap 「Get 7-Day Free Trial」,"The Google Play panel opens for the annual plan with a 7-day free trial
+SKU annualsubscription_christmas_2611 (logcat) at the store's price",P1,"R-041, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-105,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. IAP page open
+4. Logcat running","1. Tap the monthly card
+2. Tap the CTA","Step 1: the monthly card is selected
+Step 2: the Google Play panel opens for SKU monthlysubscription_christmas_2611 (logcat) at the store's discounted price",P1,"R-041, R-006, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-106,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. IAP page open
+4. Logcat running","1. Tap the monthly card
+2. Tap the CTA",The Google Play panel opens for SKU monthlysubscription_newyear_2611 (logcat),P2,"R-041, R-006, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-107,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. IAP page open
+4. Logcat running",Tap 「Get 7-Day Free Trial」,The Google Play panel opens for SKU annualsubscription_newyear_2611 (logcat),P2,"R-041, R-005, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-108,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. IAP page opened from Mine",Tap the back arrow ‹,Back on Mine,P2,R-042,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-109,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. IAP page opened from the interstitial 「More subscription plan」",Press system Back,"Back where the IAP page was opened from, as the back arrow does",P2,"R-061, R-042",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-110,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. IAP page open","1. Tap 「Terms of Service」
+2. Go back
+3. Tap 「Privacy Policy」
+4. Go back
+5. Tap 「Restore purchase」","Step 1: the Terms of Service page opens
+Step 3: the Privacy Policy page opens
+Step 5: the restore runs and, with no purchase, the account stays Free",P3,R-040,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-111,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Play Billing Lab sets the test account's country to India
+3. Christmas window: stage server, RD test date 2026-12-15",Open the IAP page from Mine,"The monthly card is selected when the page opens
+The campaign tag and prices still show",P2,R-007,Q-17 ruling (REQ-002): the country comes from Play Billing Lab.,modified,Q-17 ruling (REQ-002): Play Billing Lab sets the test account country.
+TC-112,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Play Billing Lab sets the test account's country to Indonesia
+3. Christmas window: stage server, RD test date 2026-12-15",Open the IAP page from Mine,"The monthly card is selected when the page opens
+The campaign tag and prices still show",P2,R-007,Q-17 ruling (REQ-002): the country comes from Play Billing Lab.,modified,Q-17 ruling (REQ-002): Play Billing Lab sets the test account country.
+TC-113,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Play Billing Lab sets the test account's country to Philippines
+3. Christmas window: stage server, RD test date 2026-12-15",Open the IAP page from Mine,"The monthly card is selected when the page opens
+The campaign tag and prices still show",P2,R-007,Q-17 ruling (REQ-002): the country comes from Play Billing Lab.,modified,Q-17 ruling (REQ-002): Play Billing Lab sets the test account country.
+TC-114,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language 日本語, Play country Japan","1. Open Mine
+2. Open the VIP Benefits page","The JP layout: a Christmas banner 「Merry Christmas! Enjoy...」 with 「20+ VIP features, 1000+ templates, and 250 free credits every month.」
+Christmas decoration on the welcome banner",P2,R-043,PM frame 3226:37164 (JP).,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-115,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language English, Play country US","1. Open Mine
+2. Open the VIP Benefits page",The US layout: the VIP card with Christmas decoration,P2,R-043,PM frame 3271:3807 (US).,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-116,Mine and IAP,"1. Pro account (subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30","1. Open Mine
+2. Open the VIP Benefits page","The welcome banner carries New Year decoration, no Christmas decoration",P2,R-043,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-117,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. VIP Benefits page open",Press system Back,Back on Mine,P3,R-063,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-118,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. App language 日本語","1. Open the IAP page
+2. Open Mine › Credits","Step 1: the IAP top banner 「Christmas Special」 is the same English image as in English
+Step 2: the credit page top banner 「Christmas Special」 is the same English image as in English",P3,"R-034, R-045",PM: 「不出多國」.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-119,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15","1. Open Mine
+2. Tap the top pill 「Credit Special Offer」","Step 1: the top pill reads 「Credit Special Offer」 with a gift icon
+Step 2: the Christmas credit purchase page opens",P2,R-044,Q-12 ruling (REQ-002).,modified,Q-12 ruling (REQ-002): the pill opens the campaign credit purchase page.
+TC-120,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. No Credit Auto Pass
+4. Credit purchase page open (Mine › Credits)",Look at the whole page,"Top banner 「Christmas Special」, the same image in every language
+Special Offer pack: white 「1000」 and green 「+1000」, 「$166.99」
+Packs 50, 100, 200, 500, 1000, 2000 credits, each with its original price struck through and the member price
+「Subscribe for 3000 free credits!」 and 「Get 2000 credits for $166.99」
+「Each credit for about $0.1」 and 「The expiration period for consumed credits is one year.」
+「Privacy Policy」 | 「Terms of Use」
+No countdown above the CTAs",P1,"R-045, R-046, R-050, R-052, R-049","US mockup prices: $9.99→$4.99, $17.99→$8.99, $31.99→$15.99, $69.99→$34.99, $119.99→$59.99, $199.99→$99.99. No countdown in the Christmas campaign: Q-11 ruling (REQ-003).",modified,"Q-1 / Q-11 rulings (REQ-002, REQ-003): RD test date; the Christmas credit page has no countdown."
+TC-121,Credit purchase page,"1. Pro account (subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. No Credit Auto Pass
+4. Credit purchase page open (Mine › Credits)",Look at the whole page,"Top banner 「New Year Special」, the same image in every language
+Special Offer pack: white 「1000」 and green 「+1000」, 「$166.99」
+Packs 50, 100, 200, 500, 1000, 2000 credits, each with its original price struck through and the member price
+「Subscribe for 3000 free credits!」 and 「Get 2000 credits for $166.99」
+「Each credit for about $0.1」 and 「The expiration period for consumed credits is one year.」
+「Privacy Policy」 | 「Terms of Use」
+Above the CTAs a clock icon and a countdown 「<d>D hh:mm:ss」 (TC-089 checks its value)",P1,"R-045, R-046, R-050, R-052, R-049","US mockup prices: $9.99→$4.99, $17.99→$8.99, $31.99→$15.99, $69.99→$34.99, $119.99→$59.99, $199.99→$99.99. The New Year campaign keeps the countdown: Q-11 ruling (REQ-003).",modified,"Q-1 / Q-11 rulings (REQ-002, REQ-003): RD test date; the New Year credit page keeps its countdown."
+TC-122,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit purchase page open
+4. Logcat running",Tap 「Get 2000 credits for $166.99」,"The Google Play panel opens for SKU pdrm_2000_credit_paiduser_christmas (logcat), 2000 credits at the store's price",P1,"R-046, R-008, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-123,Credit purchase page,"1. Pro account (subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Credit purchase page open
+4. Logcat running",Tap 「Get 2000 credits for $166.99」,The Google Play panel opens for the same SKU pdrm_2000_credit_paiduser_christmas (logcat),P2,"R-008, R-009",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-124,Credit purchase page,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Logcat running","1. Open Mine › Credits
+2. Look at the Special Offer pack
+3. Tap its CTA","Step 2: the pack shows only a white 「500」
+Step 2: the original price is struck through and the sale price is shown beside it (Q-13)
+Step 3: the Google Play panel opens for SKU pdrm_500_credit_freeuser_christmas (logcat)",P1,"R-047, R-008, R-009",PM-only: no Design frame yet (Design 2026-11-20).,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-125,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. No Credit Auto Pass subscription",Open the credit purchase page,"The Auto Pass credit sale leads: 「Subscribe for 3000 free credits!」
+The balance line has no 「Auto Pass activated」",P1,R-048,Q-14 ruling (REQ-002).,modified,Q-14 ruling (REQ-002) confirms what each Auto Pass state shows.
+TC-126,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit Auto Pass subscribed",Open the credit purchase page,"The balance line reads 「Auto Pass activated」
+The 2000-credit pack sale shows: 「1000+1000」 「$166.99」 and 「Get 2000 credits for $166.99」",P1,R-048,Run after the Auto Pass purchase row. Q-14 ruling (REQ-002): with Auto Pass the page shows 「Auto Pass activated」.,modified,Q-14 ruling (REQ-002): with Auto Pass the page shows 「Auto Pass activated」.
+TC-127,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. No Credit Auto Pass
+4. Credit purchase page open",Tap 「Subscribe for 3000 free credits!」,The Google Play panel opens for the Credit Auto Pass subscription,P2,R-051,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-128,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Phone date 2026-12-20 12:00 local, automatic date off",Open the credit purchase page,No countdown above the CTAs,P2,R-049,PM: countdown from 12/21 for 7 days (Q-11).,removed,"Q-11 ruling (REQ-002, corrected by REQ-003): the Christmas campaign has no countdown, so there is no start date to check; TC-129 checks the date the PM had asked for one."
+TC-129,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Stage server, RD test date 2026-12-25 00:03",Open the credit purchase page,No clock icon and no countdown above the CTAs (the PM New Year rules had asked for one from 12/21),P2,R-049,Q-11 ruling (REQ-003): only the Christmas campaign drops the countdown; the Design draws 「2D 23:56:18」 here.,modified,Q-11 ruling (REQ-003): the Christmas credit page has no countdown.
+TC-130,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit purchase page open from Mine","1. Tap the back arrow ‹
+2. Open the page again
+3. Press system Back","Step 1: back on Mine
+Step 3: back on Mine, as the arrow does",P2,"R-052, R-061",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-131,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit purchase page open","1. Tap 「Privacy Policy」
+2. Go back
+3. Tap 「Terms of Use」","Step 1: the Privacy Policy page opens
+Step 3: the Terms of Use page opens",P3,R-052,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-132,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「More Credits Needed!」
+「You don’t have enough credits to use this feature. Get credits now!」
+CTA 「Grab Discount Now!」
+Christmas background and image",P1,R-053,Design I2V_Custom 2754:6631.,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-133,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. The dialog above open",Tap 「Grab Discount Now!」,The Christmas credit purchase page opens,P1,R-054,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-134,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「Upgrade to Pro」
+「You don’t have enough credits to use this feature. Upgrade to Pro to get free bonus credits every month.」
+CTA 「Grab Discount Now!」
+Christmas background and image",P1,R-055,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-135,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. The dialog above open",Tap 「Grab Discount Now!」,The Christmas IAP page opens,P1,R-055,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-136,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「More Credits Needed!」
+「You don’t have enough credits to use this feature. Get credits now!」
+CTA 「Grab Discount Now!」
+New Year background and image",P1,"R-053, R-058",Q-15 ruling (REQ-002): the New Year theme as the Design draws it; the PM New Year frames still say 「CHRISTMAS SALE」.,modified,Q-1 / Q-15 rulings (REQ-002): RD test date; the New Year theme from the Design.
+TC-137,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. The dialog above open",Tap 「Grab Discount Now!」,The New Year credit purchase page opens,P1,R-054,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-138,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「Upgrade to Pro」
+「You don’t have enough credits to use this feature. Upgrade to Pro to get free bonus credits every month.」
+CTA 「Grab Discount Now!」
+New Year background and image",P1,"R-055, R-058",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-139,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. New Year window: stage server, RD test date 2026-12-30
+3. The dialog above open",Tap 「Grab Discount Now!」,The New Year IAP page opens,P1,R-055,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-140,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Credit balance above the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","No dialog
+The generation starts and the credits are charged once",P1,R-056,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-141,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. The paid dialog open
+4. Balance noted",Tap ⓧ,"The dialog closes, back on Image to Video
+The balance is unchanged",P2,R-057,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-142,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. The free dialog open",Press system Back,"The dialog closes, back on Image to Video, as ⓧ does",P2,R-062,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-143,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. A short Android screen (about 411×731 dp, or display size set largest)","1. Look at the interstitial
+2. Open the IAP page
+3. Open Mine › Credits","Steps 1–3: every element shows with nothing clipped or overlapped
+Steps 1–3: CTA, terms and links can be reached (scroll where the Design allows)",P2,R-023,"Design 「短裝置」 frames 2750:20070, 2750:20280.",modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-144,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Tablet or a phone the app turns to landscape",Look at the Launcher in landscape,"The Christmas top banner and pill over the landscape Launcher (My Projects, tool row), nothing cut off",P3,R-059,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-145,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Tablet or a phone the app turns to landscape",Launch the app in landscape,"Left: the 「Save <xx>%」 art (xx from the store prices, as in portrait)
+Right: price, 「Get 7-Day Free Trial」, terms, 「More subscription plan」 and the links",P3,R-024,,modified,Q-1 / Q-3 rulings (REQ-002): RD test date; the Save % is computed from the store prices.
+TC-146,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Tablet or a phone the app turns to landscape",Open the IAP page in landscape,"Left: the 「Christmas Special」 art
+Right: the plans, 「Receive 35 credits during free trial」, the CTA and the links",P3,R-060,,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-147,Purchases,"1. Free license-tester account (Play sheet shows 「Test card, always approves」)
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Logcat running
+4. Run after every Free row","1. On the interstitial tap 「Get 7-Day Free Trial」
+2. Subscribe in the Google Play panel","The purchase completes on SKU annualsubscription_christmas_2611 with a 7-day trial (logcat)
+The app turns Pro: Mine shows the VIP card and the Free-user campaign entries are gone
+The interstitial does not show on the next launch",P1,"R-005, R-009, R-016",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-148,Purchases,"1. Free license-tester account
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Balance noted
+4. Logcat running","1. Open Mine › Credits
+2. Buy the 500-credit Special Offer","SKU pdrm_500_credit_freeuser_christmas (logcat)
+The balance grows by 500",P2,"R-047, R-008",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-149,Purchases,"1. Pro license-tester account
+2. Christmas window: stage server, RD test date 2026-12-15
+3. Balance noted
+4. Logcat running","1. Open Mine › Credits
+2. Tap 「Get 2000 credits for $166.99」 and buy","SKU pdrm_2000_credit_paiduser_christmas (logcat)
+The balance grows by 2000 (1000 + 1000)",P2,"R-046, R-008",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.
+TC-150,Purchases,"1. Pro license-tester account without Auto Pass
+2. Christmas window: stage server, RD test date 2026-12-15","1. Open Mine › Credits
+2. Tap 「Subscribe for 3000 free credits!」 and subscribe","The subscription completes
+The page now shows 「Auto Pass activated」 (the next row checks its offer)",P2,"R-048, R-051",,modified,Q-1 ruling (REQ-002): the campaign window is set by RD's test date on the stage server.

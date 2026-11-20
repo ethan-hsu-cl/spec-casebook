@@ -1,0 +1,2280 @@
+{
+  "spec_folder": "specs/2026-11-20",
+  "skip": [
+    "pm-loose"
+  ],
+  "skip_reason": "loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "ds-ny-iap-credit@5347,2060",
+      "board": "ds-ny-iap-credit",
+      "x": 5347,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / New Year [phone] / Special [phone] / PowerDirector [phone] / Pro [phone] / No Watermark. Unlimited  Assets. No Ads. [phone] / 50% Off Credit Pack. [phone] / Auto Edit [phone] / Auto Edit [phone] / $31.99/Year [phone] / with 7-day free trial [phone] / $7.99/Month [phone] / Receive 35 credits during free trial [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone]",
+      "trace": "R-034, R-040"
+    },
+    {
+      "id": "ds-ny-iap-credit@5779,2060",
+      "board": "ds-ny-iap-credit",
+      "x": 5779,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / New Year [phone] / Special [phone] / PowerDirector [phone] / Pro [phone] / No Watermark. Unlimited  Assets. No Ads. [phone] / 50% Off Credit Pack. [phone] / Auto Edit [phone] / Auto Edit [phone] / $31.99/Year [phone] / with 7-day free trial [phone] / $7.99/Month [phone] / Receive 35 credits during free trial [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone]",
+      "trace": "R-034, R-040"
+    },
+    {
+      "id": "ds-ny-iap-credit@6256,2060",
+      "board": "ds-ny-iap-credit",
+      "x": 6256,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / New Year [phone] / Special [phone] / PowerDirector [phone] / Pro [phone] / No Watermark. Unlimited  Assets. No Ads. [phone] / 50% Off Credit Pack. [phone] / Auto Edit [phone] / Auto Edit [phone] / $31.99/Year [phone] / with 7-day free trial [phone] / $7.99/Month [phone] / Receive 35 credits during free trial [phone] / Get 7-Day Free Trial [phone] / Renew automatically after 7-day free trial. Cancel at least 24 hours prior to your renewal date. [phone]",
+      "trace": "R-034, R-040"
+    },
+    {
+      "id": "ds-ny-iap-credit@7773,2060",
+      "board": "ds-ny-iap-credit",
+      "x": 7773,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / New Year [phone] / Special [phone] / 100 [phone] / Expiring within 7 days: 50 credits [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@6934,2106",
+      "board": "ds-ny-iap-credit",
+      "x": 6934,
+      "y": 2106,
+      "low": false,
+      "text": "New Year [phone] / Special [phone] / 100 [phone] / Expiring within 7 days: 50 credits [phone] / Special Offer [phone] / 1000 [phone] / +1000 [phone] / 50 [phone] / $9.99 [phone] / $17.99 [phone] / $4.99 [phone] / $8.99 [phone] / 500 [phone] / $69.99 [phone] / $119.99 [phone] / $34.99 [phone] / $59.99 [phone] / Subscribe for 3000 free credits! [phone] / Get 2000 credits for $166.99 [phone] / Each credit for about $0.1 [phone] / The expiration period for consumed credits is one year. [phone] / Privacy Policy [phone] / Terms of Use [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@7366,2106",
+      "board": "ds-ny-iap-credit",
+      "x": 7366,
+      "y": 2106,
+      "low": false,
+      "text": "New Year [phone] / Special [phone] / 100 [phone] / Expiring within 7 days: 50 credits [phone] / Special Offer [phone] / 1000 [phone] / +1000 [phone] / 50 [phone] / $9.99 [phone] / $17.99 [phone] / $4.99 [phone] / $8.99 [phone] / 500 [phone] / $69.99 [phone] / $119.99 [phone] / $34.99 [phone] / $59.99 [phone] / Subscribe for 3000 free credits! [phone] / Get 2000 credits for $166.99 [phone] / Each credit for about $0.1 [phone] / The expiration period for consumed credits is one year. [phone] / Privacy Policy [phone] / Terms of Use [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@7902,2254",
+      "board": "ds-ny-iap-credit",
+      "x": 7902,
+      "y": 2254,
+      "low": false,
+      "text": "Special Offer [phone] / 1000 [phone] / +1000 [phone] / 50 [phone] / $17.99 [phone] / $8.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@8042,2291",
+      "board": "ds-ny-iap-credit",
+      "x": 8042,
+      "y": 2291,
+      "low": false,
+      "text": "$166.99 [phone] / 100 [phone] / 200 [phone] / $31.99 [phone] / $15.99 [phone] / 1000 [phone] / 2000 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@7097,2319",
+      "board": "ds-ny-iap-credit",
+      "x": 7097,
+      "y": 2319,
+      "low": false,
+      "text": "$166.99 [phone] / 100 [phone] / 200 [phone] / $31.99 [phone] / $15.99 [phone] / 1000 [phone] / 2000 [phone] / $199.99 [phone] / $99.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@7529,2319",
+      "board": "ds-ny-iap-credit",
+      "x": 7529,
+      "y": 2319,
+      "low": false,
+      "text": "$166.99 [phone] / 100 [phone] / 200 [phone] / $31.99 [phone] / $15.99 [phone] / 1000 [phone] / 2000 [phone] / $199.99 [phone] / $99.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@6485,2356",
+      "board": "ds-ny-iap-credit",
+      "x": 6485,
+      "y": 2356,
+      "low": false,
+      "text": "Remove Watermark [phone] / 4K Output [phone] / Special Offer [phone] / 67% [phone] / OFF [phone]",
+      "trace": "older: PM 1104 Update (Treat tag, Save 57%) replaced the Design plan card (Q-10)"
+    },
+    {
+      "id": "ds-ny-iap-credit@7765,2386",
+      "board": "ds-ny-iap-credit",
+      "x": 7765,
+      "y": 2386,
+      "low": false,
+      "text": "$9.99 [phone] / $4.99 [phone] / 500 [phone] / Subscribe for 3000 free credits! [phone] / Get 2000 credits for $166.99 [phone] / Each credit for about $0.1 [phone] / The expiration period for consumed credits is one year. [phone] / Privacy Policy [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-ny-iap-credit@5576,2430",
+      "board": "ds-ny-iap-credit",
+      "x": 5576,
+      "y": 2430,
+      "low": false,
+      "text": "Remove Watermark [phone] / 4K Output [phone] / Special Offer [phone] / 67% [phone] / OFF [phone]",
+      "trace": "older: PM 1104 Update (Treat tag, Save 57%) replaced the Design plan card (Q-10)"
+    },
+    {
+      "id": "ds-ny-iap-credit@6008,2430",
+      "board": "ds-ny-iap-credit",
+      "x": 6008,
+      "y": 2430,
+      "low": false,
+      "text": "Remove Watermark [phone] / 4K Output [phone] / Special Offer [phone] / 67% [phone] / OFF [phone]",
+      "trace": "older: PM 1104 Update (Treat tag, Save 57%) replaced the Design plan card (Q-10)"
+    },
+    {
+      "id": "ds-ny-iap-credit@6399,2651",
+      "board": "ds-ny-iap-credit",
+      "x": 6399,
+      "y": 2651,
+      "low": false,
+      "text": "2D 23:56:18 [phone] / Terms of Service [phone] / Privacy Policy [phone] / Restore purchase [phone]",
+      "trace": "older: PM 1104 Update removed the countdown under the subscription CTA (R-038, Q-11)"
+    },
+    {
+      "id": "ds-ny-iap-credit@5472,2717",
+      "board": "ds-ny-iap-credit",
+      "x": 5472,
+      "y": 2717,
+      "low": false,
+      "text": "2D 23:56:18 [phone] / Terms of Service [phone] / Privacy Policy [phone] / Restore purchase [phone]",
+      "trace": "older: PM 1104 Update removed the countdown under the subscription CTA (R-038, Q-11)"
+    },
+    {
+      "id": "ds-ny-iap-credit@5904,2717",
+      "board": "ds-ny-iap-credit",
+      "x": 5904,
+      "y": 2717,
+      "low": false,
+      "text": "2D 23:56:18 [phone] / Terms of Service [phone] / Privacy Policy [phone] / Restore purchase [phone]",
+      "trace": "older: PM 1104 Update removed the countdown under the subscription CTA (R-038, Q-11)"
+    },
+    {
+      "id": "ds-ny-iap-credit@7964,2730",
+      "board": "ds-ny-iap-credit",
+      "x": 7964,
+      "y": 2730,
+      "low": false,
+      "text": "Terms of Use [phone]",
+      "trace": "R-052"
+    },
+    {
+      "id": "ds-ny-interstitial@5881,425",
+      "board": "ds-ny-interstitial",
+      "x": 5881,
+      "y": 425,
+      "low": false,
+      "text": "Save [phone] / 57 [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@5369,456",
+      "board": "ds-ny-interstitial",
+      "x": 5369,
+      "y": 456,
+      "low": false,
+      "text": "Save [phone] / 57 [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@6076,517",
+      "board": "ds-ny-interstitial",
+      "x": 6076,
+      "y": 517,
+      "low": false,
+      "text": "% [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@5564,548",
+      "board": "ds-ny-interstitial",
+      "x": 5564,
+      "y": 548,
+      "low": false,
+      "text": "% [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@5910,634",
+      "board": "ds-ny-interstitial",
+      "x": 5910,
+      "y": 634,
+      "low": false,
+      "text": "vs. paying $6.79/mo × 12 [phone] / $34.99 [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plan [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "R-020, Q-6"
+    },
+    {
+      "id": "ds-ny-interstitial@6044,695",
+      "board": "ds-ny-interstitial",
+      "x": 6044,
+      "y": 695,
+      "low": false,
+      "text": "/year [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@5400,699",
+      "board": "ds-ny-interstitial",
+      "x": 5400,
+      "y": 699,
+      "low": false,
+      "text": "vs. paying $6.79/mo × 12 [phone] / $34.99 [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plan [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "R-020, Q-6"
+    },
+    {
+      "id": "ds-ny-interstitial@5534,760",
+      "board": "ds-ny-interstitial",
+      "x": 5534,
+      "y": 760,
+      "low": false,
+      "text": "/year [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@6060,895",
+      "board": "ds-ny-interstitial",
+      "x": 6060,
+      "y": 895,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-interstitial@5549,976",
+      "board": "ds-ny-interstitial",
+      "x": 5549,
+      "y": 976,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "R-019"
+    },
+    {
+      "id": "ds-ny-landscape@5335,5276",
+      "board": "ds-ny-landscape",
+      "x": 5335,
+      "y": 5276,
+      "low": false,
+      "text": "Launcher",
+      "trace": "label: board heading"
+    },
+    {
+      "id": "ds-ny-landscape@6289,5276",
+      "board": "ds-ny-landscape",
+      "x": 6289,
+      "y": 5276,
+      "low": false,
+      "text": "Interstitial / Save",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-ny-landscape@7918,5346",
+      "board": "ds-ny-landscape",
+      "x": 7918,
+      "y": 5346,
+      "low": false,
+      "text": "Special Offer",
+      "trace": "older: PM 1104 Update replaced the Special Offer tag and $31.99 (Q-10)"
+    },
+    {
+      "id": "ds-ny-landscape@5497,5356",
+      "board": "ds-ny-landscape",
+      "x": 5497,
+      "y": 5356,
+      "low": false,
+      "text": "2D 23:56:18 / Image to Video / AI Art / Video Enhance / My Projects / New Project",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-ny-landscape@7704,5368",
+      "board": "ds-ny-landscape",
+      "x": 7704,
+      "y": 5368,
+      "low": false,
+      "text": "$31.99/Year / with 7-day free trial / $7.99/Month / Receive 35 credits during free trial / Get 7-Day Free Trial / 2D 23:56:18 / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. / Terms of Service / Privacy Policy",
+      "trace": "older: PM 1104 Update replaced the Special Offer tag and $31.99 (Q-10)"
+    },
+    {
+      "id": "ds-ny-landscape@6803,5397",
+      "board": "ds-ny-landscape",
+      "x": 6803,
+      "y": 5397,
+      "low": false,
+      "text": "$34.99 / Get 7-Day Free Trial / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. / More subscription plan / Terms of Service / Privacy Policy",
+      "trace": "R-024, Q-6"
+    },
+    {
+      "id": "ds-ny-landscape@6953,5415",
+      "board": "ds-ny-landscape",
+      "x": 6953,
+      "y": 5415,
+      "low": false,
+      "text": "/year",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-ny-landscape@5664,5434",
+      "board": "ds-ny-landscape",
+      "x": 5664,
+      "y": 5434,
+      "low": false,
+      "text": "AI Anime Video / Auto Captions / Project 11-1253... / 01:09:18 / 16:9",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-ny-landscape@5840,5434",
+      "board": "ds-ny-landscape",
+      "x": 5840,
+      "y": 5434,
+      "low": false,
+      "text": "Photo Enhance / Replace / Project 11-1253... / 01:09:18 / 16:9",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-ny-landscape@6016,5434",
+      "board": "ds-ny-landscape",
+      "x": 6016,
+      "y": 5434,
+      "low": false,
+      "text": "Adjust Speed / Image to Video / Select / Project 11-1253... / 01:09:18 / 16:9",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-ny-landscape@7338,5454",
+      "board": "ds-ny-landscape",
+      "x": 7338,
+      "y": 5454,
+      "low": false,
+      "text": "New Year / Special",
+      "trace": "R-060"
+    },
+    {
+      "id": "ds-ny-landscape@6403,5607",
+      "board": "ds-ny-landscape",
+      "x": 6403,
+      "y": 5607,
+      "low": false,
+      "text": "vs. paying $6.79/mo × 12",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-ny-landscape@6973,5647",
+      "board": "ds-ny-landscape",
+      "x": 6973,
+      "y": 5647,
+      "low": false,
+      "text": "Restore purchase",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-ny-landscape@7914,5649",
+      "board": "ds-ny-landscape",
+      "x": 7914,
+      "y": 5649,
+      "low": false,
+      "text": "Restore purchase",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6278,3628",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6278,
+      "y": 3628,
+      "low": false,
+      "text": "Free user / 2D 23:56:18 [phone] / Free [phone] / 20+ [phone] / Benefits [phone] / AI [phone] / Storytelling [phone] / Credits [phone] / My Artwork [phone] / My Cloud [phone] / Demo Videos [phone] / User Sign in [phone]",
+      "trace": "R-028, R-029, R-032"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@8063,3739",
+      "board": "ds-ny-launcher-dialog",
+      "x": 8063,
+      "y": 3739,
+      "low": false,
+      "text": "182 [phone] / Template [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5416,3741",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5416,
+      "y": 3741,
+      "low": false,
+      "text": "2D 23:56:18 [phone]",
+      "trace": "R-029, Q-9"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5848,3741",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5848,
+      "y": 3741,
+      "low": false,
+      "text": "2D 23:56:18 [phone]",
+      "trace": "R-029, Q-9"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6872,3742",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6872,
+      "y": 3742,
+      "low": false,
+      "text": "Credit Special Offer [phone] / VIP [phone] / You’re on the highest plan. [phone] / 1000+ templates, 100 GB cloud space, and 500 monthly credits. [phone] / Credits [phone] / My Artwork [phone] / My Cloud [phone] / Demo Videos [phone] / User Sign in [phone] / Your VIP Features [phone] / Video Enhance [phone] / Try Now [phone] / Auto Caption [phone] / Home [phone] / AI Magic [phone] / Template [phone] / Try Now [phone]",
+      "trace": "R-043, R-044"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@7289,3742",
+      "board": "ds-ny-launcher-dialog",
+      "x": 7289,
+      "y": 3742,
+      "low": false,
+      "text": "Credit Special Offer [phone] / VIP [phone] / My Credits [phone] / 300 [phone] / More VIP Benefits [phone] / AI Art 100+ [phone] / Transition  600+ [phone] / Effects 50+ [phone] / Body Effect  50+ [phone] / Image to Video 100+ [phone] / Home [phone] / AI Magic [phone] / Motion Tracking [phone]",
+      "trace": "R-043, R-044"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@7871,3782",
+      "board": "ds-ny-launcher-dialog",
+      "x": 7871,
+      "y": 3782,
+      "low": false,
+      "text": "Custom [phone] / Model [phone] / HappyHorse [phone] / Describe your idea [phone] / More Credits Needed! [phone] / Gracefully moves a hand to gently brush through the hair [phone] / You don’t have enough credits to use this feature. Get credits now! [phone] / 0/2500 [phone] / Grab Discount Now! [phone] / Try with inspirations [phone] / Video Quality [phone] / Standard [phone] / Pro [phone] / Generate [phone] / Duration [phone] / 5s [phone]",
+      "trace": "R-053"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6460,3808",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6460,
+      "y": 3808,
+      "low": false,
+      "text": "Claim Holiday Deal [phone] / Video Object Removal [phone] / Video [phone] / Advanced Cutout [phone] / Enhance [phone] / None [phone]",
+      "trace": "R-032, R-033"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5302,3912",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5302,
+      "y": 3912,
+      "low": false,
+      "text": "Bring New Year moments to life [phone] / New Project [phone] / Image to Video [phone] / Text to [phone] / Video [phone] / What’s Trending [phone] / USA Winner [phone] / Home [phone] / Meme Dance Creator [phone]",
+      "trace": "R-027"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5734,3912",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5734,
+      "y": 3912,
+      "low": false,
+      "text": "Bring New Year moments to life [phone] / New Project [phone] / NEW [phone] / Image to Video [phone] / Text to [phone] / Video [phone] / What’s Trending [phone] / USA Winner [phone] / Home [phone] / Meme Dance Creator [phone]",
+      "trace": "R-027"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@7114,3918",
+      "board": "ds-ny-launcher-dialog",
+      "x": 7114,
+      "y": 3918,
+      "low": false,
+      "text": "500 [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@7496,3921",
+      "board": "ds-ny-launcher-dialog",
+      "x": 7496,
+      "y": 3921,
+      "low": false,
+      "text": "Get More [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@8067,3940",
+      "board": "ds-ny-launcher-dialog",
+      "x": 8067,
+      "y": 3940,
+      "low": false,
+      "text": "My Prompt [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5424,3994",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5424,
+      "y": 3994,
+      "low": false,
+      "text": "Video Edit by Chat [phone] / Video [phone] / Enhance [phone] / Character Motion Swap [phone] / Cinematic Reel Creator [phone] / Auto Edit [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5856,3994",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5856,
+      "y": 3994,
+      "low": false,
+      "text": "Video Edit by Chat [phone] / Video [phone] / Enhance [phone] / Character Motion Swap [phone] / Cinematic Reel Creator [phone] / Auto Edit [phone] / Auto [phone] / Captions [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6053,4054",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6053,
+      "y": 4054,
+      "low": false,
+      "text": "NEW [phone] / AI Mini [phone] / Drama [phone] / Photo Enhance [phone] / View more [phone] / USA Cam [phone] / Mine [phone] / View more [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@7494,4068",
+      "board": "ds-ny-launcher-dialog",
+      "x": 7494,
+      "y": 4068,
+      "low": false,
+      "text": "Titles 1000+ [phone] / Music  100+ [phone] / Sticker 2300+ [phone] / Background 400+ [phone] / Filter 500+ [phone] / 100GB (cloud) [phone] / 4K output [phone] / Template [phone] / Project [phone] / Mine [phone] / Speed Curve [phone] / Photo Enhance [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5565,4110",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5565,
+      "y": 4110,
+      "low": false,
+      "text": "AI Mini [phone] / Drama [phone] / Auto [phone] / Photo Enhance [phone] / Captions [phone] / View more [phone] / USA Cam [phone] / Mine [phone] / View more [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@8094,4172",
+      "board": "ds-ny-launcher-dialog",
+      "x": 8094,
+      "y": 4172,
+      "low": false,
+      "text": "Clear [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@8011,4402",
+      "board": "ds-ny-launcher-dialog",
+      "x": 8011,
+      "y": 4402,
+      "low": false,
+      "text": "50 [phone] / 10s [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5438,4410",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5438,
+      "y": 4410,
+      "low": false,
+      "text": "Team ARG [phone] / AI Magic [phone] / Template [phone] / Project [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@5870,4410",
+      "board": "ds-ny-launcher-dialog",
+      "x": 5870,
+      "y": 4410,
+      "low": false,
+      "text": "Team ARG [phone] / AI Magic [phone] / Template [phone] / Project [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6275,4438",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6275,
+      "y": 4438,
+      "low": false,
+      "text": "Home [phone] / AI Magic [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6421,4438",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6421,
+      "y": 4438,
+      "low": false,
+      "text": "Template [phone] / Project [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@6566,4438",
+      "board": "ds-ny-launcher-dialog",
+      "x": 6566,
+      "y": 4438,
+      "low": false,
+      "text": "Mine [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-ny-launcher-dialog@7042,4438",
+      "board": "ds-ny-launcher-dialog",
+      "x": 7042,
+      "y": 4438,
+      "low": false,
+      "text": "Project [phone] / Mine [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-xmas-iap-credit@-333,2060",
+      "board": "ds-xmas-iap-credit",
+      "x": -333,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / Christmas [phone] / Special [phone] / PowerDirector [phone] / Pro [phone] / No Watermark. Unlimited  Assets. No Ads. [phone] / 50% Off Credit Pack. [phone] / Auto Edit [phone] / Auto Edit [phone] / $31.99/Year [phone] / with 7-day free trial [phone] / $7.99/Month [phone] / Receive 35 credits during free trial [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone]",
+      "trace": "R-034, R-040"
+    },
+    {
+      "id": "ds-xmas-iap-credit@99,2060",
+      "board": "ds-xmas-iap-credit",
+      "x": 99,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / Christmas [phone] / Special [phone] / PowerDirector [phone] / Pro [phone] / No Watermark. Unlimited  Assets. No Ads. [phone] / 50% Off Credit Pack. [phone] / Auto Edit [phone] / Auto Edit [phone] / $31.99/Year [phone] / with 7-day free trial [phone] / $7.99/Month [phone] / Receive 35 credits during free trial [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone]",
+      "trace": "R-034, R-040"
+    },
+    {
+      "id": "ds-xmas-iap-credit@576,2060",
+      "board": "ds-xmas-iap-credit",
+      "x": 576,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / Christmas [phone] / Special [phone] / PowerDirector [phone] / Pro [phone] / No Watermark. Unlimited  Assets. No Ads. [phone] / 50% Off Credit Pack. [phone] / Auto Edit [phone] / Auto Edit [phone] / $31.99/Year [phone] / with 7-day free trial [phone] / $7.99/Month [phone] / Receive 35 credits during free trial [phone] / Get 7-Day Free Trial [phone] / Renew automatically after 7-day free trial. Cancel at least 24 hours prior to your renewal date. [phone]",
+      "trace": "R-034, R-040"
+    },
+    {
+      "id": "ds-xmas-iap-credit@2093,2060",
+      "board": "ds-xmas-iap-credit",
+      "x": 2093,
+      "y": 2060,
+      "low": false,
+      "text": "12:30 [phone] / Christmas [phone] / Special [phone] / 100 [phone] / Expiring within 7 days: 50 credits [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@1247,2106",
+      "board": "ds-xmas-iap-credit",
+      "x": 1247,
+      "y": 2106,
+      "low": false,
+      "text": "Christmas [phone] / Special [phone] / 100 [phone] / Expiring within 7 days: 50 credits [phone] / Special Offer [phone] / 1000 [phone] / +1000 [phone] / 50 [phone] / $9.99 [phone] / $17.99 [phone] / $4.99 [phone] / $8.99 [phone] / 500 [phone] / $69.99 [phone] / $119.99 [phone] / $34.99 [phone] / $59.99 [phone] / Subscribe for 3000 free credits! [phone] / Get 2000 credits for $166.99 [phone] / Each credit for about $0.1 [phone] / The expiration period for consumed credits is one year. [phone] / Privacy Policy [phone] / Terms of Use [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@1679,2106",
+      "board": "ds-xmas-iap-credit",
+      "x": 1679,
+      "y": 2106,
+      "low": false,
+      "text": "Christmas [phone] / Special [phone] / 100 [phone] / Expiring within 7 days: 50 credits [phone] / Special Offer [phone] / 1000 [phone] / +1000 [phone] / 50 [phone] / $9.99 [phone] / $17.99 [phone] / $4.99 [phone] / $8.99 [phone] / 500 [phone] / $69.99 [phone] / $119.99 [phone] / $34.99 [phone] / $59.99 [phone] / Subscribe for 3000 free credits! [phone] / Get 2000 credits for $166.99 [phone] / Each credit for about $0.1 [phone] / The expiration period for consumed credits is one year. [phone] / Privacy Policy [phone] / Terms of Use [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@2222,2254",
+      "board": "ds-xmas-iap-credit",
+      "x": 2222,
+      "y": 2254,
+      "low": false,
+      "text": "Special Offer [phone] / 1000 [phone] / +1000 [phone] / 50 [phone] / $17.99 [phone] / $8.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@2362,2291",
+      "board": "ds-xmas-iap-credit",
+      "x": 2362,
+      "y": 2291,
+      "low": false,
+      "text": "$166.99 [phone] / 100 [phone] / 200 [phone] / $31.99 [phone] / $15.99 [phone] / 1000 [phone] / 2000 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@1417,2319",
+      "board": "ds-xmas-iap-credit",
+      "x": 1417,
+      "y": 2319,
+      "low": false,
+      "text": "$166.99 [phone] / 100 [phone] / 200 [phone] / $31.99 [phone] / $15.99 [phone] / 1000 [phone] / 2000 [phone] / $199.99 [phone] / $99.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@1849,2319",
+      "board": "ds-xmas-iap-credit",
+      "x": 1849,
+      "y": 2319,
+      "low": false,
+      "text": "$166.99 [phone] / 100 [phone] / 200 [phone] / $31.99 [phone] / $15.99 [phone] / 1000 [phone] / 2000 [phone] / $199.99 [phone] / $99.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@805,2356",
+      "board": "ds-xmas-iap-credit",
+      "x": 805,
+      "y": 2356,
+      "low": false,
+      "text": "Remove Watermark [phone] / 4K Output [phone] / Special Offer [phone] / 67% [phone] / OFF [phone]",
+      "trace": "older: PM 1104 Update (Treat tag, Save 57%) replaced the Design plan card (Q-10)"
+    },
+    {
+      "id": "ds-xmas-iap-credit@2085,2386",
+      "board": "ds-xmas-iap-credit",
+      "x": 2085,
+      "y": 2386,
+      "low": false,
+      "text": "$9.99 [phone] / $4.99 [phone] / 500 [phone] / Subscribe for 3000 free credits! [phone] / Get 2000 credits for $166.99 [phone] / Each credit for about $0.1 [phone] / The expiration period for consumed credits is one year. [phone] / Privacy Policy [phone]",
+      "trace": "R-045, R-046, R-049, R-050, R-052"
+    },
+    {
+      "id": "ds-xmas-iap-credit@-104,2430",
+      "board": "ds-xmas-iap-credit",
+      "x": -104,
+      "y": 2430,
+      "low": false,
+      "text": "Remove Watermark [phone] / 4K Output [phone] / Special Offer [phone] / 67% [phone] / OFF [phone]",
+      "trace": "older: PM 1104 Update (Treat tag, Save 57%) replaced the Design plan card (Q-10)"
+    },
+    {
+      "id": "ds-xmas-iap-credit@328,2430",
+      "board": "ds-xmas-iap-credit",
+      "x": 328,
+      "y": 2430,
+      "low": false,
+      "text": "Remove Watermark [phone] / 4K Output [phone] / Special Offer [phone] / 67% [phone] / OFF [phone]",
+      "trace": "older: PM 1104 Update (Treat tag, Save 57%) replaced the Design plan card (Q-10)"
+    },
+    {
+      "id": "ds-xmas-iap-credit@719,2651",
+      "board": "ds-xmas-iap-credit",
+      "x": 719,
+      "y": 2651,
+      "low": false,
+      "text": "2D 23:56:18 [phone] / Terms of Service [phone] / Privacy Policy [phone] / Restore purchase [phone]",
+      "trace": "older: PM 1104 Update removed the countdown under the subscription CTA (R-038, Q-11)"
+    },
+    {
+      "id": "ds-xmas-iap-credit@-208,2717",
+      "board": "ds-xmas-iap-credit",
+      "x": -208,
+      "y": 2717,
+      "low": false,
+      "text": "2D 23:56:18 [phone] / Terms of Service [phone] / Privacy Policy [phone] / Restore purchase [phone]",
+      "trace": "older: PM 1104 Update removed the countdown under the subscription CTA (R-038, Q-11)"
+    },
+    {
+      "id": "ds-xmas-iap-credit@224,2717",
+      "board": "ds-xmas-iap-credit",
+      "x": 224,
+      "y": 2717,
+      "low": false,
+      "text": "2D 23:56:18 [phone] / Terms of Service [phone] / Privacy Policy [phone] / Restore purchase [phone]",
+      "trace": "older: PM 1104 Update removed the countdown under the subscription CTA (R-038, Q-11)"
+    },
+    {
+      "id": "ds-xmas-iap-credit@2284,2730",
+      "board": "ds-xmas-iap-credit",
+      "x": 2284,
+      "y": 2730,
+      "low": false,
+      "text": "Terms of Use [phone]",
+      "trace": "R-052"
+    },
+    {
+      "id": "ds-xmas-interstitial@201,425",
+      "board": "ds-xmas-interstitial",
+      "x": 201,
+      "y": 425,
+      "low": false,
+      "text": "Save [phone] / 57 [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@-311,456",
+      "board": "ds-xmas-interstitial",
+      "x": -311,
+      "y": 456,
+      "low": false,
+      "text": "Save [phone] / 57 [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@396,517",
+      "board": "ds-xmas-interstitial",
+      "x": 396,
+      "y": 517,
+      "low": false,
+      "text": "% [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@-116,548",
+      "board": "ds-xmas-interstitial",
+      "x": -116,
+      "y": 548,
+      "low": false,
+      "text": "% [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@230,634",
+      "board": "ds-xmas-interstitial",
+      "x": 230,
+      "y": 634,
+      "low": false,
+      "text": "vs. paying $6.79/mo × 12 [phone] / $34.99 [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plan [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "R-020, Q-6"
+    },
+    {
+      "id": "ds-xmas-interstitial@364,695",
+      "board": "ds-xmas-interstitial",
+      "x": 364,
+      "y": 695,
+      "low": false,
+      "text": "/year [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@-280,699",
+      "board": "ds-xmas-interstitial",
+      "x": -280,
+      "y": 699,
+      "low": false,
+      "text": "vs. paying $6.79/mo × 12 [phone] / $34.99 [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plan [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "R-020, Q-6"
+    },
+    {
+      "id": "ds-xmas-interstitial@-146,760",
+      "board": "ds-xmas-interstitial",
+      "x": -146,
+      "y": 760,
+      "low": false,
+      "text": "/year [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@380,895",
+      "board": "ds-xmas-interstitial",
+      "x": 380,
+      "y": 895,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-interstitial@-131,976",
+      "board": "ds-xmas-interstitial",
+      "x": -131,
+      "y": 976,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "R-018"
+    },
+    {
+      "id": "ds-xmas-landscape@-345,5276",
+      "board": "ds-xmas-landscape",
+      "x": -345,
+      "y": 5276,
+      "low": false,
+      "text": "Launcher",
+      "trace": "label: board heading"
+    },
+    {
+      "id": "ds-xmas-landscape@609,5276",
+      "board": "ds-xmas-landscape",
+      "x": 609,
+      "y": 5276,
+      "low": false,
+      "text": "Interstitial / Save",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-xmas-landscape@2238,5346",
+      "board": "ds-xmas-landscape",
+      "x": 2238,
+      "y": 5346,
+      "low": false,
+      "text": "Special Offer",
+      "trace": "older: PM 1104 Update replaced the Special Offer tag and $31.99 (Q-10)"
+    },
+    {
+      "id": "ds-xmas-landscape@-221,5357",
+      "board": "ds-xmas-landscape",
+      "x": -221,
+      "y": 5357,
+      "low": false,
+      "text": "Try Pro+ 7 days for free / Image to Video / AI Art / Video Enhance / My Projects / New Project",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-xmas-landscape@2024,5368",
+      "board": "ds-xmas-landscape",
+      "x": 2024,
+      "y": 5368,
+      "low": false,
+      "text": "$31.99/Year / with 7-day free trial / $7.99/Month / Receive 35 credits during free trial / Get 7-Day Free Trial / 2D 23:56:18 / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. / Terms of Service / Privacy Policy",
+      "trace": "older: PM 1104 Update replaced the Special Offer tag and $31.99 (Q-10)"
+    },
+    {
+      "id": "ds-xmas-landscape@1123,5397",
+      "board": "ds-xmas-landscape",
+      "x": 1123,
+      "y": 5397,
+      "low": false,
+      "text": "$34.99 / Get 7-Day Free Trial / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. / More subscription plan / Terms of Service / Privacy Policy",
+      "trace": "R-024, Q-6"
+    },
+    {
+      "id": "ds-xmas-landscape@1273,5415",
+      "board": "ds-xmas-landscape",
+      "x": 1273,
+      "y": 5415,
+      "low": false,
+      "text": "/year",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-xmas-landscape@-16,5434",
+      "board": "ds-xmas-landscape",
+      "x": -16,
+      "y": 5434,
+      "low": false,
+      "text": "AI Anime Video / Auto Captions / Project 11-1253... / 01:09:18 / 16:9",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-xmas-landscape@160,5434",
+      "board": "ds-xmas-landscape",
+      "x": 160,
+      "y": 5434,
+      "low": false,
+      "text": "Photo Enhance / Replace / Project 11-1253... / 01:09:18 / 16:9",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-xmas-landscape@336,5434",
+      "board": "ds-xmas-landscape",
+      "x": 336,
+      "y": 5434,
+      "low": false,
+      "text": "Adjust Speed / Image to Video / Select / Project 11-1253... / 01:09:18 / 16:9",
+      "trace": "R-059"
+    },
+    {
+      "id": "ds-xmas-landscape@1649,5454",
+      "board": "ds-xmas-landscape",
+      "x": 1649,
+      "y": 5454,
+      "low": false,
+      "text": "Christmas / Special",
+      "trace": "R-060"
+    },
+    {
+      "id": "ds-xmas-landscape@723,5607",
+      "board": "ds-xmas-landscape",
+      "x": 723,
+      "y": 5607,
+      "low": false,
+      "text": "vs. paying $6.79/mo × 12",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-xmas-landscape@1293,5647",
+      "board": "ds-xmas-landscape",
+      "x": 1293,
+      "y": 5647,
+      "low": false,
+      "text": "Restore purchase",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-xmas-landscape@2234,5649",
+      "board": "ds-xmas-landscape",
+      "x": 2234,
+      "y": 5649,
+      "low": false,
+      "text": "Restore purchase",
+      "trace": "R-024"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@596,3628",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 596,
+      "y": 3628,
+      "low": false,
+      "text": "Free user / Try Pro+ 7 days for free [phone] / Free [phone] / 20+ [phone] / Benefits [phone] / AI [phone] / Storytelling [phone] / Credits [phone] / My Artwork [phone] / My Cloud [phone] / Demo Videos [phone] / User Sign in [phone]",
+      "trace": "R-028, R-032"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@2383,3739",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 2383,
+      "y": 3739,
+      "low": false,
+      "text": "182 [phone] / Template [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@-302,3742",
+      "board": "ds-xmas-launcher-dialog",
+      "x": -302,
+      "y": 3742,
+      "low": false,
+      "text": "Try Pro+ 7 days for free [phone]",
+      "trace": "R-028, Q-8"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@130,3742",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 130,
+      "y": 3742,
+      "low": false,
+      "text": "Try Pro+ 7 days for free [phone]",
+      "trace": "R-028, Q-8"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@1192,3742",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 1192,
+      "y": 3742,
+      "low": false,
+      "text": "Credit Special Offer [phone] / VIP [phone] / You’re on the highest plan. [phone] / 1000+ templates, 100 GB cloud space, and 500 monthly credits. [phone] / Credits [phone] / My Artwork [phone] / My Cloud [phone] / Demo Videos [phone] / User Sign in [phone] / Your VIP Features [phone] / Video Enhance [phone] / Try Now [phone] / Auto Caption [phone] / Home [phone] / AI Magic [phone] / Template [phone] / Try Now [phone]",
+      "trace": "R-043, R-044"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@1609,3742",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 1609,
+      "y": 3742,
+      "low": false,
+      "text": "Credit Special Offer [phone] / VIP [phone] / My Credits [phone] / 300 [phone] / More VIP Benefits [phone] / AI Art 100+ [phone] / Transition  600+ [phone] / Effects 50+ [phone] / Body Effect  50+ [phone] / Image to Video 100+ [phone] / Home [phone] / AI Magic [phone] / Motion Tracking [phone]",
+      "trace": "R-043, R-044"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@2191,3782",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 2191,
+      "y": 3782,
+      "low": false,
+      "text": "Custom [phone] / Model [phone] / HappyHorse [phone] / Describe your idea [phone] / More Credits Needed! [phone] / Gracefully moves a hand to gently brush through the hair [phone] / You don’t have enough credits to use this feature. Get credits now! [phone] / 0/2500 [phone] / Grab Discount Now! [phone] / Try with inspirations [phone] / Video Quality [phone] / Standard [phone] / Pro [phone] / Generate [phone] / Duration [phone] / 5s [phone]",
+      "trace": "R-053"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@780,3808",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 780,
+      "y": 3808,
+      "low": false,
+      "text": "Claim Holiday Deal [phone] / Video Object Removal [phone] / Video [phone] / Advanced Cutout [phone] / Enhance [phone] / None [phone]",
+      "trace": "R-032, R-033"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@-378,3912",
+      "board": "ds-xmas-launcher-dialog",
+      "x": -378,
+      "y": 3912,
+      "low": false,
+      "text": "Make Christmas magic with AI [phone] / New Project [phone] / Image to Video [phone] / Text to [phone] / Video [phone] / What’s Trending [phone] / USA Winner [phone] / Home [phone] / Meme Dance Creator [phone]",
+      "trace": "R-026"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@54,3912",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 54,
+      "y": 3912,
+      "low": false,
+      "text": "Make Christmas magic with AI [phone] / New Project [phone] / NEW [phone] / Image to Video [phone] / Text to [phone] / Video [phone] / What’s Trending [phone] / USA Winner [phone] / Home [phone] / Meme Dance Creator [phone]",
+      "trace": "R-026"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@1434,3918",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 1434,
+      "y": 3918,
+      "low": false,
+      "text": "500 [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@1816,3921",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 1816,
+      "y": 3921,
+      "low": false,
+      "text": "Get More [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@2387,3940",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 2387,
+      "y": 3940,
+      "low": false,
+      "text": "My Prompt [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@-256,3994",
+      "board": "ds-xmas-launcher-dialog",
+      "x": -256,
+      "y": 3994,
+      "low": false,
+      "text": "Video Edit by Chat [phone] / Video [phone] / Enhance [phone] / Character Motion Swap [phone] / Cinematic Reel Creator [phone] / Auto Edit [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@176,3994",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 176,
+      "y": 3994,
+      "low": false,
+      "text": "Video Edit by Chat [phone] / Video [phone] / Enhance [phone] / Character Motion Swap [phone] / Cinematic Reel Creator [phone] / Auto Edit [phone] / Auto [phone] / Captions [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@373,4054",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 373,
+      "y": 4054,
+      "low": false,
+      "text": "NEW [phone] / AI Mini [phone] / Drama [phone] / Photo Enhance [phone] / View more [phone] / USA Cam [phone] / Mine [phone] / View more [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@1814,4068",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 1814,
+      "y": 4068,
+      "low": false,
+      "text": "Titles 1000+ [phone] / Music  100+ [phone] / Sticker 2300+ [phone] / Background 400+ [phone] / Filter 500+ [phone] / 100GB (cloud) [phone] / 4K output [phone] / Template [phone] / Project [phone] / Mine [phone] / Speed Curve [phone] / Photo Enhance [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@-115,4110",
+      "board": "ds-xmas-launcher-dialog",
+      "x": -115,
+      "y": 4110,
+      "low": false,
+      "text": "AI Mini [phone] / Drama [phone] / Auto [phone] / Photo Enhance [phone] / Captions [phone] / View more [phone] / USA Cam [phone] / Mine [phone] / View more [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@2414,4172",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 2414,
+      "y": 4172,
+      "low": false,
+      "text": "Clear [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@2331,4402",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 2331,
+      "y": 4402,
+      "low": false,
+      "text": "50 [phone] / 10s [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@-242,4410",
+      "board": "ds-xmas-launcher-dialog",
+      "x": -242,
+      "y": 4410,
+      "low": false,
+      "text": "Team ARG [phone] / AI Magic [phone] / Template [phone] / Project [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@190,4410",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 190,
+      "y": 4410,
+      "low": false,
+      "text": "Team ARG [phone] / AI Magic [phone] / Template [phone] / Project [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@595,4438",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 595,
+      "y": 4438,
+      "low": false,
+      "text": "Home [phone] / AI Magic [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@741,4438",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 741,
+      "y": 4438,
+      "low": false,
+      "text": "Template [phone] / Project [phone]",
+      "trace": "ui: regular Launcher, Mine or Image to Video content the campaign does not change"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@886,4438",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 886,
+      "y": 4438,
+      "low": false,
+      "text": "Mine [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "ds-xmas-launcher-dialog@1362,4438",
+      "board": "ds-xmas-launcher-dialog",
+      "x": 1362,
+      "y": 4438,
+      "low": false,
+      "text": "Project [phone] / Mine [phone]",
+      "trace": "R-030, R-031"
+    },
+    {
+      "id": "pm-loose-left@-9484,2257",
+      "board": "pm-loose-left",
+      "x": -9484,
+      "y": 2257,
+      "low": false,
+      "text": "PowerDirector Pro+ [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-9069,2257",
+      "board": "pm-loose-left",
+      "x": -9069,
+      "y": 2257,
+      "low": false,
+      "text": "PowerDirector Pro+ [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-9501,2613",
+      "board": "pm-loose-left",
+      "x": -9501,
+      "y": 2613,
+      "low": false,
+      "text": "Save 66% vs. Monthly [phone] / $31.99 [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-9086,2613",
+      "board": "pm-loose-left",
+      "x": -9086,
+      "y": 2613,
+      "low": false,
+      "text": "Save 63% vs. Monthly [phone] / $34.99 [phone] / Get 7-Day Free Trial [phone] / 7 days free, then $34.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plans [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-9351,2688",
+      "board": "pm-loose-left",
+      "x": -9351,
+      "y": 2688,
+      "low": false,
+      "text": "/year [phone] / $34.99 [phone] / 2D 23:56:18 [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-8932,2716",
+      "board": "pm-loose-left",
+      "x": -8932,
+      "y": 2716,
+      "low": false,
+      "text": "/year [phone] / 2D 23:56:18 [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-9482,2832",
+      "board": "pm-loose-left",
+      "x": -9482,
+      "y": 2832,
+      "low": false,
+      "text": "Get 7-Day Free Trial [phone] / 7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plans [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-9334,2964",
+      "board": "pm-loose-left",
+      "x": -9334,
+      "y": 2964,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-left@-8919,2964",
+      "board": "pm-loose-left",
+      "x": -8919,
+      "y": 2964,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-right@13777,-2781",
+      "board": "pm-loose-right",
+      "x": 13777,
+      "y": -2781,
+      "low": false,
+      "text": "Design多國11國: ENG, CHT, CHS, FRA, DEU, Hindi, IND, ITA,JPN,KOR,ESP",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-right@13758,-2590",
+      "board": "pm-loose-right",
+      "x": 13758,
+      "y": -2590,
+      "low": false,
+      "text": "「Christmas Sale」改為「Christmas Special」，因目前未提供年折扣，現有畫面設計不適合使用「Sale」 / 加重「Save 66% 」視覺呈現，提高折扣力度吸引力 / 移除原價刪除線及倒數計時",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-right@15806,-2523",
+      "board": "pm-loose-right",
+      "x": 15806,
+      "y": -2523,
+      "low": false,
+      "text": "價格Tag改為「Christmas Treat」：所有文案不得出現與「Offer」相關的字樣",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-right@13944,1312",
+      "board": "pm-loose-right",
+      "x": 13944,
+      "y": 1312,
+      "low": false,
+      "text": "If點數不夠",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-right@13944,1788",
+      "board": "pm-loose-right",
+      "x": 13944,
+      "y": 1788,
+      "low": false,
+      "text": "If點數夠",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-right@14515,2817",
+      "board": "pm-loose-right",
+      "x": 14515,
+      "y": 2817,
+      "low": false,
+      "text": "開始gen",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@-5707,-3956",
+      "board": "pm-loose-top",
+      "x": -5707,
+      "y": -3956,
+      "low": false,
+      "text": "PowerDirector Pro+ [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@3734,-3886",
+      "board": "pm-loose-top",
+      "x": 3734,
+      "y": -3886,
+      "low": false,
+      "text": "PowerDirector Pro+ [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@-5721,-3582",
+      "board": "pm-loose-top",
+      "x": -5721,
+      "y": -3582,
+      "low": false,
+      "text": "$34.99 [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@-5571,-3562",
+      "board": "pm-loose-top",
+      "x": -5571,
+      "y": -3562,
+      "low": false,
+      "text": "/year [phone] / Save 57% [phone] / vs. $6.79/mo [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@3720,-3512",
+      "board": "pm-loose-top",
+      "x": 3720,
+      "y": -3512,
+      "low": false,
+      "text": "$34.99 [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@3870,-3492",
+      "board": "pm-loose-top",
+      "x": 3870,
+      "y": -3492,
+      "low": false,
+      "text": "/year [phone] / Save 57% [phone] / vs. $6.79/mo [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@-5705,-3381",
+      "board": "pm-loose-top",
+      "x": -5705,
+      "y": -3381,
+      "low": false,
+      "text": "Get 7-Day Free Trial [phone] / 7 days free, then $34.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plans [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@3736,-3311",
+      "board": "pm-loose-top",
+      "x": 3736,
+      "y": -3311,
+      "low": false,
+      "text": "Get 7-Day Free Trial [phone] / 7 days free, then $34.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged. [phone] / More subscription plans [phone] / Terms of Service [phone] / Privacy Policy [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@-5557,-3249",
+      "board": "pm-loose-top",
+      "x": -5557,
+      "y": -3249,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-loose-top@3884,-3179",
+      "board": "pm-loose-top",
+      "x": 3884,
+      "y": -3179,
+      "low": false,
+      "text": "Restore purchase [phone]",
+      "trace": "older: loose older copies outside the Christmas / New Year sections (superseded by the 1104 frames)"
+    },
+    {
+      "id": "pm-ny-credit@4910,596",
+      "board": "pm-ny-credit",
+      "x": 4910,
+      "y": 596,
+      "low": false,
+      "text": "無訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-ny-credit@5471,596",
+      "board": "pm-ny-credit",
+      "x": 5471,
+      "y": 596,
+      "low": false,
+      "text": "已訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-ny-credit@3799,1308",
+      "board": "pm-ny-credit",
+      "x": 3799,
+      "y": 1308,
+      "low": false,
+      "text": "If點數不夠",
+      "trace": "R-053, R-055"
+    },
+    {
+      "id": "pm-ny-credit@3799,1784",
+      "board": "pm-ny-credit",
+      "x": 3799,
+      "y": 1784,
+      "low": false,
+      "text": "If點數夠",
+      "trace": "R-056"
+    },
+    {
+      "id": "pm-ny-credit@4370,2813",
+      "board": "pm-ny-credit",
+      "x": 4370,
+      "y": 2813,
+      "low": false,
+      "text": "開始gen",
+      "trace": "R-056"
+    },
+    {
+      "id": "pm-ny-iap@4910,596",
+      "board": "pm-ny-iap",
+      "x": 4910,
+      "y": 596,
+      "low": false,
+      "text": "無訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-ny-iap@5471,596",
+      "board": "pm-ny-iap",
+      "x": 5471,
+      "y": 596,
+      "low": false,
+      "text": "已訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-ny-launch@3632,-2785",
+      "board": "pm-ny-launch",
+      "x": 3632,
+      "y": -2785,
+      "low": false,
+      "text": "Design多國11國: ENG, CHT, CHS, FRA, DEU, Hindi, IND, ITA,JPN,KOR,ESP / 「New Year Sale」改為「New Year Special」，因目前未提供年折扣，現有畫面設計不適合使用「Sale」 / 加重「Save 57% 」視覺呈現，提高折扣力度吸引力 / 移除原價刪除線及倒數計時",
+      "trace": "R-018, R-019"
+    },
+    {
+      "id": "pm-ny-launch@5664,-2636",
+      "board": "pm-ny-launch",
+      "x": 5664,
+      "y": -2636,
+      "low": false,
+      "text": "價格Tag改為「New Year Treat」：所有文案不得出現與「Offer」相關的字樣 / Monthly 呈現原價劃掉，顯示優惠價 / 移除倒數計時，放在 CTA 會讓使用者誤會是年方案折扣做最後倒數",
+      "trace": "R-035, R-037, R-038"
+    },
+    {
+      "id": "pm-ny-rules@7172,-2579",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -2579,
+      "low": false,
+      "text": "目標 : Increase sub revenue (Free User) and credit revenue (Paid User) 檔期：New Year  Sale 2025/12/28-2025/01/05, User Local Time >> 共 9 days (216 hr) / *兩檔期Spec邏輯相同，但優惠及視覺會換，以下若有提到Christmas優惠及視覺，New Year時皆須換成New Year優惠及視覺* / ➊ Promotion 內容 / Subscription Sale Promotion 期間 New User Offer 不顯示 ，優惠結束恢復 New User Offer / Pro Annual 原價, with 7-day free trial; Monthly 15% off / India/ Indonesia/ Philippines 維持default landing 在 monthly plan / SKU 表",
+      "trace": "R-001, R-002, R-003, R-004, R-005, R-006, R-007, R-008, Q-2, Q-3"
+    },
+    {
+      "id": "pm-ny-rules@7172,-2243",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -2243,
+      "low": false,
+      "text": "New Free User 出現邏輯 / 1st Launch: GDPR → Sub 活動 interstitial → 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 2nd Launch: Open intro→ Sub 活動 interstitial→ 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 3rd (Daily) Launch: Sub 活動 interstitial → 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點擊 More subscription plans 到 IAP / Upgrade Free User 出現邏輯 / 1st Launch: Open intro → Sub 活動 interstitial→ 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 2nd (Daily) Launch: Sub 活動 interstitial→ 點 X 回 launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 底圖 & 價格 / Design 出底圖：包含標題 New Year Sale 出多國文案 (11國*2檔期 =22張) / RD 出價格：New Year Sale 該行以下文字出多國 / Top Banner  加上New Year Top Banner (請design確認可符合dark/light mode的設計) / Mine Footer     調整成 New Year 氛圍 Icon / Top Banner   新增禮物感靜態 New Year Top Banner，不出多國 / 壓底圖，右半邊維持「xx% Off」，右上角Tag加小裝飾，文字改成「Special Offer」出多國 / 「xx% Off」公式: Xmas 年價格 vs 月價格*12個月的 價差% / CTA BTN      Get 7-day Free Trial 下方加上倒數鐘，12/21 開始倒數 7天 / VIP Welcome Banner: 放上New Year裝飾，含 US / JP 兩版本 / Top Banner   放靜態 New Year Top Banner，文案「New Year Sale」，不出多國 / Special Offer 若是賣500 credit pack (free user)，則只顯示白字「500」，右側原價劃掉，顯示原價 Special Offer 若是賣2000 credit pack (paid user)，則顯示「1000+1000」(白字+綠字) / CTA BTN      上方加上倒數鐘，12/21 開始倒數 7天 / 未訂閱 Auto Pass 的用戶會看到 Auto Pass 的 Credit Sales；若已訂閱 Auto Pass，則會看到 2000 Credit Pack 的 Credit Sales / 背景色&圖片  改成檔期主題 / CTA BTN  文案: Grab Discount Now!",
+      "trace": "R-010, R-011, R-012, R-013, R-014, R-015, R-016, R-017, R-022, R-026, R-027, R-030, R-034, R-035, R-036, R-038, R-043, R-045, R-048, R-049, R-053, R-055, R-058, Q-4, Q-10, Q-11, Q-14, Q-16"
+    },
+    {
+      "id": "pm-xmas-credit@-4560,540",
+      "board": "pm-xmas-credit",
+      "x": -4560,
+      "y": 540,
+      "low": false,
+      "text": "無訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-xmas-credit@-3999,540",
+      "board": "pm-xmas-credit",
+      "x": -3999,
+      "y": 540,
+      "low": false,
+      "text": "已訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-xmas-credit@-5671,1252",
+      "board": "pm-xmas-credit",
+      "x": -5671,
+      "y": 1252,
+      "low": false,
+      "text": "If點數不夠",
+      "trace": "R-053, R-055"
+    },
+    {
+      "id": "pm-xmas-credit@-5671,1728",
+      "board": "pm-xmas-credit",
+      "x": -5671,
+      "y": 1728,
+      "low": false,
+      "text": "If點數夠",
+      "trace": "R-056"
+    },
+    {
+      "id": "pm-xmas-credit@-5100,2757",
+      "board": "pm-xmas-credit",
+      "x": -5100,
+      "y": 2757,
+      "low": false,
+      "text": "開始gen",
+      "trace": "R-056"
+    },
+    {
+      "id": "pm-xmas-iap@-4560,540",
+      "board": "pm-xmas-iap",
+      "x": -4560,
+      "y": 540,
+      "low": false,
+      "text": "無訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-xmas-iap@-3999,540",
+      "board": "pm-xmas-iap",
+      "x": -3999,
+      "y": 540,
+      "low": false,
+      "text": "已訂閱 Credit Auto Pass",
+      "trace": "R-048, Q-14"
+    },
+    {
+      "id": "pm-xmas-launch@-5838,-2841",
+      "board": "pm-xmas-launch",
+      "x": -5838,
+      "y": -2841,
+      "low": false,
+      "text": "Design多國11國: ENG, CHT, CHS, FRA, DEU, Hindi, IND, ITA,JPN,KOR,ESP / 「Christmas Sale」改為「Christmas Special」，因目前未提供年折扣，現有畫面設計不適合使用「Sale」 / 加重「Save 57% 」視覺呈現，提高折扣力度吸引力 / 移除原價刪除線及倒數計時",
+      "trace": "R-018, R-019"
+    },
+    {
+      "id": "pm-xmas-launch@-3817,-2696",
+      "board": "pm-xmas-launch",
+      "x": -3817,
+      "y": -2696,
+      "low": false,
+      "text": "價格Tag改為「Christmas Treat」：所有文案不得出現與「Offer」相關的字樣 / Monthly 呈現原價劃掉，顯示優惠價 / 移除倒數計時，放在 CTA 會讓使用者誤會是年方案折扣做最後倒數",
+      "trace": "R-035, R-037, R-038"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-2569",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -2569,
+      "low": false,
+      "text": "目標 : Increase sub revenue (Free User) and credit revenue (Paid User) 檔期：Christmas  Sale 2025/12/11– 12/27, User Local Time >> 共 17 days (408 hr) / *兩檔期Spec邏輯相同，但優惠及視覺會換，以下若有提到Christmas優惠及視覺，New Year時皆須換成New Year優惠及視覺* / ➊ Promotion 內容 / Subscription Sale Promotion 期間 New User Offer 不顯示 ，優惠結束恢復 New User Offer / Pro Annual 原價, with 7-day free trial; Monthly 15% off / India/ Indonesia/ Philippines 維持default landing 在 monthly plan / SKU 表",
+      "trace": "R-001, R-002, R-003, R-004, R-005, R-006, R-007, R-008, Q-2, Q-3"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-2233",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -2233,
+      "low": false,
+      "text": "New Free User 出現邏輯 / 1st Launch: GDPR → Sub 活動 interstitial → 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 2nd Launch: Open intro→ Sub 活動 interstitial→ 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 3rd (Daily) Launch: Sub 活動 interstitial → 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點擊 More subscription plans 到 IAP / Upgrade Free User 出現邏輯 / 1st Launch: Open intro → Sub 活動 interstitial→ 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 2nd (Daily) Launch: Sub 活動 interstitial→ 點 X 回 launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP / 底圖 & 價格 / Design 出底圖：包含標題 Christmas Sale 出多國文案 (11國*2檔期 =22張) / RD 出價格：Christmas Sale 該行以下文字出多國 / Top Banner  加上Christmas Top Banner (請design確認可符合dark/light mode的設計) / Mine Footer     調整成 Christmas 氛圍 Icon / Top Banner   新增禮物感靜態 Christmas Top Banner，不出多國 / 壓底圖，右半邊維持「xx% Off」，右上角Tag加小裝飾，文字改成「Special Offer」出多國 / 「xx% Off」公式: Xmas 年價格 vs 月價格*12個月的 價差% / VIP Welcome Banner: 放上Xmas裝飾，含 US / JP 兩版本 / Top Banner   放靜態 Christmas Top Banner，文案「Christmas Sale」，不出多國 / Special Offer 若是賣500 credit pack (free user)，則只顯示白字「500」，右側原價劃掉，顯示原價 Special Offer 若是賣2000 credit pack (paid user)，則顯示「1000+1000」(白字+綠字) / 未訂閱 Auto Pass 的用戶會看到 Auto Pass 的 Credit Sales；若已訂閱 Auto Pass，則會看到 2000 Credit Pack 的 Credit Sales / 背景色&圖片  改成檔期主題 / CTA BTN  文案: Grab Discount Now!",
+      "trace": "R-010, R-011, R-012, R-013, R-014, R-015, R-016, R-017, R-022, R-026, R-027, R-030, R-034, R-035, R-036, R-038, R-043, R-045, R-048, R-049, R-053, R-055, R-058, Q-4, Q-10, Q-11, Q-14, Q-16"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-2317",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -2317,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Annual Subscription_Christmas_2611, SKU annualsubscription_christmas_2611: US $45.99, JP $34.99 / ¥6,100, FR $34.99 / €37.99, DE $34.99 / €37.99, UK $34.99 / £31.99, TW $34.99 / NT$1,210, ROW T2 -",
+      "trace": "R-005 (TC-017, TC-104, TC-147)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-2257",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -2257,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Monthly Subscription_Christmas_2611, SKU monthlysubscription_christmas_2611: US $6.99, JP $6.99 / ¥1190, FR $6.99 / €7.49, DE $6.99 / €7.49, UK $6.99 / £5.99, TW $6.99 / NT$240, ROW T2 -",
+      "trace": "R-006 (TC-105)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-2197",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -2197,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Annual Subscription_NewYear_2611, SKU annualsubscription_newyear_2611: same prices as the Christmas annual",
+      "trace": "R-005 (TC-024, TC-107)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-2137",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -2137,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Monthly Subscription_NewYear_2611, SKU monthlysubscription_newyear_2611: same prices as the Christmas monthly",
+      "trace": "R-006 (TC-106)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1981",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1981,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, ENG: title 「Christmas Special」, 「Save 57%」, 「vs. $6.79/mo」, CTA 「Get 7-Day Free Trial」",
+      "trace": "R-022 (TC-029)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1921",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1921,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, CHT: title 「聖誕節 限定」, 「現省 57%」, 「相較於每月$6.79」, CTA 「７天免費試用」",
+      "trace": "R-022 (TC-030)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1861",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1861,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, CHS: title 「圣诞节 限定」, 「现省57%」, 「相较于每月$6.79」, CTA 「7天免费试用」",
+      "trace": "R-022 (TC-031)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1801",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1801,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, FRA: title 「Vente de Noël」, 「Économisez 57%」, 「vs. $6.79/mo」, CTA 「Essai gratuit de 7 jours」",
+      "trace": "R-022 (TC-032)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1741",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1741,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, DEU: title 「Weihnachts- Special」, 「57% sparen」, 「vs. 6,79 € /Monat」, CTA 「7 Tage gratis testen」",
+      "trace": "R-022 (TC-033)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1681",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1681,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Hindi: title 「क्रिसमस की विशेष पेशकश」, 「57% बचत करें」, 「$6.79/महीने की तुलना में」, CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」",
+      "trace": "R-022 (TC-034)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1621",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1621,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, IND: title 「Spesial Natal」, 「Hemat 57%」, 「dibanding $6.79/bulan」, CTA 「Dapatkan Uji Coba Gratis 7 Hari」",
+      "trace": "R-022 (TC-035)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1561",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1561,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, ITA: title 「Natale Speciale」, 「Sconto 57%」, 「rispetto a €6,79/mese」, CTA 「Prova Gratis per 7gg.」",
+      "trace": "R-022 (TC-036)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1501",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1501,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, JPN: title 「クリスマス セール」, 「57% オフ」, 「通常月額 ¥6.79」, CTA 「7 日間無料で試す」",
+      "trace": "R-022 (TC-037)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1441",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1441,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, KOR: title 「Christmas Special」, 「57% 세일」, 「정가 : 월 $6.79」, CTA 「7일 무료 체험 시작하기」",
+      "trace": "R-022 (TC-038)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1381",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1381,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, ESP: title 「Especial Navidad」, 「Ahorra un 57 %」, 「frente a $6.79/mes」, CTA 「Prueba 7 días gratis」",
+      "trace": "R-022 (TC-039)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1321",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1321,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Malay: title 「Hari Natal Istimewa」, 「Jimat 57%」, 「berbanding $6.79/bulan」, CTA 「Dapatkan Percubaan Percuma 7 Hari」",
+      "trace": "R-022 (TC-040)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1261",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1261,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, PTB: title 「Especial de Natal」, 「Economize 57%」, 「em vez de $6.79/mês」, CTA 「Obtenha a avaliação gratuita de 7 dias」",
+      "trace": "R-022 (TC-041)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1201",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1201,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, RUS: title 「Рождественская акция」, 「Экономия 57%」, 「вместо $6.79/мес.」, CTA 「Попробовать 7 дней бесплатно」",
+      "trace": "R-022 (TC-042)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1141",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1141,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Thai: title 「คริสต์มาส สุดพิเศษ」, 「ประหยัด 57%」, 「เทียบกับ $6.79/เดือน」, CTA 「เชิญทดลองใช้ฟรี 7 วัน」",
+      "trace": "R-022 (TC-043)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1081",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1081,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, ESP (MX): title 「Especial de Navidad」, 「Ahorra 57 %」, 「frente a $6.79/mes」, CTA 「Prueba gratis por 7 días」",
+      "trace": "R-022 (TC-044)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-1021",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -1021,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Viet: title 「Ưu đãi Giáng sinh」, 「Tiết kiệm 57%」, 「so với $6.79/tháng」, CTA 「Dùng thử miễn phí 7 ngày」",
+      "trace": "R-022 (TC-045)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-961",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -961,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Dutch: title 「Kerst- aanbieding」, 「Bespaar 57%」, 「in plaats van $6.79/maand」, CTA 「Probeer 7 dagen gratis」",
+      "trace": "R-022 (TC-046)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-901",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -901,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Turkish: title 「Noel'e Özel」, 「%57 Tasarruf」, 「$6.79/ay yerine」, CTA 「7 günlük ücretsiz denemeyi başlat」",
+      "trace": "R-022 (TC-047)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-841",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -841,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Arabic: title 「عرض عيد الميلاد الخاص」, 「وفّر 57%」, 「بدلاً من $6.79/شهر」, CTA 「بدء تجربة مجانية لمدة 7 أيام」",
+      "trace": "R-022 (TC-048)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-781",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -781,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Polish: title 「Świąteczna promocja」, 「Zaoszczędź 57%」, 「zamiast $6.79/mies.」, CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」",
+      "trace": "R-022 (TC-049)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-721",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -721,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Persian: title 「کریسمس پیشنهاد ویژه」, 「تخفیف ۵۷٪」, 「در مقایسه با $6.79/ماه」, CTA 「شروع دوره آزمایشی رایگان ۷ روزه」",
+      "trace": "R-022 (TC-050)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-661",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -661,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, Hebrew: title 「מבצע מיוחד לחג המולד」, 「חסכו 57%」, 「לעומת $6.79/חודש」, CTA 「ניסיון חינם ל-7 ימים」",
+      "trace": "R-022 (TC-051)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-601",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -601,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, SVE: title 「Julens erbjudande」, 「Spara 57 %」, 「jämfört med $6.79/mån」, CTA 「Prova gratis i 7 dagar」",
+      "trace": "R-022 (TC-052)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-541",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -541,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, DAN: title 「Julens Særtilbud」, 「Spar 57 %」, 「mod $6.79/måned」, CTA 「Få 7-dages gratis prøveperiode」",
+      "trace": "R-022 (TC-053)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-481",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -481,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, NOR: title 「Jule- tilbud」, 「Spar 57 %」, 「sammenlignet med $6.79/mnd」, CTA 「Prøv gratis i 7 dager」",
+      "trace": "R-022 (TC-054)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-xmas-rules@-1890,-421",
+      "board": "pm-xmas-rules",
+      "x": -1890,
+      "y": -421,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] Christmas Special interstitial, UKR: title 「Різдвяна пропозиція」, 「Заощадьте 57%」, 「замість $6.79/міс.」, CTA 「Спробуйте 7 днів безкоштовно」",
+      "trace": "R-022 (TC-055)",
+      "link": "3226:31596"
+    },
+    {
+      "id": "pm-ny-rules@7172,-2327",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -2327,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Annual Subscription_Christmas_2611, SKU annualsubscription_christmas_2611: US $45.99, JP $34.99 / ¥6,100, FR $34.99 / €37.99, DE $34.99 / €37.99, UK $34.99 / £31.99, TW $34.99 / NT$1,210, ROW T2 -",
+      "trace": "R-005 (TC-017, TC-104, TC-147)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-2267",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -2267,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Monthly Subscription_Christmas_2611, SKU monthlysubscription_christmas_2611: US $6.99, JP $6.99 / ¥1190, FR $6.99 / €7.49, DE $6.99 / €7.49, UK $6.99 / £5.99, TW $6.99 / NT$240, ROW T2 -",
+      "trace": "R-006 (TC-105)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-2207",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -2207,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Annual Subscription_NewYear_2611, SKU annualsubscription_newyear_2611: same prices as the Christmas annual",
+      "trace": "R-005 (TC-024, TC-107)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-2147",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -2147,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847] Monthly Subscription_NewYear_2611, SKU monthlysubscription_newyear_2611: same prices as the Christmas monthly",
+      "trace": "R-006 (TC-106)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1991",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1991,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, ENG: title 「New Year Special」, 「Save 57%」, 「vs. $6.79/mo」, CTA 「Get 7-Day Free Trial」",
+      "trace": "R-022 (TC-056)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1931",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1931,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, CHT: title 「新年 限定」, 「現省 57%」, 「相較於每月$6.79」, CTA 「７天免費試用」",
+      "trace": "R-022 (TC-057)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1871",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1871,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, CHS: title 「新年 限定」, 「现省57%」, 「相较于每月$6.79」, CTA 「7天免费试用」",
+      "trace": "R-022 (TC-058)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1811",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1811,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, FRA: title 「Vente du Nouvel An」, 「Économisez 57%」, 「vs. $6.79/mo」, CTA 「Essai gratuit de 7 jours」",
+      "trace": "R-022 (TC-059)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1751",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1751,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, DEU: title 「Neujahrs- Special」, 「57% sparen」, 「vs. 6,79 € /Monat」, CTA 「7 Tage gratis testen」",
+      "trace": "R-022 (TC-060)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1691",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1691,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Hindi: title 「नए साल की विशेष पेशकश」, 「57% बचत करें」, 「$6.79/महीने की तुलना में」, CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」",
+      "trace": "R-022 (TC-061)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1631",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1631,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, IND: title 「Spesial Tahun Baru」, 「Hemat 57%」, 「dibanding $6.79/bulan」, CTA 「Dapatkan Uji Coba Gratis 7 Hari」",
+      "trace": "R-022 (TC-062)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1571",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1571,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, ITA: title 「Capodanno Speciale」, 「Sconto 57%」, 「rispetto a €6,79/mese」, CTA 「Prova Gratis per 7gg.」",
+      "trace": "R-022 (TC-063)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1511",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1511,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, JPN: title 「お正月 セール」, 「57% オフ」, 「通常月額 ¥6.79」, CTA 「7 日間無料で試す」",
+      "trace": "R-022 (TC-064)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1451",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1451,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, KOR: title 「New Year Special」, 「57% 세일」, 「정가 : 월 $6.79」, CTA 「7일 무료 체험 시작하기」",
+      "trace": "R-022 (TC-065)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1391",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1391,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, ESP: title 「Especial Año Nuevo」, 「Ahorra un 57 %」, 「frente a $6.79/mes」, CTA 「Prueba 7 días gratis」",
+      "trace": "R-022 (TC-066)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1331",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1331,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Malay: title 「Tahun Baharu Istimewa」, 「Jimat 57%」, 「berbanding $6.79/bulan」, CTA 「Dapatkan Percubaan Percuma 7 Hari」",
+      "trace": "R-022 (TC-067)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1271",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1271,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, PTB: title 「Especial de Ano Novo」, 「Economize 57%」, 「em vez de $6.79/mês」, CTA 「Obtenha a avaliação gratuita de 7 dias」",
+      "trace": "R-022 (TC-068)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1211",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1211,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, RUS: title 「Новогодняя акция」, 「Экономия 57%」, 「вместо $6.79/мес.」, CTA 「Попробовать 7 дней бесплатно」",
+      "trace": "R-022 (TC-069)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1151",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1151,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Thai: title 「ปีใหม่ สุดพิเศษ」, 「ประหยัด 57%」, 「เทียบกับ $6.79/เดือน」, CTA 「เชิญทดลองใช้ฟรี 7 วัน」",
+      "trace": "R-022 (TC-070)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1091",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1091,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, ESP (MX): title 「Especial de Año Nuevo」, 「Ahorra 57 %」, 「frente a $6.79/mes」, CTA 「Prueba gratis por 7 días」",
+      "trace": "R-022 (TC-071)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-1031",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -1031,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Viet: title 「Ưu đãi Năm mới」, 「Tiết kiệm 57%」, 「so với $6.79/tháng」, CTA 「Dùng thử miễn phí 7 ngày」",
+      "trace": "R-022 (TC-072)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-971",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -971,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Dutch: title 「Nieuwjaars- aanbieding」, 「Bespaar 57%」, 「in plaats van $6.79/maand」, CTA 「Probeer 7 dagen gratis」",
+      "trace": "R-022 (TC-073)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-911",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -911,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Turkish: title 「Yeni Yıla Özel」, 「%57 Tasarruf」, 「$6.79/ay yerine」, CTA 「7 günlük ücretsiz denemeyi başlat」",
+      "trace": "R-022 (TC-074)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-851",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -851,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Arabic: title 「عرض رأس السنة الخاص」, 「وفّر 57%」, 「بدلاً من $6.79/شهر」, CTA 「بدء تجربة مجانية لمدة 7 أيام」",
+      "trace": "R-022 (TC-075)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-791",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -791,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Polish: title 「Noworoczna promocja」, 「Zaoszczędź 57%」, 「zamiast $6.79/mies.」, CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」",
+      "trace": "R-022 (TC-076)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-731",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -731,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Persian: title 「سال نو پیشنهاد ویژه」, 「تخفیف ۵۷٪」, 「در مقایسه با $6.79/ماه」, CTA 「شروع دوره آزمایشی رایگان ۷ روزه」",
+      "trace": "R-022 (TC-077)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-671",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -671,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, Hebrew: title 「מבצע מיוחד לשנה החדשה」, 「חסכו 57%」, 「לעומת $6.79/חודש」, CTA 「ניסיון חינם ל-7 ימים」",
+      "trace": "R-022 (TC-078)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-611",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -611,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, SVE: title 「Nyårets erbjudande」, 「Spara 57 %」, 「jämfört med $6.79/mån」, CTA 「Prova gratis i 7 dagar」",
+      "trace": "R-022 (TC-079)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-551",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -551,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, DAN: title 「Nytårets Særtilbud」, 「Spar 57 %」, 「mod $6.79/måned」, CTA 「Få 7-dages gratis prøveperiode」",
+      "trace": "R-022 (TC-080)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-491",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -491,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, NOR: title 「Nyttårs- tilbud」, 「Spar 57 %」, 「sammenlignet med $6.79/mnd」, CTA 「Prøv gratis i 7 dager」",
+      "trace": "R-022 (TC-081)",
+      "link": "3271:4770"
+    },
+    {
+      "id": "pm-ny-rules@7172,-431",
+      "board": "pm-ny-rules",
+      "x": 7172,
+      "y": -431,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055] New Year Special interstitial, UKR: title 「Новорічна пропозиція」, 「Заощадьте 57%」, 「замість $6.79/міс.」, CTA 「Спробуйте 7 днів безкоштовно」",
+      "trace": "R-022 (TC-082)",
+      "link": "3271:4770"
+    }
+  ]
+}

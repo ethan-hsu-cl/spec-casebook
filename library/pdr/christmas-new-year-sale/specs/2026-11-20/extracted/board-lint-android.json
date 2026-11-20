@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-20T07:25:28.502Z",
+  "feature": "pdr/christmas-new-year-sale",
+  "platform": "android",
+  "set": "specs/2026-11-20",
+  "warnings": [],
+  "skipped": [
+    "pm-loose-left (no Figma screenshot)",
+    "pm-loose-top (no Figma screenshot)",
+    "pm-loose-right (no Figma screenshot)"
+  ]
+}

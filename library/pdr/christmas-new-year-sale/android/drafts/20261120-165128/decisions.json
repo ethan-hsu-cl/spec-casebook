@@ -1,0 +1,13 @@
+{
+  "saved_at": "2026-11-20T09:40:47.823Z",
+  "version": 2,
+  "decisions": [
+    {
+      "type": "delete",
+      "id": "TC-128",
+      "was_change": "removed"
+    }
+  ],
+  "summary": "Review: pdr/christmas-new-year-sale / android · draft 20261120-165128\nFinal table: 151 cases · kept 151 · edited 0 · added 0 · deleted 1\n\nDELETE TC-128",
+  "notes": []
+}

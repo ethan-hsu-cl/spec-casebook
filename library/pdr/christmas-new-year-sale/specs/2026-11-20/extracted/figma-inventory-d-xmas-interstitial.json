@@ -1,0 +1,363 @@
+{
+ "file": "HpkQG91Rm4POCXpzjC1QbT",
+ "page": "2651:11",
+ "group": "d-xmas-interstitial",
+ "extracted_at": "2026-11-20T07:03:28.414Z",
+ "section": [
+  "2784:5280",
+  "Christmas",
+  -784,
+  -544,
+  5360,
+  7664
+ ],
+ "boards": [
+  [
+   "2750:19946",
+   "ds-xmas-interstitial",
+   -528,
+   36,
+   4768,
+   1516
+  ]
+ ],
+ "names": [
+  "Button/Action",
+  "Button/Link",
+  "Nav/Top/Result"
+ ],
+ "screens": [
+  [
+   "2749:18523",
+   0,
+   "Google Pixel 2 - 2",
+   110,
+   212,
+   411,
+   731
+  ],
+  [
+   "2749:17877",
+   0,
+   "Interstitial_christmas",
+   -383,
+   212,
+   375,
+   812
+  ]
+ ],
+ "controls": [
+  [
+   0,
+   "Get 7-Day Free Trial",
+   58,
+   539,
+   295,
+   44,
+   "2749:18552",
+   [
+    0
+   ],
+   -1
+  ],
+  [
+   1,
+   "More subscription plan",
+   136,
+   641,
+   140,
+   22,
+   "2749:18554",
+   [
+    0
+   ],
+   -1
+  ],
+  [
+   2,
+   "",
+   0,
+   44,
+   375,
+   48,
+   "2749:18579",
+   [
+    0,
+    1
+   ],
+   -1
+  ],
+  [
+   0,
+   "Get 7-Day Free Trial",
+   40,
+   616,
+   295,
+   44,
+   "2749:18471",
+   [
+    1
+   ],
+   -1
+  ],
+  [
+   1,
+   "More subscription plan",
+   118,
+   722,
+   140,
+   22,
+   "2749:18473",
+   [
+    1
+   ],
+   -1
+  ]
+ ],
+ "arrows": [],
+ "hidden": {
+  "screens": 0,
+  "controls": 0
+ },
+ "entries": [
+  {
+   "id": "2750:19946",
+   "name": "ds-xmas-interstitial"
+  }
+ ],
+ "hash": {
+  "2750:19946": "daedceea"
+ },
+ "hashed_at": "2026-11-20T07:03:28.414Z",
+ "overlay": {
+  "2750:19946": ""
+ },
+ "overlay_box": {
+  "2750:19946": [
+   -528,
+   36,
+   4768,
+   1516
+  ]
+ },
+ "texts": [
+  [
+   0,
+   230,
+   634,
+   169,
+   20,
+   "vs. paying $6.79/mo × 12",
+   1
+  ],
+  [
+   0,
+   214,
+   677,
+   150,
+   50,
+   "$34.99",
+   1
+  ],
+  [
+   0,
+   364,
+   695,
+   52,
+   26,
+   "/year",
+   1
+  ],
+  [
+   0,
+   201,
+   425,
+   250,
+   28,
+   "Save",
+   1
+  ],
+  [
+   0,
+   201,
+   453,
+   191,
+   150,
+   "57",
+   1
+  ],
+  [
+   0,
+   396,
+   517,
+   54,
+   82,
+   "%",
+   1
+  ],
+  [
+   0,
+   232,
+   763,
+   167,
+   20,
+   "Get 7-Day Free Trial",
+   1
+  ],
+  [
+   0,
+   168,
+   803,
+   295,
+   42,
+   "7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged.",
+   1
+  ],
+  [
+   0,
+   248,
+   857,
+   136,
+   14,
+   "More subscription plan",
+   1
+  ],
+  [
+   0,
+   169,
+   895,
+   80,
+   12,
+   "Terms of Service",
+   1
+  ],
+  [
+   0,
+   281,
+   895,
+   66,
+   12,
+   "Privacy Policy",
+   1
+  ],
+  [
+   0,
+   380,
+   895,
+   83,
+   12,
+   "Restore purchase",
+   1
+  ],
+  [
+   0,
+   -280,
+   699,
+   169,
+   20,
+   "vs. paying $6.79/mo × 12",
+   1
+  ],
+  [
+   0,
+   -296,
+   742,
+   150,
+   50,
+   "$34.99",
+   1
+  ],
+  [
+   0,
+   -146,
+   760,
+   52,
+   26,
+   "/year",
+   1
+  ],
+  [
+   0,
+   -311,
+   456,
+   250,
+   28,
+   "Save",
+   1
+  ],
+  [
+   0,
+   -311,
+   484,
+   191,
+   150,
+   "57",
+   1
+  ],
+  [
+   0,
+   -116,
+   548,
+   54,
+   82,
+   "%",
+   1
+  ],
+  [
+   0,
+   -279,
+   840,
+   167,
+   20,
+   "Get 7-Day Free Trial",
+   1
+  ],
+  [
+   0,
+   -343,
+   880,
+   295,
+   42,
+   "7 days free, then $31.99/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged.",
+   1
+  ],
+  [
+   0,
+   -263,
+   938,
+   136,
+   14,
+   "More subscription plan",
+   1
+  ],
+  [
+   0,
+   -342,
+   976,
+   80,
+   12,
+   "Terms of Service",
+   1
+  ],
+  [
+   0,
+   -230,
+   976,
+   66,
+   12,
+   "Privacy Policy",
+   1
+  ],
+  [
+   0,
+   -131,
+   976,
+   83,
+   12,
+   "Restore purchase",
+   1
+  ]
+ ],
+ "ms": 25496,
+ "size": 2050
+}

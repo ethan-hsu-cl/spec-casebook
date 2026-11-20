@@ -1,0 +1,155 @@
+{
+  "Q-1": {
+    "question": "How does QA put the app into each campaign window before 12/11? Assumption: set the phone date and time by hand (Settings › Date & time, automatic off) to a day inside the window; if the window is server-checked, RD gives a test switch or server. Rows: every row with a 「Campaign」 precondition.",
+    "answer": "請RD設定測試用日期，在該時段內可以在stage server測試",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: every campaign precondition is the RD test date on the stage server (149 rows modified); boundary rows TC-002 – TC-004 set dates either side of midnight."
+  },
+  "Q-2": {
+    "question": "The PM notes give 「2025/12/11 – 12/27」 and 「2025/12/28 – 2025/01/05」 on a page named 「26 16.9」. Assumption: 2026-12-11 – 2026-12-27 and 2026-12-28 – 2027-01-05 (17 and 9 days, as the notes count). R-001, R-002, R-003.",
+    "answer": "2026-12-11 – 2026-12-27 聖誕節特賣期間\n2026-12-28 – 2027-01-05 新年特賣期間",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-001, R-002 dated 2026-12-11 – 2026-12-27 and 2026-12-28 – 2027-01-05; TC-001."
+  },
+  "Q-3": {
+    "question": "Prices: the SKU table prices the Android US store at $45.99/year and $6.99/month (TW NT$1,210 / NT$240), while the Design and PM mockups and the 多國文案 sheet use $34.99/year, $6.79/month (15% off $7.99) and a fixed 「Save 57%」 / 「vs. $6.79/mo」. With the SKU table's US prices the PM formula gives 45%, with TW 58%. Which is right, and are 「57%」 and 「$6.79」 fixed text or computed from the store price? Assumption: the app shows the store's prices for the campaign SKUs, and 「Save xx%」 follows the PM formula on those prices; a fixed 57% that disagrees is recorded, not filed. R-005, R-006, R-018, R-036, R-037.",
+    "answer": "價格請參照SKU table為主，折扣%數應該要是自動計算出來的",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-005, R-006, R-018, R-022, R-036; TC-013, TC-020 expect US $45.99 / $6.99 and Save 45%; TC-101, TC-103 compute the %; the 54 language rows expect <xx> and the store monthly price."
+  },
+  "Q-4": {
+    "question": "「3rd (Daily) Launch」 / 「2nd (Daily) Launch」: does the interstitial show once a day (the first launch of each day) or on every launch? Assumption: once a day. R-012, R-014.",
+    "answer": "once a day",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-012; TC-010 adds a same-day launch with no interstitial."
+  },
+  "Q-5": {
+    "question": "What do system Back on the interstitial and a paid (Pro) user's launch do? The PM lists free users only. Assumption: Back acts like X; a Pro user gets no subscription interstitial (no row asserts the second). R-025.",
+    "answer": "Back acts like X; a Pro user gets no subscription interstitial",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-025 (TC-016, TC-023); new R-077 and TC-151 (Pro user, no interstitial)."
+  },
+  "Q-6": {
+    "question": "The Design interstitial says 「7 days free, then $31.99/year」 under 「$34.99/year」 (PM 1104 frame: $34.99 in both). Assumption: the same annual price in both places. R-020.",
+    "answer": "價格請參照SKU table為主",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-020; TC-014, TC-021 expect the SKU table annual price."
+  },
+  "Q-7": {
+    "question": "Where does the Launcher top banner title 「Make Christmas magic with AI ›」 (New Year: 「Bring New Year moments to life ›」) lead? Not drawn. Assumption: the campaign's existing banner target; rows only check the banner.",
+    "answer": "the campaign's existing banner target; rows only check the banner",
+    "by": "ANGOL_HUANG",
+    "at": "2026-11-20T09:40:45.463Z",
+    "platform": "android",
+    "status": "open"
+  },
+  "Q-8": {
+    "question": "Android sells Pro (KP-006), but the Launcher and Mine pill read 「Try Pro+ 7 days for free」 (Design and PM); the interstitial and IAP say 「PowerDirector Pro」. Assumption: Android shows the Pro wording the app already uses on this pill; the Design text is recorded. R-028.",
+    "answer": "Android版本應該使用Pro字樣，沒有Pro+",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-028; TC-087, TC-089, TC-090, TC-095 expect 「Try Pro 7 days for free」."
+  },
+  "Q-9": {
+    "question": "The New Year Launcher and Mine pill shows a countdown (Design 「2D 23:56:18」, PM 「6D 23:56:18」): to what moment does it count, and is there one in the Christmas campaign? Assumption: to the end of the New Year campaign (1/5 23:59:59 local), New Year only. R-029.",
+    "answer": "應該都移除倒數",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002, corrected by REQ-003: R-029; TC-089 checks the New Year countdown on the pill, IAP and credit page; new TC-152 at the window start; TC-090 no countdown at Christmas. Open part: Q-18.",
+    "correction": "2026-11-20 (chat, REQ-003): New Year keeps the countdown; only Christmas drops it."
+  },
+  "Q-10": {
+    "question": "The Design IAP plan card still draws 「Special Offer」, 「67% OFF」, $31.99/year and $7.99/month, which the PM 1104 update replaced (「Christmas Treat」, 「Save 57%」, struck monthly price, no 「Offer」 wording). Assumption: the PM 1104 version. R-035, R-037.",
+    "answer": "the PM 1104 version",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-035; IAP look rows cite the ruling."
+  },
+  "Q-11": {
+    "question": "Countdowns: 1104 removed the countdown from the subscription CTA (both seasons), but the PM New Year rules (Last Update 1104) still say 「CTA BTN Get 7-day Free Trial 下方加上倒數鐘，12/21 開始倒數 7天」 and 「(Credit IAP) CTA BTN 上方加上倒數鐘，12/21 開始倒數 7天」; the Christmas rules say neither, while the Design draws one on the credit page. Assumption: no countdown on the IAP CTA; on the credit page a countdown from 12/21 counting to the end of the Christmas campaign (12/27 23:59:59). R-038, R-049.",
+    "answer": "應該都移除倒數",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002, corrected by REQ-003: R-038, R-049; the New Year IAP and credit look rows expect the countdown, the Christmas ones none; TC-129 (Christmas, none) kept; TC-128 removed. Open part: Q-18.",
+    "correction": "2026-11-20 (chat, REQ-003): New Year keeps the countdowns; only Christmas drops them."
+  },
+  "Q-12": {
+    "question": "Where does a paid user's 「Credit Special Offer」 pill lead? Assumption: the campaign credit purchase page. R-044.",
+    "answer": "the campaign credit purchase page",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-044; TC-119."
+  },
+  "Q-13": {
+    "question": "The free user's 500-credit Special Offer has no Design frame and no sale price (「右側原價劃掉，顯示原價」 reads as 「show the original price」 twice). Assumption: the original price struck through and the Play price of pdrm_500_credit_freeuser_christmas beside it. R-047.",
+    "answer": "the original price struck through and the Play price of pdrm_500_credit_freeuser_christmas beside it",
+    "by": "ANGOL_HUANG",
+    "at": "2026-11-20T09:40:45.463Z",
+    "platform": "android",
+    "status": "open"
+  },
+  "Q-14": {
+    "question": "「未訂閱 Auto Pass 的用戶會看到 Auto Pass 的 Credit Sales；若已訂閱 Auto Pass，則會看到 2000 Credit Pack 的 Credit Sales」: the two PM frames show the same pack and the same two CTAs. What differs? Assumption: without Auto Pass the page leads with 「Subscribe for 3000 free credits!」; with Auto Pass it shows 「Auto Pass activated」 and the 2000-pack offer. R-048.",
+    "answer": "有Auto Pass 會秀 「Auto Pass activated」字樣",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-048; TC-125, TC-126."
+  },
+  "Q-15": {
+    "question": "The PM New Year 「Not Enough Credit Dialog」 frames still read 「CHRISTMAS SALE」. Assumption: the New Year theme (PM: every Christmas visual becomes New Year). R-058.",
+    "answer": "應該使用新年樣式(參照Design spec)",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-058; TC-136 note."
+  },
+  "Q-16": {
+    "question": "The PM says Design makes 11 languages (ENG, CHT, CHS, FRA, DEU, Hindi, IND, ITA, JPN, KOR, ESP); the Design draws 27 title images and the 多國文案 sheet holds 27 (its 「ESP」 column appears twice, word for word). Assumption: all 27 ship. Also the JPN line 「通常月額 ¥6.79」 puts a yen sign on a dollar amount. R-022.",
+    "answer": "all 27 ship",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-022; language row notes."
+  },
+  "Q-17": {
+    "question": "India, Indonesia and the Philippines (R-007) need a Play account in that country; the run marks those rows Blocked as test-data until one exists.",
+    "answer": "請使用Play Billing Lab設定測試帳號地區",
+    "by": "",
+    "at": "2026-11-20T08:48:29.197Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-002: R-007; India / Indonesia / Philippines rows set the country with Play Billing Lab."
+  }
+}

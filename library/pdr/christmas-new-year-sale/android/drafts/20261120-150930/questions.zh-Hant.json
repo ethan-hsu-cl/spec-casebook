@@ -1,0 +1,19 @@
+{
+ "Q-1": "QA 要怎麼在 12/11 前讓 App 進入各檔期？假設：手動把手機日期時間設到檔期內（設定 › 日期與時間，關閉自動）；若檔期由伺服器判斷，請 RD 提供測試開關或伺服器。",
+ "Q-2": "PM 寫的檔期是 2025/12/11 – 12/27 與 2025/12/28 – 2025/01/05，但頁面名稱是「26 16.9」。假設：2026-12-11 – 2026-12-27、2026-12-28 – 2027-01-05（天數與 PM 相同）。",
+ "Q-3": "價格：SKU 表的 Android 美國區是年費 $45.99、月費 $6.99（台灣 NT$1,210 / NT$240），但 Design、PM 畫面與多國文案都用 $34.99/年、$6.79/月，以及固定的「Save 57%」。用 SKU 表美國價套 PM 公式是 45%，台灣是 58%。假設：App 顯示 Play 商店的檔期 SKU 價格，「Save xx%」依 PM 公式計算；與固定 57% 不符時只記錄、不開單。",
+ "Q-4": "「3rd (Daily) Launch」是每天第一次開啟才出現，還是每次開啟都出現？假設：每天一次。",
+ "Q-5": "Interstitial 上按系統返回鍵，以及付費（Pro）使用者開啟 App 時會怎樣？PM 只寫了免費使用者。假設：返回鍵等同 X；Pro 使用者不會看到訂閱 interstitial（沒有列案驗證這點）。",
+ "Q-6": "Design 的 interstitial 在「$34.99/year」下方寫「7 days free, then $31.99/year」（PM 1104 畫面兩處都是 $34.99）。假設：兩處年費一致。",
+ "Q-7": "Launcher 頂部 banner 標題「Make Christmas magic with AI ›」（新年版「Bring New Year moments to life ›」）點了會去哪？沒畫。假設：沿用既有 banner 目標，案例只檢查 banner 本身。",
+ "Q-8": "Android 只賣 Pro（KP-006），但 Launcher 與 Mine 的膠囊按鈕寫「Try Pro+ 7 days for free」；interstitial 與 IAP 寫「PowerDirector Pro」。假設：Android 這顆按鈕沿用 App 既有的 Pro 用語，Design 文字只記錄。",
+ "Q-9": "新年檔期 Launcher 與 Mine 的膠囊按鈕有倒數計時（Design「2D 23:56:18」、PM「6D 23:56:18」）：倒數到哪個時間點？聖誕檔期也有嗎？假設：倒數到新年檔期結束（當地 1/5 23:59:59），只有新年檔期有。",
+ "Q-10": "Design 的 IAP 方案卡仍畫「Special Offer」、「67% OFF」、$31.99/年、$7.99/月，PM 1104 已改成「Christmas Treat」、「Save 57%」、月費原價劃線、不得出現「Offer」。假設：以 PM 1104 為準。",
+ "Q-11": "倒數計時：1104 已移除訂閱 CTA 的倒數（兩檔期），但 PM 新年規則（同為 1104）仍寫 IAP 的 CTA 下方與 Credit IAP 的 CTA 上方「12/21 開始倒數 7 天」；聖誕規則沒寫，Design 則在點數頁畫了倒數。假設：IAP 的 CTA 沒有倒數；點數頁從 12/21 起顯示，倒數到聖誕檔期結束（12/27 23:59:59）。",
+ "Q-12": "付費使用者 Mine 的「Credit Special Offer」膠囊按鈕會去哪？假設：檔期版的點數購買頁。",
+ "Q-13": "免費使用者的 500 點 Special Offer 沒有 Design 畫面，也沒有特價（「右側原價劃掉，顯示原價」看起來寫了兩次原價）。假設：原價劃線，旁邊顯示 pdrm_500_credit_freeuser_christmas 在 Play 的價格。",
+ "Q-14": "「未訂閱 Auto Pass 的用戶會看到 Auto Pass 的 Credit Sales；若已訂閱 Auto Pass，則會看到 2000 Credit Pack 的 Credit Sales」：PM 兩張畫面的優惠包與兩顆 CTA 都一樣，差別在哪？假設：未訂閱時以「Subscribe for 3000 free credits!」為主；已訂閱時顯示「Auto Pass activated」與 2000 點優惠包。",
+ "Q-15": "PM 新年版的「Not Enough Credit Dialog」畫面仍寫「CHRISTMAS SALE」。假設：新年檔期改為新年主題（PM：聖誕視覺全部換成新年）。",
+ "Q-16": "PM 說 Design 出 11 國（ENG、CHT、CHS、FRA、DEU、Hindi、IND、ITA、JPN、KOR、ESP），但 Design 畫了 27 種標題圖、多國文案表也有 27 種（「ESP」欄出現兩次、內容相同）。假設：27 種都會上線。另外 JPN 的「通常月額 ¥6.79」把日圓符號放在美元金額上。",
+ "Q-17": "印度、印尼、菲律賓（R-007）需要該國的 Play 帳號；沒有之前，這些案例記為 Blocked（test-data）。"
+}

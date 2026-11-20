@@ -1,0 +1,162 @@
+{
+  "pm-xmas-launch.png": {
+    "board": "3226:21365/pm-xmas-launch",
+    "group": "pm-xmas-launch",
+    "hash": "be76aa10",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:06.146Z",
+    "box": [
+      -7399,
+      -3071,
+      5400,
+      2150
+    ]
+  },
+  "pm-xmas-iap.png": {
+    "board": "3226:21365/pm-xmas-iap",
+    "group": "pm-xmas-iap",
+    "hash": "987265ad",
+    "overlay": "5b0fbd23",
+    "captured_at": "2026-11-20T07:12:08.250Z",
+    "box": [
+      -7399,
+      -921,
+      5400,
+      1450
+    ]
+  },
+  "pm-xmas-credit.png": {
+    "board": "3226:21365/pm-xmas-credit",
+    "group": "pm-xmas-credit",
+    "hash": "5e88cfc6",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:10.838Z",
+    "box": [
+      -7399,
+      529,
+      5400,
+      2372
+    ]
+  },
+  "pm-xmas-rules.png": {
+    "board": "3226:21365/pm-xmas-rules",
+    "group": "pm-xmas-rules",
+    "hash": "3589ea8a",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:13.395Z",
+    "box": [
+      -1999,
+      -3071,
+      2667,
+      5972
+    ]
+  },
+  "pm-ny-launch.png": {
+    "board": "3271:4161/pm-ny-launch",
+    "group": "pm-ny-launch",
+    "hash": "38e11ed5",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:16.181Z",
+    "box": [
+      2071,
+      -3015,
+      5400,
+      2150
+    ]
+  },
+  "pm-ny-iap.png": {
+    "board": "3271:4161/pm-ny-iap",
+    "group": "pm-ny-iap",
+    "hash": "d2a0310a",
+    "overlay": "5b0fbd23",
+    "captured_at": "2026-11-20T07:12:18.316Z",
+    "box": [
+      2071,
+      -865,
+      5400,
+      1450
+    ]
+  },
+  "pm-ny-credit.png": {
+    "board": "3271:4161/pm-ny-credit",
+    "group": "pm-ny-credit",
+    "hash": "2963060d",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:20.916Z",
+    "box": [
+      2071,
+      585,
+      5400,
+      2428
+    ]
+  },
+  "pm-ny-rules.png": {
+    "board": "3271:4161/pm-ny-rules",
+    "group": "pm-ny-rules",
+    "hash": "ca9289cc",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:23.462Z",
+    "box": [
+      7471,
+      -3015,
+      2667,
+      6028
+    ]
+  },
+  "ds-xmas-launcher-dialog.png": {
+    "board": "2772:10246",
+    "group": "d-xmas-launcher-dialog",
+    "hash": "e5c543ca",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:23.885Z"
+  },
+  "ds-xmas-iap-credit.png": {
+    "board": "2750:19947",
+    "group": "d-xmas-iap-credit",
+    "hash": "c88e977f",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:24.296Z"
+  },
+  "ds-xmas-interstitial.png": {
+    "board": "2750:19946",
+    "group": "d-xmas-interstitial",
+    "hash": "daedceea",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:24.726Z"
+  },
+  "ds-xmas-landscape.png": {
+    "board": "2750:27885",
+    "group": "d-xmas-landscape",
+    "hash": "a454dc2d",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:25.158Z"
+  },
+  "ds-ny-launcher-dialog.png": {
+    "board": "2844:23135",
+    "group": "d-ny-launcher-dialog",
+    "hash": "d637e880",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:25.591Z"
+  },
+  "ds-ny-iap-credit.png": {
+    "board": "2844:5521",
+    "group": "d-ny-iap-credit",
+    "hash": "53ed2f0f",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:26.008Z"
+  },
+  "ds-ny-interstitial.png": {
+    "board": "2844:5895",
+    "group": "d-ny-interstitial",
+    "hash": "c463d730",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:26.436Z"
+  },
+  "ds-ny-landscape.png": {
+    "board": "2844:22907",
+    "group": "d-ny-landscape",
+    "hash": "79f3eccb",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:12:26.868Z"
+  }
+}

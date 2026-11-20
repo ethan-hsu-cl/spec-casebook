@@ -1,0 +1,149 @@
+{
+ "arrows": [
+  {
+   "arrow": "3271-4713",
+   "node": "3271-4713",
+   "edge": "pm-loose-right: Interstitial_christmas (automatic) → Launcher_2026_08",
+   "expected": "",
+   "source": "figma-inventory",
+   "not_flow": "older copy outside the Christmas / New Year sections (pm-loose, superseded by the 1104 frames)"
+  },
+  {
+   "arrow": "3271-7756",
+   "node": "3271-7756",
+   "edge": "pm-loose-right: Launcher_2026_08 (automatic) → IAP_T1",
+   "expected": "",
+   "source": "figma-inventory",
+   "not_flow": "older copy outside the Christmas / New Year sections (pm-loose, superseded by the 1104 frames)"
+  },
+  {
+   "arrow": "3271-7836",
+   "node": "3271-7836",
+   "edge": "pm-loose-right: Launcher_2026_08 · 「USA Cam」 → mine_free",
+   "expected": "",
+   "source": "figma-inventory",
+   "not_flow": "older copy outside the Christmas / New Year sections (pm-loose, superseded by the 1104 frames)"
+  },
+  {
+   "arrow": "3271-7837",
+   "node": "3271-7837",
+   "edge": "pm-loose-right: Interstitial_christmas (automatic) → IAP_T1",
+   "expected": "",
+   "source": "figma-inventory",
+   "not_flow": "older copy outside the Christmas / New Year sections (pm-loose, superseded by the 1104 frames)"
+  },
+  {
+   "arrow": "3271-9646",
+   "node": "3271-9646",
+   "edge": "pm-loose-right: mine_free (automatic) → IAP_T1",
+   "expected": "",
+   "source": "figma-inventory",
+   "not_flow": "older copy outside the Christmas / New Year sections (pm-loose, superseded by the 1104 frames)"
+  },
+  {
+   "arrow": "3271-9647",
+   "node": "3271-9647",
+   "edge": "pm-loose-right: mine_free (automatic) → IAP_T1",
+   "expected": "",
+   "source": "figma-inventory",
+   "not_flow": "older copy outside the Christmas / New Year sections (pm-loose, superseded by the 1104 frames)"
+  },
+  {
+   "arrow": "3430-25926",
+   "node": "3430-25926",
+   "edge": "pm-ny-launch: Launcher_2026_08 · 「USA Cam」 → mine_free",
+   "expected": "New Year Launcher Mine tab → mine_free",
+   "source": "figma-inventory",
+   "requirement": "R-074"
+  },
+  {
+   "arrow": "3430-25851",
+   "node": "3430-25851",
+   "edge": "pm-ny-launch: Launcher_2026_08 (automatic) → IAP_T1",
+   "expected": "New Year Launcher top pill → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-073"
+  },
+  {
+   "arrow": "3430-27745",
+   "node": "3430-27745",
+   "edge": "pm-ny-launch: mine_free (automatic) → IAP_T1",
+   "expected": "New Year mine_free top pill → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-075"
+  },
+  {
+   "arrow": "3430-27744",
+   "node": "3430-27744",
+   "edge": "pm-ny-launch: mine_free (automatic) → IAP_T1",
+   "expected": "New Year mine_free 「Claim Holiday Deal」 → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-076"
+  },
+  {
+   "arrow": "3430-21182",
+   "node": "3430-21182",
+   "edge": "pm-ny-launch: Interstitial_christmas (automatic) → Launcher_2026_08",
+   "expected": "New Year interstitial X → Launcher",
+   "source": "figma-inventory",
+   "requirement": "R-071"
+  },
+  {
+   "arrow": "3430-25927",
+   "node": "3430-25927",
+   "edge": "pm-ny-launch: Interstitial_christmas (automatic) → IAP_T1",
+   "expected": "New Year interstitial 「More subscription plan」 → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-072"
+  },
+  {
+   "arrow": "3226-43005",
+   "node": "3226-43005",
+   "edge": "pm-xmas-launch: Launcher_2026_08 (automatic) → IAP_T1",
+   "expected": "Launcher top pill 「Try Pro+ 7 days for free」 → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-067"
+  },
+  {
+   "arrow": "3252-72047",
+   "node": "3252-72047",
+   "edge": "pm-xmas-launch: Launcher_2026_08 · 「USA Cam」 → mine_free",
+   "expected": "Launcher Mine tab (inventory says 「USA Cam」; geometry: Mine tab) → mine_free",
+   "source": "figma-inventory",
+   "requirement": "R-068"
+  },
+  {
+   "arrow": "3252-72051",
+   "node": "3252-72051",
+   "edge": "pm-xmas-launch: mine_free (automatic) → IAP_T1",
+   "expected": "mine_free 「Claim Holiday Deal」 → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-070"
+  },
+  {
+   "arrow": "3252-72045",
+   "node": "3252-72045",
+   "edge": "pm-xmas-launch: mine_free (automatic) → IAP_T1",
+   "expected": "mine_free top pill → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-069"
+  },
+  {
+   "arrow": "3226-31539",
+   "node": "3226-31539",
+   "edge": "pm-xmas-launch: Interstitial_christmas (automatic) → Launcher_2026_08",
+   "expected": "Interstitial X (top left) → Launcher",
+   "source": "figma-inventory",
+   "requirement": "R-065"
+  },
+  {
+   "arrow": "3226-31190",
+   "node": "3226-31190",
+   "edge": "pm-xmas-launch: Interstitial_christmas · 「More subscription plan」 → IAP_T1",
+   "expected": "Interstitial 「More subscription plan」 → IAP_T1",
+   "source": "figma-inventory",
+   "requirement": "R-066"
+  }
+ ],
+ "count": 18
+}

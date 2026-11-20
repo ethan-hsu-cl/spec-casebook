@@ -1,0 +1,5 @@
+{
+  "Q-7": "Launcher 頂部 banner 標題「Make Christmas magic with AI ›」（新年版「Bring New Year moments to life ›」）點了會去哪？沒畫。假設：沿用既有 banner 目標，案例只檢查 banner 本身。",
+  "Q-13": "免費使用者的 500 點 Special Offer 沒有 Design 畫面，也沒有特價（「右側原價劃掉，顯示原價」看起來寫了兩次原價）。假設：原價劃線，旁邊顯示 pdrm_500_credit_freeuser_christmas 在 Play 的價格。",
+  "Q-18": "新年檔期的倒數（Launcher 與 Mine 的膠囊按鈕、IAP 頁 CTA 下方、點數頁 CTA 上方）是倒數到什麼時候？從哪天開始顯示？PM 新年規則寫「12/21 開始倒數 7天」，但 12/21 還沒進新年檔期（12/28 開始），看起來是從聖誕規則複製過來的。假設：倒數到新年檔期結束（2027-01-05 23:59:59 本地時間），整個檔期都顯示。"
+}

@@ -1,0 +1,312 @@
+{
+ "links": [
+  {
+   "board": "pm-xmas-rules",
+   "at": [
+    -1890,
+    -2377
+   ],
+   "node": "3226:31596",
+   "text": "SKU 表",
+   "target": "https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847",
+   "label": "SKU 表 (PDR Price Tracking › sku update list)",
+   "file": "sku-table.md",
+   "read": "2026-11-20",
+   "items": [
+    {
+     "label": "Christmas annual · annualsubscription_christmas_2611",
+     "text": "Annual Subscription_Christmas_2611, SKU annualsubscription_christmas_2611: US $45.99, JP $34.99 / ¥6,100, FR $34.99 / €37.99, DE $34.99 / €37.99, UK $34.99 / £31.99, TW $34.99 / NT$1,210, ROW T2 -"
+    },
+    {
+     "label": "Christmas monthly · monthlysubscription_christmas_2611",
+     "text": "Monthly Subscription_Christmas_2611, SKU monthlysubscription_christmas_2611: US $6.99, JP $6.99 / ¥1190, FR $6.99 / €7.49, DE $6.99 / €7.49, UK $6.99 / £5.99, TW $6.99 / NT$240, ROW T2 -"
+    },
+    {
+     "label": "New Year annual · annualsubscription_newyear_2611",
+     "text": "Annual Subscription_NewYear_2611, SKU annualsubscription_newyear_2611: same prices as the Christmas annual"
+    },
+    {
+     "label": "New Year monthly · monthlysubscription_newyear_2611",
+     "text": "Monthly Subscription_NewYear_2611, SKU monthlysubscription_newyear_2611: same prices as the Christmas monthly"
+    }
+   ]
+  },
+  {
+   "board": "pm-xmas-rules",
+   "at": [
+    -1890,
+    -2041
+   ],
+   "node": "3226:31596",
+   "text": "多國文案",
+   "target": "https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055",
+   "label": "多國文案 (interstitial copy sheet)",
+   "file": "multilang-copy.md",
+   "read": "2026-11-20",
+   "items": [
+    {
+     "label": "Christmas · ENG",
+     "text": "Christmas Special interstitial, ENG: title 「Christmas Special」, 「Save 57%」, 「vs. $6.79/mo」, CTA 「Get 7-Day Free Trial」"
+    },
+    {
+     "label": "Christmas · CHT",
+     "text": "Christmas Special interstitial, CHT: title 「聖誕節 限定」, 「現省 57%」, 「相較於每月$6.79」, CTA 「７天免費試用」"
+    },
+    {
+     "label": "Christmas · CHS",
+     "text": "Christmas Special interstitial, CHS: title 「圣诞节 限定」, 「现省57%」, 「相较于每月$6.79」, CTA 「7天免费试用」"
+    },
+    {
+     "label": "Christmas · FRA",
+     "text": "Christmas Special interstitial, FRA: title 「Vente de Noël」, 「Économisez 57%」, 「vs. $6.79/mo」, CTA 「Essai gratuit de 7 jours」"
+    },
+    {
+     "label": "Christmas · DEU",
+     "text": "Christmas Special interstitial, DEU: title 「Weihnachts- Special」, 「57% sparen」, 「vs. 6,79 € /Monat」, CTA 「7 Tage gratis testen」"
+    },
+    {
+     "label": "Christmas · Hindi",
+     "text": "Christmas Special interstitial, Hindi: title 「क्रिसमस की विशेष पेशकश」, 「57% बचत करें」, 「$6.79/महीने की तुलना में」, CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」"
+    },
+    {
+     "label": "Christmas · IND",
+     "text": "Christmas Special interstitial, IND: title 「Spesial Natal」, 「Hemat 57%」, 「dibanding $6.79/bulan」, CTA 「Dapatkan Uji Coba Gratis 7 Hari」"
+    },
+    {
+     "label": "Christmas · ITA",
+     "text": "Christmas Special interstitial, ITA: title 「Natale Speciale」, 「Sconto 57%」, 「rispetto a €6,79/mese」, CTA 「Prova Gratis per 7gg.」"
+    },
+    {
+     "label": "Christmas · JPN",
+     "text": "Christmas Special interstitial, JPN: title 「クリスマス セール」, 「57% オフ」, 「通常月額 ¥6.79」, CTA 「7 日間無料で試す」"
+    },
+    {
+     "label": "Christmas · KOR",
+     "text": "Christmas Special interstitial, KOR: title 「Christmas Special」, 「57% 세일」, 「정가 : 월 $6.79」, CTA 「7일 무료 체험 시작하기」"
+    },
+    {
+     "label": "Christmas · ESP",
+     "text": "Christmas Special interstitial, ESP: title 「Especial Navidad」, 「Ahorra un 57 %」, 「frente a $6.79/mes」, CTA 「Prueba 7 días gratis」"
+    },
+    {
+     "label": "Christmas · Malay",
+     "text": "Christmas Special interstitial, Malay: title 「Hari Natal Istimewa」, 「Jimat 57%」, 「berbanding $6.79/bulan」, CTA 「Dapatkan Percubaan Percuma 7 Hari」"
+    },
+    {
+     "label": "Christmas · PTB",
+     "text": "Christmas Special interstitial, PTB: title 「Especial de Natal」, 「Economize 57%」, 「em vez de $6.79/mês」, CTA 「Obtenha a avaliação gratuita de 7 dias」"
+    },
+    {
+     "label": "Christmas · RUS",
+     "text": "Christmas Special interstitial, RUS: title 「Рождественская акция」, 「Экономия 57%」, 「вместо $6.79/мес.」, CTA 「Попробовать 7 дней бесплатно」"
+    },
+    {
+     "label": "Christmas · Thai",
+     "text": "Christmas Special interstitial, Thai: title 「คริสต์มาส สุดพิเศษ」, 「ประหยัด 57%」, 「เทียบกับ $6.79/เดือน」, CTA 「เชิญทดลองใช้ฟรี 7 วัน」"
+    },
+    {
+     "label": "Christmas · ESP (MX)",
+     "text": "Christmas Special interstitial, ESP (MX): title 「Especial de Navidad」, 「Ahorra 57 %」, 「frente a $6.79/mes」, CTA 「Prueba gratis por 7 días」"
+    },
+    {
+     "label": "Christmas · Viet",
+     "text": "Christmas Special interstitial, Viet: title 「Ưu đãi Giáng sinh」, 「Tiết kiệm 57%」, 「so với $6.79/tháng」, CTA 「Dùng thử miễn phí 7 ngày」"
+    },
+    {
+     "label": "Christmas · Dutch",
+     "text": "Christmas Special interstitial, Dutch: title 「Kerst- aanbieding」, 「Bespaar 57%」, 「in plaats van $6.79/maand」, CTA 「Probeer 7 dagen gratis」"
+    },
+    {
+     "label": "Christmas · Turkish",
+     "text": "Christmas Special interstitial, Turkish: title 「Noel'e Özel」, 「%57 Tasarruf」, 「$6.79/ay yerine」, CTA 「7 günlük ücretsiz denemeyi başlat」"
+    },
+    {
+     "label": "Christmas · Arabic",
+     "text": "Christmas Special interstitial, Arabic: title 「عرض عيد الميلاد الخاص」, 「وفّر 57%」, 「بدلاً من $6.79/شهر」, CTA 「بدء تجربة مجانية لمدة 7 أيام」"
+    },
+    {
+     "label": "Christmas · Polish",
+     "text": "Christmas Special interstitial, Polish: title 「Świąteczna promocja」, 「Zaoszczędź 57%」, 「zamiast $6.79/mies.」, CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」"
+    },
+    {
+     "label": "Christmas · Persian",
+     "text": "Christmas Special interstitial, Persian: title 「کریسمس پیشنهاد ویژه」, 「تخفیف ۵۷٪」, 「در مقایسه با $6.79/ماه」, CTA 「شروع دوره آزمایشی رایگان ۷ روزه」"
+    },
+    {
+     "label": "Christmas · Hebrew",
+     "text": "Christmas Special interstitial, Hebrew: title 「מבצע מיוחד לחג המולד」, 「חסכו 57%」, 「לעומת $6.79/חודש」, CTA 「ניסיון חינם ל-7 ימים」"
+    },
+    {
+     "label": "Christmas · SVE",
+     "text": "Christmas Special interstitial, SVE: title 「Julens erbjudande」, 「Spara 57 %」, 「jämfört med $6.79/mån」, CTA 「Prova gratis i 7 dagar」"
+    },
+    {
+     "label": "Christmas · DAN",
+     "text": "Christmas Special interstitial, DAN: title 「Julens Særtilbud」, 「Spar 57 %」, 「mod $6.79/måned」, CTA 「Få 7-dages gratis prøveperiode」"
+    },
+    {
+     "label": "Christmas · NOR",
+     "text": "Christmas Special interstitial, NOR: title 「Jule- tilbud」, 「Spar 57 %」, 「sammenlignet med $6.79/mnd」, CTA 「Prøv gratis i 7 dager」"
+    },
+    {
+     "label": "Christmas · UKR",
+     "text": "Christmas Special interstitial, UKR: title 「Різдвяна пропозиція」, 「Заощадьте 57%」, 「замість $6.79/міс.」, CTA 「Спробуйте 7 днів безкоштовно」"
+    }
+   ]
+  },
+  {
+   "board": "pm-ny-rules",
+   "at": [
+    7172,
+    -2387
+   ],
+   "node": "3271:4770",
+   "text": "SKU 表",
+   "target": "https://docs.google.com/spreadsheets/d/1u83J27ni-kVONHuiYlTaH9DZ4hM4mrEeFgLYwTfUuIg/edit?pli=1&gid=1445500847#gid=1445500847",
+   "label": "SKU 表 (PDR Price Tracking › sku update list)",
+   "file": "sku-table.md",
+   "read": "2026-11-20",
+   "items": [
+    {
+     "label": "Christmas annual · annualsubscription_christmas_2611",
+     "text": "Annual Subscription_Christmas_2611, SKU annualsubscription_christmas_2611: US $45.99, JP $34.99 / ¥6,100, FR $34.99 / €37.99, DE $34.99 / €37.99, UK $34.99 / £31.99, TW $34.99 / NT$1,210, ROW T2 -"
+    },
+    {
+     "label": "Christmas monthly · monthlysubscription_christmas_2611",
+     "text": "Monthly Subscription_Christmas_2611, SKU monthlysubscription_christmas_2611: US $6.99, JP $6.99 / ¥1190, FR $6.99 / €7.49, DE $6.99 / €7.49, UK $6.99 / £5.99, TW $6.99 / NT$240, ROW T2 -"
+    },
+    {
+     "label": "New Year annual · annualsubscription_newyear_2611",
+     "text": "Annual Subscription_NewYear_2611, SKU annualsubscription_newyear_2611: same prices as the Christmas annual"
+    },
+    {
+     "label": "New Year monthly · monthlysubscription_newyear_2611",
+     "text": "Monthly Subscription_NewYear_2611, SKU monthlysubscription_newyear_2611: same prices as the Christmas monthly"
+    }
+   ]
+  },
+  {
+   "board": "pm-ny-rules",
+   "at": [
+    7172,
+    -2051
+   ],
+   "node": "3271:4770",
+   "text": "多國文案",
+   "target": "https://docs.google.com/spreadsheets/d/1_rJf-7ljc0c_HO0P4isuyn-AOt6mIlbXsmyRW9xcGSk/edit?gid=1226976055",
+   "label": "多國文案 (interstitial copy sheet)",
+   "file": "multilang-copy.md",
+   "read": "2026-11-20",
+   "items": [
+    {
+     "label": "New Year · ENG",
+     "text": "New Year Special interstitial, ENG: title 「New Year Special」, 「Save 57%」, 「vs. $6.79/mo」, CTA 「Get 7-Day Free Trial」"
+    },
+    {
+     "label": "New Year · CHT",
+     "text": "New Year Special interstitial, CHT: title 「新年 限定」, 「現省 57%」, 「相較於每月$6.79」, CTA 「７天免費試用」"
+    },
+    {
+     "label": "New Year · CHS",
+     "text": "New Year Special interstitial, CHS: title 「新年 限定」, 「现省57%」, 「相较于每月$6.79」, CTA 「7天免费试用」"
+    },
+    {
+     "label": "New Year · FRA",
+     "text": "New Year Special interstitial, FRA: title 「Vente du Nouvel An」, 「Économisez 57%」, 「vs. $6.79/mo」, CTA 「Essai gratuit de 7 jours」"
+    },
+    {
+     "label": "New Year · DEU",
+     "text": "New Year Special interstitial, DEU: title 「Neujahrs- Special」, 「57% sparen」, 「vs. 6,79 € /Monat」, CTA 「7 Tage gratis testen」"
+    },
+    {
+     "label": "New Year · Hindi",
+     "text": "New Year Special interstitial, Hindi: title 「नए साल की विशेष पेशकश」, 「57% बचत करें」, 「$6.79/महीने की तुलना में」, CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」"
+    },
+    {
+     "label": "New Year · IND",
+     "text": "New Year Special interstitial, IND: title 「Spesial Tahun Baru」, 「Hemat 57%」, 「dibanding $6.79/bulan」, CTA 「Dapatkan Uji Coba Gratis 7 Hari」"
+    },
+    {
+     "label": "New Year · ITA",
+     "text": "New Year Special interstitial, ITA: title 「Capodanno Speciale」, 「Sconto 57%」, 「rispetto a €6,79/mese」, CTA 「Prova Gratis per 7gg.」"
+    },
+    {
+     "label": "New Year · JPN",
+     "text": "New Year Special interstitial, JPN: title 「お正月 セール」, 「57% オフ」, 「通常月額 ¥6.79」, CTA 「7 日間無料で試す」"
+    },
+    {
+     "label": "New Year · KOR",
+     "text": "New Year Special interstitial, KOR: title 「New Year Special」, 「57% 세일」, 「정가 : 월 $6.79」, CTA 「7일 무료 체험 시작하기」"
+    },
+    {
+     "label": "New Year · ESP",
+     "text": "New Year Special interstitial, ESP: title 「Especial Año Nuevo」, 「Ahorra un 57 %」, 「frente a $6.79/mes」, CTA 「Prueba 7 días gratis」"
+    },
+    {
+     "label": "New Year · Malay",
+     "text": "New Year Special interstitial, Malay: title 「Tahun Baharu Istimewa」, 「Jimat 57%」, 「berbanding $6.79/bulan」, CTA 「Dapatkan Percubaan Percuma 7 Hari」"
+    },
+    {
+     "label": "New Year · PTB",
+     "text": "New Year Special interstitial, PTB: title 「Especial de Ano Novo」, 「Economize 57%」, 「em vez de $6.79/mês」, CTA 「Obtenha a avaliação gratuita de 7 dias」"
+    },
+    {
+     "label": "New Year · RUS",
+     "text": "New Year Special interstitial, RUS: title 「Новогодняя акция」, 「Экономия 57%」, 「вместо $6.79/мес.」, CTA 「Попробовать 7 дней бесплатно」"
+    },
+    {
+     "label": "New Year · Thai",
+     "text": "New Year Special interstitial, Thai: title 「ปีใหม่ สุดพิเศษ」, 「ประหยัด 57%」, 「เทียบกับ $6.79/เดือน」, CTA 「เชิญทดลองใช้ฟรี 7 วัน」"
+    },
+    {
+     "label": "New Year · ESP (MX)",
+     "text": "New Year Special interstitial, ESP (MX): title 「Especial de Año Nuevo」, 「Ahorra 57 %」, 「frente a $6.79/mes」, CTA 「Prueba gratis por 7 días」"
+    },
+    {
+     "label": "New Year · Viet",
+     "text": "New Year Special interstitial, Viet: title 「Ưu đãi Năm mới」, 「Tiết kiệm 57%」, 「so với $6.79/tháng」, CTA 「Dùng thử miễn phí 7 ngày」"
+    },
+    {
+     "label": "New Year · Dutch",
+     "text": "New Year Special interstitial, Dutch: title 「Nieuwjaars- aanbieding」, 「Bespaar 57%」, 「in plaats van $6.79/maand」, CTA 「Probeer 7 dagen gratis」"
+    },
+    {
+     "label": "New Year · Turkish",
+     "text": "New Year Special interstitial, Turkish: title 「Yeni Yıla Özel」, 「%57 Tasarruf」, 「$6.79/ay yerine」, CTA 「7 günlük ücretsiz denemeyi başlat」"
+    },
+    {
+     "label": "New Year · Arabic",
+     "text": "New Year Special interstitial, Arabic: title 「عرض رأس السنة الخاص」, 「وفّر 57%」, 「بدلاً من $6.79/شهر」, CTA 「بدء تجربة مجانية لمدة 7 أيام」"
+    },
+    {
+     "label": "New Year · Polish",
+     "text": "New Year Special interstitial, Polish: title 「Noworoczna promocja」, 「Zaoszczędź 57%」, 「zamiast $6.79/mies.」, CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」"
+    },
+    {
+     "label": "New Year · Persian",
+     "text": "New Year Special interstitial, Persian: title 「سال نو پیشنهاد ویژه」, 「تخفیف ۵۷٪」, 「در مقایسه با $6.79/ماه」, CTA 「شروع دوره آزمایشی رایگان ۷ روزه」"
+    },
+    {
+     "label": "New Year · Hebrew",
+     "text": "New Year Special interstitial, Hebrew: title 「מבצע מיוחד לשנה החדשה」, 「חסכו 57%」, 「לעומת $6.79/חודש」, CTA 「ניסיון חינם ל-7 ימים」"
+    },
+    {
+     "label": "New Year · SVE",
+     "text": "New Year Special interstitial, SVE: title 「Nyårets erbjudande」, 「Spara 57 %」, 「jämfört med $6.79/mån」, CTA 「Prova gratis i 7 dagar」"
+    },
+    {
+     "label": "New Year · DAN",
+     "text": "New Year Special interstitial, DAN: title 「Nytårets Særtilbud」, 「Spar 57 %」, 「mod $6.79/måned」, CTA 「Få 7-dages gratis prøveperiode」"
+    },
+    {
+     "label": "New Year · NOR",
+     "text": "New Year Special interstitial, NOR: title 「Nyttårs- tilbud」, 「Spar 57 %」, 「sammenlignet med $6.79/mnd」, CTA 「Prøv gratis i 7 dager」"
+    },
+    {
+     "label": "New Year · UKR",
+     "text": "New Year Special interstitial, UKR: title 「Новорічна пропозиція」, 「Заощадьте 57%」, 「замість $6.79/міс.」, CTA 「Спробуйте 7 днів безкоштовно」"
+    }
+   ]
+  }
+ ]
+}

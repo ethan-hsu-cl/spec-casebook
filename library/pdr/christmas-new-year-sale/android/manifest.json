@@ -1,0 +1,43 @@
+{
+  "feature": "pdr/christmas-new-year-sale",
+  "platform": "android",
+  "title": "(MX) Christmas & New Year Sales",
+  "version": 2,
+  "approved_at": "2026-11-20T09:40:47.823Z",
+  "draft": "20261120-165128",
+  "spec_folder": "specs/2026-11-20",
+  "spec_files": [
+    {
+      "name": "Christmas New Year Sales - Design Figma 2784-5280.md",
+      "sha256": "843a2dbb0cee4cf7297475a08c653a7465f561652253f405cf46a92bf4c83758",
+      "bytes": 28738
+    },
+    {
+      "name": "Christmas New Year Sales - PM Figma 3226-21364.md",
+      "sha256": "95065bdbc8d4cbd6e5348287dc4cdab6ed779faf2fa4e0e1e5fea2d24e1f83d4",
+      "bytes": 37347
+    }
+  ],
+  "spec_set_sha256": "0713ab30f419f1b3a996152c87b1f092ad8e60c292daa8822d63631805637159",
+  "cases": 151,
+  "history": [
+    {
+      "version": 1,
+      "approved_at": "2026-11-20T08:48:57.062Z",
+      "spec_set_sha256": "0713ab30f419f1b3a996152c87b1f092ad8e60c292daa8822d63631805637159",
+      "draft": "20261120-150930",
+      "cases": 150,
+      "csv": "history/v1.csv",
+      "requirements": "history/v1-requirements.md"
+    },
+    {
+      "version": 2,
+      "approved_at": "2026-11-20T09:40:47.823Z",
+      "spec_set_sha256": "0713ab30f419f1b3a996152c87b1f092ad8e60c292daa8822d63631805637159",
+      "draft": "20261120-165128",
+      "cases": 151,
+      "csv": "cases.csv",
+      "requirements": "requirements.md"
+    }
+  ]
+}

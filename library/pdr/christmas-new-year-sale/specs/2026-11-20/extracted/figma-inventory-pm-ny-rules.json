@@ -1,0 +1,81 @@
+{
+ "file": "3urWYejMUP2uaglb4s73M5",
+ "page": "3226:21364",
+ "group": "pm-ny-rules",
+ "extracted_at": "2026-11-20T07:07:55.626Z",
+ "section": [
+  "3271:4161",
+  "New Year Sale",
+  2071,
+  -3015,
+  8067,
+  6028
+ ],
+ "boards": [
+  [
+   "3271:4161/pm-ny-rules",
+   "pm-ny-rules",
+   7471,
+   -3015,
+   2800,
+   6100
+  ]
+ ],
+ "names": [],
+ "screens": [],
+ "controls": [],
+ "arrows": [],
+ "hidden": {
+  "screens": 0,
+  "controls": 0
+ },
+ "entries": [
+  {
+   "name": "pm-ny-rules",
+   "parent": "3271:4161",
+   "box": [
+    7471,
+    -3015,
+    2800,
+    6100
+   ]
+  }
+ ],
+ "hash": {
+  "3271:4161/pm-ny-rules": "ca9289cc"
+ },
+ "hashed_at": "2026-11-20T07:07:55.626Z",
+ "overlay": {
+  "3271:4161/pm-ny-rules": ""
+ },
+ "overlay_box": {
+  "3271:4161/pm-ny-rules": [
+   7471,
+   -3015,
+   2800,
+   6100
+  ]
+ },
+ "texts": [
+  [
+   0,
+   7172,
+   -2579,
+   2307,
+   3805,
+   "目標 : Increase sub revenue (Free User) and credit revenue (Paid User) 檔期：New Year  Sale 2025/12/28-2025/01/05, User Local Time >> 共 9 days (216 hr)\n*兩檔期Spec邏輯相同，但優惠及視覺會換，以下若有提到Christmas優惠及視覺，New Year時皆須換成New Year優惠及視覺*\n ➊ Promotion 內容\n\nSubscription Sale Promotion 期間 New User Offer 不顯示 ，優惠結束恢復 New User Offer\n\n[Android]\nPro Annual 原價, with 7-day free trial; Monthly 15% off\nAndroid Sku: annualsubscription_newyear_2611, monthlysubscription_newyear_2611 \nIndia/ Indonesia/ Philippines 維持default landing 在 monthly plan\nSKU 表\n\nCredit Sale\n[Android]\nPaid User：pdrm_2000_credit_paiduser_christmas\nFree User：pdrm_500_credit_freeuser_christmas\n\n➋ Interstitial\n\nNew Free User 出現邏輯\n1st Launch: GDPR → Sub 活動 interstitial → 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP\n2nd Launch: Open intro→ Sub 活動 interstitial→ 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP\n3rd (Daily) Launch: Sub 活動 interstitial → 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點擊 More subscription plans 到 IAP\n\nUpgrade Free User 出現邏輯\n1st Launch: Open intro → Sub 活動 interstitial→ 點 X 回 Launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP\n2nd (Daily) Launch: Sub 活動 interstitial→ 點 X 回 launcher, 點 CTA 吊起付費 panel, 點 More subscription plans 到 IAP \n\n底圖 & 價格\nDesign 出底圖：包含標題 New Year Sale 出多國文案 (11國*2檔期 =22張)  \nRD 出價格：New Year Sale 該行以下文字出多國\n\n➌ Launcher \nTop Banner  加上New Year Top Banner (請design確認可符合dark/light mode的設計)\nMine Footer     調整成 New Year 氛圍 Icon\n\n➍ Mine Tab & IAP Page\nFree User\nTop Banner   新增禮物感靜態 New Year Top Banner，不出多國\nAnnual Plan\n壓底圖，右半邊維持「xx% Off」，右上角Tag加小裝飾，文字改成「Special Offer」出多國\n「xx% Off」公式: Xmas 年價格 vs 月價格*12個月的 價差%\nCTA BTN      Get 7-day Free Trial 下方加上倒數鐘，12/21 開始倒數 7天\nPaid User \n VIP Welcome Banner: 放上New Year裝飾，含 US / JP 兩版本\n\n➎  Credit IAP\n\nTop Banner   放靜態 New Year Top Banner，文案「New Year Sale」，不出多國\nSpecial Offer Pack\nSpecial Offer 若是賣500 credit pack (free user)，則只顯示白字「500」，右側原價劃掉，顯示原價 Special Offer 若是賣2000 credit pack (paid user)，則顯示「1000+1000」(白字+綠字)\nCTA BTN      上方加上倒數鐘，12/21 開始倒數 7天\n未訂閱 Auto Pass 的用戶會看到 Auto Pass 的 Credit Sales；若已訂閱 Auto Pass，則會看到 2000 Credit Pack 的 Credit Sales\n  ➏ Credit Feature - Not Enough Credit Dialog\n\n背景色&圖片  改成檔期主題\nCTA BTN  文案: Grab Discount Now!\n",
+   0
+  ],
+  [
+   0,
+   7648,
+   -2761,
+   302,
+   42,
+   "Last Update: 1104",
+   0
+  ]
+ ],
+ "ms": 2597,
+ "size": 2851
+}

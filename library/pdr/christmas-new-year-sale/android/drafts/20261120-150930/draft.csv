@@ -1,0 +1,825 @@
+ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,Campaign window,"1. Free account (not subscribed) signed in
+2. Phone date 2026-12-10 23:55 local, automatic date off","1. Launch the app
+2. Open Mine
+3. Open the IAP page","No campaign interstitial
+The Launcher top banner, the Mine tab icon and the IAP page are the regular ones (no 「Christmas Special」, no Christmas tag)
+The New User Offer shows as usual",P1,"R-001, R-003, R-004",Year assumed 2026 (Q-2).,new,New feature (REQ-001)
+TC-002,Campaign window,"1. Free account (not subscribed) signed in
+2. Phone date 2026-12-10 23:58 local, automatic date off","1. Wait until the phone clock passes 2026-12-11 00:00
+2. Close the app fully and launch it again","The Christmas interstitial 「Christmas Special」 shows
+Behind it the Launcher shows the Christmas top banner",P1,"R-001, R-012",,new,New feature (REQ-001)
+TC-003,Campaign window,"1. Free account (not subscribed) signed in
+2. Phone date 2026-12-27 23:58 local, automatic date off
+3. Christmas visuals showing","1. Wait until the phone clock passes 2026-12-28 00:00
+2. Close the app fully and launch it again","The interstitial is now 「New Year Special」
+The Launcher top banner reads 「Bring New Year moments to life」
+No Christmas visual is left on Launcher, Mine or IAP",P1,R-002,,new,New feature (REQ-001)
+TC-004,Campaign window,"1. Free account (not subscribed) signed in
+2. Phone date 2027-01-05 23:58 local, automatic date off","1. Wait until the phone clock passes 2027-01-06 00:00
+2. Close the app fully and launch it again
+3. Open Mine
+4. Open the IAP page","No campaign interstitial
+The Launcher, Mine tab icon and IAP page are the regular ones
+The New User Offer is back",P1,"R-002, R-003, R-004",,new,New feature (REQ-001)
+TC-005,Campaign window,"1. Free account (not subscribed) signed in
+2. Phone time zone UTC+8, date 2026-12-11 00:05 local (still 12/10 in UTC)",Launch the app,"The Christmas campaign shows: the window follows the phone's local time, not UTC",P2,R-001,PM: 「User Local Time」.,new,New feature (REQ-001)
+TC-006,Campaign window,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. An account that would normally see the New User Offer (new install)","1. Launch the app
+2. Open every subscription entry: interstitial, Launcher pill, Mine 「Claim Holiday Deal」",No New User Offer anywhere during the campaign,P1,R-004,,new,New feature (REQ-001)
+TC-007,Campaign window,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. An account that would normally see the New User Offer (new install)","1. Launch the app
+2. Open every subscription entry: interstitial, Launcher pill, Mine 「Claim Holiday Deal」",No New User Offer anywhere during the campaign,P1,R-004,,new,New feature (REQ-001)
+TC-008,Interstitial,"1. Fresh install (Android: uninstall, or `pm clear` after pulling logs)
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)","1. Launch the app
+2. Accept the GDPR screen (「Get Started」)",Right after GDPR the Christmas interstitial shows (before the Launcher),P1,R-010,,new,New feature (REQ-001)
+TC-009,Interstitial,"1. The row above done (1st launch over)
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)","1. Close the app fully
+2. Launch it again (2nd launch)","The Open intro shows first
+After the intro the Christmas interstitial shows",P1,R-011,,new,New feature (REQ-001)
+TC-010,Interstitial,"1. 2nd launch over
+2. Phone date moved to the next day inside the window (2026-12-16)","1. Close the app fully
+2. Launch it again (3rd launch)","The Christmas interstitial shows directly, with no intro
+Launching a second time the same day shows it again or not as Q-4 is answered (record which)",P1,R-012,Q-4: once a day assumed.,new,New feature (REQ-001)
+TC-011,Interstitial,"1. Free account on the previous app build, already past its first launches
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Install the build under test over it (adb install -r)",Launch the app (1st launch after the update),"The Open intro shows first
+Then the Christmas interstitial",P1,R-013,,new,New feature (REQ-001)
+TC-012,Interstitial,"1. The row above done
+2. Phone date moved to the next day inside the window","1. Close the app fully
+2. Launch it again","The Christmas interstitial shows directly, with no intro",P1,R-014,,new,New feature (REQ-001)
+TC-013,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language English",Launch the app and look at the interstitial,"Title art 「Christmas Special」 (never 「Sale」)
+「SAVE」 「57」 「%」 is the largest element
+「vs. paying $6.79/mo × 12」 under it (the store price: Q-3)
+「$34.99/year」 (the store price: Q-3)
+Yellow CTA 「Get 7-Day Free Trial」
+Trial terms, 「More subscription plan」, 「Terms of Service」 | 「Privacy Policy」 | 「Restore purchase」
+No struck-through price and no countdown",P1,"R-018, R-022",Design 2749:17877; PM 1104 Update.,new,New feature (REQ-001)
+TC-014,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)",Read the trial terms under the CTA,"「7 days free, then <annual price>/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged.」 with the same annual price as the big price",P2,R-020,Design draws $31.99 under $34.99 (Q-6).,new,New feature (REQ-001)
+TC-015,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Interstitial showing",Tap X,The interstitial closes and the Launcher shows,P1,"R-015, R-065",,new,New feature (REQ-001)
+TC-016,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Interstitial showing",Press system Back,"The interstitial closes and the Launcher shows, as X does",P2,R-025,Spec silent on Back (Q-5).,new,New feature (REQ-001)
+TC-017,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Interstitial showing
+4. Logcat running",Tap 「Get 7-Day Free Trial」,"The Google Play payment panel opens for the annual plan with a 7-day free trial
+The panel is for SKU annualsubscription_christmas_2611 (logcat) at the store's campaign price (SKU table)",P1,"R-016, R-005, R-009",,new,New feature (REQ-001)
+TC-018,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Payment panel opened from the interstitial CTA",Press system Back,"The panel closes with no purchase
+The interstitial is still there",P2,R-064,,new,New feature (REQ-001)
+TC-019,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Interstitial showing",Tap 「More subscription plan」,The IAP page opens in its Christmas version,P1,"R-017, R-066",,new,New feature (REQ-001)
+TC-020,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language English",Launch the app and look at the interstitial,"Title art 「New Year Special」 (never 「Sale」)
+「SAVE」 「57」 「%」 is the largest element
+「vs. paying $6.79/mo × 12」 under it (the store price: Q-3)
+「$34.99/year」 (the store price: Q-3)
+Yellow CTA 「Get 7-Day Free Trial」
+Trial terms, 「More subscription plan」, 「Terms of Service」 | 「Privacy Policy」 | 「Restore purchase」
+No struck-through price and no countdown",P1,"R-019, R-022",Design 2844:27481; PM 1104 Update.,new,New feature (REQ-001)
+TC-021,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)",Read the trial terms under the CTA,"「7 days free, then <annual price>/year. Subscription renews automatically until canceled. Cancel in Google Play at any time before the trial ends to avoid being charged.」 with the same annual price as the big price",P2,R-020,Design draws $31.99 under $34.99 (Q-6).,new,New feature (REQ-001)
+TC-022,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Interstitial showing",Tap X,The interstitial closes and the Launcher shows,P1,"R-015, R-071",,new,New feature (REQ-001)
+TC-023,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Interstitial showing",Press system Back,"The interstitial closes and the Launcher shows, as X does",P2,R-025,Spec silent on Back (Q-5).,new,New feature (REQ-001)
+TC-024,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Interstitial showing
+4. Logcat running",Tap 「Get 7-Day Free Trial」,"The Google Play payment panel opens for the annual plan with a 7-day free trial
+The panel is for SKU annualsubscription_newyear_2611 (logcat) at the store's campaign price (SKU table)",P1,"R-016, R-005, R-009",,new,New feature (REQ-001)
+TC-025,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Payment panel opened from the interstitial CTA",Press system Back,"The panel closes with no purchase
+The interstitial is still there",P2,R-064,,new,New feature (REQ-001)
+TC-026,Interstitial,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Interstitial showing",Tap 「More subscription plan」,The IAP page opens in its New Year version,P1,"R-017, R-072",,new,New feature (REQ-001)
+TC-027,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Interstitial showing","1. Tap 「Terms of Service」
+2. Go back
+3. Tap 「Privacy Policy」
+4. Go back","Step 1: the Terms of Service page opens
+Step 2: back on the interstitial
+Step 3: the Privacy Policy page opens
+Step 4: back on the interstitial",P3,R-021,,new,New feature (REQ-001)
+TC-028,Interstitial,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Interstitial showing",Tap 「Restore purchase」,"The app checks Google Play for purchases
+With none it says so and stays Free",P3,R-021,,new,New feature (REQ-001)
+TC-029,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language English (US) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Christmas Special」
+「Save 57%」
+「vs. $6.79/mo」 with the store's monthly price
+CTA 「Get 7-Day Free Trial」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, Christmas Special, ENG.",new,New feature (REQ-001)
+TC-030,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language 中文（台灣） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「聖誕節 限定」
+「現省 57%」
+「相較於每月$6.79」 with the store's monthly price
+CTA 「７天免費試用」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, Christmas Special, CHT.",new,New feature (REQ-001)
+TC-031,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language 中文（简体） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「圣诞节 限定」
+「现省57%」
+「相较于每月$6.79」 with the store's monthly price
+CTA 「7天免费试用」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, CHS.",new,New feature (REQ-001)
+TC-032,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Français (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Vente de Noël」
+「Économisez 57%」
+「vs. $6.79/mo」 with the store's monthly price
+CTA 「Essai gratuit de 7 jours」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, FRA.",new,New feature (REQ-001)
+TC-033,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Deutsch (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Weihnachts- Special」
+「57% sparen」
+「vs. 6,79 € /Monat」 with the store's monthly price
+CTA 「7 Tage gratis testen」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, DEU.",new,New feature (REQ-001)
+TC-034,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language हिन्दी (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「क्रिसमस की विशेष पेशकश」
+「57% बचत करें」
+「$6.79/महीने की तुलना में」 with the store's monthly price
+CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Hindi.",new,New feature (REQ-001)
+TC-035,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Bahasa Indonesia (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Spesial Natal」
+「Hemat 57%」
+「dibanding $6.79/bulan」 with the store's monthly price
+CTA 「Dapatkan Uji Coba Gratis 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, IND.",new,New feature (REQ-001)
+TC-036,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Italiano (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Natale Speciale」
+「Sconto 57%」
+「rispetto a €6,79/mese」 with the store's monthly price
+CTA 「Prova Gratis per 7gg.」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, ITA.",new,New feature (REQ-001)
+TC-037,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language 日本語 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「クリスマス セール」
+「57% オフ」
+「通常月額 ¥6.79」 with the store's monthly price
+CTA 「7 日間無料で試す」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, Christmas Special, JPN. Sheet text 「通常月額 ¥6.79」 (Q-16).",new,New feature (REQ-001)
+TC-038,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language 한국어 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Christmas Special」
+「57% 세일」
+「정가 : 월 $6.79」 with the store's monthly price
+CTA 「7일 무료 체험 시작하기」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, KOR.",new,New feature (REQ-001)
+TC-039,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Español (España) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial Navidad」
+「Ahorra un 57 %」
+「frente a $6.79/mes」 with the store's monthly price
+CTA 「Prueba 7 días gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, ESP.",new,New feature (REQ-001)
+TC-040,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Bahasa Melayu (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Hari Natal Istimewa」
+「Jimat 57%」
+「berbanding $6.79/bulan」 with the store's monthly price
+CTA 「Dapatkan Percubaan Percuma 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Malay. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-041,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Português (Brasil) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Natal」
+「Economize 57%」
+「em vez de $6.79/mês」 with the store's monthly price
+CTA 「Obtenha a avaliação gratuita de 7 dias」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, PTB. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-042,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Русский (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Рождественская акция」
+「Экономия 57%」
+「вместо $6.79/мес.」 with the store's monthly price
+CTA 「Попробовать 7 дней бесплатно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, RUS. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-043,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language ไทย (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「คริสต์มาส สุดพิเศษ」
+「ประหยัด 57%」
+「เทียบกับ $6.79/เดือน」 with the store's monthly price
+CTA 「เชิญทดลองใช้ฟรี 7 วัน」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Thai. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-044,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Español (México) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Navidad」
+「Ahorra 57 %」
+「frente a $6.79/mes」 with the store's monthly price
+CTA 「Prueba gratis por 7 días」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, ESP (MX). Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-045,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Tiếng Việt (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Ưu đãi Giáng sinh」
+「Tiết kiệm 57%」
+「so với $6.79/tháng」 with the store's monthly price
+CTA 「Dùng thử miễn phí 7 ngày」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Viet. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-046,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Nederlands (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Kerst- aanbieding」
+「Bespaar 57%」
+「in plaats van $6.79/maand」 with the store's monthly price
+CTA 「Probeer 7 dagen gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Dutch. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-047,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Türkçe (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Noel'e Özel」
+「%57 Tasarruf」
+「$6.79/ay yerine」 with the store's monthly price
+CTA 「7 günlük ücretsiz denemeyi başlat」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Turkish. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-048,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language العربية (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「عرض عيد الميلاد الخاص」
+「وفّر 57%」
+「بدلاً من $6.79/شهر」 with the store's monthly price
+CTA 「بدء تجربة مجانية لمدة 7 أيام」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Arabic. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-049,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Polski (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Świąteczna promocja」
+「Zaoszczędź 57%」
+「zamiast $6.79/mies.」 with the store's monthly price
+CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Polish. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-050,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language فارسی (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「کریسمس پیشنهاد ویژه」
+「تخفیف ۵۷٪」
+「در مقایسه با $6.79/ماه」 with the store's monthly price
+CTA 「شروع دوره آزمایشی رایگان ۷ روزه」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Persian. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-051,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language עברית (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「מבצע מיוחד לחג המולד」
+「חסכו 57%」
+「לעומת $6.79/חודש」 with the store's monthly price
+CTA 「ניסיון חינם ל-7 ימים」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, Hebrew. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-052,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Svenska (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Julens erbjudande」
+「Spara 57 %」
+「jämfört med $6.79/mån」 with the store's monthly price
+CTA 「Prova gratis i 7 dagar」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, SVE. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-053,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Dansk (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Julens Særtilbud」
+「Spar 57 %」
+「mod $6.79/måned」 with the store's monthly price
+CTA 「Få 7-dages gratis prøveperiode」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, DAN. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-054,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Norsk bokmål (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Jule- tilbud」
+「Spar 57 %」
+「sammenlignet med $6.79/mnd」 with the store's monthly price
+CTA 「Prøv gratis i 7 dager」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, NOR. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-055,Interstitial languages,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language Українська (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Різдвяна пропозиція」
+「Заощадьте 57%」
+「замість $6.79/міс.」 with the store's monthly price
+CTA 「Спробуйте 7 днів безкоштовно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, Christmas Special, UKR. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-056,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language English (US) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「New Year Special」
+「Save 57%」
+「vs. $6.79/mo」 with the store's monthly price
+CTA 「Get 7-Day Free Trial」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, New Year Special, ENG.",new,New feature (REQ-001)
+TC-057,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language 中文（台灣） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「新年 限定」
+「現省 57%」
+「相較於每月$6.79」 with the store's monthly price
+CTA 「７天免費試用」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, New Year Special, CHT.",new,New feature (REQ-001)
+TC-058,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language 中文（简体） (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「新年 限定」
+「现省57%」
+「相较于每月$6.79」 with the store's monthly price
+CTA 「7天免费试用」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, CHS.",new,New feature (REQ-001)
+TC-059,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Français (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Vente du Nouvel An」
+「Économisez 57%」
+「vs. $6.79/mo」 with the store's monthly price
+CTA 「Essai gratuit de 7 jours」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, FRA.",new,New feature (REQ-001)
+TC-060,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Deutsch (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Neujahrs- Special」
+「57% sparen」
+「vs. 6,79 € /Monat」 with the store's monthly price
+CTA 「7 Tage gratis testen」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, DEU.",new,New feature (REQ-001)
+TC-061,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language हिन्दी (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「नए साल की विशेष पेशकश」
+「57% बचत करें」
+「$6.79/महीने की तुलना में」 with the store's monthly price
+CTA 「पाएँ 7-दिन का मुफ़्त परीक्षण」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Hindi.",new,New feature (REQ-001)
+TC-062,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Bahasa Indonesia (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Spesial Tahun Baru」
+「Hemat 57%」
+「dibanding $6.79/bulan」 with the store's monthly price
+CTA 「Dapatkan Uji Coba Gratis 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, IND.",new,New feature (REQ-001)
+TC-063,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Italiano (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Capodanno Speciale」
+「Sconto 57%」
+「rispetto a €6,79/mese」 with the store's monthly price
+CTA 「Prova Gratis per 7gg.」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, ITA.",new,New feature (REQ-001)
+TC-064,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language 日本語 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「お正月 セール」
+「57% オフ」
+「通常月額 ¥6.79」 with the store's monthly price
+CTA 「7 日間無料で試す」
+No text clipped, overlapped or in another language",P2,R-022,"多國文案 sheet, New Year Special, JPN. Sheet text 「通常月額 ¥6.79」 (Q-16).",new,New feature (REQ-001)
+TC-065,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language 한국어 (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「New Year Special」
+「57% 세일」
+「정가 : 월 $6.79」 with the store's monthly price
+CTA 「7일 무료 체험 시작하기」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, KOR.",new,New feature (REQ-001)
+TC-066,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Español (España) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial Año Nuevo」
+「Ahorra un 57 %」
+「frente a $6.79/mes」 with the store's monthly price
+CTA 「Prueba 7 días gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, ESP.",new,New feature (REQ-001)
+TC-067,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Bahasa Melayu (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Tahun Baharu Istimewa」
+「Jimat 57%」
+「berbanding $6.79/bulan」 with the store's monthly price
+CTA 「Dapatkan Percubaan Percuma 7 Hari」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Malay. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-068,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Português (Brasil) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Ano Novo」
+「Economize 57%」
+「em vez de $6.79/mês」 with the store's monthly price
+CTA 「Obtenha a avaliação gratuita de 7 dias」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, PTB. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-069,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Русский (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Новогодняя акция」
+「Экономия 57%」
+「вместо $6.79/мес.」 with the store's monthly price
+CTA 「Попробовать 7 дней бесплатно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, RUS. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-070,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language ไทย (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「ปีใหม่ สุดพิเศษ」
+「ประหยัด 57%」
+「เทียบกับ $6.79/เดือน」 with the store's monthly price
+CTA 「เชิญทดลองใช้ฟรี 7 วัน」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Thai. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-071,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Español (México) (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Especial de Año Nuevo」
+「Ahorra 57 %」
+「frente a $6.79/mes」 with the store's monthly price
+CTA 「Prueba gratis por 7 días」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, ESP (MX). Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-072,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Tiếng Việt (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Ưu đãi Năm mới」
+「Tiết kiệm 57%」
+「so với $6.79/tháng」 with the store's monthly price
+CTA 「Dùng thử miễn phí 7 ngày」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Viet. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-073,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Nederlands (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nieuwjaars- aanbieding」
+「Bespaar 57%」
+「in plaats van $6.79/maand」 with the store's monthly price
+CTA 「Probeer 7 dagen gratis」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Dutch. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-074,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Türkçe (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Yeni Yıla Özel」
+「%57 Tasarruf」
+「$6.79/ay yerine」 with the store's monthly price
+CTA 「7 günlük ücretsiz denemeyi başlat」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Turkish. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-075,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language العربية (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「عرض رأس السنة الخاص」
+「وفّر 57%」
+「بدلاً من $6.79/شهر」 with the store's monthly price
+CTA 「بدء تجربة مجانية لمدة 7 أيام」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Arabic. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-076,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Polski (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Noworoczna promocja」
+「Zaoszczędź 57%」
+「zamiast $6.79/mies.」 with the store's monthly price
+CTA 「Rozpocznij 7-dniowy bezpłatny okres próbny」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Polish. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-077,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language فارسی (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「سال نو پیشنهاد ویژه」
+「تخفیف ۵۷٪」
+「در مقایسه با $6.79/ماه」 with the store's monthly price
+CTA 「شروع دوره آزمایشی رایگان ۷ روزه」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Persian. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-078,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language עברית (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「מבצע מיוחד לשנה החדשה」
+「חסכו 57%」
+「לעומת $6.79/חודש」 with the store's monthly price
+CTA 「ניסיון חינם ל-7 ימים」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, Hebrew. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-079,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Svenska (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nyårets erbjudande」
+「Spara 57 %」
+「jämfört med $6.79/mån」 with the store's monthly price
+CTA 「Prova gratis i 7 dagar」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, SVE. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-080,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Dansk (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nytårets Særtilbud」
+「Spar 57 %」
+「mod $6.79/måned」 with the store's monthly price
+CTA 「Få 7-dages gratis prøveperiode」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, DAN. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-081,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Norsk bokmål (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Nyttårs- tilbud」
+「Spar 57 %」
+「sammenlignet med $6.79/mnd」 with the store's monthly price
+CTA 「Prøv gratis i 7 dager」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, NOR. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-082,Interstitial languages,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. App language Українська (phone or app language setting)",Launch the app and look at the interstitial,"Title art reads 「Новорічна пропозиція」
+「Заощадьте 57%」
+「замість $6.79/міс.」 with the store's monthly price
+CTA 「Спробуйте 7 днів безкоштовно」
+No text clipped, overlapped or in another language",P3,R-022,"多國文案 sheet, New Year Special, UKR. Not in the PM's 11 (Q-16).",new,New feature (REQ-001)
+TC-083,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Phone in dark mode",Close the interstitial and look at the Launcher top,"The Christmas top banner with the title 「Make Christmas magic with AI」 ›
+The banner reads well in dark mode (no white-on-white or black-on-black text)",P1,R-026,PM: 「請design確認可符合dark/light mode的設計」.,new,New feature (REQ-001)
+TC-084,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Phone in light mode",Close the interstitial and look at the Launcher top,"The Christmas top banner with the title 「Make Christmas magic with AI」 ›
+The banner reads well in light mode (no white-on-white or black-on-black text)",P1,R-026,PM: 「請design確認可符合dark/light mode的設計」.,new,New feature (REQ-001)
+TC-085,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Phone in dark mode",Close the interstitial and look at the Launcher top,"The New Year top banner with the title 「Bring New Year moments to life」 ›
+The banner reads well in dark mode (no white-on-white or black-on-black text)",P1,R-027,PM: 「請design確認可符合dark/light mode的設計」.,new,New feature (REQ-001)
+TC-086,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Phone in light mode",Close the interstitial and look at the Launcher top,"The New Year top banner with the title 「Bring New Year moments to life」 ›
+The banner reads well in light mode (no white-on-white or black-on-black text)",P1,R-027,PM: 「請design確認可符合dark/light mode的設計」.,new,New feature (REQ-001)
+TC-087,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Launcher showing",Tap the top pill 「Try Pro+ 7 days for free」 (Santa-hat icon),"The pill shows the Santa-hat icon
+The Christmas IAP page opens",P1,"R-028, R-067",Android sells Pro: the pill wording is Q-8.,new,New feature (REQ-001)
+TC-088,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Launcher showing",Tap the top pill,The New Year IAP page opens,P1,R-073,,new,New feature (REQ-001)
+TC-089,Launcher,"1. Free account (not subscribed) signed in
+2. Phone date 2027-01-03 12:00:00 local, automatic date off","1. Look at the Launcher top pill
+2. Wait 10 seconds
+3. Open Mine and look at its top pill","Step 1: a clock icon and a countdown 「2D 11:59:59」 (to 2027-01-05 23:59:59, assumption Q-9)
+Step 2: the seconds count down
+Step 3: Mine shows the same countdown",P2,R-029,"Design 「2D 23:56:18」, PM 「6D 23:56:18」 (Q-9).",new,New feature (REQ-001)
+TC-090,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)",Look at the Launcher top pill,The pill reads 「Try Pro+ 7 days for free」 with no countdown,P3,"R-028, R-029",,new,New feature (REQ-001)
+TC-091,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)","1. Look at the Mine tab icon in the bottom bar on Home
+2. Tap Mine
+3. Tap Home","Step 1: the Christmas Mine icon (Santa hat), unselected state
+Step 2: the Christmas icon in its selected state, and Mine opens
+Step 3: back to the unselected icon",P2,"R-030, R-031",Design santa_claus_select / santa_claus_unselect.,new,New feature (REQ-001)
+TC-092,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)","1. Look at the Mine tab icon in the bottom bar on Home
+2. Tap Mine
+3. Tap Home","Step 1: the New Year Mine icon, unselected state
+Step 2: the New Year icon in its selected state, and Mine opens
+Step 3: back to the unselected icon",P2,"R-030, R-031",Design santa_claus_select / santa_claus_unselect.,new,New feature (REQ-001)
+TC-093,Launcher,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Launcher showing",Tap Mine in the bottom bar,Mine opens with the Free card,P1,"R-031, R-068",,new,New feature (REQ-001)
+TC-094,Launcher,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Launcher showing",Tap Mine in the bottom bar,Mine opens with the Free card,P2,R-074,,new,New feature (REQ-001)
+TC-095,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)",Open Mine,"The Free card shows 「Free」 and 「20+ Benefits」
+A yellow 「Claim Holiday Deal」 button on the card
+The top pill 「Try Pro+ 7 days for free」",P1,R-032,,new,New feature (REQ-001)
+TC-096,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Mine showing",Tap 「Claim Holiday Deal」,The Christmas IAP page opens,P1,"R-032, R-070",,new,New feature (REQ-001)
+TC-097,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Mine showing",Tap 「Claim Holiday Deal」,The New Year IAP page opens,P1,R-076,,new,New feature (REQ-001)
+TC-098,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Mine showing",Tap the top pill,The Christmas IAP page opens,P2,"R-033, R-069",,new,New feature (REQ-001)
+TC-099,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Mine showing",Tap the top pill,The New Year IAP page opens,P2,R-075,,new,New feature (REQ-001)
+TC-100,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page open from Mine",Look at the whole IAP page,"Top banner 「Christmas Special」, the same image in every language
+「PowerDirector Pro」 and 「No Watermark. Unlimited  Assets. No Ads. 50% Off Credit Pack.」
+Feature cards 「Auto Edit」, 「4K Output」, 「Remove Watermark」
+The annual card is selected
+Annual card: seasonal background, top-right tag 「Christmas Treat」 with a small decoration, 「Save <xx>%」 on its right half, 「<annual price>/Year」 and 「with 7-day free trial」
+Monthly card: the original price struck through and the discounted price
+「Receive 35 credits during free trial」 above the CTA
+No countdown on or under 「Get 7-Day Free Trial」
+No 「Offer」 wording anywhere on the page",P1,"R-034, R-035, R-037, R-038, R-039, R-040, R-007","PM 1104 wins over the Design plan card (Special Offer, 67% OFF, $31.99, countdown): Q-10, Q-11.",new,New feature (REQ-001)
+TC-101,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page open","1. Note the annual price A and the discounted monthly price M on the cards
+2. Read 「Save <xx>%」","xx = (M × 12 − A) ÷ (M × 12) × 100, rounded (mockup: $34.99 vs $6.79 × 12 = 57%)",P1,"R-036, R-005, R-006","SKU table US $45.99 / $6.99 gives 45%, TW gives 58% (Q-3).",new,New feature (REQ-001)
+TC-102,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. IAP page open from Mine",Look at the whole IAP page,"Top banner 「New Year Special」, the same image in every language
+「PowerDirector Pro」 and 「No Watermark. Unlimited  Assets. No Ads. 50% Off Credit Pack.」
+Feature cards 「Auto Edit」, 「4K Output」, 「Remove Watermark」
+The annual card is selected
+Annual card: seasonal background, top-right tag 「New Year Treat」 with a small decoration, 「Save <xx>%」 on its right half, 「<annual price>/Year」 and 「with 7-day free trial」
+Monthly card: the original price struck through and the discounted price
+「Receive 35 credits during free trial」 above the CTA
+No countdown on or under 「Get 7-Day Free Trial」
+No 「Offer」 wording anywhere on the page",P1,"R-034, R-035, R-037, R-038, R-039, R-040, R-007","PM 1104 wins over the Design plan card (Special Offer, 67% OFF, $31.99, countdown): Q-10, Q-11.",new,New feature (REQ-001)
+TC-103,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. IAP page open","1. Note the annual price A and the discounted monthly price M on the cards
+2. Read 「Save <xx>%」","xx = (M × 12 − A) ÷ (M × 12) × 100, rounded (mockup: $34.99 vs $6.79 × 12 = 57%)",P1,"R-036, R-005, R-006","SKU table US $45.99 / $6.99 gives 45%, TW gives 58% (Q-3).",new,New feature (REQ-001)
+TC-104,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page open, annual card selected
+4. Logcat running",Tap 「Get 7-Day Free Trial」,"The Google Play panel opens for the annual plan with a 7-day free trial
+SKU annualsubscription_christmas_2611 (logcat) at the store's price",P1,"R-041, R-009",,new,New feature (REQ-001)
+TC-105,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page open
+4. Logcat running","1. Tap the monthly card
+2. Tap the CTA","Step 1: the monthly card is selected
+Step 2: the Google Play panel opens for SKU monthlysubscription_christmas_2611 (logcat) at the store's discounted price",P1,"R-041, R-006, R-009",,new,New feature (REQ-001)
+TC-106,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. IAP page open
+4. Logcat running","1. Tap the monthly card
+2. Tap the CTA",The Google Play panel opens for SKU monthlysubscription_newyear_2611 (logcat),P2,"R-041, R-006, R-009",,new,New feature (REQ-001)
+TC-107,Mine and IAP,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. IAP page open
+4. Logcat running",Tap 「Get 7-Day Free Trial」,The Google Play panel opens for SKU annualsubscription_newyear_2611 (logcat),P2,"R-041, R-005, R-009",,new,New feature (REQ-001)
+TC-108,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page opened from Mine",Tap the back arrow ‹,Back on Mine,P2,R-042,,new,New feature (REQ-001)
+TC-109,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page opened from the interstitial 「More subscription plan」",Press system Back,"Back where the IAP page was opened from, as the back arrow does",P2,"R-061, R-042",,new,New feature (REQ-001)
+TC-110,Mine and IAP,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. IAP page open","1. Tap 「Terms of Service」
+2. Go back
+3. Tap 「Privacy Policy」
+4. Go back
+5. Tap 「Restore purchase」","Step 1: the Terms of Service page opens
+Step 3: the Privacy Policy page opens
+Step 5: the restore runs and, with no purchase, the account stays Free",P3,R-040,,new,New feature (REQ-001)
+TC-111,Mine and IAP,"1. Free account (not subscribed) signed in, Google Play country India
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)",Open the IAP page from Mine,"The monthly card is selected when the page opens
+The campaign tag and prices still show",P2,R-007,Needs a Play account in this country (Q-17).,new,New feature (REQ-001)
+TC-112,Mine and IAP,"1. Free account (not subscribed) signed in, Google Play country Indonesia
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)",Open the IAP page from Mine,"The monthly card is selected when the page opens
+The campaign tag and prices still show",P2,R-007,Needs a Play account in this country (Q-17).,new,New feature (REQ-001)
+TC-113,Mine and IAP,"1. Free account (not subscribed) signed in, Google Play country Philippines
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)",Open the IAP page from Mine,"The monthly card is selected when the page opens
+The campaign tag and prices still show",P2,R-007,Needs a Play account in this country (Q-17).,new,New feature (REQ-001)
+TC-114,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language 日本語, Play country Japan","1. Open Mine
+2. Open the VIP Benefits page","The JP layout: a Christmas banner 「Merry Christmas! Enjoy...」 with 「20+ VIP features, 1000+ templates, and 250 free credits every month.」
+Christmas decoration on the welcome banner",P2,R-043,PM frame 3226:37164 (JP).,new,New feature (REQ-001)
+TC-115,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language English, Play country US","1. Open Mine
+2. Open the VIP Benefits page",The US layout: the VIP card with Christmas decoration,P2,R-043,PM frame 3271:3807 (US).,new,New feature (REQ-001)
+TC-116,Mine and IAP,"1. Pro account (subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)","1. Open Mine
+2. Open the VIP Benefits page","The welcome banner carries New Year decoration, no Christmas decoration",P2,R-043,,new,New feature (REQ-001)
+TC-117,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. VIP Benefits page open",Press system Back,Back on Mine,P3,R-063,,new,New feature (REQ-001)
+TC-118,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. App language 日本語","1. Open the IAP page
+2. Open Mine › Credits","Step 1: the IAP top banner 「Christmas Special」 is the same English image as in English
+Step 2: the credit page top banner 「Christmas Special」 is the same English image as in English",P3,"R-034, R-045",PM: 「不出多國」.,new,New feature (REQ-001)
+TC-119,Mine and IAP,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)","1. Open Mine
+2. Tap the top pill 「Credit Special Offer」","Step 1: the top pill reads 「Credit Special Offer」 with a gift icon
+Step 2: the Christmas credit purchase page opens (assumption Q-12)",P2,R-044,,new,New feature (REQ-001)
+TC-120,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. No Credit Auto Pass
+4. Credit purchase page open (Mine › Credits)",Look at the whole page,"Top banner 「Christmas Special」, the same image in every language
+Special Offer pack: white 「1000」 and green 「+1000」, 「$166.99」
+Packs 50, 100, 200, 500, 1000, 2000 credits, each with its original price struck through and the member price
+「Subscribe for 3000 free credits!」 and 「Get 2000 credits for $166.99」
+「Each credit for about $0.1」 and 「The expiration period for consumed credits is one year.」
+「Privacy Policy」 | 「Terms of Use」",P1,"R-045, R-046, R-050, R-052","US mockup prices: $9.99→$4.99, $17.99→$8.99, $31.99→$15.99, $69.99→$34.99, $119.99→$59.99, $199.99→$99.99.",new,New feature (REQ-001)
+TC-121,Credit purchase page,"1. Pro account (subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. No Credit Auto Pass
+4. Credit purchase page open (Mine › Credits)",Look at the whole page,"Top banner 「New Year Special」, the same image in every language
+Special Offer pack: white 「1000」 and green 「+1000」, 「$166.99」
+Packs 50, 100, 200, 500, 1000, 2000 credits, each with its original price struck through and the member price
+「Subscribe for 3000 free credits!」 and 「Get 2000 credits for $166.99」
+「Each credit for about $0.1」 and 「The expiration period for consumed credits is one year.」
+「Privacy Policy」 | 「Terms of Use」",P1,"R-045, R-046, R-050, R-052","US mockup prices: $9.99→$4.99, $17.99→$8.99, $31.99→$15.99, $69.99→$34.99, $119.99→$59.99, $199.99→$99.99.",new,New feature (REQ-001)
+TC-122,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit purchase page open
+4. Logcat running",Tap 「Get 2000 credits for $166.99」,"The Google Play panel opens for SKU pdrm_2000_credit_paiduser_christmas (logcat), 2000 credits at the store's price",P1,"R-046, R-008, R-009",,new,New feature (REQ-001)
+TC-123,Credit purchase page,"1. Pro account (subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Credit purchase page open
+4. Logcat running",Tap 「Get 2000 credits for $166.99」,The Google Play panel opens for the same SKU pdrm_2000_credit_paiduser_christmas (logcat),P2,"R-008, R-009",,new,New feature (REQ-001)
+TC-124,Credit purchase page,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Logcat running","1. Open Mine › Credits
+2. Look at the Special Offer pack
+3. Tap its CTA","Step 2: the pack shows only a white 「500」
+Step 2: the original price is struck through and the sale price is shown beside it (Q-13)
+Step 3: the Google Play panel opens for SKU pdrm_500_credit_freeuser_christmas (logcat)",P1,"R-047, R-008, R-009",PM-only: no Design frame yet (Design 2026-11-20).,new,New feature (REQ-001)
+TC-125,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. No Credit Auto Pass subscription",Open the credit purchase page,"The Auto Pass credit sale leads: 「Subscribe for 3000 free credits!」 (Q-14)
+The balance line has no 「Auto Pass activated」",P1,R-048,,new,New feature (REQ-001)
+TC-126,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit Auto Pass subscribed",Open the credit purchase page,"The balance line reads 「Auto Pass activated」
+The 2000-credit pack sale shows: 「1000+1000」 「$166.99」 and 「Get 2000 credits for $166.99」 (Q-14)",P1,R-048,Run after the Auto Pass purchase row.,new,New feature (REQ-001)
+TC-127,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. No Credit Auto Pass
+4. Credit purchase page open",Tap 「Subscribe for 3000 free credits!」,The Google Play panel opens for the Credit Auto Pass subscription,P2,R-051,,new,New feature (REQ-001)
+TC-128,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Phone date 2026-12-20 12:00 local, automatic date off",Open the credit purchase page,No countdown above the CTAs,P2,R-049,PM: countdown from 12/21 for 7 days (Q-11).,new,New feature (REQ-001)
+TC-129,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Phone date 2026-12-25 00:03:42 local, automatic date off","1. Open the credit purchase page
+2. Wait 10 seconds","Step 1: above the CTAs a clock icon and 「2D 23:56:18」 or less (counting to 2026-12-27 23:59:59, assumption Q-11)
+Step 2: the seconds count down",P2,R-049,,new,New feature (REQ-001)
+TC-130,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit purchase page open from Mine","1. Tap the back arrow ‹
+2. Open the page again
+3. Press system Back","Step 1: back on Mine
+Step 3: back on Mine, as the arrow does",P2,"R-052, R-061",,new,New feature (REQ-001)
+TC-131,Credit purchase page,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit purchase page open","1. Tap 「Privacy Policy」
+2. Go back
+3. Tap 「Terms of Use」","Step 1: the Privacy Policy page opens
+Step 3: the Terms of Use page opens",P3,R-052,,new,New feature (REQ-001)
+TC-132,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「More Credits Needed!」
+「You don’t have enough credits to use this feature. Get credits now!」
+CTA 「Grab Discount Now!」
+Christmas background and image",P1,R-053,Design I2V_Custom 2754:6631.,new,New feature (REQ-001)
+TC-133,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. The dialog above open",Tap 「Grab Discount Now!」,The Christmas credit purchase page opens,P1,R-054,,new,New feature (REQ-001)
+TC-134,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「Upgrade to Pro」
+「You don’t have enough credits to use this feature. Upgrade to Pro to get free bonus credits every month.」
+CTA 「Grab Discount Now!」
+Christmas background and image",P1,R-055,,new,New feature (REQ-001)
+TC-135,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. The dialog above open",Tap 「Grab Discount Now!」,The Christmas IAP page opens,P1,R-055,,new,New feature (REQ-001)
+TC-136,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「More Credits Needed!」
+「You don’t have enough credits to use this feature. Get credits now!」
+CTA 「Grab Discount Now!」
+New Year background and image",P1,"R-053, R-058",PM New Year frames still say 「CHRISTMAS SALE」 (Q-15).,new,New feature (REQ-001)
+TC-137,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. The dialog above open",Tap 「Grab Discount Now!」,The New Year credit purchase page opens,P1,R-054,,new,New feature (REQ-001)
+TC-138,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. Credit balance below the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","The dialog 「Upgrade to Pro」
+「You don’t have enough credits to use this feature. Upgrade to Pro to get free bonus credits every month.」
+CTA 「Grab Discount Now!」
+New Year background and image",P1,"R-055, R-058",,new,New feature (REQ-001)
+TC-139,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. New Year window: phone date 2026-12-30, automatic date off (Q-1)
+3. The dialog above open",Tap 「Grab Discount Now!」,The New Year IAP page opens,P1,R-055,,new,New feature (REQ-001)
+TC-140,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Credit balance above the price of Image to Video (Custom)","1. Open Image to Video › Custom
+2. Enter a prompt
+3. Tap 「Generate」","No dialog
+The generation starts and the credits are charged once",P1,R-056,,new,New feature (REQ-001)
+TC-141,Not Enough Credit dialog,"1. Pro account (subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. The paid dialog open
+4. Balance noted",Tap ⓧ,"The dialog closes, back on Image to Video
+The balance is unchanged",P2,R-057,,new,New feature (REQ-001)
+TC-142,Not Enough Credit dialog,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. The free dialog open",Press system Back,"The dialog closes, back on Image to Video, as ⓧ does",P2,R-062,,new,New feature (REQ-001)
+TC-143,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. A short Android screen (about 411×731 dp, or display size set largest)","1. Look at the interstitial
+2. Open the IAP page
+3. Open Mine › Credits","Steps 1–3: every element shows with nothing clipped or overlapped
+Steps 1–3: CTA, terms and links can be reached (scroll where the Design allows)",P2,R-023,"Design 「短裝置」 frames 2750:20070, 2750:20280.",new,New feature (REQ-001)
+TC-144,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Tablet or a phone the app turns to landscape",Look at the Launcher in landscape,"The Christmas top banner and pill over the landscape Launcher (My Projects, tool row), nothing cut off",P3,R-059,,new,New feature (REQ-001)
+TC-145,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Tablet or a phone the app turns to landscape",Launch the app in landscape,"Left: the 「Save 57%」 art
+Right: price, 「Get 7-Day Free Trial」, terms, 「More subscription plan」 and the links",P3,R-024,,new,New feature (REQ-001)
+TC-146,Layout,"1. Free account (not subscribed) signed in
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Tablet or a phone the app turns to landscape",Open the IAP page in landscape,"Left: the 「Christmas Special」 art
+Right: the plans, 「Receive 35 credits during free trial」, the CTA and the links",P3,R-060,,new,New feature (REQ-001)
+TC-147,Purchases,"1. Free license-tester account (Play sheet shows 「Test card, always approves」)
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Logcat running
+4. Run after every Free row","1. On the interstitial tap 「Get 7-Day Free Trial」
+2. Subscribe in the Google Play panel","The purchase completes on SKU annualsubscription_christmas_2611 with a 7-day trial (logcat)
+The app turns Pro: Mine shows the VIP card and the Free-user campaign entries are gone
+The interstitial does not show on the next launch",P1,"R-005, R-009, R-016",,new,New feature (REQ-001)
+TC-148,Purchases,"1. Free license-tester account
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Balance noted
+4. Logcat running","1. Open Mine › Credits
+2. Buy the 500-credit Special Offer","SKU pdrm_500_credit_freeuser_christmas (logcat)
+The balance grows by 500",P2,"R-047, R-008",,new,New feature (REQ-001)
+TC-149,Purchases,"1. Pro license-tester account
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)
+3. Balance noted
+4. Logcat running","1. Open Mine › Credits
+2. Tap 「Get 2000 credits for $166.99」 and buy","SKU pdrm_2000_credit_paiduser_christmas (logcat)
+The balance grows by 2000 (1000 + 1000)",P2,"R-046, R-008",,new,New feature (REQ-001)
+TC-150,Purchases,"1. Pro license-tester account without Auto Pass
+2. Christmas window: phone date 2026-12-15, automatic date off (Q-1)","1. Open Mine › Credits
+2. Tap 「Subscribe for 3000 free credits!」 and subscribe","The subscription completes
+The page now shows 「Auto Pass activated」 (the next row checks its offer)",P2,"R-048, R-051",,new,New feature (REQ-001)

@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-11-20",
+  "how": "Figma-only spec set (user, 2026-11-20). Design file 「[MX] Christmas & New Year」 page 2651:11 「2026」 (figma-design, qa-dm): section 「Christmas」 2784:5280 (boards Interstitial, IAP & Credit, Launcher & dialog, Landscape) read as group files d-xmas-*, section 「New year」 2844:5519 (same four boards) as d-ny-*. Frame 「X」 2732:16703 (exploration drafts) is not spec. The Design 「MX Spec Link」 text links to the PM page. PM page 3226:21364 「26 16.9 Christmas & New Year Sales」 in the PDRM-MX file (figma-pm, qa1): sections 「Christmas Sale」 3226:21365 and 「New Year Sale」 3271:4161 read as four regions each (launch, iap, credit, rules), and the loose layers outside the sections (older interstitial and screen copies) as pm-loose (traced older). Neither file carries dated board labels; the PM notes are marked 「1104 Update」 and 「Last Update: 1104」.",
+  "pm_checked_at": "2026-11-20",
+  "files": {
+    "pm": {
+      "fileKey": "3urWYejMUP2uaglb4s73M5",
+      "page": "3226:21364",
+      "url": "https://www.figma.com/design/3urWYejMUP2uaglb4s73M5/PDRM-MX?node-id=3226-21364",
+      "account": "qa1@cyberlink.com (Dev seat, PM Workspace)"
+    },
+    "design": {
+      "fileKey": "HpkQG91Rm4POCXpzjC1QbT",
+      "page": "2651:11",
+      "url": "https://www.figma.com/design/HpkQG91Rm4POCXpzjC1QbT/-MX--Christmas---New-Year?node-id=2784-5280",
+      "account": "qa-dm@cyberlink.com (Dev seat, CyberLink DC)"
+    }
+  },
+  "frames": [
+    {
+      "label": "1104 Update (PM, Christmas interstitial)",
+      "node": "3226:21365",
+      "in_pdf": false,
+      "read": "pm-xmas-launch"
+    },
+    {
+      "label": "1104 Update (PM, Christmas IAP price tag)",
+      "node": "3226:21365",
+      "in_pdf": false,
+      "read": "pm-xmas-launch"
+    },
+    {
+      "label": "1104 Update (PM, New Year interstitial)",
+      "node": "3271:4161",
+      "in_pdf": false,
+      "read": "pm-ny-launch"
+    },
+    {
+      "label": "1104 Update (PM, New Year IAP price tag)",
+      "node": "3271:4161",
+      "in_pdf": false,
+      "read": "pm-ny-launch"
+    },
+    {
+      "label": "Last Update: 1104 (PM rules, Christmas)",
+      "node": "3226:21365",
+      "in_pdf": false,
+      "read": "pm-xmas-rules"
+    },
+    {
+      "label": "Last Update: 1104 (PM rules, New Year)",
+      "node": "3271:4161",
+      "in_pdf": false,
+      "read": "pm-ny-rules"
+    }
+  ]
+}
