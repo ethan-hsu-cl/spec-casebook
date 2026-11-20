@@ -1,0 +1,19 @@
+# ISS-CR-18 Creative charge 70
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-S9110 / Android 16, logcat of the app captured by the casebook run
+# Lines about the job, its status, credits (balance shown only when it changes) and notifications; tokens and IDs dropped.
+
+## Generate tapped 14:04:41 (2026-11-18 14:04:30–14:04:50)
+2026-11-18 14:04:42.399 CreditSystem: totalRemain=1052
+2026-11-18 14:04:44.260 AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1794981882704]
+2026-11-18 14:04:44.261 AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-18 14:04:45.118 CreditSystem: totalRemain=982
+2026-11-18 14:04:45.121 AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1794981882704]
+2026-11-18 14:04:45.122 AIEditorPreferenceUtil: updatePackItems column value: Apply
+2026-11-18 14:04:45.130 AIEditorPreferenceUtil: updatePackItems column: created_time packIds: [credit_create_CreativeReel_1794981882704]
+2026-11-18 14:04:45.130 AIEditorPreferenceUtil: updatePackItems column value: 1794981885130
+2026-11-18 14:04:45.133 AIEditorPreferenceUtil: updatePackItems column: estimated_time packIds: [credit_create_CreativeReel_1794981882704]
+2026-11-18 14:04:45.133 AIEditorPreferenceUtil: updatePackItems column value: 1794981885130
+2026-11-18 14:04:45.134 AIEditorPreferenceUtil: updatePackItems column: task_id packIds: [credit_create_CreativeReel_1794981882704]
+2026-11-18 14:04:45.134 AIEditorPreferenceUtil: updatePackItems column value: 1
+2026-11-18 14:04:45.135 AIEditorPreferenceUtil: updatePackItems column: credit_consume_task_id packIds: [credit_create_CreativeReel_1794981882704]
+2026-11-18 14:04:45.135 AIEditorPreferenceUtil: updatePackItems column value: 91717397

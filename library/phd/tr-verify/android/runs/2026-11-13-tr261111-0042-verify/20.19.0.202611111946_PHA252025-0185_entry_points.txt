@@ -1,0 +1,16 @@
+Entry points checked for AI Face Swap on 20.19.0.v202611111946 (SM-S911, Android 16), 2026-11-13
+
+Launcher shortcuts page 1: Camera, AI Edit Agent, Image to Video, AI Creative Studio, AI Removal, Beautify, AI Expand, AI Try-On
+Launcher shortcuts page 2: Cinematic Reel Creator, AI Group Shot, Character Motion Swap, AI Video Try-On, AI Replace, Collage, AI Art, Pet Try-on
+AI Photos tab: AI Creative Studio, AI Group Shot, AI Try-On, AI Hair Color, AI Headshot, AI Hairstyle, AI Art, AI Glow Up, AI Background, Hair Volume, Style Transfer, AI Edits, AI Replace, AI Expand, AI Scene
+AI Videos tab: Image to Video, Cinematic Reel Creator, Character Motion Swap, AI Video Try-On, AI Anime Video
+Edit room tools:
+
+  Edit Background Mosaic AI Expand AI Replace Add Photo Sticker InstaFill Brush Move Clone Frame AI Scene 
+  Enhance AI Edit Agent AI Enhance Adjustments Filter Deblur Denoise Dehaze 
+  Portrait Beautify Body Reshape Makeup Hair AI Headshot AI Try-On AI Art Image to Video People Background Style Transfer AI Relight 
+  Effects Cinematic Reel Creator Blur Tool Fisheye HDR Vignette Light Hits Focus Sky VHS Splash Invert Glitch Live Overlay Effect Mirror 
+  Quick Actions Auto Subject Presets
+  (Edit also starts with AI Edit Agent, AI Removal, Crop, Text, Cutout)
+
+AI Face Swap appears in none of them.

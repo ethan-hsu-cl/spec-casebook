@@ -1,0 +1,33 @@
+{
+  "tr": "TR261111-0042",
+  "product": "PhotoDirector Mobile for Android",
+  "tester": "WILLY_WU",
+  "template": "Standard Report",
+  "testingDate": "2026/11/13",
+  "version": "20.19.0",
+  "build": "202611111946",
+  "buildDay": "",
+  "os": "",
+  "style": "phd-a",
+  "textOnly": true,
+  "shortDescription": "20.19.0.v202611111946 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R3)",
+  "env": {
+    "device": "Samsung Galaxy S23 (SM-S911) / Android 16",
+    "server": "Test Server",
+    "account": "",
+    "testedBy": "WILLY_WU",
+    "install": "Google Play internal testing build 20.19.0",
+    "scope": "PHA262026P0050"
+  },
+  "rows": [
+    {
+      "bug": "PHA262026P0050",
+      "title": "PHD-A 20.18.0 - [Scail-2]Char_motion_swap: Generation always failed when using reference video without audio",
+      "creator": "ALBERT_CHANG",
+      "severity": "2",
+      "result": "OK",
+      "summary": "Character Motion Swap now generates successfully with a reference video that has no audio.",
+      "images": []
+    }
+  ]
+}

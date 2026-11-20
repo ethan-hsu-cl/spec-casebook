@@ -1,0 +1,30 @@
+
+2 of 6 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[AI-Hair-Color-Custom-R3-01] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Intro Demo button reads 「Try now」, not 「Try Now」
+      feature='AI_Hair_Color'  searched 16 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R3-02] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom panel: Solid leaves the Highlight Color row greyed out instead of hiding it
+      feature='AI_Hair_Color'  searched 16 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R3-03] PHD-A 20.19.0 - [AIAgent][UX] AI_Hair_Color: Custom cell keeps its unset look after applying, not the chosen colours — PM to decide
+      feature='AI_Hair_Color'  searched 16 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R3-04] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Solid template 「Soft Black」 takes about 35 s to generate, not about 15 s
+      feature='AI_Hair_Color'  searched 16 candidate(s)
+    ! 57%  closed    PHA262026P0115  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Collapsing Custom panel keeps Soft Black select
+              shares phrase "soft black"
+
+[AI-Hair-Color-Custom-R3-05] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Colour page: first Solid template is 「Soft Black」, no 「Platinum」 — PM to confirm
+      feature='AI_Hair_Color'  searched 16 candidate(s)
+    ! 33%  closed    PHA262026P0115  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Collapsing Custom panel keeps Soft Black select
+              shares phrase "soft black"
+    ! 22%  OPEN      PHA262026P0110  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: No slanted-face warning: a face tilted 45° open
+              shares phrase "colour page"
+
+[AI-Hair-Color-Custom-R3-06] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Custom panel: split-dye styles show photo thumbnails, not plain-colour ones — PM to confirm
+      feature='AI_Hair_Color'  searched 16 candidate(s)
+      no likely duplicate

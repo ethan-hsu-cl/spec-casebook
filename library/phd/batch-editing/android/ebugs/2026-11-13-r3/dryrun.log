@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\willy_wu\Desktop\Agent\spec-casebook\.claude\skills\ebug-tr-filer\scripts\ecl_if3.py", line 932, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\willy_wu\Desktop\Agent\spec-casebook\.claude\skills\ebug-tr-filer\scripts\ecl_if3.py", line 925, in main
+    return a.fn(a)
+           ^^^^^^^
+  File "C:\Users\willy_wu\Desktop\Agent\spec-casebook\.claude\skills\ebug-tr-filer\scripts\ecl_if3.py", line 317, in cmd_create
+    bodies = json.load(f)
+             ^^^^^^^^^^^^
+  File "C:\Users\willy_wu\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ^^^^^^^^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe3 in position 85: illegal multibyte sequence

@@ -1,0 +1,18 @@
+20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md
+  6 entries · 10 images · 6 Spec Link lines · 0/0 ▲ rows · max ShortDesc 136
+FAILED:
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e1 (ISS-HCC-31): links 'AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), Spec - Flow board, Intro Demo' but Description never names that sheet in full (ambiguous=True)
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e1: unknown sheet 'AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), Spec - Flow board, Intro Demo'
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e2 (ISS-HCC-32): links 'AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), panel_solid_color (NEW) frame, Spec - UI (D6-04)' but Description never names that sheet in full (ambiguous=True)
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e2: unknown sheet 'AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), panel_solid_color (NEW) frame, Spec - UI (D6-04)'
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e3 (ISS-HCC-33): links 'AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), collapsed_applied (NEW) frame, Spec - UI (D6-08)' but Description never names that sheet in full (ambiguous=True)
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e3: unknown sheet 'AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), collapsed_applied (NEW) frame, Spec - UI (D6-08)'
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e4 (ISS-HCC-34): links 'AI Hair Color PM Figma (26 10E AI Hair Color v2, cited by the Custom page), Spec - UI, sync short task D1-03 (about 15 s)' but Description never names that sheet in full (ambiguous=True)
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e4: unknown sheet 'AI Hair Color PM Figma (26 10E AI Hair Color v2, cited by the Custom page), Spec - UI, sync short task D1-03 (about 15 s)'
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e5 (ISS-HCC-35): links 'AI Hair Color Design Figma (Hair, 261005_AI_hair_color page), 4-hair_color frame (swatch row)' but Description never names that sheet in full (ambiguous=True)
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e5: unknown sheet 'AI Hair Color Design Figma (Hair, 261005_AI_hair_color page), 4-hair_color frame (swatch row)'
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e6 (ISS-HCC-36): links 'AI Hair Color Design Figma (Hair, 261005_AI_hair_color page), 4-hair_color_case1_no_style frame' but Description never names that sheet in full (ambiguous=True)
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md e6: unknown sheet 'AI Hair Color Design Figma (Hair, 261005_AI_hair_color page), 4-hair_color_case1_no_style frame'
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md: no '### Owner split' table
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md: owner split
+  20261120_eBug_drafts_AI-Hair-Color-Custom-R3_20.19.0.md: row map omits ['ISS-HCC-31', 'ISS-HCC-32', 'ISS-HCC-33', 'ISS-HCC-34', 'ISS-HCC-35', 'ISS-HCC-36']

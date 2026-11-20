@@ -1,0 +1,41 @@
+{
+ "ISS-HCC-31": {
+  "cases": [
+   "TC-001"
+  ],
+  "why": "Intro Demo button reads 「Try now」, not the spec's 「Try Now」"
+ },
+ "ISS-HCC-32": {
+  "cases": [
+   "TC-024",
+   "TC-029"
+  ],
+  "why": "With Solid the Highlight Color row stays on screen greyed out instead of being hidden"
+ },
+ "ISS-HCC-33": {
+  "cases": [
+   "TC-038",
+   "TC-041",
+   "TC-042"
+  ],
+  "why": "PM decision: an applied Custom cell keeps its unset look instead of showing the chosen colours"
+ },
+ "ISS-HCC-34": {
+  "cases": [
+   "TC-078"
+  ],
+  "why": "A Solid template generation takes about 35 s, not the spec's about 15 s"
+ },
+ "ISS-HCC-35": {
+  "cases": [
+   "TC-017"
+  ],
+  "why": "PM decision: the first Solid template is 「Soft Black」, not the spec's 「Platinum」"
+ },
+ "ISS-HCC-36": {
+  "cases": [
+   "TC-022"
+  ],
+  "why": "PM decision: the two split-dye styles have photo thumbnails, not plain-colour ones"
+ }
+}

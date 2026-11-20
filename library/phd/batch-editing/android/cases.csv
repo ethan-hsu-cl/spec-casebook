@@ -6,7 +6,8 @@ TC-002,Photo Picker,"1. Photo Picker opened from 「Edit」 with the 「Batch」
 TC-003,Photo Picker,Photo Picker from 「Edit」 on 「Single」,Tap one photo,"The existing single-photo Edit Room opens with that photo (full Edit Room toolbar, flow unchanged)",P1,R-011,
 TC-004,Photo Picker,Photo Picker from 「Edit」 on 「Single」,Try to select a second photo,Only one photo can be chosen on 「Single」 (the first tap opens Edit Room; no multi-select),P2,R-013,
 TC-005,Photo Picker,Photo Picker from 「Edit」,Tap 「Batch」 and look at the tab and the bottom bar,"The 「Batch」 tab is highlighted
-A bottom bar shows the hint 「Select 1 to 20 photos to continue. (0/20)」 and 「Next」",P1,"R-012, R-015",Design copy; the PM boards draw 「Select 1 to 20 photos.」 / 「n selected (max 20)」 and 「Done」 (Q-1): record the string shown before and after selecting.
+A bottom bar shows the hint 「Select 1 to 20 photos to continue. (0/20)」 and 「Next」
+「Next」 is grey (no photo selected)",P1,"R-012, R-015","Design copy (REQ-004). Ruling REQ-021 (Q-1, Q-13): 「Next」 is grey until a photo is selected."
 TC-006,Photo Picker,"1. Signed in with a PhotoDirector Premium account
 2. Gallery holds at least 25 photos of mixed orientation",On the Launcher tap the 「AI Enhance」 shortcut,"The Photo Picker opens with the same 「Single」 / 「Batch」 tab, 「Single」 selected",P1,"R-012, R-010, R-214",
 TC-007,Photo Picker,Photo Picker on 「Batch」,Tap 3 photos one after another,"Each selected thumbnail shows its order number 1, 2, 3
@@ -15,15 +16,17 @@ The tray under the bar lists the 3 photos in that order
 「Next」 is enabled",P1,"R-013, R-014, R-015, R-019",
 TC-008,Photo Picker,"Photo Picker on 「Batch」 with photos A, B, C selected in that order",Tap 「Next」 and look at the thumbnail strip of Batch Edit Room,"The strip lists A, B, C in the selection order (not the gallery order)",P1,R-014,
 TC-009,Photo Picker,"Photo Picker on 「Batch」 with 3 photos selected (1, 2, 3)",Tap photo 2 again to deselect it,"Photo 2 is deselected
-Record whether photo 3 is renumbered to 2 and the count drops to 2",P3,R-014,Spec silent on deselect (Q-13).
+Photo 3 is renumbered to 2
+The hint ends 「(2/20)」",P2,R-014,Ruling REQ-021 (Q-13).
 TC-150,Photo Picker,"Photo Picker on 「Batch」 with photos 1, 2, 3 selected",Tap ✕ on photo 2 in the tray under the bottom bar,"Photo 2 leaves the tray and its tile loses the number
 The hint ends 「(2/20)」
-Record whether photo 3 is renumbered to 2",P2,"R-019, R-014",Spec silent on renumbering (Q-13).
+Photo 3 is renumbered to 2 on its tile and in the tray",P2,"R-019, R-014",Ruling REQ-021 (Q-13).
 TC-151,Photo Picker,"Photo Picker on 「Batch」, nothing selected","1. Tap the expand icon at the bottom right of a tile
-2. Close what opens","The photo opens large without being selected
-Closing it returns to the picker with nothing selected",P3,R-233,Design draws the icon only (Q-13): record what opens.
-TC-010,Photo Picker,"Photo Picker on 「Batch」, nothing selected",Tap 「Next」,"Record: 「Next」 is disabled or does nothing
-Batch Edit Room does not open with no photo",P3,R-015,Spec silent (Q-13).
+2. Close what opens","The album selection screen opens
+Closing it returns to the picker with nothing selected",P3,R-233,Ruling REQ-021 (Q-13): the expand icon opens the album selection screen.
+TC-010,Photo Picker,"Photo Picker on 「Batch」, nothing selected",Tap 「Next」,"「Next」 is grey
+Tapping it does nothing
+Batch Edit Room does not open",P2,R-015,Ruling REQ-021 (Q-13).
 TC-011,Photo Picker,"1. Signed in with a PhotoDirector Premium account
 2. Photo Picker on 「Batch」
 3. Gallery holds at least 25 photos of mixed orientation",Select 20 photos,"All 20 can be selected (numbers 1–20)
@@ -48,7 +51,11 @@ TC-019,Entry,"1. Signed in with a PhotoDirector Premium account
 2. Photo Picker from the 「AI Enhance」 shortcut on 「Batch」 with 3 photos selected (「(3/20)」)",Tap 「Next」,"Batch Edit Room opens directly on its AI Enhance page (「Enhance」 button, thumbnail strip of the 3 photos)",P1,"R-021, R-001, R-215",
 TC-020,Entry,"Single-photo Edit Room open on one photo, no edit","Tap Replace photo, switch the picker to 「Batch」, select 3 photos and tap 「Next」",The picker allows the 「Batch」 tab and 「Next」 opens Batch Edit Room with the 3 photos,P1,"R-017, R-219",
 TC-021,Entry,Single-photo Edit Room open,"Look through every Edit Room tool tab (Quick Action, Edit, Enhance, Portrait …)",No Batch Edit tool or entry in Edit Room itself,P3,R-002,
-TC-022,Entry,Launcher open,"Look for a Batch Edit shortcut on the Launcher (shortcut row and 「View all」); if there is one, tap it",Record whether the shortcut exists (its icon is still being designed) and where it lands (expected: the Photo Picker on 「Batch」),P3,R-022,UI UX flow 2 plans the shortcut and a deeplink (TC-152); landing not stated (Q-15).
+TC-022,Entry,"1. Signed in with a PhotoDirector Premium account
+2. Launcher open","1. On the Launcher look at the 「Features」 grid
+2. Tap 「Batch Edit」","Step 1: 「Batch Edit」 with its own icon is in the second row of the Features grid, between 「AI Removal」 and 「Beautify」
+Step 2: Batch Edit opens
+Step 2: The run records where it lands (assumed: the Photo Picker on 「Batch」, Q-15)",P2,R-022,Design Launcher board 225:3699 (read 2026-11-18) draws the shortcut and names it 「Batch Edit」; UI UX flow 2 still says its icon is to be designed. No arrow from it: landing still Q-15. Deeplink: TC-152.
 TC-152,Entry,"1. Signed in with a PhotoDirector Premium account
 2. Phone on USB","Open the deeplink phd://navigate/page?name=batch_edit (adb shell am start -a android.intent.action.VIEW -d ""phd://navigate/page?name=batch_edit"")","PhotoDirector opens on the Batch Edit entry
 Record where it lands (expected: the Photo Picker on 「Batch」)",P2,R-022,Landing not stated (Q-15).
@@ -59,15 +66,15 @@ TC-024,Batch Edit Room,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet",Look at the top bar,"Home and Replace photo at the left
 A feedback button (speech bubble with !), Save (download icon, as Edit Room) and Setting at the right",P2,R-031,Feedback button drawn by Design only (Q-21): record if absent.
 TC-025,Batch Edit Room,"1. Signed in with a PhotoDirector Premium account
-2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet",Tap the Setting button,"Record what opens
-Closing it returns to Batch Edit Room with nothing changed",P3,R-039,Spec silent on the target (Q-3).
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet",Tap the Setting button,"The same Setting page as the single-photo Edit Room's Setting opens
+Closing it returns to Batch Edit Room with nothing changed",P3,R-039,Ruling REQ-021 (Q-3).
 TC-154,Batch Edit Room,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet",Tap the feedback button (speech bubble with !) in the top bar,"Record what opens
 Closing it returns to Batch Edit Room with nothing changed",P3,R-031,Drawn by Design only (Q-21).
 TC-026,Batch Edit Room,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos, photo 1 cropped to Square and back on the main screen (✓)","1. Press and hold the compare button on the photo
 2. Release it","While held the original photo 1 is shown
-On release the edited one returns (as Edit Room)",P3,R-039,Compare behaviour assumed from Edit Room (Q-4).
+On release the edited one returns (as Edit Room)",P3,R-039,"Ruling REQ-021 (Q-4): hold shows the original, as in Edit Room."
 TC-027,Batch Edit Room,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet","Tap thumbnails 5, 12 and 1 in the strip","The large photo switches to each tapped photo
 The strip highlights the current one",P1,R-032,
@@ -289,9 +296,33 @@ TC-069,Adjustment,"1. Signed in with a PhotoDirector Premium account
 TC-070,Adjustment,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. Adjustment room open on photo 1",Look at the room: tabs Light / Color / Details and every tool,"Same as the 26'10/E Adjustment room
-No Subject Detection and no AI Exposure
+No Subject Detection
+「AI Exposure」 is in the tool row between 「Exposure」 and 「Contrast」 (Design)
 「Apply to all」 (icon + 「All」, semi-transparent dark capsule) at the top right
-Batch strip at the bottom",P2,"R-090, R-091, R-097",The Design frames draw 「AI Exposure」 between 「Exposure」 and 「Contrast」 (Q-18): record whether the app shows it.
+ⓘ at the top left
+Batch strip at the bottom",P2,"R-090, R-091, R-097, R-239","Every Design Adjustment frame draws 「AI Exposure」; PM DR-06 says none (Q-18): rows follow the Design (Design first, 2026-11-13)."
+TC-175,Adjustment,"1. Signed in with a PhotoDirector Premium account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. Adjustment room open on photo 1",Tap ⓘ at the top left,"The existing help for Adjustment opens
+Closing it returns to the batch Adjustment room with nothing changed",P3,R-239,Design-only icon; what it opens is not stated (Q-23).
+TC-172,Adjustment,"1. Signed in with a PhotoDirector Premium account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. Adjustment room open on photo 1","1. On 「Light」 tap Exposure, Contrast and Highlight in turn and move the slider for each
+2. Tap 「AI Exposure」","Step 1: Each tool changes photo 1 only
+Step 1: Each tool enables 「All」
+Step 2: A Premium user gets the 「Try it」 dialog, and 「Try it」 opens the AI Exposure screen (KP-014)
+Step 2: Record what the batch room does after AI Exposure (whether its result comes back to photo 1)",P2,"R-090, R-095",AI Exposure in batch is Design-only (Q-18); its Android paid entry is KP-014.
+TC-173,Adjustment,"1. Signed in with a Free (non-Premium) account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. Adjustment room open on photo 1",Tap 「AI Exposure」,"The 「Upgrade to VIP」 dialog opens (no Try Before Buy)
+「Upgrade」 opens the IAP page
+Closing the IAP page returns to the batch Adjustment room",P2,R-090,Free variant of TC-172 (KP-014); batch Crop / Adjustment stay free (TC-082).
+TC-174,Adjustment,"1. Signed in with a PhotoDirector Premium account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. Adjustment room open on photo 1","1. Tap 「Auto」
+2. Tap 「All」","Step 1: Auto adjusts photo 1
+Step 2: The toast 「Applied to 11 photos」 shows
+Step 2: Every other photo gets the same settings in the strip",P2,"R-240, R-092, R-093",
 TC-159,Adjustment,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. Adjustment room open on photo 1","1. Open the 「Color」 tab and open HSL
@@ -319,6 +350,14 @@ TC-170,Adjustment,"1. Signed in with a PhotoDirector Premium account
 4. Tap ︿ to open it again","Step 3: the photo keeps the green shift while the panel is folded
 Step 4: the green dot is still selected
 Step 4: 「Hue」 +30, 「Saturation」 -20 and 「Lightness」 +10 are shown",P2,"R-230, R-238","Folding only hides the panel (hidden clause, REQ-013). No spec states which channel / colour is selected after reopening; a reset selection is filed to PM for a decision."
+TC-176,Adjustment,"1. Signed in with a PhotoDirector Premium account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. Adjustment room open on photo 1
+4. Color › Curve open with the RGB curve pulled up in the middle","1. Press and hold the compare button on the photo
+2. Release it
+3. Tap the reset button","Step 1: The photo shows without the curve while held
+Step 2: The curve shows again
+Step 3: The curve goes back to a straight line and photo 1 to its look before the curve",P3,R-230,
 TC-166,Adjustment,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. Adjustment room open on photo 1","1. Tap 「Color」
@@ -452,6 +491,11 @@ TC-092,AI Enhance,"1. Signed in with a PhotoDirector Premium account
 The strip shows them
 The button reads 「Enhanced」 disabled
 The credit balance is unchanged",P1,"R-114, R-116, R-004, R-119",
+TC-177,AI Enhance,"1. Signed in with a PhotoDirector Premium account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. AI Enhance page open","1. Tap 「Enhance」 › 「Start」 and let the batch finish
+2. Tap ✓","Step 2: Batch Edit Room shows
+Step 2: Every photo in the strip shows its enhanced result",P1,R-241,
 TC-093,AI Enhance,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. AI Enhance page open on photo 1, no photo enhanced yet
@@ -485,10 +529,12 @@ Photo 2 is enhanced from its state now, photos 1 and 3 from their enhanced resul
 TC-157,AI Enhance,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room with 3 photos, all enhanced in one AI Enhance visit, back on the main screen","1. Tap 「AI Enhance」 again
 2. Tap 「Enhance」
-3. Tap 「Start」","On the new visit the button reads 「Enhance」 (enabled)
-The dialog reads 「Enhance 3 photos?」
-All 3 are enhanced again from their enhanced results
-Then the button reads 「Enhanced」 greyed",P1,"R-229, R-116",UI UX flow 2 (was: once per photo).
+3. Tap 「Start」
+4. Tap 「Enhanced」","Step 1: On the new visit the button reads 「Enhance」 (enabled)
+Step 2: The dialog reads 「Enhance 3 photos?」
+Step 3: All 3 are enhanced again from their enhanced results
+Step 3: Then the button reads 「Enhanced」 greyed
+Step 4: Nothing happens (no dialog, no processing)",P1,"R-229, R-116",UI UX flow 2 (was: once per photo).
 TC-098,AI Enhance,"1. Signed in with a Free (non-Premium) account
 2. Batch Edit Room with 5 photos
 3. AI Enhance page",Tap 「Enhance」,"The existing Premium IAP page opens straight away (no Confirm Dialog, no trial of one photo, nothing processed)",P1,"R-119, R-217",
@@ -497,7 +543,12 @@ TC-099,AI Enhance,"1. Signed in with a Free (non-Premium) account
 TC-100,AI Enhance,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. AI Enhance page open on photo 1, no photo enhanced yet
-4. Enhance finished",Tap ✕,Returns to the Batch Edit Room main screen with the enhanced results kept,P1,"R-130, R-114, R-213",The Design draws the Discard Dialog over the AI Enhance page (Q-19): record if ✕ asks first.
+4. Enhance finished",Tap ✕,"The Discard Dialog opens: 「Discard changes?」 (the batch Enhance counts as an edit)
+Record where 「Discard」 and 「Keep Editing」 lead",P1,"R-130, R-114, R-213","Ruling REQ-018 (Q-19 answered): with edits made, ✕ asks first."
+TC-171,AI Enhance,"1. Signed in with a PhotoDirector Premium account
+2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
+3. AI Enhance page open on photo 1, no photo enhanced yet",Tap ✕,"Returns to the Batch Edit Room main screen at once
+No Discard Dialog",P2,R-130,Ruling REQ-018: no dialog when nothing was edited.
 TC-101,AI Enhance failures,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. AI Enhance page open on photo 1, no photo enhanced yet
@@ -625,7 +676,7 @@ TC-141,Android Back,"1. Signed in with a PhotoDirector Premium account
 TC-142,Android Back,"1. Signed in with a PhotoDirector Premium account
 2. Batch Edit Room open with 12 photos (Launcher 「Edit」 › 「Batch」), no edit yet
 3. AI Enhance page open on photo 1, no photo enhanced yet
-4. Enhance finished",Press system Back,Same as ✕: back to Batch Edit Room with the results kept,P2,"R-170, R-130",The Design draws the Discard Dialog over the AI Enhance page (Q-19): record if Back asks first.
+4. Enhance finished",Press system Back,Same as ✕: the Discard Dialog opens (「Discard changes?」),P2,"R-170, R-130","Ruling REQ-018 (Q-19 answered): with edits made, Back asks first."
 TC-143,Android Back,Batch enhance processing,Press system Back,"Processing is not interrupted or cancelled
 The screen stays under the mask",P1,"R-170, R-121, R-122",
 TC-144,Android Back,Confirm Dialog open,Press system Back,Same as 「Cancel」: the dialog closes and nothing is processed,P2,"R-170, R-137",

@@ -1,0 +1,13 @@
+⚠ WARN  I2V-Reuse-R1-02  Short Description is 121 chars (budget 120)
+⚠ WARN  I2V-Reuse-R1-02  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  I2V-Reuse-R1-04  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  I2V-Reuse-R1-05  Short Description is 129 chars (budget 120)
+⚠ WARN  I2V-Reuse-R1-06  Short Description is 125 chars (budget 120)
+⚠ WARN  I2V-Reuse-R1-06  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  I2V-Reuse-R1-07  Short Description is 126 chars (budget 120)
+⚠ WARN  I2V-Reuse-R1-09  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  I2V-Reuse-R1-10  Short Description is 128 chars (budget 120)
+⚠ WARN  I2V-Reuse-R1-10  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+
+10 bug(s) checked — 0 error(s), 10 warning(s)
+Format OK — clear to file.

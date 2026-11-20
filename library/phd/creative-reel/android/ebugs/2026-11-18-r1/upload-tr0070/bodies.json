@@ -1,0 +1,206 @@
+{
+ "Reel-Creator-R1-01": {
+  "entry": 1,
+  "iss": "ISS-CR-01",
+  "title": "Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」",
+  "feature": "Reel-Creator-R1",
+  "type": "UI",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Read the room's shortcut label\n4. Tap the AI Videos tab\n5. Read the room's card label\n6. Check the result\n\nResult:\nThe Launcher shortcut and the AI Videos card both still read 「Cinematic Reel Creator」.\n摘要：Launcher 捷徑與 AI Videos 卡片仍顯示舊名 Cinematic Reel Creator。\n{20.19.0_cr01_launcher_shortcut.jpg} {20.19.0_cr01_ai_videos_card.jpg}\n\nExpect Result:\nBoth entries read 「Reel Creator」 (the room is renamed).\n摘要：兩個入口都應顯示「Reel Creator」。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), Reel Creator room frame (rename notes, room board) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7245-8672\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr01_launcher_shortcut.jpg",
+   "20.19.0_cr01_ai_videos_card.jpg"
+  ],
+  "qa_note": "R-003 / R-005 (TC-002 / TC-004 / TC-113). Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL, both entries read 「Cinematic Reel Creator」.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-11": {
+  "entry": 11,
+  "iss": "ISS-CR-11",
+  "title": "No red tray text when the picked or imported count is outside the range",
+  "feature": "Reel-Creator-R1",
+  "type": "Functional",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker: imported count out of range shows no red tray text",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the Selfie Shake card in the third section\n5. Tap Use Template\n6. Tap 4 photos in the grid, one after another\n7. Tap Next\n8. Tap ‹ on the confirm page\n9. Tap ‹ on the Preview\n10. Tap the cinematic-grade card in the second section\n11. Tap Use Template\n12. Tap Import on the prompt\n13. Check the result\n\nResult:\n4 photos are imported and Next is disabled, but the tray still reads 「Select 15 to 40 photos to continue.」 in white.\n摘要：匯入張數低於下限時，tray 沒有紅字提示。\n{20.19.0_cr11_import_below_min.jpg}\n\nExpect Result:\nThe tray shows red 「Select at least 15 photos (11 more)」 (above max: red text), Next disabled until in range.\n摘要：應顯示紅字「Select at least 15 photos (11 more)」。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 5. Imported count out of range → red text frame -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-859\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr11_import_below_min.jpg"
+  ],
+  "qa_note": "R-054 / R-055 (Q-30). Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL, 4 imported into cinematic-grade keep the white tray text; ‹ now goes confirm → Preview → room, so the path is two ‹ taps.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-12": {
+  "entry": 12,
+  "iss": "ISS-CR-12",
+  "title": "Imported photos lose their grid tick; tapping one adds it twice",
+  "feature": "Reel-Creator-R1",
+  "type": "Functional",
+  "sev": 2,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker Import: imported photos unticked; tapping one adds it twice",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the single-color-fastcut card in the second section\n5. Tap Use Template\n6. Tap the album name at the top\n7. Tap a test album\n8. Tap 6 photos in the grid, one after another\n9. Tap Next\n10. Tap ‹ on the confirm page\n11. Tap ‹ on the Preview\n12. Press Home\n13. Delete the first 2 picked photos in Gallery\n14. Open PhotoDirector from Recents\n15. Tap the single-color-fastcut card\n16. Tap Use Template\n17. Tap Import on the prompt\n18. Tap the unticked imported photo in the grid\n19. Check the result\n\nResult:\n4 photos are imported but only 3 are ticked in the grid; tapping the unticked one adds it again (5 in the tray).\n摘要：匯入後有照片在格子上未勾選，點擊會重複加入同一張。\n{20.19.0_cr12_import_unticked.jpg} {20.19.0_cr12_duplicate_added.jpg}\n\nExpect Result:\nEvery imported photo is ticked in the grid with its number; tapping it unpicks it.\n摘要：匯入的照片都應打勾編號，點擊應取消選取。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 4. Photo picker – Import prompt frame (session memory) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-785\nSpec Link: Reel Creator Design Figma (page 261109_AI_transition_feature, section Design), 03-1_Photo_Picker_Reuse_Last_Photos frame -\nhttps://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=957-5859\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr12_import_unticked.jpg",
+   "20.19.0_cr12_duplicate_added.jpg"
+  ],
+  "qa_note": "R-053 / R-056 (KP-073). Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL, 6 copies in album CRrecheck, 2 deleted, Import: 4 in the tray, 3 ticked, the 4th added again as badge 5; the 10-into-Selfie-Shake variant was not rechecked.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-15": {
+  "entry": 15,
+  "iss": "ISS-CR-15",
+  "title": "Confirm page lacks the 9:16 ratio and the reorder hint",
+  "feature": "Reel-Creator-R1",
+  "type": "UI",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: no 「9:16」 ratio and no reorder hint",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the single-color-fastcut card in the second section\n5. Tap Use Template\n6. Tap 7 photos in the grid, one after another\n7. Tap Next\n8. Read the confirm page\n9. Check the result\n\nResult:\nThe confirm page shows no 「9:16」 ratio and no reorder hint.\n摘要：確認頁沒有 9:16 比例，也沒有排序提示文字。\n{20.19.0_cr15_creative_confirm.jpg}\n\nExpect Result:\nThe header shows 「9:16」 and the reorder hint 「Long-press to reorder · tap × to remove」 is shown.\n摘要：應顯示 9:16 與排序提示文字。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator Design Figma (page 261109_AI_transition_feature, section Design), 04_Generate_Settings frame -\nhttps://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=961-6760\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 6. Confirm page frame (Generate | 60) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-931\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr15_creative_confirm.jpg"
+  ],
+  "qa_note": "R-060 / R-061 (Q-31). Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL for 9:16 and the hint; the count icon, 「Your photos (7/30)」 and 「+」 first are fixed, so they were dropped from the ticket.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-17": {
+  "entry": 17,
+  "iss": "ISS-CR-17",
+  "title": "Count below min is not shown in red on the confirm page",
+  "feature": "Reel-Creator-R1",
+  "type": "UI",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: count below min (14/40) is not red",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the cinematic-grade card in the second section\n5. Tap Use Template\n6. Tap 15 photos in the grid, one after another\n7. Tap Next\n8. Tap × on photo 1\n9. Check the result\n\nResult:\n「Your photos (14/40)」 stays white, not red; Generate is disabled.\n摘要：低於下限時張數未變紅。\n{20.19.0_cr17_count_not_red.jpg}\n\nExpect Result:\n「14/40」 turns red and Generate is disabled.\n摘要：張數應顯示紅色。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 7. Confirm page below min frame -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-989\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr17_count_not_red.jpg"
+  ],
+  "qa_note": "R-069. Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL, cinematic-grade 15 → 14 keeps 「Your photos (14/40)」 white; Generate disabled (OK).",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-21": {
+  "entry": 21,
+  "iss": "ISS-CR-21",
+  "title": "「Use Template」, 「Your photos」 and the Import prompt stay English in other app languages",
+  "feature": "Reel-Creator-R1",
+  "type": "UI",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: 「Use Template」, 「Your photos」 and Import prompt stay English in zh-Hant / de",
+  "desc": "Repro Steps:\n1. Set the phone language to 繁體中文 (Taiwan)\n2. Launch the APP\n3. Swipe the Launcher shortcut grid left to page 2\n4. Tap AI電影感運鏡\n5. Tap the Selfie Shake card in the third section\n6. Read the Use Template button\n7. Tap Use Template\n8. Tap 4 photos in the grid, one after another\n9. Tap 下一步\n10. Read 「Your photos」 on the confirm page\n11. Tap ‹ on the confirm page\n12. Tap Use Template\n13. Read the prompt\n14. Check the result\n\nResult:\nIn zh-Hant and de, 「Use Template」, 「Your photos (4/4)」 and the Import prompt sentence stay English.\n摘要：中文與德文介面下，Use Template、Your photos 與匯入提示仍為英文。\n{20.19.0_cr21_zh_use_template.jpg} {20.19.0_cr21_zh_your_photos.jpg} {20.19.0_cr21_zh_prompt_english.jpg} {20.19.0_cr21_de_your_photos.jpg}\n\nExpect Result:\nAll Reel Creator strings are shown in the app language.\n摘要：所有 Reel Creator 文字應依 App 語言翻譯。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 3. Photo picker frame -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-704\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 4. Photo picker – Import prompt frame (session memory) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-785\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr21_zh_use_template.jpg",
+   "20.19.0_cr21_zh_your_photos.jpg",
+   "20.19.0_cr21_zh_prompt_english.jpg",
+   "20.19.0_cr21_de_your_photos.jpg"
+  ],
+  "qa_note": "R-105 / R-107. Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL in zh-Hant and de; the tray and the photo count are translated now; ja / pt not rechecked, so the title names zh-Hant / de only.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-23": {
+  "entry": 23,
+  "iss": "ISS-CR-23",
+  "title": "Creative processing card shows no time estimate, 「Almost Done」 from the start",
+  "feature": "Reel-Creator-R1",
+  "type": "Functional",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Creative card shows 「Almost Done」 at once, no remaining time",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the single-color-fastcut card in the second section\n5. Tap Use Template\n6. Tap 7 photos in the grid, one after another\n7. Tap Next\n8. Tap Generate\n9. Read the new card in My AI Artwork\n10. Check the result\n\nResult:\nThe Creative card reads 「Processing…」 / 「Almost Done」 from the start (still at 3 min), with no remaining time.\n摘要：Creative 生成卡片一開始就顯示 Almost Done，沒有剩餘時間。\n{20.19.0_cr23_card_1min.jpg} {20.19.0_cr23_card_3min.jpg} {20.19.0_cr23_micro_cinema_estimate.jpg} {20.19.0_cr23_log.txt}\n\nExpect Result:\nThe card shows 「… minutes remaining ...」 with a progress bar, 「Almost done」 only after the estimate runs out.\n摘要：應顯示剩餘時間與進度條，時間到才顯示 Almost done。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator Design Figma (page 261109_AI_transition_feature, section Design), 05_Result_My_AI_Artwork frame -\nhttps://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=970-4457\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), My AI Artwork - Reel Creator tab frame -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7271-352\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr23_card_1min.jpg",
+   "20.19.0_cr23_card_3min.jpg",
+   "20.19.0_cr23_micro_cinema_estimate.jpg",
+   "20.19.0_cr23_log.txt"
+  ],
+  "qa_note": "R-078 / R-130. Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL; log: Creative estimated_time = created_time (11:11 and 11:46 jobs) vs +14 min for Micro Cinema; the 1 / 3 min shots are the 11:46 job after one Retry.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-25": {
+  "entry": 25,
+  "iss": "ISS-CR-25",
+  "title": "Interrupted upload: 70 credits charged, not refunded although the dialog says so; Retry does nothing",
+  "feature": "Reel-Creator-R1",
+  "type": "Functional",
+  "sev": 2,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Wi-Fi lost during upload: 70 charged, 「Credits refunded」 but no refund",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the single-color-fastcut card in the second section\n5. Tap Use Template\n6. Tap 6 photos in the grid, one after another\n7. Tap Next\n8. Tap Generate\n9. Turn Wi-Fi off when the upload starts (about 2 s later)\n10. Tap OK on the error dialog\n11. Turn Wi-Fi on\n12. Tap the room's history icon\n13. Tap Retry on the ⚠ card\n14. Wait 9 minutes\n15. Tap Create More\n16. Tap the credit pill in the room\n17. Tap Detail\n18. Check the result\n\nResult:\nThe dialog says 「Credits refunded」 but 70 stays charged (315 → 245, no refund); after Retry the card stays Almost Done.\n摘要：提示已退點但實際扣 70 點未退；Retry 後卡片一直停在 Almost Done。\n{20.19.0_cr25_credits_refunded_dialog.jpg} {20.19.0_cr25_retry_card.jpg} {20.19.0_cr25_after_retry_9min.jpg} {20.19.0_cr25_detail_no_refund.jpg} {20.19.0_cr25_log.txt}\n\nExpect Result:\n「Resume to Upload」 finishes the job with one charge; a failed job refunds the 70 credits.\n摘要：應可續傳完成且只扣一次；失敗時應確實退點。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator Design Figma (page 261109_AI_transition_feature, section Design), 05_Result_My_AI_Artwork frame -\nhttps://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=970-4457\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr25_credits_refunded_dialog.jpg",
+   "20.19.0_cr25_retry_card.jpg",
+   "20.19.0_cr25_after_retry_9min.jpg",
+   "20.19.0_cr25_detail_no_refund.jpg",
+   "20.19.0_cr25_log.txt"
+  ],
+  "qa_note": "R-132. Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL with the cut 67 ms after UploadFile (1/1 at that timing); a cut 0.13 s after Generate charged nothing, a cut ~56 s after submit gave a Retry that finished with one charge.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-27": {
+  "entry": 27,
+  "iss": "ISS-CR-27",
+  "title": "Micro Cinema reel is about 2:3, not 9:16",
+  "feature": "Reel-Creator-R1",
+  "type": "Functional",
+  "sev": 2,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Micro Cinema reel is 1176 × 1760, not 9:16",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Tap Cinematic Reel Creator\n4. Tap the Micro Cinema card in the first section\n5. Tap Use Template\n6. Tap 1 photo\n7. Tap Next\n8. Tap Generate\n9. Wait for the reel to finish\n10. Tap the Micro Cinema card\n11. Tap Save\n12. Check the result\n\nResult:\nThe saved Micro Cinema reel is 1176 × 1760 (about 2:3), although the app requests 9:16.\n摘要：Micro Cinema 輸出為 1176 × 1760，非 9:16。\n{20.19.0_cr27_saved_preview.jpg} {20.19.0_cr27_log.txt}\n\nExpect Result:\nThe reel is 9:16 in pixels.\n摘要：輸出應為 9:16。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), Reel Creator room frame (rename notes, room board) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7245-8672\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr27_saved_preview.jpg",
+   "20.19.0_cr27_log.txt"
+  ],
+  "qa_note": "R-023 / R-083. Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL, ffprobe 1176 × 1760 on DCIM/PhotoDirector/Video/2026-11-19-11-43-32-558.mp4; the pack sends aspect_ratio_to_server 9:16.",
+  "ux": false,
+  "basis": ""
+ },
+ "Reel-Creator-R1-29": {
+  "entry": 29,
+  "iss": "ISS-CR-29",
+  "title": "「Don’t keep activities」: Next in the picker returns to the room",
+  "feature": "Reel-Creator-R1",
+  "type": "Functional",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: 「Don’t keep activities」: 「Next」 in the picker lands on the room, picks lost",
+  "desc": "Repro Steps:\n1. Turn on Developer options, Don’t keep activities\n2. Launch the APP\n3. Swipe the Launcher shortcut grid left to page 2\n4. Tap Cinematic Reel Creator\n5. Tap the single-color-fastcut card in the second section\n6. Tap Use Template\n7. Tap 7 photos in the grid, one after another\n8. Tap Next\n9. Wait 30 seconds\n10. Check the result\n\nResult:\nThe Reel Creator room shows instead of the confirm page; the 7 picks are lost.\n摘要：Activity 重建後回到房間，確認頁與選取的照片遺失。\n{20.19.0_cr29_next_lands_room.jpg} {20.19.0_cr29_log.txt}\n\nExpect Result:\nThe confirm page comes back with the same photos, order and count.\n摘要：應回到原確認頁並保留照片、順序與張數。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), 6. Confirm page frame (Generate | 60) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-931\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr29_next_lands_room.jpg",
+   "20.19.0_cr29_log.txt"
+  ],
+  "qa_note": "R-112 (KP-097). Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL with the Developer options switch (settings put alone did not apply); a new ReelCreatorActivity window is created on Next; no crash; setting off again afterwards.",
+  "ux": false,
+  "basis": ""
+ }
+}

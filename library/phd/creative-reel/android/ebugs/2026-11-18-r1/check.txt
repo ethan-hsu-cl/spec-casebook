@@ -1,0 +1,12 @@
+⚠ WARN  Reel-Creator-R1-04  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  Reel-Creator-R1-07  Short Description is 123 chars (budget 120)
+⚠ WARN  Reel-Creator-R1-08  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  Reel-Creator-R1-13  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  Reel-Creator-R1-21  Short Description is 124 chars (budget 120)
+⚠ WARN  Reel-Creator-R1-21  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Reel-Creator-R1-22  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Reel-Creator-R1-22  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  Reel-Creator-R1-29  Repro Steps do not start with '1. Launch the APP'
+
+29 bug(s) checked — 0 error(s), 9 warning(s)
+Format OK — clear to file.

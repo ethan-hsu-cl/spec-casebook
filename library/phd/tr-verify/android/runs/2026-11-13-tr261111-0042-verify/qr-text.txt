@@ -1,0 +1,108 @@
+=== Template
+Standard Report
+
+=== Short Description
+20.19.0.202611111946 - Bug verify report (WILLY_WU)
+
+=== Test Result
+PHD-A - Bug verification [OK=13, Fail=0]
+
+=== Testing Date
+2026/11/13
+
+=== Product Version
+20.19.0
+
+=== Build Day
+1111
+
+=== Build No.
+202611111946
+
+=== Operation System
+Android 16
+
+=== OS Language
+English
+
+=== Test Result Details
+a. Device: Samsung Galaxy S23 (SM-S911) / Android 16
+
+b. Build: 20.19.0.202611111946 (TR261111-0042), Google Play internal testing build 20.19.0 (versionCode 90201900, SR PHA261029-01), installed 2026/11/12
+
+c. Server: Test Server
+
+d. Account: Not signed in (Free)
+
+e. Tested by: AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU
+
+f. Scope: the eBugs created by WILLY_WU in this TR's verify list
+
+g. OK (13)
+g1. PHA252025-0178 - AI Face Swap was taken down; no entry to it remains
+g2. PHA252025-0179 - AI Face Swap was taken down; no entry to it remains
+g3. PHA252025-0185 - AI Face Swap was taken down; no entry to it remains
+g4. PHA252025-0196 - AI Face Swap was taken down; no entry to it remains
+g5. PHA262026-0350 - AI Face Swap was taken down; no entry to it remains
+g6. PHA252025-0328 - Inflate, Squish and Dollify are gone from Image to Video
+g7. PHA262026P0036 - the First / Last Frame sample photos show no triangles at their bottom corners
+g8. PHA262026-0409 - a Custom generation adds no second 「Custom」 tile; the prompt is kept in My Prompts
+g9. PHA262026P0014 - the reference image page has no prompt box; Replace applies the reference image
+g10. PHA262026-0343 - 「Transform into watercolor painting」 returns a watercolor image with a short reply
+g11. PHA262026-0335 - with the app in Polish the Launcher shortcut labels are full size and long names wrap to two lines
+g12. PHA252025-0516 - AI Anime Video was redesigned; the See all button no longer applies (UI change)
+g13. PHA252025-0230 - old issue: Image to Video now generates with credits (spec change)
+
+h. FAIL (0)
+
+i. Other observations, not filed (1)
+i1. Image to Video Start / End: each sample photo sits in a rounded box that shows a thin grey band above and below the photo.
+
+=== PHA252025-0178  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached.
+
+=== PHA252025-0179  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached.
+
+=== PHA252025-0185  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached.
+
+=== PHA252025-0196  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached.
+
+=== PHA262026-0350  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached.
+
+=== PHA252025-0328  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: The three styles are in none of the 12 template categories, and a template with a photo shows no settings, so the scenario cannot be reached.
+
+=== PHA262026P0036  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+
+=== PHA262026-0409  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+
+=== PHA262026P0014  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: The reference image flow now takes no prompt (Replace with a reference image only), so a prompt can no longer be added there; Replace applied the guitar from the reference image.
+
+=== PHA262026-0343  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+
+=== PHA262026-0335  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+
+=== PHA252025-0516  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: UI change: AI Anime Video is now one page with a sideways style strip, so a See all button no longer applies.
+
+=== PHA252025-0230  [OK]
+Verified OK with build (v20.19.0.202611111946) on Samsung Galaxy S23 (SM-S911) / Android 16
+Note: Old issue, spec change: Image to Video now generates with credits, not a per-video payment.
+

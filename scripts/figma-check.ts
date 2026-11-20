@@ -25,6 +25,7 @@
 //   --prune [--dry-run]       deletes screenshots in extracted/figma/ that shots.json does not list (or every one when
 //                     the set is SUPERSEDED), so a re-captured board leaves one file, never an old copy beside it
 // Every run first takes the hashes of group files read after the baseline (a re-read clears its boards' change).
+import { PY } from './lib/python.ts';
 import { existsSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join } from 'node:path';
@@ -93,7 +94,7 @@ if (has('ack')) {
   // committed images stay small (user, 2026-10-29): 256 colours, no dithering, keeps the size and 1 px = 1 pt
   // (a Figma board is flat UI; about a fifth of the size). Needs Python 3 with Pillow, else the file is kept as is.
   const before = statSync(join(shotDir, png)).size;
-  const q = spawnSync('python3', ['-c', `import sys; from PIL import Image
+  const q = spawnSync(PY, ['-c', `import sys; from PIL import Image
 im = Image.open(sys.argv[1]); a = im.getchannel('A').getextrema()[0] if im.mode in ('RGBA', 'LA') else 255
 if im.mode != 'P': (im.convert('RGBA') if a < 255 else im.convert('RGB')).quantize(256, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE).save(sys.argv[1], optimize=True)`, join(shotDir, png)], { encoding: 'utf8' });
   if (q.status !== 0) console.log(`${png}: not shrunk (python3 with Pillow needed: pip3 install pillow)`);

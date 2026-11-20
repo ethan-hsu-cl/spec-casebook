@@ -1,0 +1,14 @@
+# Dedupe — AI Hair Color Custom R2 (Android), 2026-11-18, read-only
+# ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" (Android pool only; dedupe per OS). Raw: dedupe_raw.txt
+# Result: no same-OS duplicate among the 13 drafts; candidates judged unrelated:
+R2-03 (Quick Action has no Hair Color)  vs PHA262026P0116 / P0114 / P0005 — share only "hair color" / "edit room"; different defects
+R2-09 (panel collapses on Generate)     vs PHA262026P0117 (Intensity bar, fixed on 90201901) / P0115 (collapse key keeps Soft Black) — different trigger and symptom
+R2-10 (✕ asks Discard, lands Edit Room) vs PHA262026P0005 (closed, 20.18.0: result not applied in Edit Room) — different defect
+R2-12 (first template Soft Black)       vs PHA262026P0115 / P0110 — share only "soft black" / "colour page"
+# Same-OS filed tickets matched by this round's rows (no card, no comment — AGENTS.md No comments on existing eBugs):
+PHA262026P0110 still failing   TC-005, TC-012, TC-015 (slant part)
+PHA262026P0112 symptom gone    TC-019, TC-021 (rows hidden instead of drawn disabled; informational)
+PHA262026P0115 partly fixed    TC-038, TC-041, TC-042 (Custom cell shows no colours); TC-040 template part fixed
+PHA262026P0116 still failing   TC-045 (text part), TC-046, TC-040
+PHA262026P0118 still failing   TC-057
+PHA262026P0111 / P0113 / P0114 / P0117 / P0119 fixed on 90201901

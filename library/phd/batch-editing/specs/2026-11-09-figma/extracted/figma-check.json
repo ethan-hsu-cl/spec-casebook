@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-11T09:37:21.873Z",
+  "checked_at": "2026-11-18T02:04:14.831Z",
   "set": "2026-11-09-figma",
   "unchanged": [
     {
@@ -373,6 +373,10 @@
   "missed_arrows": [],
   "reread": [],
   "shots": [
+    {
+      "png": "design-light-entry.png",
+      "board": "12:2321/design-light-entry"
+    },
     {
       "png": "design-dark-entry.png",
       "board": "12:2321/design-dark-entry"

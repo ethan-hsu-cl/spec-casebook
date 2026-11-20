@@ -1,0 +1,19 @@
+20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md
+  10 entries · 21 images · 12 Spec Link lines · 0/0 ▲ rows · max ShortDesc 129
+FAILED:
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e1: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e2: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04b explanation sheet first)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e3: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-05 ‹ Back returns to Save & Share)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e4: unknown sheet 'Image to Video Reuse Design Figma (page 261105_support to reuse model settings), Save & Share light frame (Prompts & Settings card, chips 「10s」 「Pro」 「Sound on」, section order)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e5: unknown sheet 'Image to Video Reuse Design Figma (page 261105_support to reuse model settings), Save & Share light frame (Prompts & Settings card, chips 「10s」 「Pro」 「Sound on」, section order)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e5: unknown sheet 'Image to Video Reuse Design Figma (page 261105_support to reuse model settings), Save & Share dark frame (Save & Share page in dark mode)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e6: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (My AI Artwork, D1-03 Create more mockup)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e6: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - Flow board (Reuse flow and Create more mockup)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e7: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), 【Tracking Event】 board (D4-05 ImageToVideo_Reuse_Click, parameter model)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e8: unknown sheet 'Image to Video Reuse Design Figma (page 261105_support to reuse model settings), Save & Share dark frame (Save & Share page in dark mode)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e9: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md e10: unknown sheet 'Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」)'
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md: no '### Owner split' table
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md: owner split
+  20261119_eBug_drafts_I2V-Reuse-R1_20.19.0.md: row map omits ['ISS-IR-01', 'ISS-IR-02', 'ISS-IR-03', 'ISS-IR-04', 'ISS-IR-05', 'ISS-IR-06', 'ISS-IR-07', 'ISS-IR-08', 'ISS-IR-09', 'ISS-IR-10']
+exit 1

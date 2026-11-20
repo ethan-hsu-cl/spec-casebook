@@ -1,0 +1,18 @@
+# From the Batch picker (Batch tab) with the album list closed (R3-c, S23): open the album list, scroll to
+# 「Casebook」 (alphabetical, below the digit-named albums; names are not in the page source, so the list is dragged
+# three times and the row tapped by position — check with a screenshot if the album count changes), pick ① ② ③ ④
+# in that order, Next. Ends on Batch Edit Room main screen with ① current.
+tap 300 284
+fingerdrag 600 1650 600 700 15
+fingerdrag 600 1650 600 700 15
+fingerdrag 600 1650 600 700 15
+fingerdrag 600 1650 600 700 15
+tap 450 817
+waitfor "Casebook" --timeout 5
+tap 194 686
+tap 540 686
+tap 885 686
+tap 194 1031
+expect (4/20)
+lbl Next
+waitfor "Crop & Rotate" --timeout 15

@@ -1,0 +1,1170 @@
+{
+ "spec_folder": "specs/2026-11-17",
+ "platform": "android",
+ "inventory": "specs/2026-11-17/extracted/inventory.json",
+ "entries": [
+  {
+   "group": "K-a06f04",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "btn_add_credit",
+   "label": "100",
+   "set": false,
+   "instances": 18,
+   "screens": [
+    "4-hair_color",
+    "4-hair_color_for_free_user",
+    "4-hair_color_case1_no_style",
+    "4-hair_color_case2_base_only",
+    "4-hair_color_case2-1_toast",
+    "4-hair_color_case3_custom_color"
+   ],
+   "controls": [
+    "K-7ddee1",
+    "K-c7462a"
+   ],
+   "app": [],
+   "press": "TC-077"
+  },
+  {
+   "group": "K-e0017a",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "btn_credit_primary_1row",
+   "label": "Generate",
+   "set": false,
+   "instances": 28,
+   "screens": [
+    "4-hair_color",
+    "4-hair_color_case1_no_style",
+    "4-hair_color_case2_base_only",
+    "4-hair_color_case2-1_toast",
+    "4-hair_color_case3_custom_color"
+   ],
+   "controls": [
+    "K-4a6eaa",
+    "K-d871c8",
+    "K-5565cf",
+    "K-47637b"
+   ],
+   "app": [],
+   "press": "TC-021, TC-027, TC-036, TC-037, TC-040, TC-045",
+   "how": "label"
+  },
+  {
+   "group": "K-a3d8b6",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "btn_credit_primary_free_trial_0",
+   "label": "1 Free Trial",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "4-hair_color_for_free_user"
+   ],
+   "controls": [
+    "K-bd4f7c",
+    "K-68b36a"
+   ],
+   "app": [],
+   "press": "n/a: the template row's 10/E one-time free trial (the Design draws it with Platinum); a free trial for Custom is undecided (Q-7)"
+  },
+  {
+   "group": "K-d5ffd5",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "btn_premium",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-88f399",
+    "K-1472e2"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-e81415",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "btn_setting",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-aea920",
+    "K-0aab38"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-882ca2",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "button",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-500825",
+    "K-9c182b"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-4cdeaf",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "DownSheet_caption/btn_ok_n",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "3-File_picker",
+    "2-before_importing_photo"
+   ],
+   "controls": [
+    "K-cfec0f",
+    "K-c2f0e5"
+   ],
+   "app": [],
+   "press": "n/a: other feature: the app's shared photo picker header (back / confirm), unchanged by AI Hair Color"
+  },
+  {
+   "group": "K-5475e2",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_account_circle",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-1e2eed",
+    "K-bfc235"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-1d961b",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_ai_art",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-bd9291",
+    "K-baa983"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room chrome (AI Art, more, download, home, photo library), not part of AI Hair Color"
+  },
+  {
+   "group": "K-e74f30",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_ai_photo",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-a68329",
+    "K-30eda8"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-6bd523",
+   "kind": "item",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_ai_video",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-0a7562",
+    "K-7cfeb8"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-2976b6",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_checked",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "2-before_importing_photo"
+   ],
+   "controls": [
+    "K-90daaf",
+    "K-4769ef"
+   ],
+   "app": [],
+   "press": "TC-093"
+  },
+  {
+   "group": "K-ac3edc",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_history",
+   "label": "",
+   "set": false,
+   "instances": 18,
+   "screens": [
+    "4-hair_color",
+    "4-hair_color_for_free_user",
+    "4-hair_color_case1_no_style",
+    "4-hair_color_case2_base_only",
+    "4-hair_color_case2-1_toast",
+    "4-hair_color_case3_custom_color"
+   ],
+   "controls": [
+    "K-ed5a6e",
+    "K-70b7a5"
+   ],
+   "app": [],
+   "press": "TC-055"
+  },
+  {
+   "group": "K-466c2e",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_home",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1-launcher"
+   ],
+   "controls": [
+    "K-752a22",
+    "K-282567"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher chrome (Home tabs, Premium, Settings, account), not part of AI Hair Color"
+  },
+  {
+   "group": "K-fa67fc",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "ic_more_filled",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-c3e5f7",
+    "K-b63c73"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room chrome (AI Art, more, download, home, photo library), not part of AI Hair Color"
+  },
+  {
+   "group": "K-211b26",
+   "kind": "tab",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "tab",
+   "label": "Photo",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "3-File_picker",
+    "2-before_importing_photo"
+   ],
+   "controls": [
+    "K-c88e2f",
+    "K-eacbcc"
+   ],
+   "app": [],
+   "press": "TC-005, TC-008, TC-009, TC-010, TC-011, TC-013",
+   "how": "label"
+  },
+  {
+   "group": "C-101e75",
+   "kind": "tab",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "tab",
+   "label": "choice of 5: 「AI Agent」 「Beautify」 「Hairstyle」 「Hair Color」 …",
+   "set": true,
+   "instances": 10,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-965d3e",
+    "K-328125",
+    "K-34d110",
+    "K-08a1a8",
+    "K-49301e",
+    "K-e02a66",
+    "K-ff787e",
+    "K-aa40a7",
+    "K-12a4df",
+    "K-83bfcb"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room tool row; AI Hair Color is entered through Portrait › Hair (REQ-009, TC-015)"
+  },
+  {
+   "group": "K-ddd3e0",
+   "kind": "tab",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "tab/text/main/set",
+   "label": "Quick Action",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-1b655d",
+    "K-83e156"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room Quick Action tab (no Hair Color there, ruling REQ-009)"
+  },
+  {
+   "group": "K-f35385",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "top/ic_back_n",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "3-File_picker",
+    "2-before_importing_photo"
+   ],
+   "controls": [
+    "K-f61c70",
+    "K-82a5e7"
+   ],
+   "app": [],
+   "press": "n/a: other feature: the app's shared photo picker header (back / confirm), unchanged by AI Hair Color"
+  },
+  {
+   "group": "K-c5f949",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "top/ic_download",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-5a5d1c",
+    "K-321887"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room chrome (AI Art, more, download, home, photo library), not part of AI Hair Color"
+  },
+  {
+   "group": "K-426c43",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "top/ic_home",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-72a06f",
+    "K-2c8158"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room chrome (AI Art, more, download, home, photo library), not part of AI Hair Color"
+  },
+  {
+   "group": "K-617b93",
+   "kind": "button",
+   "board": "ds-hair-a",
+   "boards": [
+    "ds-hair-a",
+    "ds-hair-b"
+   ],
+   "name": "top/ic_photo_lib",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1_edit_room"
+   ],
+   "controls": [
+    "K-deddd2",
+    "K-5e0b39"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Edit Room chrome (AI Art, more, download, home, photo library), not part of AI Hair Color"
+  },
+  {
+   "group": "K-1097a2",
+   "kind": "button",
+   "board": "pm-face-check",
+   "boards": [
+    "pm-face-check"
+   ],
+   "name": "manual/button",
+   "label": "OK",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Color Selection · entry_warn_face (NEW)"
+   ],
+   "controls": [
+    "M-64997b"
+   ],
+   "app": [],
+   "press": "TC-006",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-d7f17c",
+   "kind": "button",
+   "board": "pm-face-check",
+   "boards": [
+    "pm-face-check"
+   ],
+   "name": "manual/button",
+   "label": "Continue Anyway",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Color Selection · entry_warn_face (NEW)"
+   ],
+   "controls": [
+    "M-1579de"
+   ],
+   "app": [],
+   "press": "TC-007, TC-008",
+   "how": "label",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-2da684",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "btn_cancel",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-7c1a97"
+   ],
+   "app": [],
+   "press": "TC-079",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-09e45c",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "btn_confirm",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-9ca412"
+   ],
+   "app": [],
+   "press": "TC-056",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-c962cf",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow",
+    "pm-face-check",
+    "pm-ui"
+   ],
+   "name": "btn_generate",
+   "label": "Generate",
+   "set": false,
+   "instances": 13,
+   "screens": [
+    "custom_in_row · flow1",
+    "collapsed_applied · flow1",
+    "panel_open_no_style · flow1",
+    "panel_ready · flow1",
+    "Color Selection · entry_warn_face (NEW)",
+    "panel_open_no_style (NEW)"
+   ],
+   "controls": [
+    "K-56df51",
+    "K-55df4f",
+    "K-4fcf17",
+    "K-ef8679",
+    "K-f0867b"
+   ],
+   "app": [],
+   "press": "TC-021, TC-027, TC-036, TC-037, TC-040, TC-045",
+   "how": "label",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-912745",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow",
+    "pm-ui"
+   ],
+   "name": "btn_generate",
+   "label": "Retry",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "result_custom · flow1",
+    "result_custom (NEW)"
+   ],
+   "controls": [
+    "K-c12a17",
+    "K-0f2436"
+   ],
+   "app": [],
+   "press": "TC-049",
+   "how": "label",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-9b1bfc",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "btn_redo",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-a9e416"
+   ],
+   "app": [],
+   "press": "TC-053",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-56cb02",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "btn_undo",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-db0a4b"
+   ],
+   "app": [],
+   "press": "TC-053",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-2e1053",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow",
+    "pm-face-check",
+    "pm-ui"
+   ],
+   "name": "chip_credit",
+   "label": "100",
+   "set": false,
+   "instances": 17,
+   "screens": [
+    "custom_in_row · flow1",
+    "panel_open_no_style · flow1",
+    "panel_ready · flow1",
+    "result_custom · flow1",
+    "collapsed_applied · flow1",
+    "Color Selection · entry_warn_face (NEW)"
+   ],
+   "controls": [
+    "K-03f4ab",
+    "K-d877ee",
+    "K-aed732"
+   ],
+   "app": [],
+   "press": "TC-077",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-84545c",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow",
+    "pm-face-check",
+    "pm-ui"
+   ],
+   "name": "ic_history_n",
+   "label": "",
+   "set": false,
+   "instances": 17,
+   "screens": [
+    "custom_in_row · flow1",
+    "panel_open_no_style · flow1",
+    "panel_ready · flow1",
+    "result_custom · flow1",
+    "collapsed_applied · flow1",
+    "Color Selection · entry_warn_face (NEW)"
+   ],
+   "controls": [
+    "K-517ad4",
+    "K-acedae",
+    "K-8fb17d"
+   ],
+   "app": [],
+   "press": "TC-055",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-803a89",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/button",
+   "label": "⌄ Collapse",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_open_no_style · flow1"
+   ],
+   "controls": [
+    "M-25957b"
+   ],
+   "app": [],
+   "press": "TC-038",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-e774a3",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/button",
+   "label": "Base Color wheel",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_open_no_style · flow1"
+   ],
+   "controls": [
+    "M-3dfd8a"
+   ],
+   "app": [],
+   "press": "TC-031",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-ce84bb",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/button",
+   "label": "Highlight Color wheel",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_open_no_style · flow1"
+   ],
+   "controls": [
+    "M-a6ffde"
+   ],
+   "app": [],
+   "press": "TC-033",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-cce00b",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/button",
+   "label": "Try Now",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Tutorial"
+   ],
+   "controls": [
+    "M-20a2f0"
+   ],
+   "app": [],
+   "press": "TC-002, TC-004",
+   "how": "label",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-86762e",
+   "kind": "input",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/input",
+   "label": "Intensity",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "result_custom · flow1"
+   ],
+   "controls": [
+    "M-066502"
+   ],
+   "app": [],
+   "press": "TC-053",
+   "dismiss": "n/a: slider, no keyboard",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-20a43c",
+   "kind": "item",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/item",
+   "label": "Face",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_open_no_style · flow1"
+   ],
+   "controls": [
+    "M-850bda"
+   ],
+   "app": [],
+   "press": "TC-058",
+   "how": "label",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-74508f",
+   "kind": "item",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/item",
+   "label": "Base Color swatch",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_open_no_style · flow1"
+   ],
+   "controls": [
+    "M-10a854"
+   ],
+   "app": [],
+   "press": "TC-025",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-f7cf45",
+   "kind": "item",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/item",
+   "label": "Highlight Color swatch",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_open_no_style · flow1"
+   ],
+   "controls": [
+    "M-75b694"
+   ],
+   "app": [],
+   "press": "TC-027",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-5999a1",
+   "kind": "toggle",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "manual/toggle",
+   "label": "Don't show again",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Tutorial"
+   ],
+   "controls": [
+    "M-931796"
+   ],
+   "app": [],
+   "press": "TC-004",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-c33a75",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "StyleMenuCustomStyleCell",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-6cdcd0"
+   ],
+   "app": [],
+   "press": "TC-019",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-fd4bfb",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "StyleThumbCell template",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-9d11f5"
+   ],
+   "app": [],
+   "press": "TC-041",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-4d73bb",
+   "kind": "tab",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "tab_category",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-d7984e"
+   ],
+   "app": [],
+   "press": "TC-018",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-11d4fd",
+   "kind": "tab",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "tab_category",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "custom_in_row · flow1"
+   ],
+   "controls": [
+    "M-358a08"
+   ],
+   "app": [],
+   "press": "TC-018",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-439156",
+   "kind": "button",
+   "board": "pm-flow",
+   "boards": [
+    "pm-flow"
+   ],
+   "name": "top/ic_back_n",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Tutorial"
+   ],
+   "controls": [
+    "K-0e2eaf"
+   ],
+   "app": [],
+   "press": "TC-003",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-2b6ab5",
+   "kind": "button",
+   "board": "pm-ui",
+   "boards": [
+    "pm-ui"
+   ],
+   "name": "manual/button",
+   "label": "Eyedropper",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_palette (NEW)"
+   ],
+   "controls": [
+    "M-decc9c"
+   ],
+   "app": [],
+   "press": "TC-035",
+   "how": "label",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-e4881b",
+   "kind": "button",
+   "board": "pm-ui",
+   "boards": [
+    "pm-ui"
+   ],
+   "name": "palette_cancel",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_palette (NEW)"
+   ],
+   "controls": [
+    "M-e0f56c"
+   ],
+   "app": [],
+   "press": "TC-034",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-a97467",
+   "kind": "button",
+   "board": "pm-ui",
+   "boards": [
+    "pm-ui"
+   ],
+   "name": "palette_done",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_palette (NEW)"
+   ],
+   "controls": [
+    "M-197f81"
+   ],
+   "app": [],
+   "press": "TC-032",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-e4019f",
+   "kind": "input",
+   "board": "pm-ui",
+   "boards": [
+    "pm-ui"
+   ],
+   "name": "palette_hue_slider",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_palette (NEW)"
+   ],
+   "controls": [
+    "M-bde84e"
+   ],
+   "app": [],
+   "press": "TC-032",
+   "dismiss": "n/a: slider, no keyboard",
+   "carried_from": "20261113-150700"
+  },
+  {
+   "group": "K-f69c65",
+   "kind": "input",
+   "board": "pm-ui",
+   "boards": [
+    "pm-ui"
+   ],
+   "name": "palette_sv_square",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "panel_palette (NEW)"
+   ],
+   "controls": [
+    "M-3638be"
+   ],
+   "app": [],
+   "press": "TC-032",
+   "dismiss": "n/a: slider, no keyboard",
+   "carried_from": "20261113-150700"
+  }
+ ]
+}

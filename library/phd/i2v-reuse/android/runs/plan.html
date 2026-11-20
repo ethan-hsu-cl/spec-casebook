@@ -1,0 +1,529 @@
+<title>Image to Video Reuse Progress</title>
+<!-- tab icon (run plan: phase bars), different on each page so the browser tabs are easy to tell apart -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23d9822b'/><path d='M7 9h11M11 16h14M7 23h8' stroke='%23fff' stroke-width='3.6' stroke-linecap='round'/></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;650;750&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;600;700&display=swap">
+<style>
+/* Shared by every casebook page (scripts/lib/page-shared.ts puts it at the top of each page's <style>): one palette and
+   one type scale, and the time and usage strip of Progress and Design. A page's own rules come after and may override. */
+:root {
+  --bg: #f4f6f6; --panel: #ffffff; --ink: #172426; --muted: #5b6b6e; --line: #d8e0e1; --accent: #0f6e73; --chip-bg: #eef2f2;
+  --pass: #2f7d4f; --fail: #b8402f; --blocked: #a86b12; --inc: #6a55a8; --notrun: #9aa6a8; --hold: #7a5a14; --skip: #7d878a;
+  --differs: #b8402f; --question: #a86b12; --unreviewed: #6a55a8; --matches: #2f7d4f; --none: #9aa6a8; --info: #2c6fa8;
+  --display: "Archivo", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Noto Sans TC", "Segoe UI", system-ui, "PingFang TC", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  /* one page width and side gutter on every tab (user, 2026-11-06) */
+  --gutter: max(16px, env(safe-area-inset-left, 0px), calc((100vw - 1280px) / 2));
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111a1b; --panel: #182325; --ink: #e3ecec; --muted: #93a5a7; --line: #2a3a3c; --accent: #4fb8bd; --chip-bg: #213032;
+  --pass: #5cbf83; --fail: #ec7a66; --blocked: #e0a548; --inc: #a796e0; --notrun: #5f6f71; --hold: #e0b85a; --skip: #8c9a9c;
+  --differs: #ec7a66; --question: #e0a548; --unreviewed: #a796e0; --matches: #5cbf83; --none: #5f6f71; --info: #74b3ea; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #111a1b; --panel: #182325; --ink: #e3ecec; --muted: #93a5a7; --line: #2a3a3c; --accent: #4fb8bd; --chip-bg: #213032;
+  --pass: #5cbf83; --fail: #ec7a66; --blocked: #e0a548; --inc: #a796e0; --notrun: #5f6f71; --hold: #e0b85a; --skip: #8c9a9c;
+  --differs: #ec7a66; --question: #e0a548; --unreviewed: #a796e0; --matches: #5cbf83; --none: #5f6f71; --info: #74b3ea; color-scheme: dark }
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); margin: 0; padding-inline: var(--gutter) }
+/* the tab bar still spans the window, also after a resize */
+.cb-tabs { margin-left: calc(-1 * var(--gutter)) !important; margin-right: calc(-1 * var(--gutter)) !important; padding-inline: var(--gutter) !important }
+/* Time and usage: stays at the top of the page, readable at a glance (user, 2026-11-06). One figure per tile, the
+   estimate first; the account's shared total stays muted (AGENTS.md, Plan usage). */
+.ubox { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px 14px; display: grid; gap: 10px; min-width: 0 }
+.ubox .uh { display: flex; gap: 4px 12px; align-items: baseline; flex-wrap: wrap }
+.ubox .uh h2 { font: 700 1.05rem var(--display); margin: 0; letter-spacing: -0.01em }
+.ubox .uh .uw { color: var(--muted); font-size: 0.86rem }
+.ubox .ulive { font: 600 0.75rem var(--body); color: var(--pass); display: inline-flex; gap: 5px; align-items: center }
+.ubox .ulive i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: cbpulse 1.6s ease-in-out infinite }
+@keyframes cbpulse { 50% { opacity: 0.25 } }
+@media (prefers-reduced-motion: reduce) { .ubox .ulive i { animation: none } }
+.ustrip { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px }
+.ut { background: var(--chip-bg); border-radius: 6px; padding: 8px 12px 10px; display: grid; gap: 2px; align-content: start; min-width: 0 }
+.ut .ul { font-size: 0.82rem; color: var(--muted) }
+.ut .uv { font: 700 1.55rem/1.2 var(--display); font-variant-numeric: tabular-nums }
+.ut .uv.est { color: var(--accent) }
+.ut .us { font-size: 0.84rem; color: var(--muted) }
+.ut .um { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: color-mix(in srgb, var(--muted) 22%, transparent); margin-top: 5px }
+.ut .um span { display: block; height: 100%; background: var(--accent) }
+.ut .um span.idle { background: color-mix(in srgb, var(--muted) 45%, transparent) }
+.ut.acct .uv { font-size: 1.05rem; font-weight: 600; color: var(--muted); line-height: 1.5 }
+.ubox .unone { color: var(--muted); font-style: italic }
+.ubox .ufoot { display: flex; gap: 6px 14px; flex-wrap: wrap; align-items: center }
+.ubox details.how summary { cursor: pointer; font-size: 0.85rem; color: var(--muted) }
+.ubox .notes { color: var(--muted); font-size: 0.85rem; margin: 8px 0 0; display: grid; gap: 4px }
+
+/* Layout: a run sheet — summary strip, then phases as stacked ledgers whose segments are rows you can open to see their cases. */
+.actual { color: var(--muted); font-size: 0.85rem; margin-top: 4px; max-width: 46ch }
+body { padding-block: 28px 56px }
+.wrap { display: grid; gap: 28px }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em }
+h1 { font-size: 1.9rem; font-weight: 750 }
+h2 { font-size: 1.25rem; font-weight: 650 }
+.eyebrow { font: 600 0.72rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted) }
+.meta { color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.92rem }
+.meta b { color: var(--ink); font-weight: 600 }
+.bar { display: flex; height: 12px; border-radius: 3px; overflow: hidden; background: var(--chip-bg) }
+.bar span { display: block; height: 100% }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 0.82rem var(--mono); color: var(--muted) }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px }
+.num { font-variant-numeric: tabular-nums }
+.phase { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden }
+.phase-head { display: grid; grid-template-columns: auto 1fr auto; gap: 4px 16px; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--line) }
+.phase-id { font: 750 1.4rem var(--display); color: var(--accent) }
+.phase-note { grid-column: 2 / 4; color: var(--muted); font-size: 0.9rem; min-width: 0 }
+.state { font: 600 0.72rem var(--mono); text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 3px; background: var(--chip-bg); white-space: nowrap }
+.state.done { color: var(--pass) } .state.active { color: var(--accent) } .state.pending { color: var(--muted) }
+.state.hold { color: var(--hold) } .state.skip { color: var(--skip); text-decoration: line-through }
+.seg { border-top: 1px solid var(--line) }
+.seg:first-of-type { border-top: 0 }
+.seg summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 4.2rem minmax(0, 1fr) 7.5rem minmax(120px, 220px) auto; gap: 12px; align-items: center; padding: 11px 18px }
+.seg summary::-webkit-details-marker { display: none }
+.seg summary:hover { background: var(--chip-bg) }
+.seg summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px }
+.seg-id { font: 600 0.9rem var(--mono) }
+.seg-name { min-width: 0 }
+.seg-count { font: 0.82rem var(--mono); color: var(--muted); text-align: right }
+.seg[open] summary { background: var(--chip-bg) }
+.cases { overflow-x: auto; padding: 4px 18px 14px }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem }
+th { text-align: left; font: 600 0.7rem var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding: 6px 8px; border-bottom: 1px solid var(--line) }
+td { padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top }
+td.id { font-family: var(--mono); white-space: nowrap }
+/* links to the same case on the other pages (scripts/pages.ts), and the case a link opened (#case=TC-012) */
+td.id .xl { display: flex; gap: 8px; font: 600 0.68rem var(--mono); margin-top: 2px }
+td.id .xl a { color: var(--accent); text-decoration: none } td.id .xl a:hover { text-decoration: underline }
+tr.focus td { background: var(--chip-bg) } tr.focus td.id { box-shadow: inset 3px 0 0 var(--accent) }
+.r { font: 600 0.72rem var(--mono); padding: 2px 6px; border-radius: 3px; white-space: nowrap; color: var(--panel) }
+.r.Pass { background: var(--pass) } .r.Fail { background: var(--fail) } .r.Blocked { background: var(--blocked) }
+.r.Inconclusive { background: var(--inc) } .r.Notrun { background: var(--notrun) }
+.flow { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: grid; gap: 14px }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; counter-reset: s }
+.step { border: 1px solid var(--line); border-radius: 4px; padding: 10px 12px; font-size: 0.9rem; min-width: 0 }
+.step b { display: block; font: 650 0.95rem var(--display); margin-bottom: 2px }
+.step .who { font: 0.72rem var(--mono); color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; min-width: 0 }
+.box ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: 0.9rem }
+.cp { font-size: 0.86rem; display: grid; gap: 10px; margin-top: 8px }
+.cp div { border-left: 3px solid var(--line); padding-left: 10px }
+.cp .t { font: 0.75rem var(--mono); color: var(--muted) }
+.usage .tbl { overflow-x: auto; margin-top: 10px }
+.usage td, .usage th { white-space: nowrap }
+.usage td.n, .usage th.n { text-align: right; font-variant-numeric: tabular-nums }
+.usage tr.tot td { font-weight: 600; border-bottom: 0 }
+.usage .none { color: var(--muted); font-style: italic }
+.usage th.grp { text-align: center; border-bottom: 1px solid var(--line) }
+.usage td.est { color: var(--accent); font-weight: 600 }
+.usage td.acct, .usage th.acct { color: var(--muted) }
+.usage td.acct { font-size: 0.82rem }
+.usage th { white-space: normal; vertical-align: bottom }
+.usage td, .usage th { padding-inline: 6px }
+.usage .eq { display: block; font: 400 0.7rem var(--mono); color: var(--muted) }
+.usage tr.sub td { font-size: 0.8rem; color: var(--muted); padding-block: 3px }
+.usage tr.sub td:first-child { padding-left: 22px }
+.usage tr.sub td.est { color: var(--accent); font-weight: 400 }
+.usage tr.round td { border-top: 2px solid var(--line) }
+.usage.nosegs tr.sub { display: none }
+.usage .tools { font-size: 0.85rem }
+#usage-box.nosegs.single .tbl { display: none }
+.ufoot .how { margin: 0; flex: 1 1 260px; min-width: 0 }
+details.whyd > summary { cursor: pointer; list-style-position: inside }
+details.whyd > summary h3 { display: inline-flex }
+.usage .tools button { font: 600 0.75rem var(--mono); color: var(--accent); background: var(--chip-bg); border: 1px solid var(--line); border-radius: 3px; padding: 3px 8px; cursor: pointer }
+.usage .notes { color: var(--muted); font-size: 0.85rem; margin: 10px 0 0; display: grid; gap: 4px }
+.stats { display: block; font: 0.74rem var(--mono); color: var(--muted); margin-top: 3px }
+code { font: 0.85em var(--mono); background: var(--chip-bg); padding: 1px 4px; border-radius: 3px }
+@media (max-width: 720px) {
+  .two { grid-template-columns: 1fr }
+  .seg summary { grid-template-columns: 3.6rem minmax(0, 1fr) auto; }
+  .seg summary .bar, .seg summary .seg-count { display: none }
+  .phase-head { grid-template-columns: auto 1fr }
+  .phase-head .state { grid-column: 1 / 3; justify-self: start }
+  .phase-note { grid-column: 1 / 3 }
+}
+.why-lead { margin: 6px 0 0; max-width: 80ch }
+.why-cats { display: grid; gap: 18px; margin-top: 14px }
+.why-cat h3 { font-size: 1rem; font-weight: 650; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap }
+.why-cat h3 .n { font: 600 0.8rem var(--mono); color: var(--blocked) }
+.why-cat .clears { color: var(--muted); font-size: 0.86rem; margin: 2px 0 0 }
+.why-cat ul { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 0.9rem }
+.why-cat li { border-left: 3px solid var(--blocked); padding-left: 10px; min-width: 0 }
+.why-cat li b { font-weight: 600 }
+.why-cat .detail { color: var(--muted); font-size: 0.85rem }
+.why-cat .ids { font: 0.8rem/1.6 var(--mono); overflow-wrap: anywhere }
+.why-cat .ids a { color: inherit }
+.why-cat .case { display: block; font-size: 0.85rem }
+.why-cat .tag { font: 600 0.68rem var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--hold); background: var(--chip-bg); padding: 1px 6px; border-radius: 3px }
+.why-row { display: block; font-size: 0.82rem; color: var(--blocked); font-weight: 600; margin-top: 4px }
+.run-name { font-size: 15px; color: var(--muted) }
+.how { margin-top: 4px } .how summary { cursor: pointer; font-size: 13.5px; color: var(--muted) } .how .notes { margin-top: 8px }
+.history { display: grid; gap: 14px; margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--line) }
+.hist-head { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap }
+details.hist > summary { cursor: pointer; font-size: 13.5px; color: var(--muted); padding: 10px 18px }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--panel) }
+.lang button { font: 600 0.85rem var(--body); border: 0; background: transparent; color: var(--ink); padding: 5px 14px; cursor: pointer }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--panel) }
+.lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <div class="top"><div class="eyebrow"><span data-zh="測試表進度 · 本次執行">Casebook progress · current run</span></div><div class="lang" role="group" aria-label="Language"><button type="button" data-l="en" aria-pressed="true">English</button><button type="button" data-l="zh" aria-pressed="false">中文</button></div></div>
+    <h1>Image to Video Reuse Progress</h1>
+    <div class="run-name" id="runname"></div>
+    <div class="meta" id="meta"></div>
+    <div class="bar" id="totalbar" aria-label="Results of the current run"></div>
+    <div class="legend" id="legend"></div>
+  </header>
+
+  <section class="ubox usage nosegs" id="usage-box" aria-labelledby="usage-h">
+    <div class="uh"><h2 id="usage-h"><span data-zh="時間與方案用量 · 本次執行">Time and plan usage · this run</span></h2><span class="uw" id="usage-when"></span></div>
+    <div id="usage-strip"></div>
+    <div class="tbl"><table id="usage"></table></div>
+    <div class="ufoot"><span class="tools"><button type="button" aria-pressed="false" onclick="toggleSegs(this)">Show segments</button></span>
+      <details class="how"><summary><span data-zh="這些數字怎麼算">How these figures are computed</span></summary><div class="notes" id="usage-notes"></div></details></div>
+  </section>
+
+  <section class="box why" id="blocked-box" aria-labelledby="blocked-h">
+    <h2 id="blocked-h"></h2>
+    <p class="why-lead" id="blocked-lead"></p>
+    <div class="why-cats" id="blocked"></div>
+  </section>
+
+  <div id="phases" style="display:grid;gap:18px"></div>
+
+  <div class="two">
+    <section class="box"><h2><span data-zh="最近的檢查點">Recent checkpoints</span></h2><div class="cp" id="cps"></div></section>
+    <section class="box"><h2><span data-zh="執行紀錄">Run log</span></h2><ul id="log"></ul></section>
+  </div>
+
+  <section class="flow" aria-labelledby="flow-h">
+    <h2 id="flow-h"><span data-zh="一個區段怎麼跑">How a segment runs</span></h2>
+    <div class="steps">
+      <div class="step"><span class="who"><span data-zh="協調者">Orchestrator</span></span><b><span data-zh="交代一個區段">Brief a segment</span></b><span data-zh="你對話的這個聊天為每個區段啟動一個子代理，每個都從乾淨的上下文開始：接續執行資料夾、讀計畫與 run-state、執行 &lt;code&gt;run-log next&lt;/code&gt;。">The chat you talk to starts one subagent per segment, which begins with a clean context: resume the run folder, read the plan and run-state, run <code>run-log next</code>.</span></div>
+      <div class="step"><span class="who"><span data-zh="階段開始">Phase start</span></span><b><span data-zh="關卡與政策阻擋">Gate and policy blocks</span></b><span data-zh="&lt;code&gt;init&lt;/code&gt; 把需要無法提供之條件的案例記為 Blocked；做一次 Seedance 預覽，再以 &lt;code&gt;gate video&lt;/code&gt; 記錄通過或失敗。"><code>init</code> records cases needing an unavailable fixture as Blocked; one Seedance preview, then <code>gate video</code> pass or fail.</span></div>
+      <div class="step"><span class="who"><span data-zh="區段">Segment</span></span><b><span data-zh="跑一個區段">Run one segment</span></b><span data-zh="每個案例都在手機上執行、做完立刻記錄，使用 &lt;code&gt;waitfor&lt;/code&gt;、&lt;code&gt;pink&lt;/code&gt; 與 recipe，不手動逐步操作。">Each case on the phone, recorded right after it is done, using <code>waitfor</code>, <code>pink</code> and recipes instead of hand-driving.</span></div>
+      <div class="step"><span class="who"><span data-zh="區段">Segment</span></span><b><span data-zh="記錄檔與檢查點">Logs and checkpoint</span></b><span data-zh="&lt;code&gt;pull-logs&lt;/code&gt;、&lt;code&gt;log-slice&lt;/code&gt;，把原因補到 Fail 與 Blocked 案例，再寫檢查點並回覆 10 行以內。"><code>pull-logs</code>, <code>log-slice</code>, causes added to Fail and Blocked cases, then the checkpoint and a 10-line reply.</span></div>
+      <div class="step"><span class="who"><span data-zh="階段結束">Phase end</span></span><b><span data-zh="收尾">Wrap up the phase</span></b><span data-zh="總結、測試時間、Claude token、eBug 草稿與審核頁、報告。不送出任何 eBug。">Summary, test time, Claude tokens, eBug drafts and review page, report. Nothing is filed.</span></div>
+    </div>
+  </section>
+
+  <section class="history" id="history" aria-labelledby="hist-h">
+    <div class="hist-head"><h2 id="hist-h"><span data-zh="先前的執行">Earlier runs</span></h2><span class="eyebrow" id="hist-sum"></span></div>
+    <section class="box usage nosegs" aria-label="Time and plan usage of earlier runs">
+      <h2><span data-zh="時間與方案用量 · 先前的執行">Time and plan usage · earlier runs</span></h2>
+      <div class="tools"><button type="button" aria-pressed="false" onclick="toggleSegs(this)">Show segments</button></div>
+      <div class="tbl"><table id="usage-hist"></table></div>
+    </section>
+    <div id="hist-phases" style="display:grid;gap:14px"></div>
+  </section>
+</div>
+
+<script>
+// Shared by the casebook pages (scripts/lib/page-shared.ts puts it at the top of each page's script).
+// Times: every page shows Taipei time and says so (user, 2026-11-06), whatever the viewer's or the data's zone. Input is
+// an ISO time or the pages' older `YYYY-MM-DD HH:mm UTC`.
+const cbDate = s => { if (!s) return null; const d = new Date(/ UTC$/.test(s) ? String(s).replace(' UTC', 'Z').replace(' ', 'T') : s); return isNaN(d) ? null : d; };
+const cbParts = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+const cbWhen = s => { const d = cbDate(s); if (!d) return String(s ?? ''); const p = Object.fromEntries(cbParts.formatToParts(d).map(x => [x.type, x.value])); return `${p.month}-${p.day} ${p.hour}:${p.minute}`; };
+const cbZone = lang => lang === 'zh' ? '台北時間' : 'Taipei time';
+const cbWhenZ = (s, lang) => s ? `${cbWhen(s)} ${cbZone(lang)}` : '';
+const cbSpan = (a, b, lang) => `${cbWhen(a)} → ${cbWhen(b)} ${cbZone(lang)}`;
+const cbEsc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const cbHm = ms => `${Math.floor(ms / 3600000)}h ${String(Math.round(ms / 60000) % 60).padStart(2, '0')}m`;
+const cbTok = n => n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `${Math.round(n / 1e3)}k` : String(n);
+const cbPct = v => v < 9.95 ? `${v.toFixed(1)}%` : `${Math.round(v)}%`;
+// The usage strip: time, tokens, the two estimates, then the account's shared total, muted. A seat other than 1× Pro
+// also gets the estimate as a share of that seat, which is what the meter fills to.
+// o: { wall, test, idle, gaps, tokens, tokensTitle, wt, est5, estW, noTokens, seat, acct5, acctW, approx, out5, outW, outLabel }
+function cbUsageTiles(o, lang) {
+  const zh = lang === 'zh', tx = (en, z) => zh ? z : en, m = o.seat && o.seat !== 1 ? o.seat : null;
+  const pctA = v => v == null ? '—' : `${o.approx ? '≈' : ''}${Math.round(v)}%`;
+  const est = (label, v, approx, title) => {
+    const none = v == null ? `<span class="uv unone" style="font-size:1rem">${o.noTokens ? tx('no token data yet', '尚無 token 資料') : '—'}</span>` : '';
+    const share = v != null && m ? v / m : v;
+    return `<div class="ut" title="${cbEsc(title)}"><span class="ul">${label}</span>${none || `<span class="uv est">${approx ? '~' : ''}${cbPct(v)}</span>`}`
+      + (v != null ? `<span class="us">${tx('of 1× Pro', '（1× Pro）')}${m ? tx(` · ${cbPct(share)} of the ${m}× seat`, ` · ${m}× 席位的 ${cbPct(share)}`) : ''}</span><span class="um"><span style="width:${Math.min(100, share)}%"></span></span>` : '') + '</div>';
+  };
+  const on = o.wall ? Math.min(100, o.test / o.wall * 100) : 0;
+  return `<div class="ustrip">
+    <div class="ut"><span class="ul">${tx('Test time', '測試時間')}</span><span class="uv">${cbHm(o.test)}</span>
+      <span class="us">${tx(`of ${cbHm(o.wall)} wall`, `總時長 ${cbHm(o.wall)}`)}${o.idle ? tx(` · ${cbHm(o.idle)} idle`, ` · 閒置 ${cbHm(o.idle)}`) : ''}${o.gaps ? tx(` (${o.gaps} gap${o.gaps > 1 ? 's' : ''})`, `（${o.gaps} 段）`) : ''}</span>
+      <span class="um" title="${cbEsc(tx('Test time against idle time', '測試時間與閒置時間'))}"><span style="width:${on}%"></span><span class="idle" style="width:${100 - on}%"></span></span></div>
+    <div class="ut" title="${cbEsc(o.tokensTitle ?? '')}"><span class="ul">${tx('Claude tokens', 'Claude token')}</span><span class="uv">${cbTok(o.tokens)}</span>${o.wt != null ? `<span class="us">${tx(`${cbTok(o.wt)} weighted`, `加權 ${cbTok(o.wt)}`)}</span>` : ''}</div>
+    ${est(tx('5-hour estimate', '5 小時估計'), o.est5, false, tx('Weighted tokens × the calibrated rate', '加權 token × 校準後的比率'))}
+    ${est(tx('Weekly estimate (rough)', '每週估計（粗估）'), o.estW, true, tx('5-hour estimate × the weekly ÷ 5-hour ratio', '5 小時估計 × 每週 ÷ 5 小時比'))}
+    <div class="ut acct" title="${cbEsc(tx('Snapshot increments while this was active, including other users of the account', '這段期間帳號用量快照的增加量，包含帳號的其他使用者'))}"><span class="ul">${tx('Account total (shared)', '帳號合計（共用）')}</span>
+      <span class="uv">${o.acct5 == null && o.acctW == null ? tx('no readings', '無讀數') : `${pctA(o.acct5)} / ${pctA(o.acctW)}`}</span><span class="us">${o.acct5 == null && o.acctW == null ? '' : tx('5-hour / weekly', '5 小時 / 每週')}${o.out5 != null || o.outW != null ? `${o.acct5 == null && o.acctW == null ? '' : ' · '}${cbEsc(o.outLabel)}: ${pctA(o.out5)} / ${pctA(o.outW)}` : ''}</span></div>
+  </div>`;
+}
+
+let DATA = {"feature":"Image to Video Reuse","version":3,"totalCases":50,"build":"?","unavailable":{"pre-feature-video":"test-data: My AI Artwork had no Image to Video work before 20.19, so no pre-feature video exists","unreadable-settings":"test-data: no Custom video made on iOS with this account or before a reinstall","removed-model":"test-data: no model has been removed from Image to Video; the run cannot remove one","vip-low-balance":"test-data: no VIP account with a balance below the price is available","free-trial":"test-data: the account has no Image to Video free trial","analytics":"observability: no analytics event log is available on the Android build"},"generated":"2026-11-19 06:54 UTC","phases":[{"id":"R1","name":"Round 1: full run of table v3 on 20.19.0.v202611181947 (TR261118-0070), Pixel 8a","current":true,"note":"Setup first (run plan › Setup): build installed and checked, credits 1839, make the fixture videos on this build.","skip":"","hold":"","runDir":"runs/2026-11-19-r1/","stats":{"wall":13696193,"test":7830410,"idle":5865783,"gaps":2,"tokens":{"input":1080,"cacheWrite":1019422,"cacheRead":82686038,"output":208792,"messages":494},"wt":10587921.3,"est5":null,"estW":null,"noTokens":false,"models":{"claude-opus-5-5":494},"fiveHour":71.24999999999997,"weekly":12.500000000000004,"seats":[1.25],"readings":true,"approx":false,"from":"2026-11-19T03:02:04.233Z","to":"2026-11-19T06:50:20.426Z"},"wrapUp":{"wall":17270,"test":17270,"idle":0,"gaps":0,"tokens":{"input":8,"cacheWrite":4718,"cacheRead":1025938,"output":998,"messages":4},"wt":113489.3,"est5":null,"estW":null,"noTokens":false,"models":{"claude-opus-5-5":4},"fiveHour":null,"weekly":null,"seats":[1.25],"readings":false,"approx":false,"from":"2026-11-19T06:50:03.156Z","to":"2026-11-19T06:50:20.426Z"},"segments":[{"id":"R1-a","name":"My AI Artwork tile and Save & Share","stats":{"wall":11210203,"test":5344420,"idle":5865783,"gaps":2,"tokens":{"input":548,"cacheWrite":466885,"cacheRead":41126309,"output":93902,"messages":244},"wt":5166295.15,"est5":null,"estW":null,"noTokens":false,"models":{"claude-opus-5-5":244},"fiveHour":54.687247757090155,"weekly":9.804686736305866,"seats":[1.25],"readings":true,"approx":false,"from":"2026-11-19T03:02:04.233Z","to":"2026-11-19T06:08:54.436Z"},"cases":[{"id":"TC-001","origin":"","needs":"","section":"My AI Artwork — Image to Video tab","action":"Open My AI Artwork (Launcher › AI Photos › My Artwork, top right) › 「Image to Video」 tab and look at the tiles and the …","zh":{"section":"My AI Artwork — Image to Video 分頁","action":"打開 My AI Artwork（Launcher › AI Photos › My Artwork，右上角）›「Image to Video」分頁，查看卡片和頁面底部"},"result":"Pass","disp":"","actual":"My AI Artwork (Mine › My Artwork; same page as AI Photos › My Artwork) › All categories › 「Image to Video」 tab: tiles for a processing job (「Processing…」, Kling 3.0 「Fixture P…」 started 12:38), failed jobs (Kling 4.0 probe and first C with 「View Detail」), finished Custom videos (date, model, prompt, 「Expires on 2027/11/19」) and template videos (Concert, Snow Angel, Snowball Toss…, 2026/11/18). Th…","at":"2026-11-19 04:39 UTC"},{"id":"TC-002","origin":"","needs":"","section":"My AI Artwork — Image to Video tab","action":"Tap video A's tile","zh":{"section":"My AI Artwork — Image to Video 分頁","action":"點影片 A 的卡片"},"result":"Pass","disp":"","actual":"Tapping video A's tile (Kling 2.6, 「Fixture A…」) opened 「Save & Share」 with the 「Prompts & Settings」 section and 「Reuse」 (reuse_btn) on the model row.","at":"2026-11-19 04:40 UTC"},{"id":"TC-003","origin":"","needs":"","section":"My AI Artwork — Image to Video tab","action":"1. Open My AI Artwork › Recent and choose the Video filter\n2. Tap video A","zh":{"section":"My AI Artwork — Image to Video 分頁","action":"1. 打開 My AI Artwork › Recent，選 Video 篩選\n2. 點影片 A"},"result":"Pass","disp":"","actual":"My AI Artwork › 「Recent」 › 「Video」 filter lists video A (Kling 2.6, 「Fixture A…」); tapping it opened the same 「Save & Share」 with 「Prompts & Settings」 (Kling 2.6) and 「Reuse」. For Q-5: ‹ from this page returned to Recent (see the selected tabs in tc003-back).","at":"2026-11-19 06:08 UTC"},{"id":"TC-004","origin":"","needs":"","section":"My AI Artwork — Image to Video tab","action":"Tap 「View Details」 on the failed tile","zh":{"section":"My AI Artwork — Image to Video 分頁","action":"點失敗卡片上的「View Details」"},"result":"Pass","disp":"","actual":"Failed Kling 4.0 probe tile (「Probe G: the woman blinks」, 「View Detail」): tapping 「View Detail」 opened only the dialog 「An Error Has Occurred」 / 「The credits have been refunded. Modify the prompt or image, and then try again.」 / 「OK」; no 「Prompts & Settings」, no 「Reuse」. OK closed it; the tile stays with 「View Detail」. (The first-C failed tile was not opened; kept unopened.)","at":"2026-11-19 04:39 UTC"},{"id":"TC-005","origin":"","needs":"","section":"My AI Artwork — Image to Video tab","action":"Tap the processing tile","zh":{"section":"My AI Artwork — Image to Video 分頁","action":"點處理中的卡片"},"result":"Pass","disp":"","actual":"Processing tile (Kling 3.0, 「Fixture P: steam rises slowly from the coffee cup」, 「Processing…」 on the thumbnail, 「9 minutes remaining...」 progress bar; started 12:38, 30 credits, 1303 → 1273). Tapping the thumbnail and tapping the text area both did nothing: the page stayed on My AI Artwork, no Save & Share, no 「Prompts & Settings」 / 「Reuse」.","at":"2026-11-19 04:39 UTC"},{"id":"TC-006","origin":"","needs":"","section":"Save & Share — Prompts & Settings","action":"Look at the 「Prompts & Settings」 section","zh":{"section":"Save & Share — Prompts & Settings","action":"查看「Prompts & Settings」區塊"},"result":"Fail","disp":"defect","actual":"Title 「Prompts & Settings」; card row: model icon + 「Kling 2.6」 with 「Reuse」 at the right of the same row; chips 「10s」 「pro」 「Sound on」; prompt 「Fixture A: the woman smiles and waves at the camera, gentle breeze in her hair」 below; exactly one 「Reuse」 on the page. Only difference: the quality chip reads lower-case 「pro」 where the row and the Design sample show 「Pro」 (the Custom room's own option i…","at":"2026-11-19 04:40 UTC"},{"id":"TC-049","origin":"","needs":"","section":"Save & Share — Prompts & Settings","action":"Scroll the page from top to bottom","zh":{"section":"Save & Share — Prompts & Settings","action":"從上到下捲動整個頁面"},"result":"Fail","disp":"defect","actual":"Video A's Save & Share, top to bottom: 「Save」, 「Prompts & Settings」 (card), 「Add Text」 「Add Sticker」 「Add Music」, 「Make It Reel-Ready」, 「Share to」 (Instagram, Snapchat, TikTok, Pinterest, Facebook), an ad, 「You might also like」 (AI Creative Studio, AI Group Shot, AI Try-On). Expected order (R-067, Design): 「Save」, 「More Video Editing Tools」, 「Add Text」 「Add Sticker」 「Add Music」, 「Prompts & Settin…","at":"2026-11-19 06:01 UTC"},{"id":"TC-050","origin":"","needs":"system-setting","section":"Save & Share — Prompts & Settings","action":"Look at the 「Prompts & Settings」 section","zh":{"section":"Save & Share — Prompts & Settings","action":"查看「Prompts & Settings」區塊"},"result":"Pass","disp":"","actual":"Phone system theme already dark (cmd uimode night: yes). Video A's Save & Share is dark; 「Prompts & Settings」 title, 「Kling 2.6」, chips 「10s」 「pro」 「Sound on」, the prompt and the outlined 「Reuse」 are all readable on the dark card. Briefly switching the phone to light (then back to dark, restored and confirmed 'Night mode: yes') turned the app light, so it follows the system theme (Q-16), but the …","at":"2026-11-19 06:02 UTC"},{"id":"TC-007","origin":"","needs":"","section":"Save & Share — Prompts & Settings","action":"Tap the Template video's tile","zh":{"section":"Save & Share — Prompts & Settings","action":"點這支 Template 影片的卡片"},"result":"Pass","disp":"","actual":"Template video 「Santa Squad」 (2026/11/18): its 「Save & Share」 shows 「Save」, 「Add Text」 「Add Sticker」 「Add Music」, 「Make It Reel-Ready」, 「Share to」 (Instagram, Snapchat, TikTok, Pinterest, Facebook), an ad and 「You might also like」 (AI Creative Studio, AI Group Shot, AI Try-On). No 「Prompts & Settings」 and no 「Reuse」.","at":"2026-11-19 06:03 UTC"},{"id":"TC-008","origin":"","needs":"","section":"Save & Share — Prompts & Settings","action":"Tap video C's tile","zh":{"section":"Save & Share — Prompts & Settings","action":"點影片 C 的卡片"},"result":"Pass","disp":"","actual":"Video C (Kling 3.0, Start/End On, 「Fixture C: the man looks around and smiles as the scene changes」): Save & Share shows 「Prompts & Settings」 with model icon + 「Kling 3.0」, 「Reuse」 on the same row, chips 「5s」 「std」 「Sound off」 and the prompt. (Quality chip abbreviated lower-case 「std」, the room's option is 「Standard」: same chip wording as TC-006's 「pro」.)","at":"2026-11-19 06:04 UTC"},{"id":"TC-041","origin":"","needs":"pre-feature-video","section":"Save & Share — Prompts & Settings","action":"Tap that video's tile","zh":{"section":"Save & Share — Prompts & Settings","action":"點這支影片的卡片"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs pre-feature-video (test-data: My AI Artwork had no Image to Video work before 20.19, so no pre-feature video exists)","why":{"group":"need:pre-feature-video","note":""},"at":"2026-11-19 03:02 UTC"},{"id":"TC-042","origin":"","needs":"unreadable-settings","section":"Save & Share — Prompts & Settings","action":"Open that video's Save & Share page","zh":{"section":"Save & Share — Prompts & Settings","action":"打開這支影片的 Save & Share 頁"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs unreadable-settings (test-data: no Custom video made on iOS with this account or before a reinstall)","why":{"group":"need:unreadable-settings","note":""},"at":"2026-11-19 03:02 UTC"},{"id":"TC-009","origin":"","needs":"","section":"Save & Share — Prompts & Settings","action":"Tap ‹ at the top left","zh":{"section":"Save & Share — Prompts & Settings","action":"點左上的 ‹"},"result":"Pass","disp":"","actual":"Video A's Save & Share opened from the 「Image to Video」 tab; ‹ (back_btn) returned to My AI Artwork with 「Image to Video」 selected.","at":"2026-11-19 06:05 UTC"},{"id":"TC-044","origin":"","needs":"","section":"Android system Back","action":"Press system Back","zh":{"section":"Android 系統返回鍵","action":"按系統返回鍵"},"result":"Pass","disp":"","actual":"Video A's Save & Share opened from the 「Image to Video」 tab; system Back returned to My AI Artwork with 「Image to Video」 selected, same as ‹ (list position kept).","at":"2026-11-19 06:05 UTC"},{"id":"TC-010","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"Tap 「Reuse」","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"點「Reuse」"},"result":"Fail","disp":"defect","actual":"「Reuse」 on video A's Save & Share opened Image to Video straight on 「Custom」 (no intro page): 「Model」 「Kling 2.6」, 「Specify Video Start / End」 Off, 「Add your image」 empty, prompt box holds 「Fixture A: the woman smiles and waves at the camera, gentle breeze in her hair」 with 「78/2500」. But no 「Settings applied」 toast: not seen in screenshots at ~0.6 s and ~2.6 s (first try) nor in a 9 s screen rec…","at":"2026-11-19 06:06 UTC"},{"id":"TC-047","origin":"","needs":"","section":"Android: credits and artwork","action":"Tap the history button at the top right","zh":{"section":"Android：點數與作品","action":"點右上角的歷史記錄按鈕"},"result":"Pass","disp":"","actual":"In the Custom room opened by video A's 「Reuse」, the history button at the top right (go_artwork_btn) opened My AI Artwork with the 「Image to Video」 tab selected.","at":"2026-11-19 06:06 UTC"},{"id":"TC-048","origin":"","needs":"","section":"Android: credits and artwork","action":"Tap the credit button at the top","zh":{"section":"Android：點數與作品","action":"點頂端的點數按鈕"},"result":"Pass","disp":"","actual":"Custom room opened by video A's 「Reuse」: the credit button at the top showed 1273 (Mine balance after the 30 for Fixture P); tapping it opened the credit purchase page (「My Credits」 1273, 「Expiring within 7 days: 0」, packs 100/200/500/1000/2000 with NT$ prices, 「Get 100 Free Credits Each Month!」). Nothing bought; left with Back.","at":"2026-11-19 06:07 UTC"}]},{"id":"R1-b","name":"Reuse into the Custom room","stats":{"wall":1064780,"test":1064780,"idle":0,"gaps":0,"tokens":{"input":214,"cacheWrite":176333,"cacheRead":14984147,"output":39133,"messages":97},"wt":1914709.9500000002,"est5":null,"estW":null,"noTokens":false,"models":{"claude-opus-5-5":97},"fiveHour":15.102237657959911,"weekly":2.451894166202482,"seats":[1.25],"readings":true,"approx":false,"from":"2026-11-19T06:08:54.436Z","to":"2026-11-19T06:26:39.216Z"},"cases":[{"id":"TC-011","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"Open the model settings and look at Duration, Video Quality and Generate Sound by AI","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"打開模型設定，查看 Duration、Video Quality 和 Generate Sound by AI"},"result":"Pass","disp":"","actual":"Reuse from video A's Save & Share: room on Custom, Kling 2.6; settings below Inspiration show Duration (Seconds) 「10」 selected, Video Quality 「Pro」 selected (only option), 「Generate Background Sound」 「On」 selected (the app's name for Generate Sound by AI). Prompt 78/2500, Generate 80.","at":"2026-11-19 06:11 UTC"},{"id":"TC-043","origin":"","needs":"","section":"Android system Back","action":"Press system Back","zh":{"section":"Android 系統返回鍵","action":"按系統返回鍵"},"result":"Fail","disp":"defect","actual":"System Back in the Custom room opened by video A's 「Reuse」 goes to 「My AI Artwork」 › 「Image to Video」 tab (list of videos), not back to video A's 「Save & Share」 page. Same as ‹ (O-3), so system Back matches ‹ but both skip Save & Share (R-058/R-064).","at":"2026-11-19 06:11 UTC"},{"id":"TC-045","origin":"","needs":"","section":"Android system Back","action":"Press system Back","zh":{"section":"Android 系統返回鍵","action":"按系統返回鍵"},"result":"Pass","disp":"","actual":"Prompt box tapped in the Reuse room: keyboard open (mInputShown=true). System Back: keyboard closed (mInputShown=false), room stays open on Custom, prompt still 「Fixture A: the woman smiles and waves at the camera, gentle breeze in her hair」 78/2500 (text shown selected/highlighted from the focus tap).","at":"2026-11-19 06:12 UTC"},{"id":"TC-012","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"1. Open video B's Save & Share page and note the model and chips\n2. Tap 「Reuse」\n3. Open the model settings","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"1. 打開影片 B 的 Save & Share 頁，記下模型和標籤\n2. 點「Reuse」\n3. 打開模型設定"},"result":"Pass","disp":"","actual":"Video B Save & Share card: 「Kling 2.5 Turbo」, chips 「5s」 「std」 「Sound off」 (lower-case 「std」 as already failed in TC-006). Reuse: room Kling 2.5 Turbo, Start/End Off, prompt 53/2500, Generate 25; settings Duration 「5」 selected, Video Quality 「Standard」 selected (of Standard/Pro), 「Generate Background Sound」 「Off」 selected.","at":"2026-11-19 06:12 UTC"},{"id":"TC-013","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"Tap 「Reuse」","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"點「Reuse」"},"result":"Fail","disp":"defect","actual":"Video C (Kling 3.0, Start/End) Reuse: 「Specify Video Start / End」 On, 「First Frame」 and 「Last Frame」 slots empty (「Add a first frame image」/「Add a last frame image」), model Kling 3.0, prompt 「Fixture C: the man looks around and smiles as the scene changes」 63/2500, Generate 20 - all as expected. But no 「Settings applied」 toast (waitfor 7 s from the tap found none), same defect as TC-010. Save & S…","at":"2026-11-19 06:13 UTC"},{"id":"TC-014","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"Tap 「Reuse」","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"點「Reuse」"},"result":"Pass","disp":"","actual":"Video D (Kling 3.0, made from inspiration 「A dog is happily running toward its owner with excitement.」) Reuse: prompt box holds 「A dog is happily running toward its owner with excitement.」 58/2500, model Kling 3.0, Generate 30; under 「Inspiration」 none of the four thumbnails is marked selected (dog thumbnail third, no frame/highlight, no selected flag in the page source).","at":"2026-11-19 06:14 UTC"},{"id":"TC-015","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"1. Tap 「Reuse」\n2. Close the explanation sheet","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"1. 點「Reuse」\n2. 關閉說明面板"},"result":"Fail","disp":"defect","actual":"Precondition holds: entering Image to Video from AI Videos at 14:14 still shows the 「Image To Video」 intro (「Try now」 / 「Don’t show again」) and the 「Steps」 page. Tapping 「Reuse」 on video A's Save & Share goes straight to the Custom page (Kling 2.6, prompt 78/2500): the explanation sheet never shows on the Reuse path, and no 「Settings applied」 toast appears at any time (8 s recording at 2 fps, no …","at":"2026-11-19 06:15 UTC"},{"id":"TC-046","origin":"","needs":"","section":"Android system Back","action":"Press system Back while the explanation sheet shows","zh":{"section":"Android 系統返回鍵","action":"說明面板顯示時，按系統返回鍵"},"result":"Blocked","disp":"defect","actual":"The explanation sheet never shows after 「Reuse」 on this build (TC-015: Reuse opens the Custom page directly although the intro still shows from AI Videos), so system Back on that sheet cannot be pressed.","why":{"group":"other","note":"The explanation sheet never shows after 「Reuse」 on this build (TC-015"},"at":"2026-11-19 06:15 UTC"},{"id":"TC-016","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"1. Tap 「Reuse」\n2. Tap 「Model」 while 「Settings applied」 is still showing","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"1. 點「Reuse」\n2. 在「Settings applied」還在顯示時，點「Model」"},"result":"Blocked","disp":"defect","actual":"Reuse on video A, then 「Model」 tapped right away (~2 s): the model list panel opens (Kling 4.0, Pixverse V6, Kling O3 …) with no 「Settings applied」 toast over it or before it. The toast never shows after Reuse on this build (TC-010, TC-013, TC-015), so whether it keeps priority over a panel cannot be judged.","why":{"group":"other","note":"Reuse on video A, then 「Model」 tapped right away (~2 s)"},"at":"2026-11-19 06:16 UTC"},{"id":"TC-017","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"1. Open video A's Save & Share page\n2. Tap 「Reuse」\n3. Open Buy Credit › Detail from the credit button","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"1. 打開影片 A 的 Save & Share 頁\n2. 點「Reuse」\n3. 從點數按鈕打開 Buy Credit › Detail"},"result":"Pass","disp":"","actual":"Balance before the Reuse rows 1273 (Launcher pill 14:10); after five Reuse taps (A ×3, B, C, D) the room pill and Buy Credit › 「My Credits」 show 1273. Buy Credit › Detail › Credits Details newest entry is still 「Image To Video -30」 2026/11/19 (fixture P, 12:38), then 「Generation failed, credits returned +45」, -45, -25, -20: no new entry from Reuse.","at":"2026-11-19 06:16 UTC"},{"id":"TC-018","origin":"","needs":"","section":"Reuse into Image to Video Custom","action":"Look at 「Generate」 in the reused room","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"查看 Reuse 後房間裡的「Generate」"},"result":"Pass","disp":"","actual":"Fresh Custom room via My AI Artwork 「Create More」, Kling 2.6 chosen (defaults 5 / Pro / Sound Off = 25), then 10 and Generate Background Sound On: Generate shows 80. Room opened by video A's 「Reuse」 (Kling 2.6, 10, Pro, Sound On): Generate shows 80, the same current price (mockup 「30」 is sample).","at":"2026-11-19 06:19 UTC"},{"id":"TC-020","origin":"","needs":"","section":"In the room after Reuse","action":"Tap ‹ at the top left","zh":{"section":"Reuse 之後的房間","action":"點左上的 ‹"},"result":"Fail","disp":"defect","actual":"‹ (top_back_btn) in the Custom room opened by video A's 「Reuse」 returns to 「My AI Artwork」 › Image to Video list, not to video A's 「Save & Share」 page (R-033/R-064). Seen first as O-3 in R1-a; system Back does the same (TC-043).","at":"2026-11-19 06:20 UTC"},{"id":"TC-021","origin":"","needs":"","section":"In the room after Reuse","action":"1. Tap 「Model」\n2. Choose another model\n3. Open its settings\n4. Switch back to Kling 2.6","zh":{"section":"Reuse 之後的房間","action":"1. 點「Model」\n2. 選另一個模型\n3. 打開它的設定\n4. 切回 Kling 2.6"},"result":"Pass","disp":"","actual":"Reuse of video A (Kling 2.6, 10, Pro, Sound On), then Model › Kling 3.0: 10 (of 5/10/15), Pro, Sound On kept, Generate 80. Model › Veo 3.1: Duration falls back to its default 4 (10 not offered: 4/6/8), Pro and Sound On kept, Generate 72, counter 78/4000. Back to Kling 2.6: Duration 5 (Veo's 4 not offered, so Kling 2.6's default), Pro, Sound On, Generate 40, prompt kept 78/2500 - each model keeps …","at":"2026-11-19 06:21 UTC"},{"id":"TC-022","origin":"","needs":"","section":"In the room after Reuse","action":"1. Tap ‹ twice (back to My AI Artwork)\n2. Tap 「Create more」","zh":{"section":"Reuse 之後的房間","action":"1. 連點 ‹ 兩次（回到 My AI Artwork）\n2. 點「Create more」"},"result":"Pass","disp":"","actual":"From the Reuse room (Kling 2.6, A's prompt) ‹ goes straight to My AI Artwork › Image to Video (one tap, O-3), then 「Create More」: Custom tab, default Kling 3.0, Start/End Off, empty prompt with placeholder 「Describe the subject and how they move in the scene, e.g. A dancer spins and jumps under stage lights.」, counter 「0/2500」, Duration 5 / Standard / Generate Background Sound Off, Generate 30; n…","at":"2026-11-19 06:17 UTC"},{"id":"TC-028","origin":"","needs":"","section":"Create more (unchanged)","action":"In My AI Artwork (Launcher › AI Photos › My Artwork, top right) › 「Image to Video」 tab, tap 「Create more」","zh":{"section":"Create more（沒有改變）","action":"在 My AI Artwork（Launcher › AI Photos › My Artwork，右上角）›「Image to Video」分頁點「Create more」"},"result":"Fail","disp":"defect","actual":"My AI Artwork › Image to Video › 「Create More」 (fresh entry, 14:18): the 「Image To Video」 intro and 「Steps」 page show first (Try now / Continue), then the 「Custom」 tab with default 「Kling 3.0」, Start/End Off, no 「Settings applied」, no list of videos to reuse, Generate 30 - as expected. But the placeholder reads 「Describe the subject and how they move in the scene, e.g. A dancer spins and jumps un…","at":"2026-11-19 06:18 UTC"},{"id":"TC-032","origin":"","needs":"","section":"Error handling","action":"1. Tap 「Reuse」\n2. Switch to a model whose limit is 500\n3. Delete text until the counter is at the limit","zh":{"section":"錯誤處理","action":"1. 點「Reuse」\n2. 切換到上限是 500 的模型\n3. 刪掉文字，直到字數降到上限以內"},"result":"Pass","disp":"","actual":"No model has a 500 limit on this build (Q-7), so the 2000 limit of Vidu Q2 was used. Video F (Wan 3.0, 2129 characters) Save & Share shows 「Wan 3.0」 「5s」 「Sound on」; Reuse: Wan 3.0, counter 2129/20000. Croissant sample photo added so Generate could enable. Model › Vidu Q2: whole prompt kept (ends 「… right. END」), counter 「2129/2000」 with 2129 in red and 「Description exceeds 2000 character limit.」…","at":"2026-11-19 06:25 UTC"},{"id":"TC-033","origin":"","needs":"","section":"Error handling","action":"Tap 「Reuse」","zh":{"section":"錯誤處理","action":"點「Reuse」"},"result":"Pass","disp":"","actual":"Phone has no cellular service (OUT_OF_SERVICE), so Wi-Fi off = no network. With video A's Save & Share open, Wi-Fi off (14:25), 「Reuse」: the Custom room opens normally with no network message: Kling 2.6, A's prompt 78/2500, inspirations, Generate 80 (disabled, no photo), pill 1273. For comparison, ‹ › 「Create More」 offline: intro + Steps, then the Custom room with Kling 3.0, 0/2500, Generate 30, …","at":"2026-11-19 06:26 UTC"},{"id":"TC-034","origin":"","needs":"","section":"Error handling","action":"1. Tap 「Reuse」\n2. Add the photo with a face\n3. Tap 「Generate」","zh":{"section":"錯誤處理","action":"1. 點「Reuse」\n2. 加入有人臉的照片\n3. 點「Generate」"},"result":"Blocked","disp":"test-data","actual":"No model refuses a real-person photo on 20.19.0.v202611181947 / Test Server: all 18 models were given a face photo and Generate in R1-setup (2026-11-19) and none showed 「The photo you uploaded includes a real person…」 (Q-12), so no video G exists and no model to reuse into. No real-person message appeared naturally in R1-b either.","why":{"group":"other","note":"No model refuses a real-person photo on 20.19.0.v202611181947 / Test Server"},"at":"2026-11-19 06:26 UTC"},{"id":"TC-019","origin":"","needs":"free-trial","section":"Reuse into Image to Video Custom","action":"1. Open video A's Save & Share page\n2. Tap 「Reuse」\n3. Look at 「Generate」","zh":{"section":"Reuse 到 Image to Video 的 Custom","action":"1. 打開影片 A 的 Save & Share 頁\n2. 點「Reuse」\n3. 查看「Generate」"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs free-trial (test-data: the account has no Image to Video free trial)","why":{"group":"need:free-trial","note":""},"at":"2026-11-19 03:02 UTC"},{"id":"TC-036","origin":"","needs":"vip-low-balance","section":"Error handling","action":"1. Tap 「Reuse」\n2. Add a photo\n3. Tap 「Generate」","zh":{"section":"錯誤處理","action":"1. 點「Reuse」\n2. 加一張照片\n3. 點「Generate」"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs vip-low-balance (test-data: no VIP account with a balance below the price is available)","why":{"group":"need:vip-low-balance","note":""},"at":"2026-11-19 03:02 UTC"}]},{"id":"R1-c","name":"Generate from Reuse","stats":{"wall":1403940,"test":1403940,"idle":0,"gaps":0,"tokens":{"input":310,"cacheWrite":371486,"cacheRead":25549644,"output":74759,"messages":149},"wt":3393426.9000000004,"est5":null,"estW":null,"noTokens":false,"models":{"claude-opus-5-5":149},"fiveHour":1.460514584949932,"weekly":0.24341909749165533,"seats":[1.25],"readings":true,"approx":false,"from":"2026-11-19T06:26:39.216Z","to":"2026-11-19T06:50:03.156Z"},"cases":[{"id":"TC-023","origin":"","needs":"","section":"Generate from Reuse","action":"1. Add a photo under 「Add your images」\n2. Tap 「Generate」\n3. Open My AI Artwork › 「Image to Video」","zh":{"section":"從 Reuse 開始生成","action":"1. 在「Add your images」加一張照片\n2. 點「Generate」\n3. 打開 My AI Artwork ›「Image to Video」"},"result":"Pass","disp":"","actual":"Reuse from video A opened the Custom room with Kling 2.6, prompt 78/2500, no image; added the Sample Photos croissant; 「Generate」 showed 80 with balance 1273 (14:30:10). Generate jumped to My AI Artwork › Image to Video: newest tile 「Processing…」 with the croissant photo, Kling 2.6, video A's prompt, 00:10, 「16 minutes remaining…」; video A (Kling 2.6, Fixture A, 00:10) still listed below. AI Phot…","at":"2026-11-19 06:31 UTC"},{"id":"TC-024","origin":"","needs":"","section":"Generate from Reuse","action":"1. Play the new video\n2. Open its Save & Share page","zh":{"section":"從 Reuse 開始生成","action":"1. 播放新的影片\n2. 打開它的 Save & Share 頁"},"result":"Fail","disp":"defect","actual":"TC-023's video finished by 14:47 (job done ~17 min). Player 「00:10/00:10」 (seekbar 10025 ms); saved file (Save → DCIM/PhotoDirector/Video/2026-11-19-14-48-55-536.mp4, pulled to media/, local only) is 10.04 s, 1264×1636 H.264 with an AAC track carrying sound (mean −34.3 dB, max −10.1 dB): 10 s with AI sound as expected. Its 「Prompts & Settings」 card: 「Kling 2.6」, chips 「10s」 「pro」 「Sound on」, vide…","at":"2026-11-19 06:49 UTC"},{"id":"TC-025","origin":"","needs":"","section":"Generate from Reuse","action":"Open Buy Credit › Detail from the credit button","zh":{"section":"從 Reuse 開始生成","action":"從點數按鈕打開 Buy Credit › Detail"},"result":"Pass","disp":"","actual":"Credit pill › Buy Credit page (My Credits 1193) › 「Detail」 › Credits Details, 2026-11: newest entry 「Image To Video」 / PhotoDirector (Android) / 2026/11/19 / 「-80」 = TC-023's charge (price 80); next 「Image To Video」 -30 (fixture P).","at":"2026-11-19 06:31 UTC"},{"id":"TC-026","origin":"","needs":"","section":"Generate from Reuse","action":"Pull the app log and find the Image to Video generate request","zh":{"section":"從 Reuse 開始生成","action":"取出 App 的 log，找到 Image to Video 的生成請求"},"result":"Pass","disp":"","actual":"Logcat of TC-023's Generate (14:30:14): addNewPack credit_action_id 「genvideo_1_sec_kling_custom_2.6pro_enable_single_1080p」, credit_total_credit 80 — the same action ID fixture A used at 11:05 (R1-setup log); the job's prompt (ImageToVideoPromptsHistory DB line, customModelModeNameGuid I2V_3rd_party_pro_VAI, and ImageToVideo_Result_Generate) is video A's 「Fixture A: the woman smiles and waves at…","at":"2026-11-19 06:49 UTC"},{"id":"TC-027","origin":"","needs":"","section":"Generate from Reuse","action":"Tap 「Generate」 three times quickly","zh":{"section":"從 Reuse 開始生成","action":"快速連點「Generate」三次"},"result":"Pass","disp":"","actual":"Reuse from video A (Kling 2.6), croissant photo added, set 5s and Sound Off to keep it cheap (price 25, balance 1193). 「Generate」 tapped three times by burst (14:33:23): the app jumped to My AI Artwork with exactly one new 「Processing…」 tile (Kling 2.6, 00:05, Fixture A prompt, 「10 minutes remaining…」) above TC-023's job. Pill 1168 (−25 once); Credits Details shows one new 「Image To Video」 -25 ab…","at":"2026-11-19 06:34 UTC"},{"id":"TC-029","origin":"","needs":"removed-model","section":"Model no longer available","action":"Tap 「Reuse」","zh":{"section":"模型已下架","action":"點「Reuse」"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs removed-model (test-data: no model has been removed from Image to Video; the run cannot remove one)","why":{"group":"need:removed-model","note":""},"at":"2026-11-19 03:02 UTC"},{"id":"TC-030","origin":"","needs":"removed-model","section":"Model no longer available","action":"Open the model settings and look at the prompt box","zh":{"section":"模型已下架","action":"打開模型設定，並查看提示詞輸入框"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs removed-model (test-data: no model has been removed from Image to Video; the run cannot remove one)","why":{"group":"need:removed-model","note":""},"at":"2026-11-19 03:02 UTC"},{"id":"TC-031","origin":"","needs":"removed-model","section":"Model no longer available","action":"1. Tap 「Generate」\n2. Open Buy Credit › Detail","zh":{"section":"模型已下架","action":"1. 點「Generate」\n2. 打開 Buy Credit › Detail"},"result":"Blocked","disp":"test-data","actual":"Not run by policy: needs removed-model (test-data: no model has been removed from Image to Video; the run cannot remove one)","why":{"group":"need:removed-model","note":""},"at":"2026-11-19 03:02 UTC"},{"id":"TC-037","origin":"","needs":"analytics","section":"Tracking events","action":"Open video A's Save & Share page and tap 「Reuse」","zh":{"section":"埋點事件","action":"打開影片 A 的 Save & Share 頁，點「Reuse」"},"result":"Fail","disp":"defect","actual":"Event log = app logcat 「[PHD-A][Mixpanel]」 lines (Q-8 assumption: a log pull). 「Reuse」 on video A's Save & Share (14:29:36.170, again 14:32:52.878 in TC-027) logs 「logEvent name=Artwork_Reuse_Click」 and 「[setCurFrom] from = artwork_reuse」, with no parameters (events with parameters print them as JSON, e.g. ImageToVideo_Result_Generate). Expected ImageToVideo_Reuse_Click with model = Kling 2.6's v…","at":"2026-11-19 06:35 UTC"},{"id":"TC-038","origin":"","needs":"analytics","section":"Tracking events","action":"Tap 「Generate」","zh":{"section":"埋點事件","action":"點「Generate」"},"result":"Pass","disp":"","actual":"Event log = logcat 「[PHD-A][Mixpanel]」. Generate after Reuse from the Image to Video tab's Save & Share (TC-023, 14:30:15.402): 「ImageToVideo_Result_Generate:{\"duration\":\"10s\",\"mode\":\"1_solo_photo\",\"used_style\":\"custom\",\"bgm\":\"on\",\"model\":\"Model_Kling-2.6\",\"from\":\"artwork_reuse\",…,\"quality\":\"pro\"}」 — from = artwork_reuse. Same in TC-027 (14:33:27.714, duration 5s, bgm off).","at":"2026-11-19 06:34 UTC"},{"id":"TC-039","origin":"","needs":"analytics","section":"Tracking events","action":"Tap 「Generate」","zh":{"section":"埋點事件","action":"點「Generate」"},"result":"Pass","disp":"","actual":"My AI Artwork › Recent › Video filter › video A (Kling 2.6, chips 10s / pro / Sound on) › 「Reuse」 (logcat 14:36:21 「logEvent name=Artwork_Reuse_Click」, setCurFrom artwork_reuse) › croissant photo, 5s, Sound Off (price 25) › 「Generate」 14:36:42. Logcat 14:36:46.893 「ImageToVideo_Result_Generate:{…\"model\":\"Model_Kling-2.6\",\"from\":\"artwork_reuse\",…}」 — from = artwork_reuse. A third 「Processing…」 til…","at":"2026-11-19 06:36 UTC"},{"id":"TC-040","origin":"","needs":"analytics","section":"Tracking events","action":"Tap 「Generate」","zh":{"section":"埋點事件","action":"點「Generate」"},"result":"Pass","disp":"","actual":"My AI Artwork › Image to Video › 「Create More」 (intro 「Try now」 / 「Continue」 shown) › Custom room Kling 3.0, croissant photo, typed 「TC-040: steam rises from the coffee cup」, price 30 (balance 1143) › 「Generate」 14:37:45. Logcat 14:37:50.659 「ImageToVideo_Result_Generate:{…\"model\":\"Model_Kling-3.0\",\"from\":\"Artwork\",…\"quality\":\"std\"}」 — from = Artwork (setCurFrom Artwork 14:37:10). New 「Processing…","at":"2026-11-19 06:37 UTC"},{"id":"TC-035","origin":"","needs":"","section":"Error handling","action":"1. Tap 「Reuse」\n2. Add a photo\n3. Tap 「Generate」","zh":{"section":"錯誤處理","action":"1. 點「Reuse」\n2. 加一張照片\n3. 點「Generate」"},"result":"Blocked","disp":"test-data","actual":"Free account (tier Free) but the balance is 1113 credits against 「Generate」 80 (Reuse from video A, Kling 2.6 10s Pro Sound on, croissant photo; room pill 14:50). The account cannot be brought below the price without spending ~1040 credits or a second Free account with a low balance; nothing generated.","why":{"group":"other","note":"Free account (tier Free) but the balance is 1113 credits against 「Generate」 80 (Reuse from video A, Kling 2.6 10s Pro Sound on, croissant photo"},"at":"2026-11-19 06:50 UTC"}]}]}],"usage":{"snapshots":4,"markers":1,"seatAssumed":false,"weights":{"input":1,"cacheWrite":1.25,"cacheRead":0.1,"output":5},"approx":false,"fiveHour":71.25,"weekly":12.5,"outside5":0,"outsideW":0,"rounds":[{"n":1,"phases":["R1"],"seats":[1.25],"wall":13696193,"test":7830410,"idle":5865783,"gaps":2,"tokens":{"input":1080,"cacheWrite":1019422,"cacheRead":82686038,"output":208792,"messages":494},"wt":10587921.3,"est5":null,"estW":null,"noTokens":false,"models":{"claude-opus-5-5":494},"fiveHour":71.24999999999997,"weekly":12.500000000000004,"readings":true,"approx":false}],"wt":10587921.3,"est5":null,"estW":null,"calibration":null,"transcripts":182,"ledgerMessages":494,"latest":{"at":"2026-11-19T06:27:44.290Z","seat":1.25,"fiveHourPct":20,"weeklyPct":20,"fiveHourResetsAt":"2026-11-19T11:00:00.000Z","weeklyResetsAt":"2026-11-25T12:00:00.000Z"}},"checkpoints":[{"time":"2026-11-19 06:27 UTC","next":"TC-023 (R1-c)","text":"R1-b done 14:27 (14:08-14:27): 10 Pass, 5 Fail (TC-043 system Back and TC-020 ‹ from the Reuse room go to My AI Artwork, not Save & Share; TC-013 and TC-015 no 「Settings applied」 toast (TC-015 also: the intro sheet never shows on Reuse, though it shows from AI Videos and fresh Create More); TC-028 Create More placeholder 「Describe the subject and how they move in the scene, e.g. A dancer spins and jumps under stage l…","run":"2026-11-19-r1"},{"time":"2026-11-19 06:09 UTC","next":"TC-011 (R1-b)","text":"R1-a done 14:09 (paused ~12:50-14:00 for the 5-hour usage limit): 12 Pass, 3 Fail (TC-006 chip 「pro」 lower-case, also 「std」 on C; TC-049 order: Prompts & Settings right under Save, no 「More Video Editing Tools」; TC-010 no 「Settings applied」 toast), TC-041/042 Blocked (policy). New fixture P: Kling 3.0 5s Std, croissant photo, prompt 「Fixture P: steam rises slowly from the coffee cup」, 30 cr (1303 -> 1273), started 12…","run":"2026-11-19-r1"},{"time":"2026-11-19 04:25 UTC","next":"TC-001 (R1-a)","text":"R1-setup done 12:25: Reuse/Prompts & Settings present (video A). Fixtures A,B,C,D,F made; failed jobs: first C (Kling 2.5T start/end) and Kling 4.0 probe, both refunded, View Detail unopened; G impossible (no model refuses a real person, 18 tried) -> TC-034 Blocked test-data; TC-032: no 500-limit model, use Vidu Q2/Pixverse (2000) with F (2129 chars). Tier Free (restored), Test server On, credits 1303 (Mine 12:25), a…","run":"2026-11-19-r1"}],"log":["2026-11-19 14:27 R1-b done (14:08–14:27). 10 Pass, 5 Fail: TC-043 system Back and TC-020 ‹ in the Reuse room go to My AI Artwork, not Save & Share (O-3); TC-013 / TC-015 no 「Settings applied」 toast (as TC-010), and Reuse never shows the Image to Video intro though AI Videos and a fresh Create More still do; TC-028 Create More placeholder 「Describe the subject and how they move in the scene, e.g. A dancer spins and jumps under stage lights.」 / 「0/2500」 vs the PM mockup. Blocked: TC-046, TC-016 (upstream: no intro / no toast), TC-034 (test-data), TC-019, TC-036 (policy). TC-032 run with Vidu Q2 (2000): red counter + 「Description exceeds 2000 character limit.」, Generate enabled at 2000/2000. TC-033 offline Reuse = offline Create More (room opens, no message); Wi-Fi back on. Observations O-4, O-5. No credits spent (1273). Logs R1-b-20261119-142649.","2026-11-19 14:09 R1-a done (paused ~12:50–14:00 for the 5-hour limit). 12 Pass, 3 Fail: TC-006 quality chip 「pro」 lower-case (C shows 「std」); TC-049 Save & Share order has 「Prompts & Settings」 right under 「Save」 and no 「More Video Editing Tools」; TC-010 「Reuse」 fills the room right (Kling 2.6, Start/End Off, no image, prompt 78/2500) but no 「Settings applied」 toast (9 s recording). TC-041/042 Blocked by policy. Fixture P (Kling 3.0, 30 cr) made for TC-005. Observations O-1–O-3 (theme switch drops Save & Share; Reuse transition draws the room rotated; ‹ in the Reuse room goes to My AI Artwork). Credits 1273, tier Free, theme dark. Logs R1-a-20261119-140859.","2026-11-19 12:25 R1-setup done. Video A (Kling 2.6 10s Pro Sound on, 80 cr) shows 「Prompts & Settings」 and 「Reuse」:\r","2026-11-19 11:05 Build installed and checked, probe done, run folder initialised (11 Blocked up front).\r"]};
+const LIVE = false;
+// Language: English or 中文 for everything the page writes itself; run data (actions, notes, results text, log) stays
+// as written in the files. The choice is remembered per browser (served by pages.ts: the tab bar's switch).
+let LANG = 'en';
+if (window.CASEBOOK) LANG = window.CASEBOOK.lang; else try { if (localStorage.getItem('plan-lang') === 'zh') LANG = 'zh'; } catch (e) {}
+const tx = (en, zh) => LANG === 'zh' ? zh : en;
+const RES = ['Pass', 'Fail', 'Blocked', 'Inconclusive', 'Not run'];
+const RES_ZH = { 'Pass': '通過', 'Fail': '失敗', 'Blocked': '受阻', 'Inconclusive': '無法判定', 'Not run': '未執行' };
+const resName = r => tx(r, RES_ZH[r] ?? r);
+const STATE_ZH = { 'Skipped this round': '本輪略過', 'Deferred': '延後', 'Recorded': '已記錄', 'Recording complete': '記錄完成', 'In progress': '進行中', 'Pending': '待執行', 'Skipped': '略過' };
+const stateName = s => tx(s, STATE_ZH[s] ?? s);
+const COLOR = { 'Pass': 'var(--pass)', 'Fail': 'var(--fail)', 'Blocked': 'var(--blocked)', 'Inconclusive': 'var(--inc)', 'Not run': 'var(--notrun)' };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+// the other pages, when scripts/pages.ts serves this one (window.CASEBOOK); none for the static plan.html
+const PAGES = window.CASEBOOK?.pages ?? {};
+const xlinks = id => (PAGES.review || PAGES.coverage || PAGES.results) ? `<div class="xl">${PAGES.review ? `<a href="${esc(PAGES.review)}#${encodeURIComponent(id)}">${tx('cases', '案例')} →</a>` : ''}${PAGES.results ? `<a href="${esc(PAGES.results)}#case=${encodeURIComponent(id)}">${tx('results', '結果')} →</a>` : ''}${PAGES.coverage ? `<a href="${esc(PAGES.coverage)}#case=${encodeURIComponent(id)}">${tx('coverage', '覆蓋率')} →</a>` : ''}</div>` : '';
+let focusCase = '';
+const tally = cs => { const t = Object.fromEntries(RES.map(r => [r, 0])); cs.forEach(c => t[c.result in t ? c.result : 'Not run']++); return t; };
+const bar = t => { const n = Object.values(t).reduce((a, b) => a + b, 0) || 1; return RES.map(r => t[r] ? `<span style="width:${t[r] / n * 100}%;background:${COLOR[r]}" title="${resName(r)} ${t[r]}"></span>` : '').join(''); };
+const hm = ms => `${Math.floor(ms / 3600000)}h ${String(Math.round(ms / 60000) % 60).padStart(2, '0')}m`;
+const tok = n => n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `${Math.round(n / 1e3)}k` : String(n);
+const tokAll = u => u.input + u.cacheWrite + u.cacheRead + u.output;
+const num = n => n.toLocaleString('en-US');
+const tokTitle = u => tx(`${u.messages} msgs · input ${num(u.input)} · cache write ${num(u.cacheWrite)} · cache read ${num(u.cacheRead)} · output ${num(u.output)}`,
+  `${u.messages} 則訊息 · 輸入 ${num(u.input)} · 快取寫入 ${num(u.cacheWrite)} · 快取讀取 ${num(u.cacheRead)} · 輸出 ${num(u.output)}`);
+const pct = (v, approx, none = tx('no readings', '無讀數')) => v == null ? `<span class="none">${none}</span>` : `${approx ? '≈' : ''}${Math.round(v)}%`;
+// Seat label "<seat>, <note>": the part after ", " is shown small.
+const seatLabel = s => !s ? '' : (s.seats.length ? s.seats.map(m => m === 1 ? 'Pro 1×' : `${m}× Pro`).join(' + ') : tx('seat unknown', '席位不明')) + (s.readings ? '' : `, ${tx('no readings', '無讀數')}`);
+const fmtP = v => v < 9.95 ? `${v.toFixed(1)}%` : `${Math.round(v)}%`;
+// "= N% of an N× seat" for rows that ran on one non-Pro seat (6.25× in round 2, 1.25× from round 3).
+const seatEq = (v, s) => { const m = s && s.seats && s.seats.length === 1 && s.seats[0] !== 1 ? s.seats[0] : null; return m && v != null ? `<span class="eq">${tx(`= ${fmtP(v / m)} of ${m}× seat`, `= ${m}× 席位的 ${fmtP(v / m)}`)}</span>` : ''; };
+const statLine = s => s ? `<span class="stats num">${s.wall > s.test + 60000 ? `${tx('wall', '總時長')} ${hm(s.wall)} · ` : ''}${tx('test', '測試')} ${hm(s.test)}${s.idle ? ` · ${tx('idle', '閒置')} ${hm(s.idle)}` : ''} · <span title="${esc(tokTitle(s.tokens))}">${tok(tokAll(s.tokens))} tokens</span>${s.est5 != null ? ` · ${tx('est. 5-hour', '估計 5 小時')} ${fmtP(s.est5)}${s.estW != null ? ` · ${tx('weekly', '每週')} ~${fmtP(s.estW)}` : ''} ${tx('of 1× Pro', '（1× Pro）')}` : ''}${s.fiveHour != null ? ` · ${tx('account total (shared)', '帳號合計（共用）')} ${pct(s.fiveHour, s.approx)} / ${pct(s.weekly, s.approx)}` : ''}</span>` : '';
+const segBtnText = btn => { const shown = !btn.closest('.usage').classList.contains('nosegs'); btn.textContent = shown ? tx('Hide segments', '隱藏區段') : tx('Show segments', '顯示區段'); };
+function toggleSegs(btn) { const u = btn.closest('.usage'); u.classList.toggle('nosegs'); btn.setAttribute('aria-pressed', String(!u.classList.contains('nosegs'))); segBtnText(btn); }
+const utc = s => esc(cbWhen(s));
+// One usage table per part of the page: the current run (with the notes) and the earlier runs.
+function renderUsage(tableId, subset, totalLabel, emptyText) {
+  const U = DATA.usage, C = U.calibration, ps = subset.filter(p => p.stats);
+  if (!ps.length) { document.getElementById(tableId).innerHTML = `<tbody><tr><td class="none">${esc(emptyText)}</td></tr></tbody>`; }
+  const z = { wall: 0, test: 0, idle: 0, gaps: 0, tokens: { input: 0, cacheWrite: 0, cacheRead: 0, output: 0, messages: 0 } };
+  for (const p of ps) { for (const k of ['wall', 'test', 'idle', 'gaps']) z[k] += p.stats[k]; for (const k in z.tokens) z.tokens[k] += p.stats.tokens[k]; }
+  const estCells = (s, eq = true) => `<td class="n est">${s.est5 == null ? `<span class="none">${s.noTokens ? `<span title="${esc(tx('No messages in this run folder\'s tokens.jsonl yet: the computer that ran it has to build this page and commit the file', '此執行資料夾的 tokens.jsonl 尚無訊息：需由執行它的電腦建置此頁並 commit 該檔'))}">${tx('no token data yet', '尚無 token 資料')}</span>` : tx('no calibration', '未校準')}</span>` : fmtP(s.est5) + (eq ? seatEq(s.est5, s) : '')}</td><td class="n est">${s.estW == null ? '<span class="none">—</span>' : '~' + fmtP(s.estW) + (eq ? seatEq(s.estW, s) : '')}</td>`;
+  const acctCells = (h5, wk, approx) => `<td class="n acct">${pct(h5, approx, '—')}</td><td class="n acct">${pct(wk, approx, '—')}</td>`;
+  const gaps = n => tx(`${n} gap${n > 1 ? 's' : ''}`, `${n} 段閒置`);
+  const row = (label, seat, s, cls = '') => `<tr class="${cls}"><td>${label}</td><td>${esc(seat.split(', ')[0])}${seat.includes(', ') ? `<span class="eq">${esc(seat.split(', ').slice(1).join(', '))}</span>` : ''}</td><td class="n">${hm(s.wall)}</td><td class="n">${hm(s.test)}</td><td class="n">${hm(s.idle)}${s.gaps ? `<span class="eq">${gaps(s.gaps)}</span>` : ''}</td><td class="n" title="${esc(tokTitle(s.tokens))}">${tok(tokAll(s.tokens))}${s.wt != null ? `<span class="eq">${tx('wtd', '加權')} ${tok(s.wt)}</span>` : ''}</td>`;
+  const sub = (label, s) => s ? row(label, '', s, 'sub') + estCells(s, false) + acctCells(s.fiveHour, s.weekly, s.approx) + '</tr>' : '';
+  const span = s => `<span class="eq">${esc(cbSpan(s.from, s.to, LANG))}</span>`;
+  const ids = new Set(ps.map(p => p.id));
+  const rounds = (U.rounds || []).map(r => ({ ...r, phases: r.phases.filter(id => ids.has(id)) })).filter(r => r.phases.length);
+  const allRounds = U.rounds || [];
+  const sum = k => ps.some(p => p.stats[k] != null) ? ps.reduce((a, p) => a + (p.stats[k] ?? 0), 0) : null;
+  const body = rounds.map(r => r.phases.map(id => { const p = ps.find(x => x.id === id);
+      return row(`<b>${esc(p.id)}</b> ${span(p.stats)}`, seatLabel(p.stats), p.stats) + estCells(p.stats) + acctCells(p.stats.fiveHour, p.stats.weekly, p.stats.approx) + '</tr>'
+        + p.segments.map(s => sub(`<span title="${esc(s.name)}">${esc(s.id)}</span>`, s.stats)).join('') + sub(tx('wrap-up', '收尾'), p.wrapUp); }).join('')
+    + (r.phases.length > 1 ? row(`${tx(`Round ${r.n} total`, `第 ${r.n} 輪合計`)} <span class="eq">${esc(r.phases.join(' + '))}</span>`, seatLabel(r), r, 'tot round') + estCells(r) + acctCells(r.readings ? r.fiveHour : null, r.readings ? r.weekly : null, r.approx) + '</tr>' : '')).join('');
+  const outside = U.outside5 || U.outsideW ? `<tr><td>${tx('Outside any run', '執行以外')}</td><td></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n est">—</td><td class="n est">—</td>${acctCells(U.outside5, U.outsideW, U.approx)}</tr>` : '';
+  const acctTitle = tx("Snapshot increments during the run's active time, including other users of the account", '執行期間帳號用量快照的增加量，包含帳號的其他使用者');
+  if (ps.length) document.getElementById(tableId).innerHTML = `<thead><tr><th>${tx('Phase', '階段')}</th><th>${tx('Seat', '席位')}</th><th class="n">${tx('Wall', '總時長')}</th><th class="n">${tx('Test', '測試')}</th><th class="n" title="${tx('Gaps over 15 minutes', '超過 15 分鐘的間隔')}">${tx('Idle', '閒置')}</th><th class="n">${tx('Tokens', 'Token')}</th><th class="n" title="${tx('Weighted tokens × the calibrated rate, % of 1× Pro', '加權 token × 校準後的比率（1× Pro 的 %）')}">${tx('Est. 5-hour', '估計 5 小時')}</th><th class="n" title="${tx('5-hour estimate × the weekly ÷ 5-hour ratio, % of 1× Pro', '5 小時估計 × 每週 ÷ 5 小時比（1× Pro 的 %）')}">${tx('Est. weekly', '估計每週')}</th><th class="n acct" title="${acctTitle}">${tx('Acct 5-hour', '帳號 5 小時')}</th><th class="n acct" title="${acctTitle}">${tx('Acct weekly', '帳號每週')}</th></tr></thead><tbody>` +
+    body + outside +
+    (ps.length > 1 ? row(esc(totalLabel), '', { ...z, wt: sum('wt') }, 'tot round') + estCells(ps.every(p => p.stats.noTokens) ? { est5: null, estW: null, noTokens: true, seats: [] } : { est5: sum('est5'), estW: sum('estW'), seats: [] }) + acctCells(sum('fiveHour'), sum('weekly'), ps.some(p => p.stats.approx)) + '</tr>' : '') + '</tbody>';
+  if (tableId !== 'usage') return;
+  const box = document.getElementById('usage-box'), one = [...new Set(ps.flatMap(p => p.stats.seats ?? []))];
+  box.classList.toggle('single', ps.length <= 1);
+  document.getElementById('usage-when').textContent = ps.length ? `${ps.map(p => p.id).join(' + ')} · ${cbSpan(ps[0].stats.from, ps.at(-1).stats.to, LANG)}${one.length ? ` · ${one.map(m => `${m}× Pro`).join(' + ')}` : ''}` : '';
+  const anyAcct = k => ps.some(p => p.stats[k] != null) ? sum(k) : null;
+  document.getElementById('usage-strip').innerHTML = ps.length ? cbUsageTiles({ ...z, tokens: tokAll(z.tokens), tokensTitle: tokTitle(z.tokens), wt: sum('wt'), est5: sum('est5'), estW: sum('estW'), noTokens: ps.every(p => p.stats.noTokens),
+    seat: one.length === 1 ? one[0] : null, acct5: anyAcct('fiveHour'), acctW: anyAcct('weekly'), approx: ps.some(p => p.stats.approx), out5: U.outside5, outW: U.outsideW, outLabel: tx('outside any run', '執行以外') }, LANG) : `<span class="unone">${esc(emptyText)}</span>`;
+  const L = U.latest, w = U.weights;
+  const opm = t => t.messages ? t.output / t.messages : 0;
+  const basisRound = C ? allRounds.find(r => r.phases.includes(C.basis)) : null;
+  const models = o => Object.keys(o || {}).join(', ') || '?';
+  const outNotes = C && basisRound ? allRounds.filter(r => r !== basisRound).map(r => {
+    const per = r.phases.map(id => { const p = DATA.phases.find(x => x.id === id); return `${esc(id)} ${Math.round(opm(p.stats.tokens))}`; }).join(', ');
+    const extra = C.rate != null ? Math.max(0, opm(basisRound.tokens) - opm(r.tokens)) * r.tokens.messages * w.output * C.rate : 0;
+    const o = Math.round(opm(r.tokens)), ob = Math.round(opm(basisRound.tokens)), b = esc(C.basis), m = num(r.tokens.messages);
+    return tx(`<span><b>Output may be under-recorded.</b> Round ${r.n} transcripts record ${o} output tokens per message (${per}; ${m} messages) against ${ob} in ${b}. If round ${r.n}'s output was really nearer ${b}'s, its estimate is too low: at ${ob} per message it would be about ${Math.round(extra)} points higher (5-hour, 1× Pro).</span>`,
+      `<span><b>輸出可能記錄偏低。</b>第 ${r.n} 輪的對話紀錄每則訊息 ${o} 個輸出 token（${per}；${m} 則訊息），${b} 則是 ${ob}。若第 ${r.n} 輪的輸出其實接近 ${b}，它的估計就偏低：以每則 ${ob} 計算約再高 ${Math.round(extra)} 個百分點（5 小時，1× Pro）。</span>`);
+  }).join('') : '';
+  const WB = C && C.weekBasis;
+  const rateStr = C && C.rate != null ? (C.rate * 1e6).toFixed(2) : '?';
+  const ratio = C && C.weekRatio != null ? C.weekRatio.toFixed(3) : '?';
+  const notes = !C ? [tx(`<span><b>No calibration.</b> Add <code>runs/usage-calibration.json</code> (<code>{ "basis": "P1", "fiveHourPct": 300, "seat": 1, "source": "…", "weekPerFiveHour": null }</code>) to show the token-rate estimate.</span>`,
+      `<span><b>尚未校準。</b>加入 <code>runs/usage-calibration.json</code>（<code>{ "basis": "P1", "fiveHourPct": 300, "seat": 1, "source": "…", "weekPerFiveHour": null }</code>）即可顯示依 token 率的估計。</span>`)] : [
+    tx(`<span><b>Est. from token rate (the main figure).</b> Calibration (<code>runs/usage-calibration.json</code>): ${esc(C.source || '?')} = ${C.fiveHourPct * (C.seat || 1)}% of a 1× Pro 5-hour window for ${esc(C.basis)}'s ${tok(C.basisWt)} weighted tokens, so the rate is ${rateStr}% per million weighted tokens. Each row = its weighted tokens × that rate (weights: input ${w.input}, cache write ${w.cacheWrite}, cache read ${w.cacheRead}, output ${w.output}); "= N% of an N× seat" divides by the seat size of the account the row ran on.</span>`,
+      `<span><b>依 token 率估計（主要數字）。</b>校準（<code>runs/usage-calibration.json</code>）：${esc(C.source || '?')} = ${esc(C.basis)} 的 ${tok(C.basisWt)} 加權 token 用掉 1× Pro 5 小時額度的 ${C.fiveHourPct * (C.seat || 1)}%，所以比率是每百萬加權 token ${rateStr}%。每一列 = 它的加權 token × 這個比率（權重：輸入 ${w.input}、快取寫入 ${w.cacheWrite}、快取讀取 ${w.cacheRead}、輸出 ${w.output}）；「= N× 席位的 N%」是再除以該列所用帳號的席位大小。</span>`),
+    tx(`<span><b>Weekly is rough.</b> ${esc(C.basis)} has no weekly reading, so weekly = the 5-hour estimate × ${ratio}${C.weekPerFiveHour != null ? ' (weekPerFiveHour in the calibration file)' : WB ? `, the weekly ÷ 5-hour ratio in the ${WB.seat}× seat's paired readings (weekly +${Math.round(WB.weekly)}% against 5-hour +${Math.round(WB.fiveHour)}% of 1× Pro, ${esc(cbSpan(WB.from, WB.to, LANG))}). Those readings include other users of the account and assume the seat's weekly limit scales like its 5-hour limit` : ' (no paired readings to take a ratio from)'}.</span>`,
+      `<span><b>每週只是粗估。</b>${esc(C.basis)} 沒有每週讀數，所以每週 = 5 小時估計 × ${ratio}${C.weekPerFiveHour != null ? '（校準檔的 weekPerFiveHour）' : WB ? `，取自 ${WB.seat}× 席位成對讀數的每週 ÷ 5 小時比（每週 +${Math.round(WB.weekly)}%，5 小時 +${Math.round(WB.fiveHour)}%，以 1× Pro 計，${esc(cbSpan(WB.from, WB.to, LANG))}）。這些讀數包含帳號其他使用者的用量，並假設席位的每週上限與 5 小時上限同比例` : '（沒有成對讀數可算比例）'}。</span>`),
+    tx(`<span><b>Assumes the same model and limits throughout:</b> the rate from ${esc(C.basis)} holds for every round only if the same model ran (transcripts: ${allRounds.map(r => `round ${r.n} ${esc(models(r.models))}`).join('; ')}) and each seat's limits scale with its size (a 6.25× or 1.25× Team seat = that many times Pro).</span>`,
+      `<span><b>假設全程使用相同模型與上限：</b>${esc(C.basis)} 的比率只有在每一輪都用同一個模型時才適用（對話紀錄：${allRounds.map(r => `第 ${r.n} 輪 ${esc(models(r.models))}`).join('；')}），並假設每個席位的上限隨席位大小等比放大（6.25× 或 1.25× Team 席位 = 那麼多倍的 Pro）。</span>`),
+  ];
+  document.getElementById('usage-notes').innerHTML = [
+    ...notes, outNotes,
+    tx(`<span><b>Account total (shared) is muted on purpose.</b> It is the account's snapshot increments while the run was active (a 100% stop = one full window). The round-2 account was used heavily by someone else on another machine during P23 and P4 (user, 2026-10-21); their use is invisible to these transcripts, so this figure is far above this run's own use. The earlier token-ratio share (this run's tokens ÷ all tokens on this Mac) was dropped for the same reason: its denominator could not see the other user.</span>`,
+      `<span><b>帳號合計（共用）刻意淡化顯示。</b>它是執行期間帳號用量快照的增加量（用到 100% 而停止 = 一整個額度）。第 2 輪的帳號在 P23 與 P4 期間被其他人在別台電腦大量使用（使用者，2026-10-21）；這些用量不在這裡的對話紀錄中，所以這個數字遠高於本次執行自己的用量。先前的 token 比例分攤（本次執行的 token ÷ 這台 Mac 的所有 token）也因同樣原因取消：分母看不到其他使用者。</span>`),
+    tx(`<span><b>Seat size per account.</b> Each usage snapshot stores its account's seat size (<code>proMultiplier</code>, <code>usage-log.ts --seat N</code>): Pro-% = plan-% × that value, so 625% = one full 5-hour window of a 6.25× Pro Team seat. A seat change marks an account switch and starts a new round; no window spans it.${U.seatAssumed ? " Rows without a value inherit the previous row's (1 before any)." : ''} Plan % comes from ${U.snapshots} usage reading${U.snapshots === 1 ? '' : 's'}${U.markers ? ` and ${U.markers} account marker${U.markers === 1 ? '' : 's'}` : ''} (<code>runs/usage.jsonl</code>).</span>`,
+      `<span><b>每個帳號的席位大小。</b>每筆用量快照都記錄該帳號的席位大小（<code>proMultiplier</code>，<code>usage-log.ts --seat N</code>）：Pro-% = 方案 % × 席位大小，所以 625% = 6.25× Pro Team 席位的一整個 5 小時額度。席位改變代表換了帳號，並開始新的一輪；額度不會跨過它。${U.seatAssumed ? '沒有記錄席位的列沿用前一列（最前面為 1）。' : ''}方案 % 來自 ${U.snapshots} 筆用量讀數${U.markers ? `與 ${U.markers} 個帳號標記` : ''}（<code>runs/usage.jsonl</code>）。</span>`),
+    L ? tx(`<span>Latest reading ${esc(cbWhenZ(L.at, LANG))} (${L.seat}× Pro seat): 5-hour ${L.fiveHourPct ?? '?'}%${L.fiveHourResetsAt ? ` (resets ${utc(L.fiveHourResetsAt)})` : ''} · weekly ${L.weeklyPct ?? '?'}%${L.weeklyResetsAt ? ` (resets ${utc(L.weeklyResetsAt)})` : ''} of the plan.</span>`,
+      `<span>最新讀數 ${esc(cbWhenZ(L.at, LANG))}（${L.seat}× Pro 席位）：5 小時 ${L.fiveHourPct ?? '?'}%${L.fiveHourResetsAt ? `（${utc(L.fiveHourResetsAt)} 重設）` : ''} · 每週 ${L.weeklyPct ?? '?'}%${L.weeklyResetsAt ? `（${utc(L.weeklyResetsAt)} 重設）` : ''}（方案用量）。</span>`) : '',
+    tx(`<span>Time as <code>run-log.ts time</code> (activity points per run folder; test = gaps up to 15 min). Claude tokens = input + cache write + cache read + output of the ${U.ledgerMessages ?? 0} messages in the run folders' <code>tokens.jsonl</code>, which every computer that builds this page tops up from its own transcripts (sessions and subagents that name the run folder, inside its active spans) and which is committed with the run, so every computer shows the same figures once it has pulled; "wtd" = weighted. A phase row includes its wrap-up.</span>`,
+      `<span>時間同 <code>run-log.ts time</code>（各執行資料夾的活動時間點；測試 = 15 分鐘以內的間隔）。Claude token = 輸入 + 快取寫入 + 快取讀取 + 輸出，取自各執行資料夾 <code>tokens.jsonl</code> 的 ${U.ledgerMessages ?? 0} 則訊息；每台建置此頁的電腦都會從自己的對話紀錄補進去（提到該執行資料夾的工作階段與子代理，在它的活動期間內），並隨執行一起 commit，所以 pull 之後每台電腦顯示的數字相同；「加權」= 加權後。階段列包含它的收尾。</span>`)
+  ].join('');
+}
+// Blocked reasons. Group keys come from plan-page.ts: need:<n> (Blocked up front: the run can't provide <n>),
+// gate:<n> (a failed gate), upstream (an earlier case failed), label:<text> (blocked-reasons.json), other.
+const NEED = {
+  'purchase': ['Purchase (no purchases, sandbox included)', '購買（不購買，沙盒也不行）'],
+  'low-balance': ['Low credit balance', '低點數餘額'],
+  'new-account': ['A new account with no creations', '沒有作品的新帳號'],
+  'chat-count': ['Daily chat count', '每日對話次數'],
+  'remote-config': ['Remote Config daily chat allowance', 'Remote Config 每日對話額度'],
+  'voice': ['Spoken input', '語音輸入'],
+  'full-generation': ['Full template journeys', '完整範本流程'],
+  'stt-failure': ['Speech-to-text failure', '語音轉文字失敗'],
+  'slow-generation': ['A generation that stays running long enough', '持續進行夠久的生成'],
+  'video': ['A generated video', '已生成的影片'],
+};
+const GATE = { 'video': ['Video never generated', '影片始終沒有生成'] };
+const OTHER = {
+  'defect': ['Other defects', '其他缺陷'],
+  'test-data': ['A specific fixture or setup the run couldn\'t make', '本次無法做出的特定測試資料或設定'],
+  'observability': ['A result the app doesn\'t show', 'App 沒有顯示的結果'],
+};
+const whyLabel = (g, cat) => {
+  const [k, v] = [g.split(':')[0], g.slice(g.indexOf(':') + 1)];
+  const l = k === 'need' ? NEED[v] || [`Needs ${v}`, `需要 ${v}`] : k === 'gate' ? GATE[v] || [`Gate ${v} failed`, `${v} 關卡失敗`]
+    : k === 'upstream' ? ['An earlier step failed', '前一步失敗'] : k === 'label' ? [v, v] : OTHER[cat] || ['Other', '其他'];
+  return tx(l[0], l[1]);
+};
+const CAT = {
+  'defect': ['Blocked by a defect', '因缺陷受阻', 'They come back once the defect is fixed; <code>run-log.ts retest</code> lists the ones a failed gate or an earlier step blocked.', '缺陷修好後就能再跑；<code>run-log.ts retest</code> 會列出因關卡失敗或前一步失敗而受阻的案例。'],
+  'test-data': ['Test data the run can\'t set up', '本次無法準備的測試資料', 'They need an account, balance, fixture or setup this run can\'t provide. Ones marked "your rule" stay Blocked until you lift the rule.', '需要本次無法提供的帳號、餘額、測試資料或設定。標示「你的規則」的會一直受阻，直到你解除該規則。'],
+  'observability': ['Can\'t be observed', '無法觀察', 'They need a way to see the result that the app and Pink don\'t give; RD has to add a switch or fixture.', '需要看到 App 與 Pink 都沒有提供的結果；需要 RD 加上開關或測試資料。'],
+};
+// "TC-084, TC-085, TC-086" → "TC-084–086"
+const idRuns = ids => {
+  const ns = ids.map(i => [i, Number(i.match(/(\d+)$/)?.[1])]).sort((a, b) => a[1] - b[1]), out = [];
+  for (let i = 0; i < ns.length; i++) {
+    let j = i; while (j + 1 < ns.length && ns[j + 1][1] === ns[j][1] + 1) j++;
+    out.push(j > i ? `${ns[i][0]}–${ns[j][0].match(/(\d+)$/)[1]}` : ns[i][0]); i = j;
+  }
+  return out;
+};
+function renderBlocked(phases) {
+  const bs = phases.flatMap(p => p.skip || p.hold ? [] : p.segments.flatMap(s => s.cases.filter(c => c.why).map(c => ({ ...c, phase: p.id, seg: s.id }))));
+  const box = document.getElementById('blocked-box'); box.hidden = !bs.length; if (!bs.length) return;
+  const cats = {}; for (const c of bs) ((cats[c.disp || 'other'] ??= {})[c.why.group] ??= []).push(c);
+  const order = Object.keys(cats).sort((a, b) => Object.values(cats[b]).flat().length - Object.values(cats[a]).flat().length);
+  const catName = k => CAT[k] ? tx(CAT[k][0], CAT[k][1]) : k;
+  const n = k => Object.values(cats[k]).flat().length;
+  document.getElementById('blocked-h').textContent = tx(`Why ${bs.length} cases are Blocked`, `${bs.length} 個案例為何受阻`);
+  document.getElementById('blocked-lead').textContent = order.map(k => `${catName(k)}: ${n(k)}`).join(' · ');
+  const link = c => `<a href="#${esc(c.phase)}--${esc(c.seg)}" data-open="${esc(c.phase)}--${esc(c.seg)}">${esc(c.id)}</a>`;
+  document.getElementById('blocked').innerHTML = order.map(k => {
+    const groups = Object.entries(cats[k]).sort((a, b) => b[1].length - a[1].length).map(([g, cs]) => {
+      const need = g.startsWith('need:') ? g.slice(5) : '', why = need ? DATA.unavailable[need] || '' : '';
+      const rule = /\buser\b|REQ-\d+/i.test(why) ? ` <span class="tag">${tx('your rule', '你的規則')}</span>` : '';
+      const noted = cs.filter(c => c.why.note), plain = cs.filter(c => !c.why.note);
+      const bySeg = {}; for (const c of plain) (bySeg[c.seg] ??= []).push(c);
+      const idList = Object.entries(bySeg).map(([s, xs]) => `<span class="ids">${esc(s)}: ${idRuns(xs.map(c => c.id)).map(r => { const c = xs.find(x => x.id === r.split('–')[0]); return `<a href="#${esc(c.phase)}--${esc(s)}" data-open="${esc(c.phase)}--${esc(s)}">${esc(r)}</a>`; }).join(', ')}</span>`).join('<br>');
+      return `<li><b>${esc(whyLabel(g, k))}</b> <span class="num">· ${cs.length}</span>${rule}${why ? `<div class="detail">${esc(why)}</div>` : ''}${idList ? `<div>${idList}</div>` : ''}${noted.map(c => `<span class="case">${link(c)} <span class="detail">${esc(c.why.note)}</span></span>`).join('')}</li>`;
+    }).join('');
+    return `<details class="why-cat whyd" id="why--${esc(k)}"${openSegs.has(`why--${k}`) ? ' open' : ''}><summary><h3>${esc(catName(k))} <span class="n">${n(k)}</span></h3></summary>${CAT[k] ? `<p class="clears">${tx(CAT[k][2], CAT[k][3])}</p>` : ''}<ul>${groups}</ul></details>`;
+  }).join('');
+}
+// A case link in the Blocked panel opens its segment.
+document.addEventListener('click', e => { const a = e.target.closest('a[data-open]'); if (a) { const d = document.getElementById(a.dataset.open); if (d) { d.open = true; fillDetails(d); } } });
+// a segment's case table, drawn when the segment opens: a page holding every table of every run was 29,000 elements
+function segTable(s) {
+  const rows = s.cases.map(c => `<tr data-case="${esc(c.id)}"${c.id === focusCase ? ' class="focus"' : ''}><td class="id">${esc(c.id)}${c.origin ? ` <span class="eyebrow">${esc(c.origin)}</span>` : ''}${c.needs ? `<div class="eyebrow">${tx('needs', '需要')} ${esc(c.needs)}</div>` : ''}${xlinks(c.id)}</td><td>${esc(LANG === 'zh' && c.zh?.section || c.section)}</td><td>${esc(LANG === 'zh' && c.zh?.action || c.action)}</td><td><span class="r ${esc(c.result.replace(' ', ''))}">${esc(resName(c.result))}</span>${c.disp ? ` <span class="eyebrow">${esc(c.disp)}</span>` : ''}${c.why ? `<span class="why-row">${esc(whyLabel(c.why.group, c.disp))}</span>` : ''}${c.actual ? `<div class="actual">${esc(c.actual)}${c.at ? ` <span class="eyebrow">${esc(cbWhen(c.at))}</span>` : ''}</div>` : ''}</td></tr>`).join('');
+  return `<table><thead><tr><th>${tx('Case', '案例')}</th><th>${tx('Section', '分區')}</th><th>${tx('Action', '操作')}</th><th>${tx('Result', '結果')}</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+function fillDetails(d) {
+  if (d.matches('details.seg') && !d.querySelector('table')) { const [pid, sid] = d.id.split('--'), s = DATA.phases.find(p => p.id === pid)?.segments.find(x => x.id === sid); if (s) d.querySelector('.cases').innerHTML = segTable(s); }
+  if (d.matches('details.hist') && !d.querySelector('details.seg')) { const p = DATA.phases.find(x => x.id === d.id.slice(6)); if (p) { const had = openSegs; openSegs = new Set(); d.insertAdjacentHTML('beforeend', phaseSegs(p)); openSegs = had; } }
+}
+const phaseSegs = p => p.segments.map(s => {
+  const st = tally(s.cases), left = st['Not run'];
+  const ss = p.skip ? ['skip', 'Skipped'] : left === 0 ? ['done', 'Recorded'] : left < s.cases.length ? ['active', 'In progress'] : ['pending', 'Pending'];
+  const isOpen = openSegs.has(`${p.id}--${s.id}`);
+  return `<details class="seg" id="${esc(p.id)}--${esc(s.id)}"${isOpen ? ' open' : ''}><summary><span class="seg-id">${esc(s.id)}</span><span class="seg-name">${esc(s.name)}${statLine(s.stats)}</span><span class="seg-count num">${s.cases.length - left}/${s.cases.length} ${tx('recorded', '已記錄')}</span><span class="bar">${bar(st)}</span><span class="state ${ss[0]}">${stateName(ss[1])}</span></summary>
+    <div class="cases">${isOpen ? segTable(s) : ''}</div></details>`;
+}).join('');
+function phaseHtml(p, history) {
+  const cs = p.segments.flatMap(s => s.cases), t = tally(cs);
+  const state = p.skip ? ['skip', 'Skipped this round'] : p.hold ? ['hold', 'Deferred'] : t['Not run'] === 0 ? ['done', 'Recording complete'] : t['Not run'] < cs.length ? ['active', 'In progress'] : ['pending', 'Pending'];
+  const head = `<div class="phase-head"><span class="phase-id">${esc(p.id)}</span><h2>${esc(p.name)} <span class="eyebrow num">${tx(`${cs.length} cases · ${p.segments.length} segments`, `${cs.length} 個案例 · ${p.segments.length} 個區段`)}</span></h2><span class="state ${state[0]}">${stateName(state[1])}${state[0] === 'done' && t.Blocked ? tx(` — ${t.Blocked} blocked`, ` — ${t.Blocked} 個受阻`) : ''}</span>
+    <div class="phase-note">${esc(p.skip || p.hold || p.note || '')}${p.runDir ? ` <code>${esc(p.runDir)}</code>` : ''}${history ? statLine(p.stats) : ''}</div><div class="bar" style="grid-column:1/-1">${bar(t)}</div></div>`;
+  const histOpen = openSegs.has(`hist--${p.id}`);
+  const body = history ? `<details class="hist" id="hist--${esc(p.id)}"${histOpen ? ' open' : ''}><summary>${tx(`Show ${p.segments.length} segments and their cases`, `顯示 ${p.segments.length} 個區段與其案例`)}</summary>${histOpen ? phaseSegs(p) : ''}</details>` : phaseSegs(p);
+  return `<section class="phase" aria-label="${esc(p.id)}">${head}${body}</section>`;
+}
+let openSegs = new Set();
+function render() {
+openSegs = new Set([...document.querySelectorAll('details.seg[open], details.hist[open], details.whyd[open]')].map(d => d.id));
+// Both parts keep the order the phases ran in; only the current run and the earlier runs are separated.
+const cur = DATA.phases.filter(p => p.current), hist = DATA.phases.filter(p => !p.current);
+renderUsage('usage', cur, tx('This run', '本次執行'), tx('No time recorded yet: the figures start with the first segment of this run.', '尚未記錄時間：數字從本次執行的第一個區段開始。'));
+renderUsage('usage-hist', hist, tx('Earlier runs total', '先前執行合計'), tx('No earlier runs.', '沒有先前的執行。'));
+const all = cur.flatMap(p => p.skip || p.hold ? [] : p.segments.flatMap(s => s.cases));
+const nowCase = cur.flatMap(p => p.skip || p.hold ? [] : p.segments.flatMap(s => s.cases.map(c => ({ ...c, seg: s.id })))).find(c => c.result === 'Not run');
+const T = tally(all);
+document.getElementById('runname').textContent = cur.map(p => `${p.id} · ${p.name}`).join(' · ');
+const testedV = cur.map(p => p.name.match(/\btable v(\d+)/i)?.[1]).find(Boolean), lastAct = cur.map(p => p.stats?.to).filter(Boolean).sort().at(-1);
+document.getElementById('meta').innerHTML = [
+  [tx('Approved table', '核准的測試表'), `v${DATA.version} · ${tx(`${DATA.totalCases} cases`, `${DATA.totalCases} 個案例`)}`],
+  // the table a run tested is often older than the approved one: its name says which (run plans name it)
+  [tx('This run tested', '本次執行測試'), `${testedV ? `${tx('table', '測試表')} v${esc(testedV)} · ` : ''}${tx(`${all.length} cases`, `${all.length} 個案例`)}`],
+  [tx('Build', '版本'), esc(DATA.build)],
+  [tx('Recorded', '已記錄'), `${all.length - T['Not run']} / ${all.length}`], ...(nowCase ? [[tx('Next', '下一個'), `${esc(nowCase.id)} (${esc(nowCase.seg)})`]] : []),
+  ...(lastAct ? [[tx('Last run activity', '最後執行活動'), esc(cbWhenZ(lastAct, LANG))]] : []),
+  [LIVE ? tx('Page updated', '頁面更新於') : tx('Generated', '產生於'), esc(cbWhenZ(DATA.generated, LANG))]
+].map(([k, v]) => `<span>${k} <b class="num">${v}</b></span>`).join('');
+document.getElementById('totalbar').innerHTML = bar(T);
+document.getElementById('legend').innerHTML = RES.map(r => `<span><i style="background:${COLOR[r]}"></i>${resName(r)} <span class="num">${T[r]}</span></span>`).join('');
+document.getElementById('phases').innerHTML = cur.map(p => phaseHtml(p, false)).join('');
+renderBlocked(cur);
+document.getElementById('history').hidden = !hist.length;
+document.getElementById('hist-sum').textContent = hist.length ? `${hist.map(p => p.id).join(', ')} · ${tx(`${hist.reduce((n, p) => n + p.segments.reduce((m, s) => m + s.cases.length, 0), 0)} cases`, `${hist.reduce((n, p) => n + p.segments.reduce((m, s) => m + s.cases.length, 0), 0)} 個案例`)}` : '';
+document.getElementById('hist-phases').innerHTML = hist.map(p => phaseHtml(p, true)).join('');
+document.getElementById('cps').innerHTML = DATA.checkpoints.map(c => `<div><span class="t">${esc(cbWhenZ(c.time, LANG))} · ${tx('next', '下一個')} ${esc(c.next)}</span><br>${esc(c.text)}</div>`).join('') || `<div>${tx('No checkpoints yet for this run.', '本次執行還沒有檢查點。')}</div>`;
+document.getElementById('log').innerHTML = DATA.log.map(l => `<li>${esc(l)}</li>`).join('');
+}
+// Fixed text carries its Chinese in data-zh; the English is kept in data-en the first time it is swapped.
+function applyStatic() {
+  document.querySelectorAll('[data-zh]').forEach(el => { if (el.dataset.en == null) el.dataset.en = el.innerHTML; el.innerHTML = LANG === 'zh' ? el.dataset.zh : el.dataset.en; });
+  document.querySelectorAll('.usage .tools button').forEach(segBtnText);
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.l === LANG)));
+  document.documentElement.lang = LANG === 'zh' ? 'zh-Hant' : 'en';
+}
+function setLang(l) { LANG = l; try { localStorage.setItem('plan-lang', l); } catch (e) {} applyStatic(); render(); }
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.l)));
+// served by scripts/pages.ts: the tab bar holds the one language switch for every page
+if (window.CASEBOOK) { document.querySelector('.lang')?.remove(); addEventListener('casebook-lang', e => { LANG = e.detail; applyStatic(); render(); }); }
+// #case=TC-012 (a link from the review or coverage page): open the segment that runs it, in the current run when it
+// is there, else the latest earlier run, and scroll to its row
+function showCase() {
+  const m = location.hash.match(/^#case=(.+)$/); if (!m) return;
+  focusCase = decodeURIComponent(m[1]);
+  const order = [...DATA.phases.filter(p => p.current), ...DATA.phases.filter(p => !p.current).reverse()];
+  const p = order.find(p => p.segments.some(s => s.cases.some(c => c.id === focusCase))); if (!p) return;
+  const s = p.segments.find(s => s.cases.some(c => c.id === focusCase));
+  render();
+  // render() keeps whatever segments are open, so the live refresh leaves this one open too
+  for (const id of [`hist--${p.id}`, `${p.id}--${s.id}`]) { const d = document.getElementById(id); if (d) { d.open = true; fillDetails(d); } }
+  document.getElementById(`${p.id}--${s.id}`)?.querySelector(`tr[data-case="${CSS.escape(focusCase)}"]`)?.scrollIntoView({ block: 'center' });
+}
+addEventListener('hashchange', showCase);
+// The open segments are kept in the address (?open=…), so a reload or a shared link opens them again, and for this
+// browser tab, so leaving Progress for another page and coming back keeps them too.
+const VIEW = `plan-view:${location.pathname}`;   // one address serves every table now: a view per table
+function saveView() {
+  const ids = [...document.querySelectorAll('details.seg[open], details.hist[open]')].map(d => d.id), s = ids.length ? `open=${ids.map(encodeURIComponent).join(',')}` : '';
+  try { history.replaceState(history.state, '', location.pathname + (s ? `?${s}` : '') + location.hash); sessionStorage.setItem(VIEW, s); } catch (e) {}
+}
+document.addEventListener('toggle', e => { if (e.target.matches?.('details.seg, details.hist')) { if (e.target.open) fillDetails(e.target); saveView(); } }, true);
+applyStatic();
+render();
+{ let s = location.search.slice(1); if (!s && !location.hash) try { s = sessionStorage.getItem(VIEW) ?? ''; } catch (e) {}
+  for (const id of (new URLSearchParams(s).get('open') ?? '').split(',').filter(Boolean)) { const d = document.getElementById(id); if (d) { d.open = true; fillDetails(d); } } }
+showCase();
+
+</script>

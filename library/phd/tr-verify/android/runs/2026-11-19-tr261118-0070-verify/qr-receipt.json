@@ -1,0 +1,14 @@
+{
+  "qr": "QR261119-0040",
+  "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261119-0040",
+  "tr": "TR261118-0070",
+  "template": "Standard Report (QRTemplateID=14830)",
+  "created": "2026-11-19",
+  "testResult": "PHD-A - Bug verification [OK=19, Fail=2]",
+  "ok": ["PHA252025-0128", "PHA262026-0361", "PHA262026-0362", "PHA262026P0057", "PHA262026P0058", "PHA262026P0059", "PHA262026P0060", "PHA262026P0084", "PHA262026P0085", "PHA262026P0089", "PHA262026P0098", "PHA262026P0099", "PHA262026P0112", "PHA262026P0113", "PHA262026P0114", "PHA262026P0115", "PHA262026P0117", "PHA262026P0119", "PHA262026P0129"],
+  "fail": ["PHA262026P0097", "PHA262026P0118"],
+  "filesOnBugs": "none (text only)",
+  "readBack": "Short Description, Test Result, Testing Date, Details and all 21 States and Reasons match qr-text.txt; Product Version, Build Day, Build No., OS, OS Language and Attachment empty.",
+  "trAfter": "All 21 verify-list bugs show verified a few minutes after Create: 19 Close, PHA262026P0097 and PHA262026P0118 Fail.",
+  "mismatch": null
+}

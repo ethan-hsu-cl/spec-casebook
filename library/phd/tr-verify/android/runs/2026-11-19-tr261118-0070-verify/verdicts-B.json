@@ -1,0 +1,34 @@
+[
+  {
+    "bug": "PHA262026P0058",
+    "verdict": "FIXED",
+    "observed": "With 12 photos in Batch, AI Enhance > Enhance opened 「Enhance 12 photos?」 (Cancel / Start); one system Back closed it and the AI Enhance page showed (Enhance button, X / check), nothing processed. A second Back then left AI Enhance for the Batch Edit Room main bar with Undo still disabled.",
+    "shots": ["b_p0058_aienhance_page.png", "b_p0058_confirm.png", "b_p0058_after_back1.png", "b_p0058_after_back2.png"],
+    "sideEffects": "none seen (places checked: the room after Back has no enhanced photos and no Undo step; Cancel and Start still on the dialog; the later Start runs of P0057 started normally)",
+    "other": "As Free (not signed in), Enhance in Batch opens the PhotoDirector Premium paywall instead of the dialog, so the check ran as Premium through the About backdoor."
+  },
+  {
+    "bug": "PHA262026P0059",
+    "verdict": "FIXED",
+    "observed": "With 12 photos, Crop & Rotate > Square > check, then Home opened 「Discard changes?」 (Keep / Discard); one system Back closed it and Batch Edit Room stayed with the square crop applied and Undo enabled. Back from the room opened the same dialog again, and Back closed it again.",
+    "shots": ["b_p0059_square.png", "b_p0059_room_cropped.png", "b_p0059_discard.png", "b_p0059_after_back1.png", "b_p0059_back_from_room.png", "b_p0059_after_back2.png"],
+    "sideEffects": "none seen (places checked: Discard still discards and returns to the Launcher; the X on AI Enhance shows 「Discard changes? All your existing changes will be lost.」 and its Discard works)",
+    "other": "The dialog's buttons read 「Keep」 / 「Discard」 (the bug text calls the first one 「Keep Editing」); not part of this bug."
+  },
+  {
+    "bug": "PHA262026P0060",
+    "verdict": "FIXED",
+    "observed": "Batch of the four Casebook stand-ins in order 1-4; on the 4th (casebook_s3_4_seascape_16x9_2730x1535.jpg, labelled 2560 x 1439 in the room) Square showed 1439 x 1439, All gave 1706 x 1706, 1576 x 1576 and 800 x 800 on the others. The four saved files are 1706x1706, 1576x1576, 800x800 and 1439x1439, all square.",
+    "shots": ["b_p0060_picked4.png", "b_p0060_crop_open.png", "b_p0060_square_4th.png", "b_p0060_all.png", "b_p0060_room.png", "b_p0060_save1.png"],
+    "sideEffects": "Single-photo Crop (RD said it had the same bug): the same 2730x1535 photo, Crop > Square showed 1439 x 1439 and saved 1439x1439 (DCIM/PhotoDirector/2026-11-19-15-13-20-431.jpg), square. Saved files are in logs/B-files/. Shots b_p0060_single_editor.png, b_p0060_single_square.png, b_p0060_single_applied.png, b_p0060_single_save.png.",
+    "other": "The app works on the 2730x1535 photo at 2560 x 1439 (downscaled), so the square is 1439 px, not 1535 px; not part of this bug."
+  },
+  {
+    "bug": "PHA262026P0057",
+    "verdict": "FIXED",
+    "observed": "Twice with 12 photos (Premium): Home pressed at 「Enhancing 4 / 12」, 30 s away, back from Recents; the log shows 「BatchForegroundGate: paused while the app is in the background」 at Home and 「resumed」 on return, no photo processed in between, and the run continued from 5 / 12 to the end. Pass 2 (Start 15:18:57, Home 15:19:19, return 15:19:53, done 15:20:31) finished all 12 with no failure (Enhanced); in pass 1 the 11 photos around the background period all succeeded.",
+    "shots": ["b_p0057_r1_recents.png", "b_p0057_r1_return.png", "b_p0057_r1_end.png", "b_p0057_r1_retry.png", "b_p0057_r2_before_home.png", "b_p0057_r2_recents.png", "b_p0057_r2_return.png", "b_p0057_r2_end.png"],
+    "sideEffects": "none seen (places checked: progress bar and counter resume on return; in pass 2 the photo in flight at Home (image 1001) completed after resume; Retry Failed (1) works; credits 207 before and after, so Batch AI Enhance stayed free)",
+    "other": "Pass 1 (Start 15:14:47, Home 15:16:05, return 15:16:52) ended 「11 completed, 1 failed / Connection lost」, but the failed photo was photo 1 (the guitar), whose upload timed out in the foreground at 15:15:18 (executeWithAuthRetry uploadFile SocketTimeoutException -> NETWORK_ERROR), 47 s before Home; Retry Failed then enhanced it. Unrelated to backgrounding; logs/B1-20261119-151740."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "PHA252025-0128": "add credit number at result page (5b32706e)",
+  "PHA262026-0361": "Deep link from artwork enters onNewIntent(); reset source image in handleLaunchIntent() (bd243597)",
+  "PHA262026-0362": "ux modify (9baa185e)",
+  "PHA262026P0057": "Batch AI Enhance pauses while the app is in the background and continues where it stopped; a cut-off photo is sent again on return",
+  "PHA262026P0058": "DialogFactory buttons take a Role; Back closes the dialog and runs X or CANCEL, never DESTRUCTIVE",
+  "PHA262026P0059": "same fix as P0058",
+  "PHA262026P0060": "crop box rounding fixed; single-photo Crop tab had the same problem (2730x1535 Square saved 1532x1535)",
+  "PHA262026P0084": "need to use the latest build to verify; test build not implemented yet",
+  "PHA262026P0085": "need to use the latest build to verify; test build not implemented yet",
+  "PHA262026P0089": "picker Back runs Cancel; also background Solid tab and text style Color/Border/Shadow tabs",
+  "PHA262026P0097": "while dragging the page is scaled 1.1x, rotated 4 deg, 0.7 alpha; 150 ms animation (3f24683a)",
+  "PHA262026P0098": "RD note describes an unrelated AI agent request_id bug (pasted from another ticket)",
+  "PHA262026P0099": "plurals for photo, page and image counts (b1b5cdc3)",
+  "PHA262026P0112": "already solved in latest build",
+  "PHA262026P0113": "latest build has solved it",
+  "PHA262026P0114": "already fixed in latest build",
+  "PHA262026P0115": "already solved in latest build",
+  "PHA262026P0117": "already fixed in latest build",
+  "PHA262026P0118": "synced to PM comment: in Custom, show the panel first -> close -> intensity (Figma 3287-93)",
+  "PHA262026P0119": "already solved in latest build",
+  "PHA262026P0129": "Not apply design guideline -> apply design guideline (PR 2156)"
+}

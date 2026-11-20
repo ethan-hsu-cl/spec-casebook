@@ -365,10 +365,10 @@ def _shared_labels(short, other):
 def cmd_dedupe(a):
     shorts = []
     if a.source.endswith(".json"):
-        data = json.load(open(a.source))
+        data = json.load(open(a.source, encoding="utf-8"))
         shorts = [(k, v["short"]) for k, v in sorted(data.items())]
     else:
-        with open(a.source) as f:
+        with open(a.source, encoding="utf-8") as f:
             shorts = [(str(i + 1), ln.strip())
                       for i, ln in enumerate(f) if ln.strip()]
 

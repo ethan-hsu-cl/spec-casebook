@@ -2,7 +2,7 @@
 
 ## KP-032 Features opened from Edit Room get the edited image
 - kind: rule · platform: android · tags: entry, edit-room, source-image · authority: spec
-- source: PHD domain confirmed-rules.md K02 (PHA262026-0382, -0400) · aka: K02
+- source: PHD domain confirmed-rules.md K02 (PHA262026-0382, -0400); seen on creative-reel run 2026-11-17-r1 TC-012 · aka: K02 · verified: 20.19.0 (90201901) (2026-11-18)
 
 Opening a feature from Edit Room carries the current edited image, not the original file (Cinematic Reel Creator,
 AI Headshot).

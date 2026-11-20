@@ -1,0 +1,33 @@
+[
+  {
+    "bug": "PHA262026P0129",
+    "verdict": "FIXED",
+    "observed": "On the Reel Creator Preview page a dark scrim (reel_creator_preview_bottom_scrim, y 1072-2205) runs from mid-screen to the bottom of the page, so the video below the Use Template button is darkened down to near black (average RGB about 30,27,25 at the bottom edge). Checked on two Cinematic Styles templates (Horror Movie, Micro Cinema) and a bright Year-End Recap template (single-color-fastcut); no bright, un-masked video shows below the button on any of them.",
+    "shots": ["a_p0129_preview_cinematic_horror.png", "a_p0129_preview_cinematic_microcinema.png", "a_p0129_preview_yearend.png", "a_p0129_preview_cinematic_horror_crop.png", "a_p0129_preview_cinematic_microcinema_crop.png"],
+    "sideEffects": "none seen (places checked: title, description, photo count, mute button and Use Template stay legible over the scrim on all three templates)",
+    "other": "The Reel Creator home in this build lists Cinematic Styles, Year-End Recap and Cool Transitions; there is no section named Cinestory or Creative, so Year-End Recap stood in for the non-cinematic template."
+  },
+  {
+    "bug": "PHA262026-0362",
+    "verdict": "FIXED",
+    "observed": "In My AI Artwork > AI Replace tab, tapping an AI Replace artwork opens it full screen, and the button under it reads \"Replace More\" (createMoreBtn).",
+    "shots": ["a_0362_replace_tab.png", "a_0362_grid_after_gen1.png", "a_0362_selected_img1.png"],
+    "sideEffects": "none seen (places checked: the Replace More label fits the button, centred, no clipping; tapping it opens AI Replace)",
+    "other": "On the AI Replace tab's grid, before any image is opened, the bottom button still reads \"Create More\" (\"Start to Create\" when the tab is empty). The bug only covers the selected-image view, so this does not affect the verdict."
+  },
+  {
+    "bug": "PHA262026-0361",
+    "verdict": "FIXED",
+    "observed": "One AI Replace generation (coffee cup on the croissant sample replaced with a glass of orange juice, 6 credits). (1) From My AI Artwork, Replace More on that artwork opened AI Replace showing the orange-juice result. (2) This is the bug's own path: in AI Replace I switched the source to the tram sample, opened the artwork button, picked the orange-juice artwork and tapped Replace More. The AI Replace preview changed from the tram to the orange-juice image.",
+    "shots": ["a_0361_editor.png", "a_0361_after_replacemore1.png", "a_0361_source_tram.png", "a_0361_artwork_from_replace.png", "a_0361_selected_again.png", "a_0361_after_replacemore2.png"],
+    "sideEffects": "none seen (places checked: credit pill stays 209 after re-entry; brush panel, Next and undo/redo reset for the new image)",
+    "other": "Only one AI Replace artwork existed after the single allowed generation, so the second check used a different current source (the tram photo) instead of a second artwork. After generating, the app returned to My AI Artwork instead of an AI Replace result page, because the flow was entered from My AI Artwork's Start to Create."
+  },
+  {
+    "bug": "PHA252025-0128",
+    "verdict": "FIXED",
+    "observed": "Artistic Avatar is the AI Art entry in AI Photos (Mixpanel feature artistic_avatar). I generated one Clean-style image from the curly-hair sample for 2 credits. The result page's top bar now shows the credit pill reading 207, which matches the balance after the charge (209 before) and the 207 shown in Mine.",
+    "shots": ["a_0128_aiphotos.png", "a_0128_ready.png", "a_0128_result.png", "a_end_mine.png"],
+    "sideEffects": "none seen (places checked: the pill is legible, not clipped, and fits between Home and Report/Edit/Download in the top bar; its number matches Mine's My Credits; Generate More still shows its cost of 2)"
+  }
+]

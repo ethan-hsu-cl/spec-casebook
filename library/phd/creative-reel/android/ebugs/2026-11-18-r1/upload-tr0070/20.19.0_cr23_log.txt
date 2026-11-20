@@ -1,0 +1,41 @@
+PhotoDirector Android 20.19.0.v202611181947 - Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server - 2026-11-19
+ISS-CR-23 - logcat excerpt. Creative (single-color-fastcut) pack: estimated_time is set equal to created_time,
+so the card has no remaining time to count down. Micro Cinema pack for comparison: estimated_time = created_time + 840000 ms (14 min).
+Tokens and IDs redacted.
+
+# Creative job, Generate at 11:11:37
+2026-11-19 11:11:37.721 17374 19056 D AIEditorPreferenceUtil: addNewPack: {"option":"","retry_times":0,"version":1,"created_time":1795057897717,"id":"credit_create_CreativeReel_1795057897355","status":"Init","credit_member_token":"<redacted>","credit_unique_id":"<redacted>","credit_action_id":"genvideo_60_sec_anthropic_claudeopu …
+2026-11-19 11:11:38.827 17374 19056 D AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1795057897355]
+2026-11-19 11:11:38.828 17374 19056 D AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-19 11:11:41.336 17374 19056 D a       : getMemberCreditRemain, gGetMemberRemainResponse: GGetMemberRemainResponse(totalRemain=433, data=[BonusItem(remainCredit=433, category=purchase, eventId=purchase_cp500, sid=158a45e6, activeDate=2026-11-19T00:00:00+00:00, expireDate=2027-11-19T23:59:59+00:00, product=PhotoDirector (A …
+2026-11-19 11:11:41.338 17374 19056 D AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1795057897355]
+2026-11-19 11:11:41.338 17374 19056 D AIEditorPreferenceUtil: updatePackItems column value: Apply
+2026-11-19 11:11:41.342 17374 19056 D AIEditorPreferenceUtil: updatePackItems column: created_time packIds: [credit_create_CreativeReel_1795057897355]
+2026-11-19 11:11:41.343 17374 19056 D AIEditorPreferenceUtil: updatePackItems column value: 1795057901342
+2026-11-19 11:11:41.349 17374 19056 D AIEditorPreferenceUtil: updatePackItems column: estimated_time packIds: [credit_create_CreativeReel_1795057897355]
+2026-11-19 11:11:41.349 17374 19056 D AIEditorPreferenceUtil: updatePackItems column value: 1795057901342
+2026-11-19 11:11:41.350 17374 19056 D AIEditorPreferenceUtil: updatePackItems column: task_id packIds: [credit_create_CreativeReel_1795057897355]
+2026-11-19 11:11:41.351 17374 19056 D AIEditorPreferenceUtil: updatePackItems column value: 1
+2026-11-19 11:11:41.352 17374 19056 D AIEditorPreferenceUtil: updatePackItems column: credit_consume_task_id packIds: [credit_create_CreativeReel_1795057897355]
+2026-11-19 11:11:41.352 17374 19056 D AIEditorPreferenceUtil: updatePackItems column value: 91723605
+
+# Micro Cinema job, Generate at 11:28:28 (shows 「14 minutes remaining…」)
+2026-11-19 11:28:28.837 17374 17374 D AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_AICinematicShorts_1795058903505]
+2026-11-19 11:28:28.838 17374 17374 D AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-19 11:28:29.514 17374 17374 D AIEditorPreferenceUtil: updatePackItems column: created_time packIds: [credit_create_AICinematicShorts_1795058903505]
+2026-11-19 11:28:29.515 17374 17374 D AIEditorPreferenceUtil: updatePackItems column value: 1795058909514
+2026-11-19 11:28:29.522 17374 17374 D AIEditorPreferenceUtil: updatePackItems column: estimated_time packIds: [credit_create_AICinematicShorts_1795058903505]
+2026-11-19 11:28:29.522 17374 17374 D AIEditorPreferenceUtil: updatePackItems column value: 1795059749514
+
+# Creative job of the 1 min / 3 min screenshots (Generate 11:46:41, Retry 11:48:30, Done 12:01:28)
+2026-11-19 11:46:41.958 17374 22822 D AIEditorPreferenceUtil: addNewPack: {"option":"","retry_times":0,"version":1,"created_time":1795060001957,"id":"credit_create_CreativeReel_1795060001227","status":"Init","credit_member_token":"<redacted>","credit_unique_id":"<redacted>","credit_action_id":"genvideo_60_sec_anthropic_claudeopu …
+2026-11-19 11:46:43.950 17374 22822 D AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-19 11:46:44.724 17374 22822 D AIEditorPreferenceUtil: updatePackItems column value: Apply
+2026-11-19 11:46:44.734 17374 22822 D AIEditorPreferenceUtil: updatePackItems column value: 1795060004733
+2026-11-19 11:46:44.736 17374 22822 D AIEditorPreferenceUtil: updatePackItems column: estimated_time packIds: [credit_create_CreativeReel_1795060001227]
+2026-11-19 11:46:44.737 17374 22822 D AIEditorPreferenceUtil: updatePackItems column value: 1795060004733
+...
+2026-11-19 11:48:30.755 17374 17374 D ArtworkAICineStoryFragment: longTask retry click: credit_create_CreativeReel_1795060001227, isPendingServerErrorPack: false
+...
+2026-11-19 12:01:28.718 17374 22820 D AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1795060001227]
+2026-11-19 12:01:28.718 17374 22820 D AIEditorPreferenceUtil: updatePackItems column value: Done

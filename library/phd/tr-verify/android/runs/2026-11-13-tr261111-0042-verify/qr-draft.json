@@ -1,0 +1,234 @@
+{
+  "tr": "TR261111-0042",
+  "product": "PhotoDirector Mobile for Android",
+  "tester": "WILLY_WU",
+  "template": "Standard Report",
+  "testingDate": "2026/11/13",
+  "version": "20.19.0",
+  "build": "202611111946",
+  "buildDay": "1111",
+  "os": "Android 16",
+  "osLanguage": "English",
+  "testResult": "PHD-A - Bug verification [OK=13, Fail=0]",
+  "env": {
+    "device": "Samsung Galaxy S23 (SM-S911) / Android 16",
+    "server": "Test Server",
+    "account": "Not signed in (Free)",
+    "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+    "install": "Google Play internal testing build 20.19.0 (versionCode 90201900, SR PHA261029-01), installed 2026/11/12",
+    "scope": "the eBugs created by WILLY_WU in this TR's verify list"
+  },
+  "observations": [
+    "Image to Video Start / End: each sample photo sits in a rounded box that shows a thin grey band above and below the photo."
+  ],
+  "rows": [
+    {
+      "bug": "PHA252025-0178",
+      "title": "PHD-A 20.0.0 - AI_Face_Swap: The no face dialog pops up after tapping two photos and releasing one by one",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "AI Face Swap was taken down; no entry to it remains",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0178_01_launcher_page1.png",
+        "20.19.0.202611111946_PHA252025-0178_02_launcher_page2.png",
+        "20.19.0.202611111946_PHA252025-0178_03_ai_photos_top.png",
+        "20.19.0.202611111946_PHA252025-0178_04_edit_room_tools.png"
+      ],
+      "logs": [
+        "20.19.0.202611111946_PHA252025-0178_entry_points.txt"
+      ],
+      "note": "AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached."
+    },
+    {
+      "bug": "PHA252025-0179",
+      "title": "PHD-A 20.0.0 - AI_Face_Swap: The loading cursor disappears after tapping two photos at once and releasing one by one",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "AI Face Swap was taken down; no entry to it remains",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0179_01_launcher_page1.png",
+        "20.19.0.202611111946_PHA252025-0179_02_launcher_page2.png",
+        "20.19.0.202611111946_PHA252025-0179_03_ai_photos_top.png",
+        "20.19.0.202611111946_PHA252025-0179_04_edit_room_tools.png"
+      ],
+      "logs": [
+        "20.19.0.202611111946_PHA252025-0179_entry_points.txt"
+      ],
+      "note": "AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached."
+    },
+    {
+      "bug": "PHA252025-0185",
+      "title": "PHD-A 20.0.0 - AI_Face_Swap: Sometimes dog faces / monkey faces are detected as target",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "AI Face Swap was taken down; no entry to it remains",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0185_01_launcher_page1.png",
+        "20.19.0.202611111946_PHA252025-0185_02_launcher_page2.png",
+        "20.19.0.202611111946_PHA252025-0185_03_ai_photos_top.png",
+        "20.19.0.202611111946_PHA252025-0185_04_edit_room_tools.png"
+      ],
+      "logs": [
+        "20.19.0.202611111946_PHA252025-0185_entry_points.txt"
+      ],
+      "note": "AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached."
+    },
+    {
+      "bug": "PHA252025-0196",
+      "title": "PHD-A 20.0.0 - [UX]AI_Face_Swap: The [Home] button is not sync to its function (APP is going back to Edit Room instead of Launcher)",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "AI Face Swap was taken down; no entry to it remains",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0196_01_launcher_page1.png",
+        "20.19.0.202611111946_PHA252025-0196_02_launcher_page2.png",
+        "20.19.0.202611111946_PHA252025-0196_03_ai_photos_top.png",
+        "20.19.0.202611111946_PHA252025-0196_04_edit_room_tools.png"
+      ],
+      "logs": [
+        "20.19.0.202611111946_PHA252025-0196_entry_points.txt"
+      ],
+      "note": "AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached."
+    },
+    {
+      "bug": "PHA262026-0350",
+      "title": "PHD-A 20.15.0 - [AIFound]AI_Face_Swap: The resolution of the generated image is half of the original image",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "AI Face Swap was taken down; no entry to it remains",
+      "images": [
+        "20.19.0.202611111946_PHA262026-0350_01_launcher_page1.png",
+        "20.19.0.202611111946_PHA262026-0350_02_launcher_page2.png",
+        "20.19.0.202611111946_PHA262026-0350_03_ai_photos_top.png",
+        "20.19.0.202611111946_PHA262026-0350_04_edit_room_tools.png"
+      ],
+      "logs": [
+        "20.19.0.202611111946_PHA262026-0350_entry_points.txt"
+      ],
+      "note": "AI Face Swap is no longer in the app: it is on neither Launcher shortcut page, the AI Photos or AI Videos tab, nor any Edit room tool category, so the scenario cannot be reached."
+    },
+    {
+      "bug": "PHA252025-0328",
+      "title": "PHD-A 20.2.0 - [UX]Image_to_Video: Settings are shown for \"Inflate\", \"Squish\", and \"Dollify\" but changing them has no effect",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "Inflate, Squish and Dollify are gone from Image to Video",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0328_01_templates_tab.png",
+        "20.19.0.202611111946_PHA252025-0328_02_template_with_photo_no_settings.png"
+      ],
+      "logs": [],
+      "note": "The three styles are in none of the 12 template categories, and a template with a photo shows no settings, so the scenario cannot be reached."
+    },
+    {
+      "bug": "PHA262026P0036",
+      "title": "PHD-A 20.18.0 - [UX]Image_to_Video: There are small triangles on the bottom of the sample photos",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "the First / Last Frame sample photos show no triangles at their bottom corners",
+      "images": [
+        "20.19.0.202611111946_PHA262026P0036_01_start_end_samples.png",
+        "20.19.0.202611111946_PHA262026P0036_02_bottom_corners_zoom.png"
+      ],
+      "logs": []
+    },
+    {
+      "bug": "PHA262026-0409",
+      "title": "PHD-A 20.17.0 - [AIFound]AI_Background: Saved custom styles default to the name 'Custom', producing two adjacent tiles with the same label",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "a Custom generation adds no second 「Custom」 tile; the prompt is kept in My Prompts",
+      "images": [
+        "20.19.0.202611111946_PHA262026-0409_01_after_custom_generate.png",
+        "20.19.0.202611111946_PHA262026-0409_02_my_prompts.png"
+      ],
+      "logs": []
+    },
+    {
+      "bug": "PHA262026P0014",
+      "title": "PHD-A 20.18.0 - AI_Replace: The prompt is not affecting in the generate image",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "the reference image page has no prompt box; Replace applies the reference image",
+      "images": [
+        "20.19.0.202611111946_PHA262026P0014_01_reference_image_page.png",
+        "20.19.0.202611111946_PHA262026P0014_02_result_in_my_ai_artwork.png"
+      ],
+      "logs": [],
+      "note": "The reference image flow now takes no prompt (Replace with a reference image only), so a prompt can no longer be added there; Replace applied the guitar from the reference image."
+    },
+    {
+      "bug": "PHA262026-0343",
+      "title": "PHD-A 20.15.0 - AI_Edit_Agent: The response of AI Agent is filling the whole chat room",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "「Transform into watercolor painting」 returns a watercolor image with a short reply",
+      "images": [
+        "20.19.0.202611111946_PHA262026-0343_01_request.png",
+        "20.19.0.202611111946_PHA262026-0343_02_watercolor_result.png"
+      ],
+      "logs": []
+    },
+    {
+      "bug": "PHA262026-0335",
+      "title": "PHD-A 20.15.0 - [PLK]Launcher: The text size of shortcuts is too small",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "with the app in Polish the Launcher shortcut labels are full size and long names wrap to two lines",
+      "images": [
+        "20.19.0.202611111946_PHA262026-0335_01_polish_page1.png",
+        "20.19.0.202611111946_PHA262026-0335_02_polish_page2.png"
+      ],
+      "logs": []
+    },
+    {
+      "bug": "PHA252025-0516",
+      "title": "PHD-A 20.4.0 - [UX]AI_Videos: There is no [See all] button in AI Anime Video (user may not go back to pack page after generating a video)",
+      "creator": "WILLY_WU",
+      "severity": "3",
+      "result": "OK",
+      "summary": "AI Anime Video was redesigned; the See all button no longer applies (UI change)",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0516_01_anime_video_top.png",
+        "20.19.0.202611111946_PHA252025-0516_02_styles_scrolled_to_end.png"
+      ],
+      "logs": [],
+      "note": "UI change: AI Anime Video is now one page with a sideways style strip, so a See all button no longer applies."
+    },
+    {
+      "bug": "PHA252025-0230",
+      "title": "PHD-A 20.1.0 - Image_to_Video: The APP hangs in loading cursor after paying with slow test card, closing the APP, re-entering Image to Video and purchasing again",
+      "creator": "WILLY_WU",
+      "severity": "2",
+      "result": "OK",
+      "summary": "old issue: Image to Video now generates with credits (spec change)",
+      "images": [
+        "20.19.0.202611111946_PHA252025-0230_01_i2v_generate_with_credits.png"
+      ],
+      "logs": [],
+      "note": "Old issue, spec change: Image to Video now generates with credits, not a per-video payment."
+    }
+  ],
+  "uploaded": {
+    "PHA262026P0014": [
+      "20.19.0.202611111946_PHA262026P0014_01_reference_image_page.png",
+      "20.19.0.202611111946_PHA262026P0014_02_result_in_my_ai_artwork.png"
+    ],
+    "PHA262026P0036": [
+      "20.19.0.202611111946_PHA262026P0036_01_start_end_samples.png",
+      "20.19.0.202611111946_PHA262026P0036_02_bottom_corners_zoom.png"
+    ]
+  },
+  "textOnly": true
+}

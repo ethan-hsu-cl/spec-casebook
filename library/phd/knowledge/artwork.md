@@ -17,7 +17,7 @@ extended to other features.
 
 ## KP-026 History button opens the feature's Artwork tab
 - kind: rule · platform: android · use: analysis, run, ebug · tags: artwork, history · authority: team
-- source: PHD domain confirmed-rules.md K76 (user, 2026-11-03) · aka: K76
+- source: PHD domain confirmed-rules.md K76 (user, 2026-11-03); seen on creative-reel run 2026-11-17-r1 TC-112 and i2v-reuse run 2026-11-19-r1 O-4 (Image to Video) · aka: K76 · verified: 20.19.0.v202611181947 (2026-11-19)
 
 Some AI features have a History button (a sheet of paper with a clock at its bottom right); tapping it opens My AI
 Artwork with that feature's own tab selected. Only where the spec draws the button.
@@ -36,7 +36,7 @@ An Artwork filter with no matching item shows 「Nothing yet」 (e.g. Group Shot
 
 ## KP-029 Long-task tiles and completion notifications
 - kind: rule · platform: android · tags: artwork, notification, long-task · authority: spec
-- source: PHD domain confirmed-rules.md K48 (PHA262026-0375, -0373) · aka: K48
+- source: PHD domain confirmed-rules.md K48 (PHA262026-0375, -0373); tile thumbnail seen on i2v-reuse run 2026-11-19-r1 TC-023 (notification not checked) · aka: K48 · verified: 20.19.0.v202611181947 (2026-11-19)
 
 Processing tiles of long tasks show the source thumbnail. Long video jobs (Cinematic Reel Creator, Group Shot video)
 send a completion notification whose title, message and deep link open the right page.

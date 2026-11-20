@@ -1,0 +1,9 @@
+Dedupe — Batch Editing Android, TR261113-0038 batch (20.19.0.v202611132003), 2026-11-17. Read-only; Android pool only
+(product "PhotoDirector Mobile for Android"; dedupe per OS). Nothing commented.
+
+1. ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" --limit 600 (raw in
+   dedupe-raw.txt): 0 of 6 entries flagged (candidates PHA262026P0057–P0061 only, all different findings).
+2. ecl_query.py bugs --text "Crop & Rotate" / "crash" / "Batch" (Android): no Batch Editing crash ticket. Nearest:
+   PHA252025-0534 (Close, 20.4.1, crash in Adjustment after leaving the single crop room: different room, stack and
+   version) and PHA232023-0114 (18.4.0 Crop & Rotate [v] enabled): not duplicates.
+3. ISS-BEA-15 names PHA262026P0060 as related (QA note), as in R3.

@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261111-0042",
+    "server": "",
+    "version": "20.19.0",
+    "build": "202611181947",
+    "filed_on": "2026-11-20"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0151",
+      "short": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Solid template 「Soft Black」 takes about 35 s to generate, not about 15 s",
+      "status": "NewCreated",
+      "severity": 3,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "WILLY_WU",
+      "created": "2026-11-20T11:57:52",
+      "build": "202611181947",
+      "tr": "TR261111-0042",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "JANE_LAI",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "2/2",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos on the Launcher\n3. Tap AI Hair Color\n4. Tap Stock\n5. Tap Pexels\n6. Search 「woman portrait」\n7. Tap the portrait of a woman in a knitted hat\n8. Tap Soft Black in the Solid row\n9. Tap Generate\n10. Wait for the result\n11. Check the result\n\nResult:\nThe result shows after 34.4 s (second try 36.0 s).\n摘要：Soft Black 模板生成約 35 秒（34.4 / 36.0 秒），非 spec 的約 15 秒。\n{20.19.0_hcc34_soft_black_result_1.jpg} {20.19.0_hcc34_soft_black_result_2.jpg} {20.19.0_hcc34_log.txt}\n\nExpect Result:\nA template result shows after about 15 s (10/E D1-03).\n摘要：模板生成應約 15 秒完成。\n\nNote:\nDevice: Google Pixel 8a / Android 16\nSpec Link: AI Hair Color PM Figma (26 10E AI Hair Color v2, cited by the Custom page), Spec - UI, sync short task D1-03 (about 15 s) -\nhttps://www.figma.com/design/vhIp15PMJcwOcWJ6E9Q4JE/AI-Hair?node-id=3030-300\nRelated: O-3; R2 TC-078 16.2 s on the S23\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_hcc34_soft_black_result_1.jpg",
+        "20.19.0_hcc34_soft_black_result_2.jpg",
+        "20.19.0_hcc34_log.txt"
+      ],
+      "key": "AI-Hair-Color-Custom-R3-04",
+      "iss": "ISS-HCC-34",
+      "feature": "AI-Hair-Color-Custom-R3",
+      "problem_type": "Functional"
+    }
+  ],
+  "dispositions": {}
+}

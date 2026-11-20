@@ -27,3 +27,4 @@
 {"at":"2026-11-18T18:14:41.294Z","fiveHourPct":16,"fiveHourResetsAt":"2026-11-18T19:00:00.728Z","weeklyPct":77,"weeklyResetsAt":"2026-11-24T06:00:00.728Z","proMultiplier":6.25,"note":"R2-g2 end / R2-h start"}
 {"at":"2026-11-18T20:28:22.394Z","fiveHourPct":5,"fiveHourResetsAt":"2026-11-19T00:00:00.052Z","weeklyPct":78,"weeklyResetsAt":"2026-11-24T06:00:00.052Z","proMultiplier":6.25,"note":"R2-h end / R2-x settings reruns start"}
 {"at":"2026-11-18T20:46:56.313Z","fiveHourPct":7,"fiveHourResetsAt":"2026-11-19T00:00:00.851Z","weeklyPct":78,"weeklyResetsAt":"2026-11-24T06:00:00.851Z","proMultiplier":6.25,"note":"R2-x end / R2 wrap-up start"}
+{"at":"2026-11-19T03:02:03.967Z","fiveHourPct":null,"fiveHourResetsAt":null,"weeklyPct":null,"weeklyResetsAt":null,"proMultiplier":1.25,"note":"seat set on the Settings page"}

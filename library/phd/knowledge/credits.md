@@ -2,7 +2,7 @@
 
 ## KP-017 Credit Detail lists every AI use with feature name and amounts
 - kind: rule · platform: android · use: analysis, run, ebug · tags: credits, detail, refund · authority: team
-- source: PHD domain confirmed-rules.md K36a (user, 2026-10-15) · aka: K36a
+- source: PHD domain confirmed-rules.md K36a (user, 2026-10-15); seen on creative-reel run 2026-11-17-r1 TC-118 – TC-120 (entries named 「Reel Creator」) · aka: K36a · verified: 20.19.0 (90201901) (2026-11-18)
 
 After the Generate flow of any credit-using AI feature ends, Buy Credit › Detail (top right) lists the use under the
 right feature name with the credits deducted and any refunded, amounts correct. Check the Detail entry, not only the
@@ -16,14 +16,14 @@ Credit Auto Pass shows its own name in the credit detail, never 「Yearly Credit
 
 ## KP-019 A burst of Generate taps charges once
 - kind: rule · platform: android · tags: credits, generate, rapid-tap · authority: spec
-- source: PHD domain confirmed-rules.md K30 (PHA262026-0418) · aka: K30
+- source: PHD domain confirmed-rules.md K30 (PHA262026-0418); seen on creative-reel run 2026-11-17-r1 TC-117 · aka: K30 · verified: 20.19.0 (90201901) (2026-11-18)
 
 Once the first Generate is accepted, further taps are blocked until the job takes over, including the gap before the
 loading indicator appears: one charge, one result (seen on AI Expand).
 
 ## KP-020 Blue credit button opens Buy Credit
 - kind: rule · platform: android · use: analysis, run, ebug · tags: credits, credit-button · authority: team
-- source: PHD domain confirmed-rules.md K75 (user, 2026-11-03) · aka: K75
+- source: PHD domain confirmed-rules.md K75 (user, 2026-11-03); seen on creative-reel run 2026-11-17-r1 TC-008 · aka: K75 · verified: 20.19.0 (90201901) (2026-11-18)
 
 AI features show a blue button holding the current credit balance and a [+]; tapping it opens the Buy Credit page.
 The balance shown must match the account's.

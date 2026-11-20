@@ -1,0 +1,236 @@
+﻿﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-001,Intro Demo,"1. 全新安裝（或已清除 App 資料）
+2. 從未開啟過 AI Hair Color",在 Launcher 的「AI Magic」區塊點「Hair Color」卡片,"Intro Demo 頁顯示「AI Hair Color」、「Go beyond traditional hair colors! Explore everything from subtle highlights to vibrant, bold shades.」、橘色的「Try Now」、未勾選的「Don't show again」，左上角有 ‹",P2,"R-002, R-090",Q-8（10/E 寫第一次進入沒有 Demo；這個較新的頁面畫了一個）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。Launcher 卡片：Design 1-launcher 617:9493；Intro Demo 本身是 PM-only（Design 沒有畫：Q-8）。,未變更,
+TC-002,Intro Demo,已顯示 Intro Demo 頁（TC-001）,點「Try Now」,Intro Demo 關閉，AI Hair Color 繼續往下（先選照片，再進入選色頁）,P2,R-003,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-092,照片指引,"1. 全新安裝（或已清除 App 資料）
+2. 從未關閉過照片指引
+3. 從 Launcher 卡片進入 AI Hair Color","1. 看選照片之前出現的畫面
+2. 點「Continue」","1. 指引畫面顯示「For the best results, we recommend photos with the following:」、附範例照片的推薦清單和避免清單（標題和其他功能一樣，例如「Recommendation」）、「Continue」按鈕和「Don't show again」
+1. 記錄清單項目（Design：「Photo of One Female」、「Full Upper Body」、「Clear Face」；「Face Coverings」、「Face too small」）
+2. 指引關閉，出現選照片畫面（第一個分頁顯示相簿名稱）",P2,R-088,Design 2-before_importing_photo 617:10539。REQ-009：標題全 app 共用，項目依功能而定，分頁是相簿名稱；多一項「Accessories」沒問題（Q-20 已回覆）。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：標題用全 app 共用的「Recommendation」、項目依功能而定、分頁是相簿名稱（ISS-HCC-16 暫緩）
+TC-093,照片指引,已顯示照片指引（TC-092）,"1. 勾選「Don't show again.」
+2. 點「Continue」
+3. 離開 AI Hair Color
+4. 從 Launcher 卡片再次開啟 AI Hair Color","2. 顯示選照片畫面
+4. 直接顯示選照片畫面
+4. 不會再顯示指引",P3,R-088,Design 2-before_importing_photo 617:10539。,未變更,
+TC-003,Intro Demo,已顯示 Intro Demo 頁，「Don't show again」未勾選,點左上的 ‹,AI Hair Color 關閉，回到進入前的畫面,P2,R-004,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-004,Intro Demo,已顯示 Intro Demo 頁；排在所有需要 Intro Demo 的列之後（單向狀態）,"1. 勾選「Don't show again」
+2. 點「Try Now」
+3. 離開 AI Hair Color
+4. 再次開啟 AI Hair Color",第二次進入時不會顯示 Intro Demo 頁,P3,R-005,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-005,進入檢查,一張臉部明顯傾斜超過 15°（左右轉頭或歪頭）的照片，比例為一般的 4:5,從 Launcher 開啟 AI Hair Color 並選這張照片,"跳出對話框，顯示「Please choose another photo」、「The face in this photo is too slanted, which may result in poorly generated results.」、「OK」和「Continue Anyway」
+不會扣點數",P2,R-007,門檻與文字同 Hair Volume / AI Hairstyle。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。複驗 PHA262026P0110（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-006,進入檢查,已跳出臉部傾斜的對話框（TC-005）,點「OK」,不會進入編輯室，使用者可以重新選別張照片,P2,R-009,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-007,進入檢查,已跳出臉部傾斜的對話框（TC-005）,點「Continue Anyway」,以這張傾斜的照片進入 AI Hair Color 編輯室，色票列的第一格是「Custom」,P2,R-009,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-008,進入檢查,一張臉很小的照片（臉寬小於影像寬度的 1/8 左右），比例正常,"1. 從 Launcher 開啟 AI Hair Color 並選這張照片
+2. 點「Continue Anyway」","1. 跳出臉太小的警告，附「OK」和「Continue Anyway」（記錄其文字）
+2. 以這張照片進入編輯室",P2,"R-008, R-009",1024 px 縮圖上的 128 px = 長邊的 1/8。文字未畫出：沿用 AI Hairstyle 的（Q-9）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-009,進入檢查,一張沒有人臉的照片（風景、物品）,從 Launcher 開啟 AI Hair Color 並選這張照片,"跳出沒有臉的提示（「No face detected. A face is required for this feature.」或 PM 的「No face detected. Face is required for this feature.」都可以）
+不會進入房間",P2,R-010,REQ-009：用字不同可以接受。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：「A face is required」可以接受（ISS-HCC-17 暫緩）
+TC-010,進入檢查,一張特寫照片，臉佔滿大部分畫面,從 Launcher 開啟 AI Hair Color 並選這張照片,顯示「The face in this photo is too big.」，不會進入編輯室；沒有 Continue Anyway 可以按,P2,R-011,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-011,進入檢查,一張 21:9 的全景照片，臉部傾斜,從 Launcher 開啟 AI Hair Color 並選這張照片,先跳出附「Cancel」和「Crop」的比例對話框，沒有 Continue Anyway；在它之前不會先出現臉部警告,P2,"R-012, R-006",比例對話框畫在 10/E 頁面（entry_blocked_ratio）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-012,進入檢查,已跳出 21:9 臉部傾斜照片的比例對話框（TC-011）,"1. 點「Crop」
+2. 選 4:5 並點 ✓","1. 開啟既有的 Crop 編輯室
+2. 回到 AI Hair Color 後跳出臉部傾斜警告，且是以裁切後的影像檢查",P2,R-013,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-013,進入檢查,一張沒有人臉的 21:9 照片,從 Launcher 開啟 AI Hair Color 並選這張照片,顯示「No face detected. Face is required for this feature.」；不會跳出比例對話框（先檢查有沒有人臉）,P3,R-006,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-014,進入檢查,一張特寫照片，臉太大而且傾斜超過 15°,從 Launcher 開啟 AI Hair Color 並選這張照片,顯示「The face in this photo is too big.」（被擋下）；不會出現臉部傾斜的警告,P3,R-006,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-015,進入檢查,Edit Room 已開啟一張臉部傾斜的照片,在 Edit Room 開啟 Portrait › Hair › AI Hair Color,立刻跳出臉部傾斜警告，不會出現選照片的畫面,P2,R-014,REQ-009：Quick Action 不會有「Hair Color」（不照 Design 的 Edit Room 畫面）。複驗 PHA262026P0110。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：Edit Room 的 Quick Action 沒有「Hair Color」，入口是 Portrait › Hair（R-089 移除，ISS-HCC-18 暫緩）
+TC-016,進入檢查,16:9、2:1、4:1 的照片各一張，每張都有一張正面的臉,"1. 用 16:9 的照片開啟 AI Hair Color
+2. 離開編輯室
+3. 用 2:1 的照片開啟 AI Hair Color
+4. 離開編輯室
+5. 用 4:1 的照片開啟 AI Hair Color","1. 16:9 的照片直接進入編輯室，沒有比例對話框
+3. 2:1 的照片跳出「Cancel」/「Crop」比例對話框
+5. 4:1 的照片跳出同樣的對話框（舊的 5:1 上限不再適用）",P2,"R-015, R-012",Android AI Hairstyle 允許到 5:1（D2-01b）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-017,Custom 格子,"1. 人像照片，臉部清楚且正面（通過所有進入檢查）
+2. Solid 分頁",從 Launcher 開啟 AI Hair Color 並選這張照片,"「Custom」是色票列的第一格，在「Platinum」之前
+它是橘色漸層的方塊，上面有魔術棒圖示和「Custom」標籤，且未被選取
+第一個範本（「Platinum」）處於選取狀態",P1,"R-016, R-017",Q-2：mockup 畫的是鉛筆圖示。Design 4-hair_color 686:1427；PM 備註寫的是漸層加 ＋（Q-2）。,未變更,
+TC-018,Custom 格子,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）,"1. 依序點其他每個分類分頁（Design 畫的是「Highlights」和「Ombré」；PM 是「Multicolor」）
+2. 點「Solid」分頁","1. 每個分頁那一列的第一格都是「Custom」
+2. 回到 Solid 那一列，「Custom」又在第一格",P2,R-016,Q-1（只畫了 Solid）。Design 4-hair_color 686:1427 畫出「Solid」「Highlights」「Ombré」三個分頁，Custom 只出現在 Solid（Q-1）。,未變更,
+TC-019,Custom 面板,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）,點「Custom」,"開啟底部面板，頂端有拉桿，有「Style」區、「Base Color」和「Highlight Color」兩列，以及橘色風格的 Generate，裡面有 ⬤ 6
+不會顯示 ✕ ↺ ↻ ✓ 那一列（記錄有沒有「Custom」標題或 ⌄ 按鈕：Design 兩者都沒畫，Q-17）",P1,"R-018, R-019, R-020, R-039",Design 4-hair_color_case1_no_style 894:1474。需實機確認。複驗 PHA262026P0111（2026-11-13-r1 執行時開單，TR261111-0042）。它預期的 ⌄ 與 Design 衝突（Q-17）；✕ ↺ ↻ ✓ 的部分仍成立。,未變更,
+TC-020,Custom 面板,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟,對照畫面高度，看面板佔多少,面板最多佔畫面約三分之二（高度的 0.65），上方兩個角為圓角；面板上方仍看得到照片,P3,R-021,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-030,Custom 面板,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 已選風格「Ombré」","1. 左右滑動「Base Color」列
+2. 左右滑動「Highlight Color」列","每一列開頭是彩虹色輪按鈕（帶 ＋ 角標），後面依序是 8 個圓形推薦色：#5A3E2B, #A88B70, #B8AE98, #E3DCCB, #66735A, #5B6E85, #C9918A, #B5562A（每個圓的顏色請從截圖取樣），並可左右滑動",P2,R-022,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。2026-11-17 的 PM 修改（原本是 7 色）。Design 畫的是白色與中性色色票（Q-21）。,未變更,
+TC-021,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 還沒選任何風格","1. 點「Base Color」裡的一個顏色
+2. 點 Generate",兩列顏色和 Generate 都是灰色（不能按），兩次點擊都沒有反應,P1,R-023,Design 情境 (1) 894:1474 把這兩列和 Generate 畫成不能按。複驗 PHA262026P0112（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-022,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟",把「Style」列滑到最後,"顯示所有已發佈的 Custom 風格，附縮圖和名稱（Design 畫的是「Face」、「Bangs」、「Highlight」、「Balayage」、「Ombre」、「Solid」……），第 1 天依備援清單共 11 個
+兩個分染風格的縮圖是純色
+每個付費風格的縮圖右上角有皇冠角標，免費風格沒有",P2,"R-024, R-025, R-087",第 1 天的清單與付費風格：Q-6。Design 情境 (1) 894:1474 在「Balayage」上畫出皇冠。第 1 天的清單與付費風格：Q-6。,未變更,
+TC-023,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 還沒選任何風格",點「Ombré」,「Ombré」出現已選取的外框（橘色），兩列顏色都變成可以按,P1,R-026,Design 情境 (2) 894:2060 在選到的風格上畫出橘色外框；PM token 為 #ffbe98。,未變更,
+TC-024,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟",點「Solid」,"只出現「Base Color」那一列
+沒有「Highlight Color」那一列",P1,R-027,REQ-009「隱藏就好」，不照 Design 畫的灰色列（case 2-1 929:1901）。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：選 Solid 時隱藏 Highlight 那一列（Q-18 已回覆，ISS-HCC-19 暫緩）
+TC-025,Style,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；已選「Solid」,點「Base Color」裡的一個推薦色,該顏色出現外框圈，Generate 變成可以按，顯示「Generate」和 ⬤ 6（沒有減號）,P1,"R-028, R-038",PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-026,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 已選「Ombré」
+4. 還沒選任何顏色",只點「Base Color」裡的一個推薦色,"Generate 維持灰色不能按：雙色 style 要兩個顏色都選
+記錄色票列下方有沒有提示（PM 頁畫的是「Both Base Color and Highlight Color are required.」）",P1,R-029,REQ-009「都要選才能生成」取代 REQ-003 / REQ-007；和 PM D6-04、Design case 2 一致。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：兩個顏色都必選（取代 REQ-003 / REQ-007，ISS-HCC-20 暫緩）
+TC-027,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 已選「Balayage」
+4. 還沒選任何顏色","1. 只點「Highlight Color」裡的一個推薦色
+2. 點 Generate","1. 還沒選 Base Color 時，Generate 維持灰色不能按
+2. 不會開始生成，也不扣點（不需要 toast）",P2,"R-029, R-085",REQ-009：不需要 toast；Design 的「Select both a base and highlight color.」toast（case 2-1 892:1796）不用做。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：不需要 toast，Generate 不能按就夠了（ISS-HCC-21 暫緩）
+TC-028,Style,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；已選「Ombré」,"1. 點「Base Color」裡的一個顏色
+2. 點「Highlight Color」裡的一個顏色",每個選到的顏色都有 2 pt 的 #FFBE98 外框圈，Generate 變成可以按，顯示 ⬤ 6,P1,"R-030, R-038",PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-029,Style,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 已選「Ombré」，兩個顏色都已選","1. 點「Solid」
+2. 再點一次「Ombré」","1. 「Highlight Color」那一列消失（記錄 Base 是否仍被選取、Generate 是否仍可以按）
+2. 「Highlight Color」那一列重新出現（記錄原本選的顏色是否保留）",P2,"R-027, R-029",Q-3。REQ-009（選 Solid 時隱藏 Highlight 那一列）。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：選 Solid 時隱藏 Highlight 那一列（Q-18 已回覆）
+TC-031,調色盤,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 已選「Ombré」",點「Base Color」的色輪按鈕,"App 的調色盤在面板中開啟：同一行左邊是「Cancel」、右邊是「Done」，下方有飽和度／亮度方塊、帶圓形把手的彩虹色相滑桿，滑桿右邊有滴管按鈕
+底部沒有 ✕ ↩ ↪ ⊕ ✓ 那一列",P1,R-033,Design 4-hair_color 841:1429。複驗 PHA262026P0113（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-032,調色盤,已從「Base Color」開啟調色盤（TC-031）,"1. 把色相把手拖到藍色
+2. 在方塊裡拖動游標
+3. 點「Done」","調色盤關閉
+選到的藍色會以新圓圈加到「Base Color」列，位置在色輪按鈕之後、推薦色之前，並帶有選取外框圈
+推薦色各往右移一格
+「Highlight Color」沒有變",P1,"R-034, R-035, R-086",Design 情境 (3) 894:2637。,未變更,
+TC-033,調色盤,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；已選「Ombré」並選好 Base Color,"1. 點「Highlight Color」的色輪按鈕
+2. 選一個紫色
+3. 點「Done」",只有「Highlight Color」列換成紫色；「Base Color」維持原本的顏色；Generate 可以按,P1,R-034,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-034,調色盤,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；已選「Ombré」並選好 Base Color,"1. 點「Base Color」的色輪按鈕
+2. 選另一個顏色
+3. 點「Cancel」",調色盤關閉，「Base Color」維持原本的顏色,P2,R-035,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-035,調色盤,已從「Base Color」開啟調色盤,"1. 點滴管按鈕
+2. 在照片上選一個顏色
+3. 點「Done」",從照片取到的顏色填入「Base Color」，和 App 其他地方既有的調色盤一樣,P3,R-037,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。複驗 PHA262026P0113（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-036,調色盤,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數；已選「Solid」，並在調色盤選了純藍色的 Base Color；已開啟 App log 擷取,"1. 點 Generate
+2. 等待結果
+3. 取出 App log","1. 結果裡的頭髮是那個藍色
+2. 生成請求帶的顏色是 0 到 255 之間的 r/g/b 值（藍色約為 0/0/255）",P2,R-036,隱藏條款；log 的部分先擱置，等 log 擷取設定好再做。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-037,調色盤,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數；已選「Solid」並選好 Base Color；已開啟 App log 擷取,"1. 點 Generate
+2. 等待結果
+3. 取出 App log",請求送出的風格是 solid_color，只有 main_color_r/g/b，沒有 accent 顏色,P3,R-031,隱藏條款；先擱置，等 log 擷取設定好再做。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-038,收合即套用,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 已選「Ombré」，兩個顏色都已選",收合面板：把拉桿往下拖（如果這個 build 有 ⌄ 就改點 ⌄）,"面板關閉
+色票列回來了，「Custom」處於選取狀態，並顯示所選的兩個顏色
+外層的 Generate 可以按，顯示 ⬤ 6",P1,"R-042, R-043, R-044",Q-2：mockup 在格子裡畫的是鉛筆圖示。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。複驗 PHA262026P0115（2026-11-13-r1 執行時開單，TR261111-0042）。Q-2：PM mockup 在格子裡畫的是鉛筆圖示。收合方式：Q-17。,未變更,
+TC-039,收合即套用,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；已選「Balayage」，兩個顏色都已選,點面板上方的照片區,面板維持開啟，「Balayage」和兩個顏色都維持原本的選擇；不會套用，也不會取消,P1,R-042,裁定 REQ-004（使用者，2026-11-13）推翻 PM 頁面 D6-08 的「點外面 = 套用」。ISS-HCC-09 擱置。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-040,收合即套用,"1. 已用收合方式套用 Custom（TC-038）
+2. 帳號至少有 30 點數",點外層的 Generate,在原畫面開始 Custom 生成（顯示「Applying your new hair color...」），並扣 6 點數,P1,R-043,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。複驗 PHA262026P0115（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-041,收合即套用,已用收合方式套用 Custom（Ombré，兩個顏色），尚未生成,"1. 點「Platinum」
+2. 點「Custom」","1. 選取外框圈移到「Platinum」；Custom 格子仍顯示那兩個顏色
+2. 面板開啟，「Ombré」和同樣兩個顏色都已選",P1,"R-046, R-044",PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-042,收合即套用,已套用 Custom（Ombré，兩個顏色）,"1. 點「Custom」
+2. 選「Solid」和另一個 Base Color
+3. 點 ⌄",Custom 格子現在顯示新的顏色，重新開啟面板會看到「Solid」和這個顏色（使用者自己的覆寫會取代舊設定）,P2,R-045,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-043,收合即套用,已套用 Custom（Ombré，兩個顏色）,"1. 點 ✕ 離開編輯室
+2. 用同一張照片再次開啟 AI Hair Color
+3. 點「Custom」",Custom 格子恢復成尚未設定的樣子，面板裡沒有選任何風格或顏色,P2,R-045,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-045,生成與等待,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. 帳號至少有 30 點數
+4. 已選「Ombré」，兩個顏色都已選
+5. 記下點數標籤的數字",點面板裡的 Generate,"在原畫面開始生成，照片上顯示「Applying your new hair color...」
+色票列和 Generate 都是灰色（不能按）
+點數標籤減少 6",P1,"R-047, R-049, R-040, R-001",PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。複驗 PHA262026P0116（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-046,生成與等待,Custom 生成剛開始（TC-045）,計時，看多久後出現結果,約 42–48 秒後出現結果；等待期間安撫文字會分階段更換，動畫全程都在跑（不會有連續 10 秒沒動畫）,P2,R-047,後面階段的文字沒有提供（Q-10）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-078,生成與等待,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；帳號至少有 30 點數；已選「Platinum」,點 Generate 並計時,範本結果等待時間很短（依 10/E 約 15 秒），不是 Custom 的 42–48 秒,P3,R-048,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-047,生成與等待,在面板裡點 Generate 開始 Custom 生成，沒有收合面板（TC-045）,等待結果,"面板維持開啟
+結果填滿上方的照片區
+面板按鈕上方出現 44 pt 高、值為 100 的 Intensity 列，按鈕現在顯示「Retry」和 ⬤ 6",P1,R-041,result_in_panel 沒有畫出（Q-4）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）。複驗 PHA262026P0117（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-051,生成與等待,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數；已選「Solid」並選好 Base Color；先記下點數標籤上的數字,快速連點 Generate 5 次,只會執行一次生成；點數標籤只減少一次 6，也只出現一個結果,P2,R-051,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-052,生成與等待,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數；已選「Solid」並選好 Base Color；先記下點數標籤上的數字,"1. 點 Generate
+2. 等待期間強制停止 App
+3. 重新開啟 AI Hair Color",不會顯示或找回任何 Custom 結果，6 點數 也不會退還，與 10/E 規格所述一致,P3,R-050,Q-12。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-048,結果頁,"1. 已用收合方式套用 Custom
+2. 帳號至少有 30 點數","1. 點外層的 Generate
+2. 等待結果",結果直接顯示在原處，頁籤上方的 Intensity 滑桿為 100（範圍 0–100），按鈕顯示「Retry」與 ⬤ 6,P1,R-052,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面） 複驗 PHA262026P0117（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-049,結果頁,已有 Custom 結果，Intensity 已拖到 50；先記下點數標籤上的數字,"1. 點「Retry」
+2. 等待結果",新結果取代舊結果，點數標籤減少 6，Intensity 滑桿回到 100,P1,"R-053, R-054",PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-053,結果頁,已有 Custom 結果，Intensity 為 100；先記下點數標籤上的數字,"1. 將 Intensity 把手拖到約 50 後放開
+2. 點 ↺
+3. 點 ↻","1. 新顏色以約一半的強度疊在原圖上；點數標籤不變
+2. Intensity 回到 100
+3. Intensity 回到約 50",P2,R-056,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-054,結果頁,"1. 已有 Custom 結果，Intensity 為 50
+2. 先記下點數標籤上的數字","1. 點「Platinum」
+2. 點「Custom」並收合面板（把手往下拉，或有顯示 ⌄ 時點 ⌄）","Custom 結果與其 Intensity 50 都會回來，不會重新生成
+點數標籤不變
+按鈕顯示「Retry」",P1,R-055,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面） 複驗 PHA262026P0119（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-055,結果頁,剛出現 Custom 結果，Intensity 已拖到 30，尚未點 ✓,點右上角的 Artwork 鍵,開啟 My AI Artwork，停在 AI Hair 頁籤的 Color 子頁籤，列表中的 Custom 結果為完整強度（100%）,P1,R-057,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-056,結果頁,已有 Custom 結果，Intensity 為 60,點 ✓,開啟新的 Edit Room，結果的 Intensity 為 60,P1,R-058,10/E D1-07：Android 會靜默儲存並開啟新的 Edit Room。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-057,結果頁,"1. Intensity 提示從未按過「Don't show again」
+2. 這是此次安裝的第一個結果",生成一張 Custom 結果,"跳出一次性對話框，說明 My AI Artwork 只保留 100% 的版本
+按「OK」後即可使用 Intensity 滑桿",P3,R-059,10/E 對話框，沿用既有行為（D1-15）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面） 複驗 PHA262026P0118（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-058,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 face_framing 樣式（Face）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 face_framing 的效果：框住臉部的髮絲套用 Highlight Color，其餘為 Base Color；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-059,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 colored_bangs 樣式（Bangs）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 colored_bangs 的效果：瀏海套用 Highlight Color，其餘為 Base Color；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-060,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 highlights 樣式（Highlight）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 highlights 的效果：Highlight Color 的挑染沿著髮流疊在 Base Color 上；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-061,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 balayage 樣式（Balayage）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 balayage 的效果：Highlight Color 從髮中到髮尾刷染在 Base Color 上；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-062,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 ombre 樣式（Ombré）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 ombre 的效果：Base Color 漸層過渡到 Highlight Color，從耳朵下方開始變色；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P1,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-063,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點「Solid」
+2. 選一個鮮豔的 Base Color（紅色）
+3. 點 Generate",結果呈現 solid_color 的效果：整頭頭髮都是同一個 Base Color；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P1,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-064,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 dip_dye 樣式（名稱來自 CMS）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 dip_dye 的效果：髮尾染上 Highlight Color，其餘為 Base Color；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-065,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 colored_roots 樣式（名稱來自 CMS）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 colored_roots 的效果：髮根是一個顏色，髮長其餘部分是另一個顏色；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-066,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 earloop_highlights 樣式（名稱來自 CMS）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 earloop_highlights 的效果：耳朵周圍與耳後那一層頭髮出現 Highlight Color；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-067,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 split_dye_vertical 樣式（名稱來自 CMS）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 split_dye_vertical 的效果：頭髮左右分成兩種顏色；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-068,已生成的樣式,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號至少有 30 點數,"1. 點選 split_dye_horizontal 樣式（名稱來自 CMS）
+2. 選一個深色的 Base Color 和一個鮮豔的 Highlight Color
+3. 點 Generate",結果呈現 split_dye_horizontal 的效果：頭髮上下分成兩種顏色；髮型輪廓、髮長、臉部、背景和衣服都不變；扣 6 點數,P2,"R-032, R-060",外觀依樣式名稱推定（規格未描述）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-069,點數與失敗,"1. 已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）
+2. Custom 面板已開啟
+3. Free 使用者
+4. 有一個 usageType 為 purchase 的 Custom 樣式","1. 選擇付費樣式（縮圖上有皇冠標誌）及其顏色
+2. 點 Generate",跳出付費牆，且不扣點數,P1,"R-061, R-087",哪些樣式是付費樣式：Q-6。Design case (1) 894:1474 畫有皇冠。哪些樣式是付費樣式：Q-6。,未變更,
+TC-070,點數與失敗,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；Free 使用者，點數少於 6；選用免費樣式,"1. 選擇樣式和顏色
+2. 點 Generate",顯示「Upgrade to Premium」；按下它的按鈕會開啟付費牆,P1,R-062,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-071,點數與失敗,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；VIP 使用者，點數少於 6,"1. 選擇樣式和顏色
+2. 點 Generate
+3. 點「Get Credit」","2. 顯示「More Credits Required!」
+3. 開啟 Credit Shop",P1,R-063,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-073,點數與失敗,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；帳號點數少於 6；尚未使用過 Quick Credit Refill,"1. 選擇樣式和顏色
+2. 點 Generate",顯示 Quick Credit Refill 優惠（一次性 10 點數包）,P2,R-064,僅限 Android（10/E D4-04）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-075,點數與失敗,在 AI Hair Color 編輯室內，照片為只有一張清楚正臉的人像照（通過所有進入檢查）；已開啟 Custom 面板；帳號至少有 30 點數；可強制觸發伺服器錯誤 4002（RD 提供的測試條件）,點 Generate,跳出「Please Try Different Content」，且 6 點數 已退還,P2,R-065,暫緩：需要錯誤測試條件。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-076,點數與失敗,在 AI Hair Color 編輯室內，照片為只有一張清楚正臉的人像照（通過所有進入檢查）；已開啟 Custom 面板；帳號至少有 30 點數；可強制觸發另一種伺服器錯誤（RD 提供的測試條件）,點 Generate,跳出「An Error Has Occurred」，且 6 點數 已退還,P2,R-065,暫緩：需要錯誤測試條件。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-050,點數與失敗,已完成一次 Custom 生成（TC-045）,"1. 點點數標籤
+2. 點 Buy Credit 右上角的「Detail」",最新一筆是 AI Hair Color，扣了 6 點數,P2,"R-066, R-040",PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-077,點數與失敗,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）,"1. 將點數標籤與 Mine 中的餘額比對
+2. 點點數標籤","1. 點數標籤顯示的餘額相同
+2. 開啟 Buy Credit",P2,R-067,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-079,離開房間,已顯示 Custom 結果，面板已收合；從 Launcher 進入,點左下角的 ✕,"記錄是否先跳出「Discard changes?」（Q-22）；按「Discard」後回到 Edit Room，顯示原本的照片
+結果仍在 My AI Artwork 裡",P1,R-068,REQ-009「回到edit room是正常的」。PM 10/E D1-20b 寫不需要確認：Q-22。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：回到 Edit Room 是正確的（ISS-HCC-25 暫緩）；確認視窗列為 Q-22
+TC-081,Deeplink,已向 RD 取得 ombre 樣式 guid 的 Custom deeplink；已準備好一張人像照片，臉部清楚且正面（通過所有進入檢查）,"1. 開啟 deeplink
+2. 若有要求，選擇照片",開啟 AI Hair Color，Custom 面板已展開並選取「Ombré」；沒有選任何顏色，Generate 為灰色（不能按）,P2,"R-069, R-070",暫緩，待 RD 提供連結格式（Q-11；備案 mode=custom&style_guid=<guid>）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-082,Deeplink,Custom deeplink 帶有未知或尚未發布的樣式 guid,開啟 deeplink,開啟 Custom 面板，沒有選任何樣式，也不會顯示錯誤,P2,R-071,暫緩，待 RD 提供連結格式（Q-11）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-084,CMS,向 CMS 負責人取得 PhDM_AIHairColor_CustomStyle 的 CMS 清單（名稱、順序、發布狀態）,開啟 Custom 面板，將 Style 列與 CMS 清單比對,名稱、縮圖和順序都與 CMS 一致，且只顯示已發布的樣式,P3,R-024,暫緩：需要 CMS 資料（Q-13）。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-090,Android 系統返回鍵,顯示 Intro Demo 頁,按系統返回鍵,與按 ‹ 相同：AI Hair Color 關閉，回到進入前的畫面,P2,R-072,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-087,Android 系統返回鍵,畫面顯示臉部傾斜的警告,按系統返回鍵,記錄實際情況（預期與按「OK」相同：不會進入房間）,P3,R-073,Q-14。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-085,Android 系統返回鍵,已進入 AI Hair Color 編輯室，照片為人像，臉部清楚且正面（通過所有進入檢查）；Custom 面板已開啟；已選「Ombré」且兩個顏色都選好,按系統返回鍵,記錄實際情況（預期與按 ⌄ 相同：面板關閉並套用設定，仍停留在房間內）,P2,R-074,Q-14。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,
+TC-086,Android 系統返回鍵,從「Base Color」開啟了色盤，並已選了另一個顏色,按系統返回鍵,與按「Cancel」相同：色盤關閉，「Base Color」維持不變,P2,R-075,PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面） 複驗 PHA262026P0114（2026-11-13-r1 執行時開單，TR261111-0042）。,未變更,
+TC-088,Android 系統返回鍵,已顯示 Custom 結果，面板已收合；從 Launcher 進入,按系統返回鍵,和 ✕ 一樣：記錄是否先跳出「Discard changes?」（Q-22）；按「Discard」後回到 Edit Room，顯示原本的照片,P2,R-076,REQ-009「回到edit room是正常的」；Q-22。,修改,REQ-009 裁示（使用者，2026-11-18，R2 eBug 審查）：回到 Edit Room 是正確的；確認視窗列為 Q-22
+TC-089,Android 系統返回鍵,Custom 生成進行中,按系統返回鍵,記錄實際情況（畫面變化、生成是否繼續，以及點數的扣除狀況）,P3,R-077,Q-14。PM-only：Design 尚未畫出（Design 616:9324，2026-11-17 讀取，沒有這個畫面）,未變更,

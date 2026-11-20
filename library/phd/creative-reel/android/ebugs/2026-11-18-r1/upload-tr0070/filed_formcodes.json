@@ -1,0 +1,72 @@
+{
+  "Reel-Creator-R1-01": {
+    "FormCode": "PHA262026P0131",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0131",
+    "JobID": 23296109333,
+    "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」",
+    "at": "2026-11-19T14:54:49"
+  },
+  "Reel-Creator-R1-11": {
+    "FormCode": "PHA262026P0132",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0132",
+    "JobID": 23296116757,
+    "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker: imported count out of range shows no red tray text",
+    "at": "2026-11-19T14:55:19"
+  },
+  "Reel-Creator-R1-12": {
+    "FormCode": "PHA262026P0133",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0133",
+    "JobID": 23296117781,
+    "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker Import: imported photos unticked; tapping one adds it twice",
+    "at": "2026-11-19T14:55:22"
+  },
+  "Reel-Creator-R1-15": {
+    "FormCode": "PHA262026P0134",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0134",
+    "JobID": 23296118805,
+    "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: no 「9:16」 ratio and no reorder hint",
+    "at": "2026-11-19T14:55:26"
+  },
+  "Reel-Creator-R1-17": {
+    "FormCode": "PHA262026P0135",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0135",
+    "JobID": 23296119573,
+    "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: count below min (14/40) is not red",
+    "at": "2026-11-19T14:55:30"
+  },
+  "Reel-Creator-R1-21": {
+    "FormCode": "PHA262026P0136",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0136",
+    "JobID": 23296120597,
+    "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: 「Use Template」, 「Your photos」 and Import prompt stay English in zh-Hant / de",
+    "at": "2026-11-19T14:55:33"
+  },
+  "Reel-Creator-R1-23": {
+    "FormCode": "PHA262026P0137",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0137",
+    "JobID": 23296121365,
+    "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Creative card shows 「Almost Done」 at once, no remaining time",
+    "at": "2026-11-19T14:55:37"
+  },
+  "Reel-Creator-R1-25": {
+    "FormCode": "PHA262026P0138",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0138",
+    "JobID": 23296122645,
+    "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Wi-Fi lost during upload: 70 charged, 「Credits refunded」 but no refund",
+    "at": "2026-11-19T14:55:42"
+  },
+  "Reel-Creator-R1-27": {
+    "FormCode": "PHA262026P0139",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0139",
+    "JobID": 23296123925,
+    "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Micro Cinema reel is 1176 × 1760, not 9:16",
+    "at": "2026-11-19T14:55:46"
+  },
+  "Reel-Creator-R1-29": {
+    "FormCode": "PHA262026P0140",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0140",
+    "JobID": 23296124949,
+    "short": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: 「Don’t keep activities」: 「Next」 in the picker lands on the room, picks lost",
+    "at": "2026-11-19T14:55:51"
+  }
+}

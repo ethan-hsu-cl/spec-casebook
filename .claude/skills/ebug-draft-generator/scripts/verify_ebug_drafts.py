@@ -2,7 +2,7 @@
 import re,os,sys,collections,unicodedata
 def _find_idx():   # repo-relative (was hard-coded to one machine's home, 2026-10-12)
     import os as _o; d=_o.path.dirname(_o.path.realpath(__file__))
-    while d!='/' and not _o.path.isdir(_o.path.join(d,'Figma','_index')): d=_o.path.dirname(d)
+    while _o.path.dirname(d)!=d and not _o.path.isdir(_o.path.join(d,'Figma','_index')): d=_o.path.dirname(d)   # stops at '/' and 'C:\' (Windows hung, 2026-11-19)
     return _o.path.join(d,'Figma','_index')
 IDX=_find_idx()
 SPEC={"20260825_eBug_drafts_AI-Anime-Video_16.7.5.md":[2,8,9,10,11,12,21,26,28,29,30,32,34,35,36,37,43,44,48,51,52,53],

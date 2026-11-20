@@ -1,0 +1,17 @@
+# From the Batch picker with the 「00PHDa_Testing_Material」 album already open (the picker remembers the last album;
+# R3-f, S23): pick its first 12 tiles row by row (photo 1 = the guitar). Ends on Batch Edit Room main screen.
+tap 194 686
+tap 540 686
+tap 885 686
+tap 194 1031
+tap 540 1031
+tap 885 1031
+tap 194 1376
+tap 540 1376
+tap 885 1376
+tap 194 1650
+tap 540 1650
+tap 885 1650
+expect (12/20)
+lbl Next
+waitfor "Crop & Rotate" --timeout 15

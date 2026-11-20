@@ -1,0 +1,10 @@
+# Dedupe — Image to Video Reuse R1 (Android), 2026-11-19, read-only (nothing commented, nothing filed)
+# ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" (Android pool only; dedupe per OS). Raw: dedupe_raw.txt
+# Result: 0 of 10 drafts has a same-OS duplicate (125 Image_to_Video candidates searched per entry).
+# Extra text searches (Android): "Reuse", "Settings applied", "Reuse_Click", "More Video Editing Tools" — no match; "Prompts & Settings" — only P0126 below.
+# TR261118-0070 (20.19.0.v202611181947, the build tested) has no eBug filed on it yet.
+# Candidates read and judged unrelated:
+PHA262026P0126 (TR261113-0038, NeedCodeReview) Recent Custom result opens Save & Share without Prompts & Settings — different defect (R1 TC-009 Pass on 20.19.0.v202611181947: Recent shows the card)
+PHA262026P0038 (open, 20.18.0) [UX] Custom page does not move when sliding — unrelated
+PHA252025-0566 (closed, 20.5.0) My AI Artwork category selected — unrelated
+PHA262026-0413 (closed, 20.17.0) [AIFound][UX] 'Create More' resets the whole Image to Video room — different point (ISS-IR-06 is the placeholder text)

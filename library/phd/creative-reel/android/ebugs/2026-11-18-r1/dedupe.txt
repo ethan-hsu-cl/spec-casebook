@@ -1,0 +1,12 @@
+# Dedupe — Reel Creator / Creative Reel R1 (Android), 2026-11-18, read-only (nothing commented, nothing filed)
+# ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" (Android pool only; dedupe per OS). Raw: dedupe_raw.txt
+# Result: 0 of 29 drafts has a likely same-OS duplicate (6 Reel_Creator candidates searched per entry).
+# Extra text searches (Android, since 2026-09-01): "Text Language", "refund", "Credits refunded", "My AI Artwork", "Artwork",
+# "Resume to Upload", "Don't keep", "Detail", "Almost Done", "Import", "9:16", "Cinematic", "CineStory", "AI Transition", "Micro Cinema" — no match.
+# Same-OS Reel Creator tickets seen and judged unrelated:
+PHA262026P0129 (TR261113-0038, NeedCodeReview) [UX] mask not covering the preview below [Use Template]   — not drafted here (TC-024 saw the scrim)
+PHA262026P0130 (TR261113-0038, Assigned)       App crashes after tapping [Import]                           — R1 Imports did not crash; different defect
+PHA262026-0373 (Close, 20.16.0) notification shows "APP version does not support feature"                  — not back (TC-121); ISS-CR-24 is a stale page, cites it as Related
+PHA262026-0382 (Close, 20.16.0) original instead of edited photo from Edit Room                            — not back (TC-012 Pass)
+PHA262026-0399 / -0366 (Close)                                                                             — unrelated areas
+PHA262026P0002 (Close, AI Exposure Credit Detail name)                                                     — other feature; ISS-CR-20 is a PM naming question

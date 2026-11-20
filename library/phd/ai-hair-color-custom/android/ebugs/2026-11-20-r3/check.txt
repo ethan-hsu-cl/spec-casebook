@@ -1,0 +1,8 @@
+⚠ WARN  AI-Hair-Color-Custom-R3-01  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+⚠ WARN  AI-Hair-Color-Custom-R3-02  Short Description is 123 chars (budget 120)
+⚠ WARN  AI-Hair-Color-Custom-R3-03  Short Description is 131 chars (budget 120)
+⚠ WARN  AI-Hair-Color-Custom-R3-05  Short Description is 125 chars (budget 120)
+⚠ WARN  AI-Hair-Color-Custom-R3-06  Short Description is 136 chars (budget 120)
+
+6 bug(s) checked — 0 error(s), 5 warning(s)
+Format OK — clear to file.

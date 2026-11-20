@@ -1,0 +1,16 @@
+PhotoDirector Android 20.19.0.v202611181947 - Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server - 2026-11-19
+ISS-CR-27 - the Micro Cinema request asks for 9:16, but the saved reel is 1176 x 1760 (about 2:3).
+IDs redacted.
+
+# logcat, Generate at 11:28:28 (request fields)
+2026-11-19 11:28:28.419 17374 17374 D AIEditorPreferenceUtil … "template_name":"Micro Cinema","style_id":"Style_003_CineStory_Ethereal","vendor":"Kling","model":"kling-v3-omni","mode":"pro","audio_setting_to_server":"native","description":"Dreamy close-ups turn a single image into a poetic cinematic video.","resolution":"","start_frame_setting":"black_frame","end_frame_setting":"user_input","reference_frame_setting":"user_input","aspect_ratio_to_server":"9:16","video_duration":8}
+...
+2026-11-19 11:42:32.563 17374 19050 E a       : handleQueryTaskStatus packID: credit_create_AICinematicShorts_1795058903505, Done
+2026-11-19 11:42:36.289 17374 19050 D AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_AICinematicShorts_1795058903505]
+2026-11-19 11:42:36.290 17374 19050 D AIEditorPreferenceUtil: updatePackItems column value: Done
+
+# ffprobe of the saved file DCIM/PhotoDirector/Video/2026-11-19-11-43-32-558.mp4 (pulled from the phone)
+codec_name=h264
+width=1176
+height=1760
+duration=8.041667

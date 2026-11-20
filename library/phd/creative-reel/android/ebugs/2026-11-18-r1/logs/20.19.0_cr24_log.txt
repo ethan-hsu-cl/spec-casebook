@@ -1,0 +1,13 @@
+# ISS-CR-24 Notification and stale card
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-S9110 / Android 16, logcat of the app captured by the casebook run
+# Lines about the job, its status, credits (balance shown only when it changes) and notifications; tokens and IDs dropped.
+
+## Notification and tap (2026-11-18 14:35:55–14:36:40)
+2026-11-18 14:36:00.871 FcmFirebaseMessagingService: notification Title=Reel Creator Ready! Msg=Tap to see your Reel Creator. Link=phd://navigate/page?name=cinematic_reel_creator_done
+2026-11-18 14:36:35.254 ActionRouter: actionUrl:phd://navigate/page?name=cinematic_reel_creator_done
+
+## Status Done only after reopening (2026-11-18 14:39:30–14:39:40)
+2026-11-18 14:39:38.139 AIEditorPreferenceUtil: updatePackItems column: result_image_path packIds: [credit_create_CreativeReel_1794983132289]
+2026-11-18 14:39:38.139 AIEditorPreferenceUtil: updatePackItems column value: /storage/emulated/0/Android/data/com.cyberlink.photodirector/files/AICineStory/Preview/credit_create_CreativeReel_1794983132289/apply.jpg
+2026-11-18 14:39:38.143 AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1794983132289]
+2026-11-18 14:39:38.143 AIEditorPreferenceUtil: updatePackItems column value: Done

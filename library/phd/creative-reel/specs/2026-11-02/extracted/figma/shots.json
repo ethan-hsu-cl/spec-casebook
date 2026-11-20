@@ -1,0 +1,158 @@
+{
+  "pm-room.png": {
+    "board": "7340:961/pm-room",
+    "group": "p1",
+    "hash": "69e1ad08",
+    "overlay": "",
+    "captured_at": "2026-11-17T03:42:28.612Z",
+    "box": [
+      -1257,
+      -287,
+      1400,
+      1450
+    ]
+  },
+  "pm-deeplink.png": {
+    "board": "7340:961/pm-deeplink",
+    "group": "p1",
+    "hash": "b2ec0c96",
+    "overlay": "6dab0531",
+    "captured_at": "2026-11-17T03:42:29.659Z",
+    "box": [
+      -417,
+      593,
+      966,
+      320
+    ]
+  },
+  "pm-preview.png": {
+    "board": "7340:961/pm-preview",
+    "group": "p1",
+    "hash": "07185417",
+    "overlay": "83dab47a",
+    "captured_at": "2026-11-17T03:42:31.080Z",
+    "box": [
+      -801,
+      -287,
+      2250,
+      1150
+    ]
+  },
+  "pm-picker.png": {
+    "board": "7340:961/pm-picker",
+    "group": "p1",
+    "hash": "2d496120",
+    "overlay": "b2fe0c6b",
+    "captured_at": "2026-11-17T03:42:32.491Z",
+    "box": [
+      529,
+      -287,
+      1890,
+      1250
+    ]
+  },
+  "pm-confirm.png": {
+    "board": "7340:961/pm-confirm",
+    "group": "p1",
+    "hash": "9b01b908",
+    "overlay": "2cdf0096",
+    "captured_at": "2026-11-17T03:42:33.716Z",
+    "box": [
+      2283,
+      -287,
+      1416,
+      1200
+    ]
+  },
+  "pm-text-language.png": {
+    "board": "7340:961/pm-text-language",
+    "group": "p1",
+    "hash": "b9ccdb27",
+    "overlay": "c251dd9b",
+    "captured_at": "2026-11-17T03:42:34.946Z",
+    "box": [
+      3233,
+      -287,
+      916,
+      1100
+    ]
+  },
+  "pm-artwork.png": {
+    "board": "7340:961/pm-artwork",
+    "group": "p1",
+    "hash": "f0f140a5",
+    "overlay": "f77ece64",
+    "captured_at": "2026-11-17T03:42:36.118Z",
+    "box": [
+      3299,
+      -287,
+      950,
+      1100
+    ]
+  },
+  "pm-cinematic.png": {
+    "board": "7340:961/pm-cinematic",
+    "group": "p1",
+    "hash": "f9c58b40",
+    "overlay": "",
+    "captured_at": "2026-11-17T03:42:37.482Z",
+    "box": [
+      83,
+      1363,
+      1900,
+      1000
+    ]
+  },
+  "pm-tutorial.png": {
+    "board": "7340:961/pm-tutorial",
+    "group": "p1",
+    "hash": "ec4fc256",
+    "overlay": "",
+    "captured_at": "2026-11-17T03:42:38.687Z",
+    "box": [
+      2383,
+      1413,
+      1000,
+      950
+    ]
+  },
+  "ds-light.png": {
+    "board": "976:11727/ds-light",
+    "group": "d1",
+    "hash": "6a8e7c15",
+    "overlay": "",
+    "captured_at": "2026-11-17T07:03:12.082Z",
+    "box": [
+      -2505,
+      1052,
+      2960,
+      1370
+    ]
+  },
+  "ds-dark.png": {
+    "board": "976:11727/ds-dark",
+    "group": "d1",
+    "hash": "78145114",
+    "overlay": "",
+    "captured_at": "2026-11-17T07:03:12.699Z",
+    "box": [
+      715,
+      1052,
+      2960,
+      900
+    ]
+  },
+  "ds-pm-copy.png": {
+    "board": "933:4752/ds-pm-copy",
+    "group": "d2",
+    "hash": "817372c8",
+    "overlay": "",
+    "captured_at": "2026-11-17T07:03:13.909Z",
+    "box": [
+      -2585,
+      -2710,
+      5566,
+      2862
+    ]
+  }
+}

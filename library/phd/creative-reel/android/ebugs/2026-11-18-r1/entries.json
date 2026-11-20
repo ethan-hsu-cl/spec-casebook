@@ -1,0 +1,200 @@
+{
+ "ISS-CR-01": {
+  "cases": [
+   "TC-002",
+   "TC-004"
+  ],
+  "why": "Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」"
+ },
+ "ISS-CR-02": {
+  "cases": [
+   "TC-005"
+  ],
+  "why": "Reel Creator room has no 「Reel Creator」 title"
+ },
+ "ISS-CR-03": {
+  "cases": [
+   "TC-006"
+  ],
+  "why": "Room section titles are raw string keys"
+ },
+ "ISS-CR-04": {
+  "cases": [
+   "TC-007"
+  ],
+  "why": "Cinematic Styles cards carry no inset photo"
+ },
+ "ISS-CR-05": {
+  "cases": [
+   "TC-003",
+   "TC-113"
+  ],
+  "why": "PM: no Reel Creator template row on the Launcher"
+ },
+ "ISS-CR-06": {
+  "cases": [
+   "TC-023",
+   "TC-026"
+  ],
+  "why": "PM: no Year-End Recap section; Creative templates are bare test entries"
+ },
+ "ISS-CR-07": {
+  "cases": [
+   "TC-033",
+   "TC-024"
+  ],
+  "why": "PM: photo tips entry — Design ⓘ vs 「View photo tips」 chip; Creative Previews have none"
+ },
+ "ISS-CR-08": {
+  "cases": [
+   "TC-030",
+   "TC-024"
+  ],
+  "why": "Preview count line has no image icon"
+ },
+ "ISS-CR-09": {
+  "cases": [
+   "TC-037"
+  ],
+  "why": "Picker has no 「Add photos」 title and its tray wording differs from the Design"
+ },
+ "ISS-CR-10": {
+  "cases": [
+   "TC-038",
+   "TC-136"
+  ],
+  "why": "Tray thumbnails have no 「×」: a photo cannot be removed from the tray"
+ },
+ "ISS-CR-11": {
+  "cases": [
+   "TC-057",
+   "TC-058",
+   "TC-038"
+  ],
+  "why": "No red tray text when the picked or imported count is outside the range"
+ },
+ "ISS-CR-12": {
+  "cases": [
+   "TC-058",
+   "TC-059"
+  ],
+  "why": "Imported photos lose their grid tick; tapping one adds it twice"
+ },
+ "ISS-CR-13": {
+  "cases": [
+   "TC-054"
+  ],
+  "why": "Import prompt shows no 「+N」 on its third thumbnail"
+ },
+ "ISS-CR-14": {
+  "cases": [
+   "TC-139"
+  ],
+  "why": "PM decision: one remembered photo — Design shows a prompt, PM and app show none"
+ },
+ "ISS-CR-15": {
+  "cases": [
+   "TC-063",
+   "TC-094",
+   "TC-100",
+   "TC-148"
+  ],
+  "why": "Confirm page lacks the 9:16 ratio and the reorder hint; layout differs from the Design"
+ },
+ "ISS-CR-16": {
+  "cases": [
+   "TC-075",
+   "TC-076",
+   "TC-148"
+  ],
+  "why": "Creative confirm page has no Text Language bar"
+ },
+ "ISS-CR-17": {
+  "cases": [
+   "TC-066"
+  ],
+  "why": "Count below min is not shown in red on the confirm page"
+ },
+ "ISS-CR-18": {
+  "cases": [
+   "TC-063",
+   "TC-074",
+   "TC-118",
+   "TC-148"
+  ],
+  "why": "PM: Creative prices 70 / 90 and AI Transition 48 vs the drawn Creative 60"
+ },
+ "ISS-CR-19": {
+  "cases": [
+   "TC-094",
+   "TC-096",
+   "TC-119"
+  ],
+  "why": "Micro Cinema charges 48 credits, spec 40"
+ },
+ "ISS-CR-20": {
+  "cases": [
+   "TC-119",
+   "TC-120"
+  ],
+  "why": "PM: Credit Detail names Cinematic and AI Transition uses only 「Reel Creator」"
+ },
+ "ISS-CR-21": {
+  "cases": [
+   "TC-123",
+   "TC-076",
+   "TC-125"
+  ],
+  "why": "Reel Creator strings stay English in other app languages"
+ },
+ "ISS-CR-22": {
+  "cases": [
+   "TC-125"
+  ],
+  "why": "German Import button is cut off as 「Importie…」"
+ },
+ "ISS-CR-23": {
+  "cases": [
+   "TC-085",
+   "TC-141"
+  ],
+  "why": "Creative processing card shows no time estimate, 「Almost Done」 from the start"
+ },
+ "ISS-CR-24": {
+  "cases": [
+   "TC-121"
+  ],
+  "why": "Completion notification opens a stale My AI Artwork page still 「Processing」"
+ },
+ "ISS-CR-25": {
+  "cases": [
+   "TC-143"
+  ],
+  "why": "Interrupted upload: 70 credits charged, not refunded although the dialog says so; Retry does nothing"
+ },
+ "ISS-CR-26": {
+  "cases": [
+   "TC-089"
+  ],
+  "why": "My AI Artwork tabs: 「Image to Video」 is not first and 「Reel Creator」 not second"
+ },
+ "ISS-CR-27": {
+  "cases": [
+   "TC-127",
+   "TC-122"
+  ],
+  "why": "Cinematic Styles reel is 3:4, not 9:16"
+ },
+ "ISS-CR-28": {
+  "cases": [
+   "TC-122"
+  ],
+  "why": "After 「Create More」 a Micro Cinema result download timed out: ⚠ Retry, no notification"
+ },
+ "ISS-CR-29": {
+  "cases": [
+   "TC-116"
+  ],
+  "why": "Activity re-creation drops the confirm page back to the room"
+ }
+}

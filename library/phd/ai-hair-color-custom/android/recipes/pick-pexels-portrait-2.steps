@@ -1,0 +1,7 @@
+# Second half of pick-pexels-portrait.steps, after the search was submitted with adb keyevent 66 (do has no Enter key).
+# Starts: Pexels results for 「woman portrait」. Ends: the colour page with the hat portrait. Charges nothing.
+# Pixel 8a pixels (2026-11-20, R3-d): the hat portrait is the top of the right column (S23 had it at 804 1363).
+wait 5
+tap 804 1038
+wait 8
+expect Generate

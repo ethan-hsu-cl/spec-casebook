@@ -1,0 +1,17 @@
+# ISS-HCC-34 Soft Black template generations
+# PhotoDirector Android 20.19.0 (90201901), Google Pixel 8a / Android 16, logcat of the app captured by the casebook run
+# Lines about generations, failures and the credit balance (shown only when it changes); tokens and IDs dropped.
+
+## TC-078 first (2026-11-20 10:54:20–10:54:58)
+2026-11-20 10:54:23.107 NativeDump: doClairFaceDetect2 faceNum 1
+2026-11-20 10:54:23.134 [PHD-A][Mixpanel]: GenAI_Feature_Generate:{"feature":"ai_hair_color","is_customize":"FALSE","style":"Style_6001_Solid-Soft-Black_ChatGPT","from":"AIPhoto","free_quantity":"false"}
+2026-11-20 10:54:23.514 CreditSystem: totalRemain=1970
+2026-11-20 10:54:25.851 CreditSystem: totalRemain=1964
+2026-11-20 10:54:57.531 [PHD-A][Mixpanel]: AIHairColor_Generate_Status:{"generate_status":"succeed","style":"Style_6001_Solid-Soft-Black_ChatGPT"}
+
+## TC-078 second (Retry) (2026-11-20 10:55:08–10:55:46)
+2026-11-20 10:55:09.829 NativeDump: doClairFaceDetect2 faceNum 1
+2026-11-20 10:55:09.853 [PHD-A][Mixpanel]: GenAI_Feature_Generate:{"feature":"ai_hair_color","is_customize":"FALSE","style":"Style_6001_Solid-Soft-Black_ChatGPT","from":"AIPhoto","free_quantity":"false"}
+2026-11-20 10:55:11.463 CreditSystem: totalRemain=1964
+2026-11-20 10:55:30.168 CreditSystem: totalRemain=1958
+2026-11-20 10:55:45.849 [PHD-A][Mixpanel]: AIHairColor_Generate_Status:{"generate_status":"succeed","style":"Style_6001_Solid-Soft-Black_ChatGPT"}

@@ -1,0 +1,136 @@
+=== Template
+Standard Report
+
+=== Short Description
+20.19.0.v202611181947 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R5)
+
+=== Test Result
+PHD-A - Bug verification [OK=19, Fail=2]
+
+=== Testing Date
+2026/11/19
+
+=== Test Result Details
+PHD-A - Bug verification [OK=19, Fail=2]
+
+=== PHA252025-0128  [OK]
+Verified OK with 202611181947 build.
+The Artistic Avatar result page now shows the remaining credits.
+Risk test: n/a
+
+=== PHA262026-0361  [OK]
+Verified OK with 202611181947 build.
+After picking another AI Replace artwork, Replace More now opens AI Replace with that artwork's image.
+Risk test: n/a
+
+=== PHA262026-0362  [OK]
+Verified OK with 202611181947 build.
+The AI Replace tab in My AI Artwork now shows 「Replace More」.
+Risk test: n/a
+
+=== PHA262026P0057  [OK]
+Verified OK with 202611181947 build.
+Batch AI Enhance now pauses while the app is in the background and continues on return until every photo is enhanced.
+Risk test: n/a
+
+=== PHA262026P0058  [OK]
+Verified OK with 202611181947 build.
+System Back now closes the 「Enhance 12 photos?」 dialog like Cancel and nothing is processed.
+Risk test: n/a
+
+=== PHA262026P0059  [OK]
+Verified OK with 202611181947 build.
+System Back now closes the 「Discard changes?」 dialog like Keep Editing and the edits are kept.
+Risk test: n/a
+
+=== PHA262026P0060  [OK]
+Verified OK with 202611181947 build.
+Square crop applied to all now saves the 16:9 photo with equal width and height.
+Risk test: n/a
+
+=== PHA262026P0084  [OK]
+Verified OK with 202611181947 build.
+Lock now locks the photo: it can no longer be dragged or zoomed in its frame, and the floating lock unlocks it.
+Risk test: n/a
+
+=== PHA262026P0085  [OK]
+Verified OK with 202611181947 build.
+Removal now opens the Object Removal room with the frame's photo, for both Premium and Free users.
+Risk test: n/a
+
+=== PHA262026P0089  [OK]
+Verified OK with 202611181947 build.
+System Back now closes only the Custom color picker and the picked colour is not applied.
+Risk test: n/a
+
+=== PHA262026P0097  [Fail]
+Verified Fail with 202611181947 build.
+
+Result:
+Tapping the move button under a page still selects that page (orange frame, Insert Left / Insert Right / Delete enabled). Dragging now lifts the page enlarged, tilted and translucent, but no 「Hold ≡ & drag to reorder」 hint appears.
+摘要：點頁面下方的移動鈕仍會選取該頁；拖曳時頁面已放大、傾斜、半透明，但沒有出現拖曳提示文字。
+
+Expected Result:
+Tapping the move button should do nothing; only dragging it should reorder the page, with the hint shown.
+摘要：點移動鈕不應選取頁面；只有拖曳才排序，並顯示提示文字。
+
+Risk test: n/a
+
+=== PHA262026P0098  [OK]
+Verified OK with 202611181947 build.
+At 5 and 10 pages every page's move and ••• buttons are drawn apart and each opens the right page.
+Risk test: n/a
+
+=== PHA262026P0099  [OK]
+Verified OK with 202611181947 build.
+One-page template cards now read 「1 page」 and the one-page Save & Share no longer shows 「1 images」.
+Risk test: n/a
+
+=== PHA262026P0112  [OK]
+Verified OK with 202611181947 build.
+Before a style is chosen, the Custom panel's colour rows and Generate are now disabled.
+Risk test: n/a
+
+=== PHA262026P0113  [OK]
+Verified OK with 202611181947 build.
+The Custom colour palette now has an eyedropper key right of the hue slider and it picks a colour from the photo.
+Risk test: n/a
+
+=== PHA262026P0114  [OK]
+Verified OK with 202611181947 build.
+System Back in the colour palette now closes only the palette like Cancel and stays in AI Hair Color.
+Risk test: n/a
+
+=== PHA262026P0115  [OK]
+Verified OK with 202611181947 build.
+Collapsing the Custom panel now keeps Custom selected, and the outer Generate makes a Custom result with the chosen colours.
+Risk test: n/a
+
+=== PHA262026P0117  [OK]
+Verified OK with 202611181947 build.
+The Custom result now shows an Intensity bar at 100 above Retry and it can be dragged.
+Risk test: n/a
+
+=== PHA262026P0118  [Fail]
+Verified Fail with 202611181947 build.
+
+Result:
+With the app data cleared, the first Custom result shows with Intensity 100 and no one-time dialog; none appears on dragging Intensity, closing the panel or the second Custom result either.
+摘要：清除 App 資料後，第一次 Custom 結果仍沒有出現一次性對話框；拖曳 Intensity、收合面板與第二次結果時也都沒有。
+
+Expected Result:
+A one-time dialog should say My AI Artwork keeps only the 100% version, with Don't show again.
+摘要：應出現一次性對話框說明 My AI Artwork 只保存 100% 版本，並有「不再顯示」。
+
+Risk test: n/a
+
+=== PHA262026P0119  [OK]
+Verified OK with 202611181947 build.
+After a template result, tapping Custom now brings back the Custom result with no new charge.
+Risk test: n/a
+
+=== PHA262026P0129  [OK]
+Verified OK with 202611181947 build.
+In Reel Creator Preview the mask now covers the preview below 「Use Template」.
+Risk test: n/a
+

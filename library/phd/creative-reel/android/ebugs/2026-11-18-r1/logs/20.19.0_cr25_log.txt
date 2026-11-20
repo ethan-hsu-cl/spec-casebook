@@ -1,0 +1,22 @@
+# ISS-CR-25 Interrupted upload, no refund
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-S9110 / Android 16, logcat of the app captured by the casebook run
+# Lines about the job, its status, credits (balance shown only when it changes) and notifications; tokens and IDs dropped.
+
+## Generate, Wi-Fi off, Retry, balance (2026-11-18 14:40:50–14:52:20)
+2026-11-18 14:40:52.902 CreditSystem: totalRemain=912
+2026-11-18 14:40:55.562 AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_CreativeReel_1794984053357]
+2026-11-18 14:40:55.562 AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-18 14:40:55.823 executeWithAuthRetry: Exception during API call: applyEffect, java.net.UnknownHostException: Unable to resolve host "demo.myedit.online": No address associated with hostname
+2026-11-18 14:40:55.826 a       : getCreditRemain error: Unable to resolve host "credit-stage.cyberlink.com": No address associated with hostname
+2026-11-18 14:40:55.827 executeWithAuthRetry: Exception during API call: querySessionStatus, java.net.UnknownHostException: Unable to resolve host "demo.myedit.online": No address associated with hostname
+2026-11-18 14:40:55.837 VRI[AICineStoryActivity]@f71df44: setView (new window)
+2026-11-18 14:41:10.080 VRI[AICineStoryActivity]@f71df44: dispatchDetachedFromWindow
+2026-11-18 14:41:47.773 executeWithAuthRetry: Exception during API call: querySessionStatus, java.net.UnknownHostException: Unable to resolve host "demo.myedit.online": No address associated with hostname
+2026-11-18 14:42:03.772 AIEditorPreferenceUtil: updatePackItems column: retry_times packIds: [credit_create_CreativeReel_1794984053357]
+2026-11-18 14:42:03.772 AIEditorPreferenceUtil: updatePackItems column value: 1
+2026-11-18 14:42:03.780 ArtworkAICineStoryFragment: longTask retry click: credit_create_CreativeReel_1794984053357, isPendingServerErrorPack: false
+2026-11-18 14:51:43.374 VRI[AICineStoryActivity]@760bf29: setView (new window)
+2026-11-18 14:51:44.211 CreditSystem: totalRemain=842
+2026-11-18 14:51:44.974 CreditHistory: newest record creditUsage=-70, featureId=CreativeReel
+2026-11-18 14:51:47.282 CreditHistory: newest record creditUsage=-70, featureId=CreativeReel
+2026-11-18 14:52:19.967 VRI[AICineStoryActivity]@760bf29: dispatchDetachedFromWindow

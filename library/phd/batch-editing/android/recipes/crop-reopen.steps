@@ -1,0 +1,7 @@
+# From an open Batch Crop & Rotate room: cancel it (×, unapplied changes dropped) and open it again on photo 1
+# (R3-c). Never use scrollto in this room: it sweeps the rotate slider. Use fingerdrag on the ratio row
+# (900 1985 → 300 1985) to reach ratios further right.
+id closeBtn
+waitfor "Crop & Rotate" --timeout 10
+lbl "Crop & Rotate"
+waitfor Original --timeout 10

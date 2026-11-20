@@ -1,0 +1,27 @@
+[
+  {
+    "bug": "note-E-clear",
+    "verdict": "INFO",
+    "observed": "User-approved app-data clear to remove the crashing Swipe Collage draft: `adb -s RFCW2198L7B shell pm clear com.cyberlink.photodirector` at 2026-11-19 07:59:30 UTC (15:59:30 local). Before: Free, Test Server, 189 credits (e_pre_mine). After: consent 「Get Started」, notifications allowed, What's new and Premium pages closed; the app came up on Production (no Test Server label, 0 credits, e_clear_mine_production); 「Test server」 turned on in Settings › About › Debug settings (Set to subscriber left OFF, nothing else changed; e_debug_before, e_debug_testserver_on), relaunch: Launcher shows 「Test Server」, Free, 189 credits (e_clear_mine_testserver), same balance as before (KP-136). Photo access 「Allow all」 granted on first Collage entry.",
+    "shots": ["e_pre_mine.png", "e_clear_launch1.png", "e_clear_mine_production.png", "e_debug_before.png", "e_debug_testserver_on.png", "e_clear_mine_testserver.png"],
+    "sideEffects": "n/a",
+    "other": "Swipe Collage opens without a crash after the clear (「Try Swipe Collage!」 → template list, e_p0085_swipe_home). The canvas used for P0085 was discarded through its normal close › Discard, so no draft is left. Credits at the end: 177 (two Custom Hair Color generations, 6 each)."
+  },
+  {
+    "bug": "PHA262026P0085",
+    "verdict": "FIXED",
+    "observed": "As Free (Set to subscriber OFF), Year-end Recap 「4 photos · 3 pages」 › Use Template › page-1 frame + › 1 photo › Next › Removal (crown badge on the tool) opens the Object Removal room with the frame's photo behind the 「Remove with faster selection tool」 intro (Upgrade to Premium / Continue); Continue shows the 「Smart Wire Removal」 intro (Upgrade to Premium / Try First / Don't show again); Try First leaves the room ready (Smart Select / Manual / One-Tap, Brush, Remove). A brush stroke › Remove works with an 「UNLOCK TO VIP」 badge, and ✓ (apply) opens the PhotoDirector Premium IAP page, as the bug's Expect Result says. Together with segment C's Premium check (room opens via the Gen AI Removal intro), Removal now opens the room for both tiers.",
+    "shots": ["e_p0085_editor.png", "e_p0085_filled.png", "e_p0085_free_removal_tap.png", "e_p0085_free_wire_intro.png", "e_p0085_free_room.png", "e_p0085_free_remove_applied.png", "e_p0085_free_apply_check.png"],
+    "sideEffects": "Room shows the right photo, intros and IAP are legible and unclipped. IAP × returns to the room; room × asks 「Discard changes?」 and Discard returns to the Swipe Collage editor with the photo still in the frame and the image tool bar open (page source). After returning from the room the Swipe Collage window carries FLAG_SECURE (dumpsys fl=0x1812500), so screenshots of the canvas are black as Free from then on (e_p0085_back_in_collage*.png); before the room the canvas captured normally. Likely the Free screenshot policy (debug option 「Support ScreenShot for free user」 is OFF), not judged a bug.",
+    "other": "Free sees two intros in a row (faster-selection upsell, then Smart Wire Removal) before the room; Premium saw the Gen AI Removal intro instead. The 「Discard changes?」 button needed a coordinate tap: `lbl Discard` hit the dialog title."
+  },
+  {
+    "bug": "PHA262026P0118",
+    "verdict": "STILL",
+    "observed": "On a genuinely fresh state (app data cleared at 15:59, AI Hair Color entered for the first time: Intro Demo 「Try now」 and the photo tips sheet both shown again), All › woman portrait › Custom › Ombre › dark brown base › blue highlight › Generate (16:10:28, is_customize TRUE, 189 → 183). The panel collapsed and the first Custom result showed with Intensity 100 above 「Retry」 6 (16:11:22) with no one-time dialog; none after 5 s more, none on the first Intensity drag (100 → 53), none after reopening the panel (Custom) and collapsing it, none on the Intensity drag after collapsing (53 → 89). A second Custom result generated from the open panel (pink highlight, 16:12:36, 183 → 177) and its Intensity drag (100 → 38) also showed no dialog. logcat has no Dialog.show / window addView in AIHairColorActivity between 16:09:13 and the end of the segment.",
+    "expectedNote": "R-059 (PM 10/E D1-15, TC in the AI Hair Color Custom table): when the first result appears, a one-time dialog says My AI Artwork keeps only the 100% version, with 「Don't show again」; per the PM comment RD cites (Figma 3287-93: Custom shows the panel first → close → Intensity), it should appear at the latest when the panel is closed / Intensity is reached. It appeared at none of these points.",
+    "shots": ["e_p0118_entry.png", "e_p0118_ombre.png", "e_p0118_panel_ready.png", "e_p0118_generating.png", "e_p0118_first_result.png", "e_p0118_intensity_drag.png", "e_p0118_panel_reopened.png", "e_p0118_after_collapse.png", "e_p0118_intensity_after_collapse.png", "e_p0118_second_result.png", "e_p0118_second_intensity_drag.png"],
+    "sideEffects": "n/a (not fixed).",
+    "other": "Not checked: a template (non-Custom) result first, or ✓ / Artwork key after the result. Leaving the room with × › Discard lands in the Edit room photo picker path (Edit view, black on S23 per KP-139), then Back twice to the Launcher, as in segment D."
+  }
+]

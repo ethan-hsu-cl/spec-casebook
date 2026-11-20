@@ -88,7 +88,7 @@ profile from CMS `social_media_link`. No 「shown in every country」 default.
 
 ## KP-064 Prompt length limits are per feature and model
 - kind: decision · platform: android · use: analysis, run, ebug · tags: prompt, limits
-- source: PHD domain decisions.md K09 (PHA262026-0198, -0257, -0396) · verified: 20.13 (AI Replace, 2026-05-15) · aka: K09
+- source: PHD domain decisions.md K09 (PHA262026-0198, -0257, -0396); Image to Video values on 20.19.0: KF-002 (phd/i2v-reuse) · verified: 20.13 (AI Replace, 2026-05-15); 20.19.0.v202611181947 (2026-11-19) (Image to Video Pixverse V6 2000) · aka: K09
 
 Values at the time: AI Replace 500 characters (20.13; was wrongly 101); AI Creative Studio 5000 (20.13, set in code
 while XML capped 600); Image to Video Pixverse V6 `promptCharLimit` 2000 characters.
@@ -128,7 +128,16 @@ sliders record on finger-up with a changed value.
 
 ## KP-070 Stage timings are not an SLA
 - kind: decision · platform: android · use: analysis, run, ebug · tags: server, stage, wait
-- source: PHD domain decisions.md / triage.md K60 (PHA262026-0419, -0314) · aka: K60
+- source: PHD domain decisions.md / triage.md K60 (PHA262026-0419, -0314); ai-hair-color-custom run 2026-11-20-r3 O-3 · aka: K60
 
 AI Expand took 1 min 48 s on Stage vs ≈ 17 s on Production; an RTDN account hold of 「76320 days」 = 53 × 1440 Stage
-time scale. Not values to assert.
+time scale. Not values to assert. Test Server waits also differ by day or device: AI Hair Color's Soft Black template
+took 34–36 s (Pixel 8a, 2026-11-20) against 16.2 s (S23, 2026-11-17), same build 90201901.
+
+## KP-135 Photo guide heading is 「Recommendation」 in every AI feature
+- kind: decision · platform: android · use: analysis, run, ebug · tags: photo-guide, picker, recommendation · authority: team
+- source: user 2026-11-18 (REQ-009, AI Hair Color Custom ISS-HCC-16: 「其他feature都是Recommendation, 底下的三個會隨著feature改變, photo tab的話那個是相簿名稱本來就會變」); seen on creative-reel run 2026-11-17-r1 TC-033, TC-037; ai-hair-color-custom run 2026-11-20-r3 TC-092 (Pixel 8a) · verified: 20.19.0 (90201901) (2026-11-20)
+
+The guide shown before the photo picker uses the app-wide heading 「Recommendation」. Its recommend / avoid items
+change per feature, and the picker's first tab shows the album name, which changes by itself. Do not file the
+heading, the items or the tab name as differing from the spec.

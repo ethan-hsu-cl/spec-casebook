@@ -1,0 +1,51 @@
+[
+  {
+    "bug": "PHA262026P0099",
+    "verdict": "FIXED",
+    "observed": "Every one-page template card now reads 「… · 1 page」 (e.g. 「3 photos · 1 page」, 「2 photos · 1 page」, 「8 photos · 1 page」) in all five categories. A one-page collage (Minimalist Aesthetic 「2 photos · 1 page」, Premium) opens a Save & Share page with no count line at all, and after Save (toast 「Saved to your photo gallery」) no 「1 images」 appears.",
+    "shots": ["c_p0099_template_page.png", "c_p0099_cards_minimalist.png", "c_p0099_preview.png", "c_p0099_save_share_premium.png", "c_p0099_saved_1_image.png", "c_p0099_save_toast.png"],
+    "sideEffects": "None seen: card labels are not clipped; the one-page Save & Share matches TC-179 (no 「images in this set」 line).",
+    "other": "「1 photo」 could not be checked: no template in this build has one photo (smallest is 2 photos). The template catalogue changed: Year-end Recap has no 「7 photos · 3 pages」 card any more (cards: 3·1, 10·1, 8·1, 20·6, 7·9, 4·3, 13·7); P0098/P0097/P0089/P0084 used Year-end 「4 photos · 3 pages」. Banner now reads 「Try Swipe Collage!」. As Free, ✓ on a one-page canvas opened the Premium IAP page instead of Save & Share."
+  },
+  {
+    "bug": "PHA262026P0098",
+    "verdict": "FIXED",
+    "observed": "At 5 pages every page has its own move (↔) and ••• button in one row with no overlap; page 3's ••• opened 「Duplicate page / Delete page」 with page 3 selected. At 10 pages all 10 pairs are still drawn separately and page 5's ••• opened its menu with page 5 selected (Duplicate greyed at the 10-page limit).",
+    "shots": ["c_p0098_pages_3.png", "c_p0098_five_pages.png", "c_p0098_five_page3_menu.png", "c_p0098_ten_pages.png", "c_p0098_ten_page5_menu.png"],
+    "sideEffects": "At 10 pages the strip shrinks the buttons to about 26 px across (roughly 3 mm), small for a finger but each tap landed on the intended page.",
+    "other": "The move button is drawn as ↔ (arrows with a bar), not the ≡ named in the spec/bug text."
+  },
+  {
+    "bug": "PHA262026P0097",
+    "verdict": "STILL",
+    "observed": "A plain tap on the move button under a page still selects that page (orange frame, Insert Left / Insert Right / Delete enabled), checked on page 1 and page 2 with nothing selected before. A long-press drag now lifts the page enlarged, tilted and translucent and it follows the finger past page 3 (recording c_p0097_drag2.mp4, frames 6–24), but no hint text appears.",
+    "expectedNote": "A plain tap on the move button does nothing (no page selected); the drag part of the fix works.",
+    "shots": ["c_p0097_pages_before.png", "c_p0097_tap_move_page1.png", "c_p0097_pages_reopen.png", "c_p0097_tap_move_page2.png", "recordings/c_p0097_drag2.mp4", "recordings/c_p0097_drag2/f-008.png", "recordings/c_p0097_drag2/f-014.png"],
+    "sideEffects": "The drag animation renders cleanly; neighbouring pages shift to make room; nothing clipped.",
+    "other": "No 「Hold ≡ & drag to reorder」 hint at any point of the drag (before, during or after). RD's fix does not mention it. Also: tapping the empty canvas area above the strip closes the Pages panel."
+  },
+  {
+    "bug": "PHA262026P0089",
+    "verdict": "FIXED",
+    "observed": "Background › 「Custom color +」 › light red in the square previews red on every page; system Back closes only the picker, the Solid swatch sheet stays open and the pages return to their original paper background. The same happens in Text › STYLE › Color › colour wheel: red picked, Back closes the picker and the text stays white (white swatch still selected).",
+    "shots": ["c_p0089_bg_panel.png", "c_p0089_picker_open.png", "c_p0089_light_red_chosen.png", "c_p0089_after_back.png", "c_p0089_text_style.png", "c_p0089_text_picker_open.png", "c_p0089_text_red_chosen.png", "c_p0089_text_after_back.png"],
+    "sideEffects": "Text style Color picker also cancels on Back (RD's side fix confirmed for Color; Border/Shadow not checked).",
+    "other": "After Back in the text Color picker, the cancelled red is added as a recent swatch next to the colour wheel even though it was not applied."
+  },
+  {
+    "bug": "PHA262026P0084",
+    "verdict": "FIXED",
+    "observed": "Lock on the image tool bar now locks the photo: the bar's Lock becomes a highlighted 「Unlock」, the other tools grey out, and the floating bar shows a closed lock (Delete and Replace greyed). Dragging inside the frame (normal and zoomed in) pans the canvas but the photo keeps its place in the frame, and pinching zooms the canvas, not the photo; tapping the floating lock unlocks it.",
+    "shots": ["c_p0084_filled.png", "c_p0084_after_lock.png", "c_p0084_before_drag.png", "c_p0084_after_drag.png", "c_p0084_after_pinch.png", "c_p0084_zoomed_drag.png", "recordings/c_p0084_locked_drag.mp4", "c_p0084_floating_unlock_tapped.png"],
+    "sideEffects": "None blocking. The floating bar stayed at its old place after the canvas panned under it (re-aligned after the next gesture).",
+    "other": "No literal 「Image locked」 text or toast is shown (neither in the page source nor in logcat); the spec's 「Image locked」 reads as the state name. Floating icons are Delete / Replace / Lock, not the Delete / Duplicate / Unlock in TC-085. Picker for an empty frame allowed only 1–2 photos (the bug's 3-photo step does not apply to this template)."
+  },
+  {
+    "bug": "PHA262026P0085",
+    "verdict": "HOLD",
+    "observed": "As Premium, Removal on the image tool bar opens the Gen AI Removal intro (「Edit As a Pro with Generative AI!」 › Try First) and then the Object Removal room with the frame's photo, credits 207 shown. The Free check could not be done: after switching to Free, Swipe Collage crashes every time it is opened (3 times), so no image tool bar could be reached as Free.",
+    "shots": ["c_p0085_premium_removal_room.png", "c_p0085_premium_room.png", "c_crash_dialog.png"],
+    "sideEffects": "Not checked beyond the Premium room opening.",
+    "other": "New crash: after the app was terminated with a Swipe Collage canvas open (needed to switch tier with the backdoor), tapping 「Try Swipe Collage!」 crashes the app every time: java.lang.ClassCastException: com.google.gson.internal.LinkedTreeMap cannot be cast to iw8 at SwipeCollageDraftUseCase$load$2.invokeSuspend (15:38:46, 15:39:30, 15:40:18; logs/c_swipe_collage_draft_crash.txt). The second crash showed Android's 「Clear cache for PhotoDirector?」 dialog; Cancel was tapped (no cache or data cleared). Swipe Collage stays unusable on this install until its draft is cleared."
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "feature": "phd/batch-editing",
+  "platform": "android",
+  "title": "Batch Editing",
+  "draft": "20261118-101500",
+  "created_at": "2026-11-18T02:11:10.435Z",
+  "based_on_version": 8,
+  "spec_folder": "specs/2026-11-09-figma",
+  "spec_files": [
+    {
+      "name": "Batch Editing - PM and Design Figma.md",
+      "sha256": "92e49a0d0cfdca50abf3f23d99c0aa1f3eee138f6e1de26281611fbd58528d36",
+      "bytes": 45876
+    }
+  ],
+  "spec_set_sha256": "51e224f33ef6da7f140daf45cc8e5431ced4395259607fd04f58dfd1da4fdc8b",
+  "note": "REQ-019/REQ-020: Android based on the PM and Design Figma (spec set 2026-11-09-figma); the PDF set 2026-11-09 is the older export, read for history only",
+  "previous_spec_folder": "specs/2026-11-09"
+}

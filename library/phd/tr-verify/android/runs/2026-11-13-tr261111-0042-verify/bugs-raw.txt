@@ -1,0 +1,444 @@
+==============================================================================
+PHA252025-0178  —  PHD-A 20.0.0 - AI_Face_Swap: The no face dialog pops up after tapping two photos and releasing one by one
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.0.0 / build 202503201318   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-03-24T16:55:33
+  TR         TR250320-034
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Face Swap
+3. Tap the [Custom] button
+4. Tap on two photos at once
+5. Release two photos one by one
+6. Check the dialog
+
+Result:
+The no face dialog pops up after tapping two photos and releasing one by one
+
+Expect Result:
+Should not pop up the dialog
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-11T10:52:57
+  Root cause: Old issue
+  Solution:   Take down this feature in the latest build.
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  ai face swap custom two photo.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1388179
+
+==============================================================================
+PHA252025-0179  —  PHD-A 20.0.0 - AI_Face_Swap: The loading cursor disappears after tapping two photos at once and releasing one by one
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.0.0 / build 202503201318   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 4   BugBelong RD
+  Creator    WILLY_WU   2025-03-24T17:02:34
+  TR         TR250320-034
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Face Swap
+3. Select a style
+4. Select a face
+5. Tap the [Import] button
+6. Tap a no face photo and a photo with face at once
+7. Release two photos one by one
+8. Check the loading cursor
+
+Result:
+The loading cursor disappears after tapping two photos at once and releasing one by one
+
+Expect Result:
+Should not disappear
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-11T10:52:16
+  Root cause: Old issue
+  Solution:   Take down this feature in the latest build.
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  ai face swap tap two photo at once 2.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1388181
+
+==============================================================================
+PHA252025-0185  —  PHD-A 20.0.0 - AI_Face_Swap: Sometimes dog faces / monkey faces are detected as target
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.0.0 / build 202503271720   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-03-28T18:09:09
+  TR         TR250327-088
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and launch PHD
+2. Enter AI face swap
+3. Select template /reference photo with dog face / monkey face
+
+Result:
+Sometimes dog faces / monkey faces are detected as target
+
+Expect Result:
+Filter out non-human face
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-11T10:50:41
+  Root cause: Face detect issue
+  Solution:   Take down this feature in the latest build.
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  ai face swap dog.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1389112
+  ai face swap monkey.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1389113
+
+==============================================================================
+PHA252025-0196  —  PHD-A 20.0.0 - [UX]AI_Face_Swap: The [Home] button is not sync to its function (APP is going back to Edit Room instead of Launcher)
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.0.0 / build 202503271720   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-04-09T10:58:38
+  TR         TR250402-086
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter Edit Room
+3. Enter AI Face Swap
+4. Tap the [Continue] button
+5. Check the [Home] button
+
+Result:
+The [Home] button is not sync to its function (APP is going back to Edit Room instead of Launcher)
+
+Expect Result:
+Should change the [Home] button to [Edit] button (sync to Style Transfer)
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-11T10:49:33
+  Root cause: Old UI issue
+  Solution:   Take down this feature in the latest build.
+  Changeset:  -
+  by JANE_LAI  2026-11-11T10:49:33
+  Root cause: Old UI issue
+  Solution:   Take down this feature in the latest build.
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  ai face swap home button.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1390327
+
+==============================================================================
+PHA252025-0230  —  PHD-A 20.1.0 - Image_to_Video: The APP hangs in loading cursor after paying with slow test card, closing the APP, re-entering Image to Video and purchasing again
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.1.0 / build 202504151903   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-04-16T17:22:56
+  TR         TR250415-058
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter Image to Video
+3. Generate a video using cash
+4. Select the slow test card
+5. Close the APP
+6. Re-launch the APP
+7. Enter Image to Video
+8. Generate another video using cash
+9. Select the slow test card
+10. Close the panel
+11. Check the APP
+
+Result:
+The APP hangs in loading cursor after paying with slow test card, closing the APP, re-entering Image to Video and purchasing again
+
+Expect Result:
+Should not hang
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-12T19:39:30
+  Root cause: Old issue
+  Solution:   Issue was gone in latest build
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  image to video cash slow test card.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1391955
+
+==============================================================================
+PHA252025-0328  —  PHD-A 20.2.0 - [UX]Image_to_Video: Settings are shown for "Inflate", "Squish", and "Dollify" but changing them has no effect
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.2.0 / build 202506021850   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-06-03T16:34:02
+  TR         TR250602-041
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter Image to Video
+3. Select "Inflate", "Squish" or "Dollify" as style
+4. Select a photo
+5. Check the style
+
+Result:
+Settings are shown for "Inflate", "Squish", and "Dollify" but changing them has no effect
+
+Expect Result:
+There should be no settings displayed for these styles
+
+Note:
+Device = Samsung S23 (13.0)
+
+<GPT Reviewed>
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-10T18:06:25
+  Root cause: Old SPEC issue
+  Solution:   Issue is gone due to related content was taken down.
+  Changeset:  - 
+
+==============================================================================
+PHA252025-0516  —  PHD-A 20.4.0 - [UX]AI_Videos: There is no [See all] button in AI Anime Video (user may not go back to pack page after generating a video)
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.4.0 / build 202507291939   fixed in 20.19.0.v202611111946
+  Severity   3   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-07-30T16:03:21
+  TR         TR250729-045
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Videos
+3. Tap the [AI Anime Video] button
+4. Check the bottom part
+
+Result:
+There is no [See all] button in AI Anime Video (user may not go back to pack page after generating a video)
+
+Expect Result:
+Should add a [See all] button
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-12T19:37:58
+  Root cause: Old UI issue
+  Solution:   Issue was gone in latest build
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  ai anime video no see all.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1414918
+
+==============================================================================
+PHA262026-0335  —  PHD-A 20.15.0 - [PLK]Launcher: The text size of shortcuts is too small
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.15.0 / build 202607221901   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-07-23T10:31:56
+  TR         TR260722-085
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Check the text size of shortcuts
+
+Result:
+The text size of shortcuts is too small
+
+Expect Result:
+Should enlarge the text size
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- RD resolution -----------------------------------------------------------
+  by SANDRA_HUANG  2026-09-03T18:51:17
+  Root cause: New request
+  Solution:   Update the translations by wrapping into 2 lines or shorten the translations
+  by JANE_LAI  2026-11-11T11:25:48
+  Root cause: New request
+  Solution:   Update the translations by wrapping into 2 lines or shorten the translations
+
+PMA updated related CMS settings
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  launcher shortcut text small PLK 1.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1484526
+  launcher shortcut text small PLK 2.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1484527
+
+==============================================================================
+PHA262026-0343  —  PHD-A 20.15.0 - AI_Edit_Agent: The response of AI Agent is filling the whole chat room
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.15.0 / build 202607221901   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-07-23T16:06:38
+  TR         TR260722-085
+  Reproduce  1/1   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Agent
+3. Import a photo
+4. Tap the "Transform into watercolor painting" option
+5. Check the response
+
+Result:
+The response of AI Agent is filling the whole chat room
+
+Expect Result:
+Should return the image
+
+Note:
+Device = LDplayer 14 emulator (14.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-12T11:47:27
+  Root cause: external issue
+  Solution:   do not reproduce this issue after updating model
+current model: gpt luna
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  video1.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1484689
+  U-2026-07-23.png  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1484698
+
+==============================================================================
+PHA262026-0350  —  PHD-A 20.15.0 - [AIFound]AI_Face_Swap: The resolution of the generated image is half of the original image
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.15.0 / build 202607241956   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 4   BugBelong RD
+  Creator    WILLY_WU   2026-07-28T14:28:42
+  TR         TR260728-011
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Face Swap
+3. Generate an image
+4. Save the image
+5. Check the resolution of the generated image
+
+Result:
+The resolution of the generated image is half of the original image
+
+Expect Result:
+The resolution should be the same
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-11T10:47:37
+  Root cause: Old issue
+  Solution:   Take down this feature in latest build
+  Changeset:  -
+
+==============================================================================
+PHA262026-0409  —  PHD-A 20.17.0 - [AIFound]AI_Background: Saved custom styles default to the name 'Custom', producing two adjacent tiles with the same label
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.17.0 / build 202609041838   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-09-16T11:50:57
+  TR         TR260904-087
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Open a photo
+3. Enter AI Background
+4. Tap the [Custom] button
+5. Type in prompt
+6. Generate an image
+7. Check the title of the generated custom style
+
+Result:
+Saved custom styles default to the name 'Custom', producing two adjacent tiles with the same label
+
+Expect Result:
+A saved custom style should get a distinguishing name - derived from the prompt, auto-numbered, or required from the user.
+
+Note:
+Device = Samsung S23 (16.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-10T18:10:50
+  Root cause: Old issue
+  Solution:   Move Cutom style to My Prompts in latest build
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  ai background custom style name.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1498096
+
+==============================================================================
+PHA262026P0014  —  PHD-A 20.18.0 - AI_Replace: The prompt is not affecting in the generate image
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.18
+  Version    20.18.0 / build 202610201919   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-10-21T10:49:42
+  TR         TR261020-0064
+  Reproduce  3/3   previous build: Unknown
+
+==============================================================================
+PHA262026P0036  —  PHD-A 20.18.0 - [UX]Image_to_Video: There are small triangles on the bottom of the sample photos
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.18
+  Version    20.18.0 / build 202610222025   fixed in 20.19.0.v202611111946
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-10-28T10:49:35
+  TR         TR261022-0084
+  Reproduce  3/3   previous build: Unknown
+

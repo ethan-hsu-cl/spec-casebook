@@ -1,0 +1,4 @@
+⚠ WARN  Batch-Edit-T38-08  Severity 1 is crash / data loss / flow-blocking only — confirm it clears that bar
+
+6 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.

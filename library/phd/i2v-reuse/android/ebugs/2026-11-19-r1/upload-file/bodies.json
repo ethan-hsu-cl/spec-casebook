@@ -1,0 +1,136 @@
+{
+  "I2V-Reuse-R1-01": {
+    "entry": 1,
+    "iss": "ISS-IR-01",
+    "title": "No 「Settings applied」 toast after Reuse",
+    "feature": "I2V-Reuse-R1",
+    "type": "Functional",
+    "sev": 3,
+    "belong": "RD",
+    "out": 4,
+    "times": 4,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: No 「Settings applied」 toast when Reuse opens the Custom page",
+    "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos\n3. Tap My Artwork\n4. Tap the All categories button\n5. Tap Image to Video\n6. Tap a finished Custom video made with Kling 2.6 (10s, Pro, Sound on)\n7. Tap Reuse\n8. Watch the Custom page for 8 seconds\n9. Check the result\n\nResult:\nThe Custom page opens with the video's settings and prompt, but the toast 「Settings applied」 never shows.\n摘要：Reuse 進入 Custom 頁設定已帶入，但沒有出現「Settings applied」toast。\n{20.19.0_ir01_reuse_room_no_toast.jpg} {20.19.0_ir01_recording_frames_no_toast.jpg} {20.19.0_ir01_start_end_room_no_toast.jpg} {20.19.0_ir01_log.txt}\n\nExpect Result:\nOn entering the Custom page the toast 「Settings applied」 shows (PM D1-04).\n摘要：進入 Custom 頁時應顯示 toast「Settings applied」。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6366-5664\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_ir01_reuse_room_no_toast.jpg",
+      "20.19.0_ir01_recording_frames_no_toast.jpg",
+      "20.19.0_ir01_start_end_room_no_toast.jpg",
+      "20.19.0_ir01_log.txt"
+    ],
+    "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/01_ISS-IR-01",
+    "qa_note": "R-025 / R-026 (PM Spec - UI, From Save & Share Reuse D1-04 / D1-04b: entering the reused Custom page shows the toast 「Settings applied」). Reuse fills the room correctly (model, Start/End, prompt, empty photo; TC-010 / TC-013 / TC-012 Pass), but no toast: screenshots at ~0.6 s and ~2.6 s, a 9 s recording at 2 fps (TC-010), an 8 s recording (TC-015) and waitfor 「Settings applied」 7 s (TC-010, TC-013) found none. Seen on video A (Kling 2.6) and video C (Kling 3.0, Start/End). Blocks TC-016 (toast over a panel) and TC-046. The PM drew the toast only; no Design frame for it (PM-only).",
+    "ux": false,
+    "basis": "",
+    "ux_check": "—"
+  },
+  "I2V-Reuse-R1-02": {
+    "entry": 2,
+    "iss": "ISS-IR-02",
+    "title": "Reuse skips the Image to Video explanation sheet",
+    "feature": "I2V-Reuse-R1",
+    "type": "Functional",
+    "sev": 4,
+    "belong": "RD",
+    "out": 2,
+    "times": 2,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: Reuse opens Custom without the Image to Video explanation sheet shown elsewhere",
+    "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Videos\n3. Tap Image to Video\n4. Check the explanation sheet shows\n5. Tap the device Back button\n6. Tap AI Photos\n7. Tap My Artwork\n8. Tap the All categories button\n9. Tap Image to Video\n10. Tap a finished Custom video made with Kling 2.6\n11. Tap Reuse\n12. Check the result\n\nResult:\nFrom AI Videos the 「Image To Video」 explanation sheet shows; from 「Reuse」 the Custom page opens directly with no sheet.\n摘要：從 AI Videos 進入會出現說明頁，但從 Reuse 進入直接到 Custom 頁，沒有說明頁。\n{20.19.0_ir02_ai_videos_entry_sheet.jpg} {20.19.0_ir02_reuse_no_sheet.jpg}\n\nExpect Result:\nWhen Image to Video would show its explanation sheet, Reuse shows it first as today, then the Custom page (PM D1-04b).\n摘要：說明頁應照常先出現，關閉後才進入 Custom 頁。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04b explanation sheet first) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6366-5664\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_ir02_ai_videos_entry_sheet.jpg",
+      "20.19.0_ir02_reuse_no_sheet.jpg"
+    ],
+    "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/02_ISS-IR-02",
+    "qa_note": "R-026 (PM Spec - UI D1-04b: when Image to Video would show its Android explanation sheet, it shows first as today, then the toast). 「Don't show again」 was never tapped: entering Image to Video from AI Videos (14:14) and from a fresh My AI Artwork 「Create More」 (TC-028) still shows the 「Image To Video」 intro (Try now / Don't show again) and the 「Steps」 page, but 「Reuse」 opens the Custom page directly, every time (R1-a, R1-b, R1-c). TC-046 (Back on that sheet) is Blocked behind it.",
+    "ux": false,
+    "basis": "",
+    "ux_check": "—"
+  },
+  "I2V-Reuse-R1-03": {
+    "entry": 3,
+    "iss": "ISS-IR-03",
+    "title": "‹ and system Back in the reused room skip the Save & Share page",
+    "feature": "I2V-Reuse-R1",
+    "type": "Functional",
+    "sev": 3,
+    "belong": "RD",
+    "out": 3,
+    "times": 3,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: ‹ / Back in the room opened by Reuse go to My AI Artwork, not Save & Share",
+    "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos\n3. Tap My Artwork\n4. Tap the All categories button\n5. Tap Image to Video\n6. Tap a finished Custom video made with Kling 2.6 (10s, Pro, Sound on)\n7. Tap Reuse\n8. Tap ‹ at the top left\n9. Tap the same video\n10. Tap Reuse\n11. Tap the device Back button\n12. Check the result\n\nResult:\nBoth ‹ and system Back return to the My AI Artwork Image to Video list; the video's Save & Share page is skipped.\n摘要：Reuse 房間按 ‹ 或返回鍵都回到 My AI Artwork 列表，未回到 Save & Share 頁。\n{20.19.0_ir03_back_arrow_to_artwork.jpg} {20.19.0_ir03_system_back_to_artwork.jpg}\n\nExpect Result:\n‹ (and system Back) in the reused room return to the video's Save & Share page (PM D1-05).\n摘要：應回到該影片的 Save & Share 頁。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-05 ‹ Back returns to Save & Share) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6366-5664\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_ir03_back_arrow_to_artwork.jpg",
+      "20.19.0_ir03_system_back_to_artwork.jpg"
+    ],
+    "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/03_ISS-IR-03",
+    "qa_note": "R-033 (PM Spec - UI From Save & Share Reuse D1-05: ‹ Back in the reused room returns to the Save & Share page) and R-058 / R-064 (system Back acts as ‹). Both ‹ (top_back_btn) and system Back land on My AI Artwork › Image to Video (the list), never on the video's Save & Share page. First seen as O-3 (R1-a), then TC-020 / TC-043 (R1-b).",
+    "ux": false,
+    "basis": "",
+    "ux_check": "—"
+  },
+  "I2V-Reuse-R1-07": {
+    "entry": 7,
+    "iss": "ISS-IR-07",
+    "title": "Reuse sends Artwork_Reuse_Click without model, not ImageToVideo_Reuse_Click",
+    "feature": "I2V-Reuse-R1",
+    "type": "Functional",
+    "sev": 3,
+    "belong": "RD",
+    "out": 3,
+    "times": 3,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: Tracking: Reuse logs Artwork_Reuse_Click without model, not ImageToVideo_Reuse_Click",
+    "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos\n3. Tap My Artwork\n4. Tap the All categories button\n5. Tap Image to Video\n6. Tap a finished Custom video made with Kling 2.6 (10s, Pro, Sound on)\n7. Tap Reuse\n8. Pull the app's logcat\n9. Find the Mixpanel event logged at the Reuse tap\n10. Check the result\n\nResult:\nThe Reuse tap logs 「logEvent name=Artwork_Reuse_Click」 with no parameters.\n摘要：點 Reuse 送出的事件為 Artwork_Reuse_Click，且沒有 model 參數。\n{20.19.0_ir07_reuse_room.jpg} {20.19.0_ir07_log.txt}\n\nExpect Result:\nImageToVideo_Reuse_Click is sent with parameter model = the video's model value (PM D4-05).\n摘要：應送出 ImageToVideo_Reuse_Click 並帶 model 參數。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), 【Tracking Event】 board (D4-05 ImageToVideo_Reuse_Click, parameter model) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6394-586\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_ir07_reuse_room.jpg",
+      "20.19.0_ir07_log.txt"
+    ],
+    "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/07_ISS-IR-07",
+    "qa_note": "R-051 (PM 【Tracking Event】 D4-05: new event ImageToVideo_Reuse_Click with parameter model). Observed in the app's logcat Mixpanel lines (Q-8: a log pull): each 「Reuse」 tap logs 「logEvent name=Artwork_Reuse_Click」 (the form used for events without parameters; events with parameters print JSON) and 「[setCurFrom] from = artwork_reuse」. Three taps, 14:29:36, 14:32:52, 14:36:21. Generate after Reuse sends ImageToVideo_Result_Generate with from = artwork_reuse (TC-038 / TC-039 Pass) and Create more from = Artwork (TC-040 Pass).",
+    "ux": false,
+    "basis": "",
+    "ux_check": "—"
+  },
+  "I2V-Reuse-R1-09": {
+    "entry": 9,
+    "iss": "ISS-IR-09",
+    "title": "Reuse transition draws the room rotated for a moment",
+    "feature": "I2V-Reuse-R1",
+    "type": "UI",
+    "sev": 4,
+    "belong": "RD",
+    "out": 3,
+    "times": 3,
+    "short": "PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Reuse: Custom room flashes rotated (landscape) before settling portrait",
+    "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos\n3. Tap My Artwork\n4. Tap the All categories button\n5. Tap Image to Video\n6. Tap a finished Custom video made with Kling 2.6 (10s, Pro, Sound on)\n7. Tap Reuse\n8. Watch the transition into the Custom page\n9. Check the result\n\nResult:\nFor one or two frames the Custom room is drawn rotated (landscape) before it shows portrait.\n摘要：Reuse 轉場時房間短暫以橫向（旋轉）畫面出現。\n{20.19.0_ir09_rotated_frames.jpg} {20.19.0_ir09_rotated_frames_again.jpg}\n\nExpect Result:\nThe Custom room opens in portrait without a rotated frame.\n摘要：應直接以直向開啟，不閃現旋轉畫面。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6366-5664\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_ir09_rotated_frames.jpg",
+      "20.19.0_ir09_rotated_frames_again.jpg"
+    ],
+    "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/09_ISS-IR-09",
+    "qa_note": "Observation O-2 (TC-010, again TC-015). The 9 s screen recording of 「Reuse」 shows the Custom room drawn rotated 90° (landscape layout) for one or two frames before it settles portrait (frames 3–4 of the grid). Phone in portrait, auto-rotate unchanged.",
+    "ux": false,
+    "basis": "",
+    "ux_check": "—"
+  },
+  "I2V-Reuse-R1-10": {
+    "entry": 10,
+    "iss": "ISS-IR-10",
+    "title": "PM: first tap in a reused prompt selects the whole prompt",
+    "feature": "I2V-Reuse-R1",
+    "type": "UX",
+    "sev": 4,
+    "belong": "PM",
+    "out": 2,
+    "times": 2,
+    "short": "PHD-A 20.19.0 - [AIAgent][UX] Image_to_Video: Reused room: first tap selects the whole prompt (one key erases it) — PM to decide",
+    "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos\n3. Tap My Artwork\n4. Tap the All categories button\n5. Tap Image to Video\n6. Tap a finished Custom video made with Kling 2.6 (10s, Pro, Sound on)\n7. Tap Reuse\n8. Tap inside the prompt box\n9. Check the result\n\nResult:\nThe whole reused prompt is highlighted; the next key press replaces it.\n摘要：第一次點擊提示詞欄位會全選整段文字，再按一鍵即全部被取代。\n{20.19.0_ir10_prompt_all_selected.jpg} {20.19.0_ir10_prompt_all_selected_2.jpg}\n\nExpect Result:\nPM to decide: the tap places the cursor (keeping the prompt) or selects all on purpose.\n摘要：請 PM 決定第一次點擊應放置游標或刻意全選。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6366-5664\nBasis: None — neither the PM spec nor the Design states how the first tap treats the reused prompt; PM to decide\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_ir10_prompt_all_selected.jpg",
+      "20.19.0_ir10_prompt_all_selected_2.jpg"
+    ],
+    "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/10_ISS-IR-10",
+    "qa_note": "Observation O-5 (TC-045, TC-032). The first tap into the prompt box of a room opened by Reuse highlights the whole reused prompt; a Backspace or a typed letter then replaces all of it. The spec says nothing about the selection; R-022 brings the prompt back for editing. Filed to PM to decide (UX decision rule 2026-11-11).",
+    "ux": true,
+    "basis": "None — neither the PM spec nor the Design states how the first tap treats the reused prompt; PM to decide",
+    "ux_check": "confirmed"
+  }
+}

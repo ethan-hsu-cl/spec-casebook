@@ -1,0 +1,49 @@
+# Run state — R3 Full run of v4 on the Pixel 8a (build 20.19.0 / 90201901)
+
+Table: library/phd/ai-hair-color-custom/android/cases.csv
+Started: 2026-11-20T02:06:02.768Z
+
+## Environment
+(build, server, device, tier, credit balance, Pink toggles, Log stage timings, Write Log)
+- R3-a start 2026-11-20 10:08: Google Pixel 8a (adb 42201JEKB02229, CASEBOOK_SERIAL set; the S23 RFCW2198L7B also attached, not driven), Android 16, 1080 × 2400.
+- Build: com.cyberlink.photodirector versionName 20.19.0 / versionCode 90201901 (firstInstallTime 2026-11-18 14:53:09, lastUpdateTime 2026-11-19 10:58:06, sideloaded).
+- Server: Test Server (Launcher debug line 「NetworkManager Test Server」).
+- Tier: Free (Mine 「Upgrade to Premium!」).
+- Credits: 0 (Mine › My Credits 0 at 10:09; log getMemberCreditRemain totalRemain=0, usage history empty, creditSystemUUID 32a51ece-…; KP-136: this phone's Production balance does not carry to Test Server). R3-d / R3-e generations need ≈130 credits.
+- No Pink / Log stage timings / Write Log on PhotoDirector Android; logs from logcat capture (`logcat start`).
+- Mine opened a 「Check Backup Protection」 dialog on first visit (dismissed with 「Later」).
+
+## Checkpoints
+
+### 2026-11-20T02:12:35.674Z · next TC-005 (R3-b)
+{"Fail":1,"Pass":6,"Not run":75,"Blocked":5}
+
+R3-a done: 6 Pass (TC-090/003/002/092/004/093), 1 Fail defect (TC-001: Intro Demo shows on this phone, text matches but button reads 「Try now」 not 「Try Now」; Launcher still has no 「AI Magic」/「Hair Color」 card, entry = AI Photos › 「AI Hair Color」). First time the Intro Demo showed (R1/R2 never saw it). Build 20.19.0 / 90201901, Test Server, Free (Mine 「Upgrade to Premium!」), credits 0 (Mine 10:09, log totalRemain=0) — R3-d/R3-e generations (≈130 credits) cannot run unless credits are added; the agent never buys. One-way states now set on this install: Intro Demo 「Don’t show again」 ticked (TC-004) and photo guide 「Don’t show again」 ticked (TC-093): AI Hair Color opens the picker directly (first tab 「All ⌄」, Stock). Recipes: open-hair-color.steps works by labels on the Pixel (tapif Continue harmless); pick-portrait.steps' coordinate tap (884,913) and pick-pexels-portrait.steps' taps are S23 pixels and the picker album here is 「All」, not checked yet (fix by screenshot in R3-b). Phone on the Launcher AI Photos tab. Logs pulled R3-a-20261120-101210, sliced (no charge, 0 toasts; TC-001's fail lines are launch noise). logcat live capture running. Appium servers: 1 (4724).
+
+### 2026-11-20T02:23:41.103Z · next TC-017 (R3-c)
+{"Fail":4,"Pass":13,"Blocked":8,"Not run":62}
+
+R3-b done: 7 Pass (TC-008/009/010/011/013/014/016), 3 Fail defect (TC-005, TC-012, TC-015: no slanted-face warning on hc_tilted30 / hc_tilted45 / cropped 21:9, PHA262026P0110 still not fixed on 90201901; log 10:15:30 doClairFaceDetect2 faceNum 1, no warning), 3 Blocked defect upstream TC-005 (TC-006/087/007). TC-009 / TC-013 pass on the v4 wording rule ('A face', KF-006). Build 20.19.0 / 90201901, Test Server, Free, credits 0 (log 10:17 totalRemain=0; colour page shows Generate | 6, no free trial). Recipes: new back-to-picker.steps (colour page > X > Edit Room > Back (general picker) > Back (Launcher) > AI Hair Color) and pick-haircolor.steps (HairColor grid cells in Pixel pixels: cols 194/539/884, rows 574/920/1266/1612; alphabetical; hc_portrait_4x5 = 539 920). Album list items are not in the page source: open with the album tab label, fingerdrag 540 2000 540 600 twice to the bottom, then fingerdrag 540 700 540 1700 puts HairColor at 414,476. The picker keeps the last album (now HairColor). pick-portrait.steps (S23 884 913) and pick-pexels-portrait*.steps still hold S23 pixels: R3-c should use open AI Hair Color + pick-haircolor.steps 539 920; Pexels taps not yet fixed (R3-d). Phone on the Launcher. Logs pulled R3-b-20261120-102320, sliced (no charge, 0 toasts). logcat live capture running. Appium servers: 1 (4724).
+
+### 2026-11-20 10:26 · Credit purchase (not a case result; REQ-011)
+Pixel 8a, Test Server, Free. My Credits shop (screenshots/credit-shop-1.png, credit-shop-2000.png): selected the 2000 pack, 「Get 2000 Credits for NT$6720」. Google Play sheet: 「2000 Credits NT$6,720.00」, payment 「Test card, always approves」, 「This is a test order, you will not be charged.」 (play-sheet-2000.png) → 1-tap buy. Play then offered 「Want to get 1000 credits, too?」 (NT$2,010.00): declined with 「Not now」. Log: one order GPA.3335-2572-8983-85359, productId phd_2000_credit_freeuser, verified; totalRemain=2000. Launcher chip 2000 (credit-after-buy3.png). Phone left on the Launcher.
+
+### 2026-11-20T02:37:34.098Z · next TC-045 (R3-d)
+{"Fail":12,"Pass":32,"Blocked":8,"Not run":35}
+
+R3-c done: 27 cases, 18 Pass, 9 Fail (7 defect: TC-024/029 Solid greys the Highlight row instead of hiding it (REQ-009, new vs R2), TC-038/041/042 Custom cell never shows the chosen colours (PHA262026P0115 still), TC-039 tap outside applies and closes (REQ-004, ISS-HCC-09); 2 question: TC-017 first template Soft Black not Platinum, TC-022 split-dye photo thumbnails). Fixed vs R2: TC-032 picked colour now added as a ringed circle after the wheel. Panel differs from R2 on the same build (O-1): rows disabled before a style, no ⌄ key, no hint line. Build 20.19.0 / 90201901, Test Server, Free (Mine 「Upgrade to Premium!」 10:36), credits 2000 (chip and Mine 10:36; nothing charged in R3-c, log no credit lines). Nothing generated. Phone on the Launcher Mine tab. Picker album kept = HairColor. Recipes unchanged (pick-haircolor 539 920 and back-to-picker work); collapse = fingerdrag 540 1215 540 2150 15 (no ⌄). Logs pulled R3-c-20261120-103708, sliced (0 toasts, 0 charges; TC-017 window's fail lines are the 10:24–10:26 purchase verify / cache noise). logcat live capture running. Appium servers: 1 (4724).
+
+### 2026-11-20T03:00:56.269Z · next TC-062 (R3-e)
+{"Fail":18,"Pass":44,"Blocked":10,"Not run":15}
+
+R3-d done: 20 cases, 12 Pass (TC-050/048/053/049/054/055/056/051/089/079/088/052), 6 Fail (5 defect: TC-045/046/040 no 'Applying your new hair color...' or staged text, scan bar only, P0116 open; TC-047 panel collapses on Generate; TC-057 no one-time 100% dialog, P0118 open; 1 question: TC-078 Soft Black template wait 34.4 / 36.0 s, not ~15 s, O-3), 2 Blocked observability (TC-036/037: no request body in logcat; blue result OK). v4: TC-079 / TC-088 'Discard changes?' shows before leaving (Q-22 recorded), Discard lands in the Edit Room with the original photo, result kept in My AI Artwork. Kept fixed vs R1: P0117 (Intensity row), P0119 (Custom result + Intensity 50 back after a template), P0115 generation part. TC-089 Back ignored while generating; TC-052 force-stop keeps the 6 credits, no result recalled. Build 20.19.0 / 90201901, Test Server, Free (Mine 'Upgrade to Premium!'), credits 2000 -> 1946 (Mine 10:59; server history 1 pack + 9 consumes): 9 generations x 6 = 54 (7 Custom, 2 Soft Black). Recipes fixed for the Pixel 8a: pick-pexels-portrait.steps (Pexels tab 787 462, field 540 605) and pick-pexels-portrait-2.steps (hat portrait 804 1038, top of the right column); both tested 4x. Picker album kept = HairColor. Phone on the Launcher (Home). Logs pulled R3-d-20261120-110034, sliced (fail lines are DB/cache and Artwork job-cancel noise; 0 toasts). logcat live capture running (logcat-20261120-103708). Appium servers: 1 (4724). Next R3-e TC-062: Premium via KP-131.
+
+### 2026-11-20T03:24:24.800Z · next TC-069 (R3-f)
+{"Fail":18,"Pass":55,"Blocked":10,"Not run":4}
+
+R3-e done: 11 cases, 11 Pass (TC-062 Ombre, TC-063 Solid red, TC-061 Balayage, TC-060 Babylights, TC-058 Face framing, TC-059 Bangs, TC-064 Dip-dye, TC-065 Roots, TC-066 Earloop, TC-067 Half-and-half = left/right, TC-068 Split-dye = top/bottom). Tier: Premium via KP-131 ('Set to subscriber' ON 11:02, relaunch, Mine 'Hello VIP!'; no crowns on the Custom styles while VIP; price stays 6) — LEFT ON for R3-f to switch OFF. Pexels hat portrait (pick-pexels-portrait*.steps worked unchanged). Base dark brown swatch; Highlight copper swatch (Ombre, Balayage), palette vivid blue hue 63 (the rest); Solid base palette hue 0 red. Credits 1946 -> 1874 (Mine 11:23; log totalRemain=1874; server history 22 records = 1 pack + 21 consumes): 12 generations x 6 = 72, one of them an extra Bangs regeneration from a script mis-step (O-6). Waits 45.0-69.2 s; every Custom generation logs style 'Style_010_Custom_HairColor_gpt-image-2.5-sunburst' (O-7). Exit from the result: X shows 'Discard changes?' (Q-22), Discard -> Edit Room -> Back x2 -> Launcher. Phone on the Launcher Mine tab, Test Server. Picker album kept = HairColor. Logs pulled R3-e-20261120-112407, sliced (TC-062's 132 fail lines are the 11:03:45 relaunch model-parse noise; 0 toasts; 12 AIHairColor_Generate_Status succeed). logcat live capture running. Appium servers: 1 (4724). Next R3-f TC-069: turn 'Set to subscriber' OFF first (KP-131).
+
+### 2026-11-20T03:30:15.736Z · all recorded
+{"Fail":18,"Pass":56,"Blocked":13}
+
+R3-f done: 4 cases, 1 Pass (TC-069: Free, Balayage (crown) + two colours, Generate opens the PhotoDirector Premium paywall, log 11:28:11 Monetize_Subscription_Appear iap_trigger_by 'Paid style applied', no generation, chip/server 1874 unchanged), 3 Blocked test-data (TC-073 / TC-070 / TC-071: balance 1874, not under 6; no credit reset without the user). Tier: 'Set to subscriber' turned OFF 11:25 (screenshots/r3f_subscriber_off.png), relaunch, Mine 'Upgrade to Premium!' (r3f_mine_free.png) = Free; Test server still ON (Launcher 'Test Server'). Credits 1874 (Mine 11:25, log totalRemain 1874 at 11:29:48, history 22 records), nothing charged in R3-f. Build 20.19.0 / 90201901. Crowns while Free: Balayage, Face framing (as TC-022). Phone on the Launcher. Picker album kept = HairColor. Logs pulled R3-f-20261120-113001, sliced (TC-069's 159 fail lines are the 11:27:33 relaunch model-parse noise; 0 toasts). logcat live capture running. Run at 0 Not run; next: phase wrap-up.

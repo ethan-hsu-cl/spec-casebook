@@ -1,0 +1,47 @@
+{
+  "Q-1": {
+    "question": "Picker bottom copy: the Design draws 「Select 1 to 20 photos to continue. (10/20)」 and 「Next」 (the light frame without the space before 「(10/20)」 and with 「Next」 grey although 10 photos are selected); the PM boards still draw 「Select 1 to 20 photos.」 / 「3 selected (max 20)」 and 「Done」. Assumption: the Design copy, 「Next」 enabled once a photo is selected. (R-015, TC-005, TC-007)",
+    "answer": "next只要有選就會亮",
+    "by": "user",
+    "at": "2026-11-18T02:45:24.777Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-021: R-015; TC-005 modified (Next grey until a photo is selected), TC-007 unchanged"
+  },
+  "Q-3": {
+    "question": "Where does the Setting button in Batch Edit Room's top bar lead (Edit Room settings, save quality)? (R-039)",
+    "answer": "就跟一般Edit room的setting一樣",
+    "by": "user",
+    "at": "2026-11-18T02:45:24.777Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-021: R-039; TC-025 modified (Edit Room Setting page)"
+  },
+  "Q-4": {
+    "question": "The compare button on the photo is drawn but not described: same as Edit Room (hold to see the original)? (R-039)",
+    "answer": "對 按住就顯示原圖",
+    "by": "user",
+    "at": "2026-11-18T02:45:24.777Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-021: R-039; TC-026 modified (Notes: confirmed)"
+  },
+  "Q-5": {
+    "question": "DR-07 says the crop box defaults to centred on each photo, while Section 3 「✅ 結論」 places other photos' boxes at the source's relative position. Rows follow Section 3 (more specific, marked 結論); confirm. (R-061, R-073)",
+    "answer": "照結論",
+    "by": "user",
+    "at": "2026-11-18T02:48:37.280Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-021: R-061 (DR-07 centred superseded); TC-047, TC-051, TC-052, TC-053 unchanged (already followed 結論)"
+  },
+  "Q-13": {
+    "question": "What happens to the selected photos when the user deselects one on the Batch tab, by tapping the tile or the tray ✕ (do the numbers renumber?), is 「Next」 disabled with none selected, and what does a tile's expand icon open? Spec silent; rows record it. Assumption: the numbers close up. (R-019, R-233, TC-009, TC-010, TC-150, TC-151)",
+    "answer": "數字會照順序往前, next沒選照片時顯示灰色, 上面expand會打開相簿選擇畫面",
+    "by": "user",
+    "at": "2026-11-18T02:49:29.486Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-021: R-015, R-019, R-233; TC-009, TC-010, TC-150, TC-151 modified"
+  }
+}

@@ -1,0 +1,324 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,Room,Fresh launch of the build under test,Open the Effects menu and read the room button,The button is labelled 「Reel Creator」 (no longer 「Cinematic Reel Creator」),P2,R-002,,unchanged,
+TC-002,Room,Launcher open,Read the Launcher Shortcut for the room,The shortcut is labelled 「Reel Creator」,P2,R-003,,unchanged,
+TC-003,Room,Launcher open,Scroll to the Launcher Template row of the room and read its title,The row is titled 「Reel Creator」,P2,R-004,,unchanged,
+TC-004,Room,AI Video page open,Read the room entry on the AI Video page,The entry is labelled 「Reel Creator」,P2,R-005,,unchanged,
+TC-128,Room,"1. Launcher open
+2. The intro page not yet dismissed with 「Don’t show again」 (first entry on this install, or the box never ticked)",Tap the 「Reel Creator」 Launcher Shortcut,"The Reel Creator intro page shows
+A demo video plays at the top
+Title 「Reel Creator」
+Text 「Turn photos into post-worthy videos with trendy transitions, cinematic styles, and creative effects!」
+Button 「Try Now」
+「Don’t show again」 unticked
+「‹」 at the top left",P1,R-118,PM Figma 「Tutorial」 + 【Demo video 調整】 文案同左 (not in the PDF). When the page shows is not stated (Q-24). Design file not readable (Q-23): wording from the PM mockup.,new,PM Figma catch-up (REQ-009)
+TC-129,Room,"1. Reel Creator intro page shown
+2. 「Don’t show again」 not ticked","1. Tap 「Try Now」
+2. Tap 「‹」 to leave the room
+3. Open the room again from the Launcher Shortcut","Step 1: the intro closes and the room shows
+Step 3: the intro page shows again",P2,"R-119, R-121","Assumption: unticked = shown on every entry, as the old Cinematic Reel Creator intro (Q-24).",new,PM Figma catch-up (REQ-009)
+TC-130,Room,Reel Creator intro page shown,"1. Tap 「Don’t show again」
+2. Tap 「Try Now」
+3. Leave the room and open it again
+4. Force-stop the app, launch it and open the room once more","Step 1: the box shows ticked
+Step 2: the room shows
+Step 3: no intro page
+Step 4: no intro page",P1,"R-119, R-120",Run before the other Room rows on a state where the intro still shows; once ticked it cannot be brought back without clearing app data.,new,PM Figma catch-up (REQ-009)
+TC-131,Room,Reel Creator intro page shown (opened from the Launcher Shortcut),Tap 「‹」 on the intro page,"Leaves to the Launcher (the page the room was opened from)
+The room is not shown",P3,R-122,No arrow drawn (Q-8): record where it goes.,new,PM Figma catch-up (REQ-009)
+TC-132,Room,Reel Creator intro page shown,Press the Android system Back,"Same as 「‹」 on the intro page (TC-131), or recorded",P3,"R-089, R-122",System Back is an exit of every page (REQ-051).,new,PM Figma catch-up (REQ-009)
+TC-005,Room,"1. Launcher open
+2. The Reel Creator intro page already dismissed with 「Don’t show again」 (TC-130)",Tap the 「Reel Creator」 Launcher Shortcut,"The room opens titled 「Reel Creator」
+Top bar shows 「‹」, the credit pill (balance and 「+」) and a history icon",P1,"R-001, R-008",,modified,PM Figma catch-up (REQ-009): the intro page (R-118) shows on room entry until 「Don’t show again」
+TC-006,Room,Reel Creator room open,Scroll the room from top to bottom and read the section headers,"No tabs
+One page of sections including 「Cinematic Styles 🎬」, 「Year-End Recap 📅」, 「Christmas Time 🎄」 and 「Cool Transitions 🤳🏻」, the three features mixed",P1,"R-006, R-009",Section order is pending (Q-1): record the order shown.,unchanged,
+TC-007,Room,Reel Creator room open,Swipe each section's row of cards left and right,Each section scrolls horizontally through its own template cards,P2,R-007,,unchanged,
+TC-008,Room,"1. Reel Creator room open
+2. Note the account's credit balance","1. Read the blue credit button at the top right
+2. Tap it","The button shows the account's current balance and a 「+」
+Tapping it opens the Buy Credit page",P2,R-008,"Domain K75 (user, 2026-11-03). The same button is on the Preview and the confirm page.",unchanged,
+TC-112,Room,Reel Creator room open,Tap the History button (a sheet of paper with a clock) at the top right,My AI Artwork opens with the 「Reel Creator」 tab selected,P2,R-101,"Domain K76 (user, 2026-11-03).",unchanged,
+TC-009,Room,Reel Creator room open,Tap 「‹」,Leaves the room to the page it was opened from,P3,R-089,,unchanged,
+TC-113,Room,Launcher open,"1. Open the room from each entry in turn: Effects button, Launcher Shortcut, Launcher Template row, AI Video page, My AI Artwork 「Create More」
+2. After each, tap 「‹」","Every entry opens the Reel Creator room
+Each 「‹」 returns to the page that entry was on",P2,R-108,Domain K01: every entry is its own path.,modified,One step per line (team rule 2026-11-03); wording unchanged
+TC-010,Entry from Edit Room,"Edit Room open with a photo, an edit applied",Tap the Reel Creator entry in the Edit Room,A dialog (as Image to Video) asks whether to jump to Reel Creator,P1,R-010,Dialog copy not drawn (Q-13): note it.,unchanged,
+TC-011,Entry from Edit Room,Jump dialog shown from the Edit Room,Choose the cancel option,"The dialog closes
+The Edit Room stays with the photo and its edit",P2,R-011,,unchanged,
+TC-012,Entry from Edit Room,"1. Jump dialog shown from the Edit Room
+2. Note the photo count in the Gallery",Confirm the jump,"The Reel Creator room opens
+The photo was saved to the Gallery automatically, with the Edit Room edit applied (not the original file)",P1,"R-010, R-012, R-109",Domain K02 (PHA262026-0382: the original photo was used instead of the edited one).,unchanged,
+TC-013,Entry from Edit Room,Reel Creator room opened from the Edit Room,"1. Open a Cinematic Styles template, tap 「Use Template」
+2. Do the same with a Creative template","Neither picker has the Edit Room photo preselected (0 picked)
+The room opened without carrying the photo",P1,R-012,Today CineStory carries the photo in; the new spec does not. Domain K02 (edited image carried in) no longer applies: the spec wins.,modified,One step per line (team rule 2026-11-03); wording unchanged
+TC-014,Deeplink,"1. PhotoDirector closed
+2. Old Cinematic Reel Creator deeplink without parameters",Open the deeplink (adb `am start -a android.intent.action.VIEW -d <link>`),The Reel Creator room opens,P2,"R-013, R-014",needs: deeplink URLs from RD (Q-15).,unchanged,
+TC-114,Deeplink,"1. PhotoDirector already running on another page (e.g. Edit Room)
+2. Deeplink with template = a Creative content GUID",Open the deeplink,"The same Preview opens as from a cold start
+No crash, the template list is loaded",P2,"R-110, R-015","needs: deeplink URLs from RD (Q-15). Domain K05 (cold vs warm start, data not loaded yet).",unchanged,
+TC-015,Deeplink,Deeplink with template = the content GUID of a Creative template,Open the deeplink,"That template's Preview opens directly
+No photo is selected",P2,"R-015, R-017","needs: deeplink URLs from RD (Q-15). Domain K04: the linked template itself, not the category's first.",unchanged,
+TC-016,Deeplink,Deeplink with template = the content GUID of an AI Transition template,Open the deeplink,That template's Preview opens directly,P2,"R-015, R-017",needs: deeplink URLs from RD (Q-15).,unchanged,
+TC-017,Deeplink,Deeplink with template = a CineStory (Cinematic Styles) GUID,Open the deeplink,"That Cinematic template's Preview opens directly
+No photo is selected",P2,"R-015, R-016",needs: deeplink URLs from RD (Q-15).,unchanged,
+TC-018,Deeplink,Deeplink with template = a GUID that does not exist,Open the deeplink,The Reel Creator room opens (no error page),P2,R-018,needs: deeplink URLs from RD (Q-15).,unchanged,
+TC-019,Deeplink,Deeplink with only a category parameter,Open the deeplink,"The Reel Creator room opens
+The category parameter is ignored",P3,R-019,needs: deeplink URLs from RD (Q-15).,unchanged,
+TC-020,Deeplink,Preview opened by a template GUID deeplink,Tap 「‹」,Record where it goes (expected: the Reel Creator room),P3,"R-015, R-035","Spec silent (Q-8, Q-15).",unchanged,
+TC-021,Preview,First time the room is entered on this install (clear app data or new account state),Open the room and tap a Year-End Recap template,A finger animation guides swiping up / down,P2,R-033,"Needs a first-entry state; run before any other Preview row. Domain K05: first entry, cold start and later entry are separate onboarding states.",unchanged,
+TC-022,Preview,The swipe guide was already shown once,"Leave the room, enter again and open a template",The finger animation is not shown again,P3,R-033,,unchanged,
+TC-023,Preview,Reel Creator room open,Tap the 「Top 5 of My Year」 card,A full-screen 9:16 demo plays automatically and loops when it ends,P1,R-026,,unchanged,
+TC-024,Preview,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)",Read the screen,"「View photo tips」 top left
+A mute button on the right
+At the bottom the name 「Top 5 of My Year」, the description 「Rank your year's best moments in one reel」, 「5–15 photos」 and 「Use Template」
+Text over a darkened bottom of the demo",P2,"R-029, R-031, R-032, R-020",,unchanged,
+TC-025,Preview,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)","1. Tap the mute button
+2. Tap it again","The demo's sound goes off, then back on
+The icon follows",P2,R-030,,unchanged,
+TC-115,Preview,"1. Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)
+2. Demo muted","1. Swipe up to the next template
+2. Swipe down again",The demo stays muted on every template,P3,R-111,Domain K52 (mute state survives template switches); the spec does not say.,unchanged,
+TC-026,Preview,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)","1. Swipe up
+2. Swipe down","Up shows the next template of the same category (Year-End Recap) with its own demo, name and count
+Down returns",P1,R-027,,unchanged,
+TC-027,Preview,Preview of the last template of Year-End Recap,Swipe up,"The first template of Year-End Recap appears (endless loop, no other category)",P2,R-028,,unchanged,
+TC-028,Preview,Preview of the first template of Year-End Recap,Swipe down,The last template of Year-End Recap appears (endless loop),P2,R-028,,unchanged,
+TC-029,Preview,Preview of a Cool Transitions template,Swipe up through every template until one repeats,"Only Cool Transitions templates appear
+The list loops",P3,R-028,,unchanged,
+TC-030,Preview,Preview of a Cinematic Styles template,Read the count line,The count reads 「1 photo」,P3,R-031,,unchanged,
+TC-031,Preview,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)",Tap 「‹」,Returns to the Reel Creator room,P2,R-035,No arrow drawn (Q-8).,unchanged,
+TC-032,View photo tips,"1. Room entered
+2. A template's Preview opened",Wait on the Preview for 10 s without touching,The photo tips sheet does not open by itself,P2,R-036,,unchanged,
+TC-033,View photo tips,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)",Tap 「View photo tips」,"The 「Photo tips」 sheet opens: 「✓ Recommended」 with example images and bullets (incl. 「Portrait (vertical) photos work best」), 「✕ Avoid」 with example images and bullets, and 「Got it」",P1,"R-036, R-037, R-039",,unchanged,
+TC-034,View photo tips,Photo tips sheet open,Tap 「Got it」,The sheet closes and the Preview stays on the same template,P2,R-040,,unchanged,
+TC-035,View photo tips,Photo tips read on 「Top 5 of My Year」,Swipe to another template and open its 「View photo tips」,The tips content (text and example images) is that template's own,P3,R-038,,unchanged,
+TC-036,View photo tips,Photo tips sheet open,"Tap the dimmed area above the sheet, or drag the sheet down",Record whether the sheet closes,P3,R-037,Spec draws only 「Got it」; record.,unchanged,
+TC-037,Photo picker,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)",Tap 「Use Template」,"The picker 「Add Photos」 opens directly (「‹」, 「Recents ▾」)
+Tray shows 「Select 5–15 photos」 「0/15」 and 「Next」",P1,"R-034, R-041, R-042",,unchanged,
+TC-038,Photo picker,"Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked",Pick 3 photos,"They show 01, 02, 03 in pick order
+Tray 「3/15」 with 3 thumbnails
+Red 「Select at least 5 photos (2 more)」
+Next disabled",P1,"R-041, R-043",,unchanged,
+TC-039,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. 3 picked",Tap 「Next」,Nothing happens (Next disabled below min),P2,R-043,,unchanged,
+TC-040,Photo picker,"Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked",Pick exactly 5 photos,"Red hint gone
+「5/15」
+Next enabled",P1,"R-043, R-022",,unchanged,
+TC-041,Photo picker,"Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked",Pick 10 photos and scroll the tray,The tray thumbnails scroll horizontally and show all 10 in pick order,P2,R-042,,unchanged,
+TC-042,Photo picker,"Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked","1. Pick 15 photos
+2. Try to pick a 16th","The 16th cannot be picked (or Next turns disabled)
+15/15 is the most allowed",P1,"R-047, R-022",How the 16th is refused is not drawn (Q-11): record.,unchanged,
+TC-043,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. 4 photos picked (01–04)",Tap photo 02 again,"It is unpicked
+Count 3/15
+Record whether 03 / 04 renumber",P2,R-048,Q-11.,unchanged,
+TC-044,Photo picker,"Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked",Pick a landscape and a portrait photo,Both are accepted and numbered,P2,R-046,,unchanged,
+TC-045,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds a photo 299 px on its short side",Pick it,The photo is marked as not meeting the requirement,P2,R-045,needs: test photos. Marking copy not drawn (Q-11).,unchanged,
+TC-046,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds photos of exactly 300 px and 4096 px",Pick both,Both are accepted (300–4096 px inclusive),P2,R-045,needs: test photos.,unchanged,
+TC-047,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds a photo 4097 px or larger on its long side",Pick it,The photo is marked as not meeting the requirement,P2,R-045,needs: test photos.,unchanged,
+TC-048,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds a JPEG of 1200 × 1200 px padded to 11,000,000 bytes (above 10 MB and 10 MiB)",Pick it,The photo is marked as not meeting the requirement (≤ 10 MB),P2,R-045,"needs: test photos. Unit of 10 MB unknown (Q-22); 11,000,000 bytes is over both readings.",unchanged,
+TC-126,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds a JPEG of 1200 × 1200 px padded to 9,900,000 bytes (under 10 MB and 10 MiB)",Pick it,The photo is accepted and numbered (not marked),P2,R-045,"needs: test photo. Unit of 10 MB unknown (Q-22); 9,900,000 bytes is under both readings.",unchanged,
+TC-049,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds an NSFW test photo",Pick it,The photo is marked as not allowed,P2,R-045,needs: NSFW test photo.,unchanged,
+TC-050,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. Gallery holds a celebrity photo",Pick it,The photo is marked as not allowed,P2,R-045,needs: celebrity test photo.,unchanged,
+TC-051,Photo picker,"Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked",Tap 「Recents ▾」 and choose another album,The grid shows that album's photos,P3,R-049,,unchanged,
+TC-052,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. 3 picked",Tap 「‹」,Returns to the Preview of the same template,P2,R-050,No arrow drawn (Q-8).,unchanged,
+TC-053,Photo picker,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. 7 picked",Tap 「Next」,The confirm page opens with the 7 photos,P1,R-095,,unchanged,
+TC-054,Picker memory,"1. App relaunched (force-stop and launch) so a new session starts
+2. Picker of 「Top 5 of My Year」 with 7 photos picked
+3. 「Next」 tapped
+4. Back in the room (without leaving it)",Open 「Top 5 of My Year」 › 「Use Template」 again,"Above the tray: 「Use the 7 photos you picked last time?」 with 「Import」 and 「×」
+Nothing is picked yet (0/15)",P1,"R-051, R-052, R-115","「Last time」 = the set applied with Next (Figma, R-115; Q-3 answered).",modified,PM Figma catch-up (REQ-009): session = one visit to the room (R-051); Q-3 answered by R-115
+TC-133,Picker memory,"1. App relaunched (force-stop and launch) so a new session starts
+2. In the room, 7 photos picked on 「Top 5 of My Year」
+3. 「Next」 tapped
+4. Back on the picker, the pick changed to 9 photos
+5. Picker left with 「‹」 (no Next)",Open 「Top 5 of My Year」 › 「Use Template」 again,"The prompt reads 「Use the 7 photos you picked last time?」 (the set applied with Next)
+「Import」 brings in those 7",P2,R-115,「上次選的圖」 = 上次按 Next (apply 的那組) (Figma).,new,PM Figma catch-up (REQ-009)
+TC-055,Picker memory,Import prompt shown with 7 photos from last time,Tap 「Import」,"The 7 photos are picked in the picker (7/15) with their numbers ticked
+The picker stays open (does not jump to the confirm page)",P1,R-053,Domain K03: a photo shown but not ticked points at a photo id mix-up.,unchanged,
+TC-056,Picker memory,Import prompt shown,"1. Tap 「×」 on the prompt
+2. Leave the picker and enter it again","The prompt closes
+Record whether it appears again on the next entry",P2,R-052,Q-5.,modified,One step per line (team rule 2026-11-03); wording unchanged
+TC-057,Picker memory,"1. App relaunched (force-stop and launch) so a new session starts
+2. In the room, 4 photos picked on a 4-photo AI Transition template
+3. 「Next」 tapped
+4. Back in the room",Open 「Top 5 of My Year」 › Use Template › 「Import」,"4 photos imported
+Tray red 「Select at least 5 photos (1 more)」
+Next disabled until 1 more is picked",P1,"R-055, R-094","Drawn flow (picker-a2). The mockup imports 3, but only a set applied with Next is remembered (R-115), so 4 from an AI Transition template is the smallest reachable.",modified,"PM Figma catch-up (REQ-009): the memory holds the set applied with Next (R-115), within the same room visit (R-051)"
+TC-058,Picker memory,"1. App relaunched (force-stop and launch) so a new session starts
+2. In the room, 10 photos picked on a Creative template
+3. 「Next」 tapped
+4. Back in the room",Open an AI Transition template with 4 photos › Use Template › 「Import」,"10 photos imported
+Tray shows red text
+Next disabled until photos are removed down to 4",P1,"R-054, R-059, R-087",,modified,PM Figma catch-up (REQ-009): the memory holds the set applied with Next (R-115)
+TC-059,Picker memory,"1. App relaunched (force-stop and launch) so a new session starts
+2. In the room, 6 photos picked
+3. 「Next」 tapped
+4. Without leaving the room (switch apps with Recents), 2 of the 6 deleted from the Gallery",Enter the picker again and tap 「Import」,Only the 4 photos still in the Gallery are picked,P2,R-056,Record the N shown in the prompt (Q-17).,modified,"PM Figma catch-up (REQ-009): leaving the room clears the memory (R-114), so the Gallery is changed without leaving it"
+TC-060,Picker memory,"1. App relaunched (force-stop and launch) so a new session starts
+2. In the room, only 1 photo picked (e.g. Cinematic Styles)
+3. 「Next」 tapped
+4. Back in the room",Enter the 「Top 5 of My Year」 picker,No 「Use the … photos you picked last time?」 prompt is shown,P2,R-057,,modified,PM Figma catch-up (REQ-009): the memory holds the set applied with Next (R-115)
+TC-061,Picker memory,7 photos picked in the last session,"1. Force-stop and relaunch the app
+2. Open the 「Top 5 of My Year」 picker",No Import prompt (the memory ends with the session),P2,R-058,,unchanged,
+TC-134,Picker memory,"1. In the room, 7 photos picked on 「Top 5 of My Year」
+2. 「Next」 tapped","1. Tap 「‹」 until the room is left
+2. Open the room again (without relaunching the app)
+3. Enter the 「Top 5 of My Year」 picker","No Import prompt
+Leaving the room ended the session and cleared the memory",P1,"R-051, R-114","離開房間 = 離開 session, 記憶清除 (Figma). Opening My AI Artwork with the History button is not counted as leaving (Q-25): record it in Notes if the prompt is gone after it.",new,PM Figma catch-up (REQ-009)
+TC-062,Picker memory,"1. App relaunched (force-stop, then launch) so a new session starts
+2. 7 photos picked in the Reel Creator picker","1. Leave the room
+2. Open another photo picker of the app (e.g. Collage, AI Replace) and look above its tray","No 「Use the … photos you picked last time?」 prompt
+The memory exists only inside Reel Creator",P2,"R-051, R-116",Q-4 answered by Figma (R-116). Domain K07: selection state leaking into another feature is a past bug class.,modified,"PM Figma catch-up (REQ-009): Q-4 answered, memory only in Reel Creator (R-116)"
+TC-063,Confirm page,Confirm page of 「Top 5 of My Year」 reached with 7 photos picked,Read the page,"Top: template thumbnail, 「Top 5 of My Year」, 「5–15 photos · output 9:16」, 「‹」 and the credit pill
+「Your photos」 「7/15」 with 「Long-press to reorder · tap × to remove」
+7 numbered photos with 「×」 and a 「+」 tile
+「Text language」 「English ▾」
+「Generate | 60」",P1,"R-060, R-061, R-067, R-068, R-023",,unchanged,
+TC-064,Confirm page,Confirm page of 「Top 5 of My Year」 reached with 7 photos picked,Long-press photo 3 and drag it to position 1,The photo moves to position 1 and the numbers follow the new order,P1,R-062,,unchanged,
+TC-065,Confirm page,Confirm page of 「Top 5 of My Year」 reached with 7 photos picked,Tap 「×」 on photo 7,"The photo is removed
+Count 6/15",P1,R-063,,unchanged,
+TC-066,Confirm page,Confirm page of 「Top 5 of My Year」 reached with 7 photos picked,Remove photos until 4 are left,"Count 「4/15」 in red
+「Generate」 disabled",P1,"R-069, R-096",,unchanged,
+TC-067,Confirm page,"1. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked
+2. 4 left after removing",Tap the disabled 「Generate」,"Toast 「Please upload at least 5 photos」
+Nothing is generated and no credits are charged",P1,"R-069, R-096",,unchanged,
+TC-068,Confirm page,"1. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked
+2. 4 left after removing",Tap the 「+」 tile,The picker opens with the 4 current photos picked and ticked (4/15),P1,R-064,Domain K03.,unchanged,
+TC-069,Confirm page,Picker opened from the confirm page 「+」 with 4 picked,Pick 2 more and tap 「Next」,The confirm page shows the 6 photos (the 4 kept plus 2 new),P2,R-064,,unchanged,
+TC-070,Confirm page,Confirm page with 15/15 photos,Look for the 「+」 tile,Record whether 「+」 is shown at max,P3,R-064,Q-16.,unchanged,
+TC-071,Confirm page,Confirm page of 「Top 5 of My Year」 reached with 7 photos picked,Tap 「‹」,Returns to the picker (record whether the 7 photos stay picked),P2,R-072,No arrow drawn (Q-8).,unchanged,
+TC-116,Confirm page,"1. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked
+2. Photos reordered
+3. Text language 「日本語」
+4. Developer options › Don't keep activities on","Press Home, open another app, return to PhotoDirector","The confirm page is back with the same photos, order, count and Text language
+No crash",P2,R-112,Domain K62 (Activity re-creation). Turn Don't keep activities off afterwards.,unchanged,
+TC-072,Confirm page,"1. Signed in with a Free (non-Premium) account
+2. Credit balance below 60
+3. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Tap 「Generate | 60」,"The paywall (IAP page) opens
+Nothing is generated",P1,R-070,"The PHD round-start state (free user, 0 credits; domain test-setup) fits this row.",unchanged,
+TC-073,Confirm page,"1. Signed in with a PhotoDirector Premium (subscribed) account
+2. Credit balance below 60
+3. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Tap 「Generate | 60」,"「More Credits Required」 appears
+Its button leads to the Credit Shop",P1,R-070,"needs: low-credit Premium account. Domain K36b: on Android VIP = Pro = Premium = subscribed, one mode.",unchanged,
+TC-074,Confirm page,"1. Credit balance of 60 or more (note it)
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Tap 「Generate | 60」,"Generation starts
+The balance drops by exactly 60",P1,"R-071, R-068",,unchanged,
+TC-117,Confirm page,"1. Credits ≥ 120 (note the balance)
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Tap 「Generate | 60」 three times as fast as possible,One job starts: one new card in My AI Artwork and the balance drops by 60 only once,P1,R-103,Domain K30 (PHA262026-0418): a burst of taps charges once.,unchanged,
+TC-118,Confirm page,A 「Top 5 of My Year」 Generate just finished (TC-074),Open the credit button › Buy Credit › 「Detail」 (top right),"The newest entry names the feature (Reel Creator / the Creative feature) and shows 60 deducted
+A refund, if any, is listed with its amount",P1,R-102,Domain K36a. Feature name not fixed yet (Q-2): record it.,unchanged,
+TC-075,Text language,"1. Phone language English
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Tap 「Text language」 「English ▾」,"A list opens with 「English (Device language)」 first and ticked, then 「繁體中文」, 「简体中文」, 「日本語」, 「한국어」, 「Español」, 「Français」, 「Deutsch」, 「Português」, 「Italiano」, 「ภาษาไทย」 …
+The list scrolls",P1,"R-073, R-074",,unchanged,
+TC-076,Text language,"1. App launched in Traditional Chinese (`launch --lang zh-Hant`)
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Read the Text language value and open the list,The default is 「繁體中文」 marked (Device language),P2,R-073,End with `locale reset`.,unchanged,
+TC-077,Text language,Text language list open,Scroll to the end of the list,"Every language PhotoDirector supports is listed
+Record the list (should match iOS)",P3,R-074,,unchanged,
+TC-078,Text language,Text language list open,Choose 「日本語」,"The list closes
+Text language shows 「日本語」",P2,R-074,,unchanged,
+TC-079,Text language,Text language set to 「日本語」 on the confirm page,"1. Go back to the picker
+2. Tap 「Next」 again
+3. Open another Creative template's confirm page",Text language still shows 「日本語」 within the room (same session),P2,R-076,,unchanged,
+TC-080,Text language,Text language set to 「日本語」,"Leave the Reel Creator room, enter it again and reach a Creative confirm page",Text language is back to the device language,P2,R-076,,unchanged,
+TC-081,Text language,"1. Credits ≥ 60
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked
+3. Text language 「日本語」",Tap 「Generate」 and open the finished reel,The text in the reel is Japanese,P1,R-075,,unchanged,
+TC-082,Text language,"1. Credits ≥ 60
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked
+3. Text language 「繁體中文」",Tap 「Generate」 and open the finished reel,The text in the reel is Traditional Chinese,P2,R-075,,unchanged,
+TC-083,Text language,"1. Credits ≥ 60
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked
+3. Text language left at 「English (Device language)」",Tap 「Generate」 and open the finished reel,The text in the reel is English,P2,R-075,,unchanged,
+TC-084,Text language,A finished Creative reel in My AI Artwork,Open it and look for a way to edit its text,The reel's text cannot be edited,P3,R-077,,unchanged,
+TC-123,App language,"1. App launched in Traditional Chinese (`launch --lang zh-Hant`)
+2. App launched again in Japanese (`launch --lang ja`)","1. In each language: pick 3 photos in the 「Top 5 of My Year」 picker
+2. Reach the Import prompt (TC-054 setup)
+3. On the confirm page remove photos to 4 and tap Generate","The tray, the Import prompt and the toast show the right numbers (5–15, 2, N, 5) in that language
+No screen crashes or shows a raw placeholder",P2,R-105,Domain K70 (placeholders %d / %1$s). End with `locale reset`.,modified,One step per line (team rule 2026-11-03); wording unchanged
+TC-124,App language,"App launched in Arabic (`launch --lang ar`, if PhotoDirector offers it)",Walk room → Preview → picker → confirm page → Text language list,"Layout mirrors (‹ on the right, tray and lists in bounds, swipe guide and tips point at the right controls)
+Western digits 0–9 are acceptable",P3,R-106,"Domain K66, K68. Record Not run if Arabic is not offered. End with `locale reset`.",unchanged,
+TC-125,App language,"1. App launched in German
+2. App launched again in Portuguese","Read the picker tray, the Import prompt, the confirm page hint and 「Generate」",Every string is readable (not cut off or overlapping) and every button stays reachable,P3,R-107,Domain K69 (long strings). End with `locale reset`.,unchanged,
+TC-085,Generation and My AI Artwork,"1. Credits ≥ 60
+2. Confirm page of 「Top 5 of My Year」 reached with 7 photos picked",Tap 「Generate | 60」,"My AI Artwork opens on the 「Reel Creator」 tab with a new 「Top 5 of My Year」 card at the top: 「Processing…」, a time estimate (「… minutes remaining…」) and a progress bar",P1,"R-078, R-097","Domain K60 / K61: 「3 minutes」 is mockup text, not a promised duration; judge the waiting UI. Note the thumbnail on the card (Q-18).",unchanged,
+TC-086,Generation and My AI Artwork,A Creative reel processing in My AI Artwork,"1. Wait until it finishes
+2. Tap the card","The card shows the date and 「Top 5 of My Year」
+The reel plays, and the video file is 9:16 in pixels (width : height)",P1,"R-083, R-023, R-081","Domain K51 / K53: check the file's pixel size and that it opens, not only the on-screen size.",unchanged,
+TC-087,Generation and My AI Artwork,A finished Creative reel from 7 different photos,Watch the whole reel,Each of the 7 input photos appears in the reel (order may differ from the confirm page),P2,R-066,,unchanged,
+TC-088,Generation and My AI Artwork,A reel processing in My AI Artwork,"Leave My AI Artwork (‹), wait 1 minute, open it again from the room's history icon","The card is still processing (or finished)
+Nothing is lost",P2,R-078,Leaving during processing is not stated (Q-12).,unchanged,
+TC-121,Generation and My AI Artwork,A Creative reel just started processing,"1. Press Home
+2. Wait for the job to finish
+3. Tap the completion notification","A notification with a title and message arrives
+Tapping it opens My AI Artwork (Reel Creator tab) on the finished reel, never 「APP version does not support feature」",P2,R-104,Domain K48 (PHA262026-0373). The spec itself is silent (Q-12).,unchanged,
+TC-089,Generation and My AI Artwork,My AI Artwork open,"1. Read the tabs
+2. Tap 「Image to Video」
+3. Tap 「Reel Creator」","Step 1: tabs include 「Image to Video」, 「Reel Creator」, 「Character Motion Swap」
+Step 1: no tab named 「Cinematic Reel Creator」
+Steps 2–3: each tap selects that tab and shows its own items
+Step 3: 「Reel Creator」 lists the reels",P2,R-080,,modified,PM Figma catch-up (REQ-009): the Figma inventory lists the Artwork tabs as a control; the row now presses them (REQ-038)
+TC-090,Generation and My AI Artwork,"One finished result each from Creative, AI Transition and Cinematic Styles",Open the 「Reel Creator」 tab,"All three are in the same list, no sub tabs, newest first, each with its date and template name",P1,"R-079, R-081",,unchanged,
+TC-091,Generation and My AI Artwork,My AI Artwork on the 「Reel Creator」 tab,Tap 「Create More」,The Reel Creator room opens,P2,"R-082, R-098",,unchanged,
+TC-122,Generation and My AI Artwork,"1. Room opened by 「Create More」 from My AI Artwork
+2. Credits ≥ 40","1. Generate a Cinematic Styles reel again
+2. Press 「‹」 from the room","The second job runs and finishes normally
+「‹」 leaves the room without an error or a black screen",P2,R-113,Domain K28 (Create More / Back with stale resources). Whether Create More keeps inputs is open (Q-20).,unchanged,
+TC-092,Cinematic Styles,Reel Creator room open,"1. Tap a Cinematic Styles template (e.g. 「Micro Cinema」)
+2. Tap 「Use Template」","The Preview shows 「1 photo」
+「Use Template」 opens the picker with 「Select 1 photo」 「0/1」",P1,"R-084, R-044, R-099",,unchanged,
+TC-093,Cinematic Styles,Cinematic picker 「Select 1 photo」,"1. Pick 1 photo
+2. Try to pick a 2nd","The first shows 01 and 1/1
+Next enabled
+A second cannot be added (or Next turns disabled)",P2,"R-044, R-047",,unchanged,
+TC-094,Cinematic Styles,Cinematic picker with 1 photo picked,Tap 「Next」,"Confirm page: 「Micro Cinema」, 「1 photo · output 9:16」, 「Your photos」 「1/1」, 「Tap the photo to replace」, 「Generate | 40」
+No Text language",P1,"R-085, R-086, R-100",,unchanged,
+TC-095,Cinematic Styles,Cinematic confirm page,Tap the photo and pick another one,The photo on the confirm page is replaced by the new one (still 1/1),P2,R-085,,unchanged,
+TC-096,Cinematic Styles,"1. Cinematic confirm page
+2. Credits ≥ 40 (note the balance)",Tap 「Generate | 40」,"My AI Artwork 「Reel Creator」 tab shows the 「Micro Cinema」 card processing
+The balance drops by exactly 40",P1,"R-084, R-079",,unchanged,
+TC-127,Cinematic Styles,The 「Micro Cinema」 reel from TC-096 has finished,"Open it from My AI Artwork, play it and check the video file","The reel plays
+The file is 9:16 in pixels (width : height) and opens",P2,"R-023, R-083","Domain K51 / K53: measure the file, not the on-screen size.",unchanged,
+TC-119,Cinematic Styles,A Cinematic Styles Generate just finished,Open Buy Credit › 「Detail」,The newest entry names the feature (Cinematic Styles / CineStory) and shows 40 deducted,P2,R-102,Domain K36a.,unchanged,
+TC-097,Cinematic Styles,"1. App relaunched (force-stop and launch) so a new session starts
+2. In the room, 7 photos picked on a Creative template
+3. 「Next」 tapped
+4. Back in the room",Open a Cinematic template › 「Use Template」,"The Cinematic picker 「Select 1 photo」 shows no Import prompt
+The prompt is only for templates with photo input > 1",P2,"R-084, R-117",Q-7 answered by Figma (R-117).,modified,"PM Figma catch-up (REQ-009): Q-7 answered, no prompt on 1-photo templates (R-117)"
+TC-098,AI Transition,Reel Creator room open,"1. Open a Cool Transitions template
+2. Read the count
+3. Tap 「Use Template」","The Preview shows a fixed count (「4 photos」 or 「6 photos」)
+The picker tray reads 「Select 4 photos」 (or 6) with 「0/4」",P1,"R-021, R-044, R-087",,unchanged,
+TC-099,AI Transition,AI Transition picker 「Select 4 photos」,"1. Pick 3 photos
+2. Try to pick a 4th","Next disabled at 3
+Enabled at 4/4
+A 5th cannot be picked",P1,"R-087, R-043",,unchanged,
+TC-100,AI Transition,AI Transition picker with 4 photos picked,Tap 「Next」,"Confirm page with 「4/4」 photos, reorder hint and 「Generate | <price>」
+No Text language",P1,"R-088, R-067",Price not drawn (Q-9): record it.,unchanged,
+TC-101,AI Transition,"1. AI Transition confirm page with photos A, B, C, D
+2. Credits enough (note the balance)","1. Long-press to reorder to D, C, B, A
+2. Tap 「Generate」","The finished video shows the photos in the order D, C, B, A and its file is 9:16 in pixels
+The balance drops by the price on the button",P1,"R-065, R-088, R-023",,unchanged,
+TC-120,AI Transition,An AI Transition Generate just finished,Open Buy Credit › 「Detail」,The newest entry names the feature (AI Transition) and shows the price on the button deducted,P2,R-102,Domain K36a.,unchanged,
+TC-102,AI Transition,Preview of a 6-photo Cool Transitions template (if the roster has one),Tap 「Use Template」,The tray reads 「Select 6 photos」,P2,"R-021, R-087",,unchanged,
+TC-103,Android Back,Reel Creator room open,Press system Back,Same as 「‹」: leaves the room,P2,R-089,Domain K63: Back regressions (Predictive Back) were per screen; every screen has its own row.,unchanged,
+TC-104,Android Back,"Preview of the Creative template 「Top 5 of My Year」 (Year-End Recap, 5–15 photos)",Press system Back,Same as 「‹」: returns to the room,P2,R-089,,unchanged,
+TC-105,Android Back,Photo tips sheet open,Press system Back,"The sheet closes (as 「Got it」)
+The Preview stays",P2,R-089,,unchanged,
+TC-106,Android Back,"1. Picker of 「Top 5 of My Year」 (opened by 「Use Template」), nothing picked
+2. 3 picked",Press system Back,Same as the picker 「‹」: returns to the Preview,P2,R-089,,unchanged,
+TC-107,Android Back,Import prompt shown in the picker,Press system Back,"Record: the prompt closes, or the picker closes",P3,R-089,Spec silent (Q-8).,unchanged,
+TC-108,Android Back,Confirm page of 「Top 5 of My Year」 reached with 7 photos picked,Press system Back,Same as 「‹」: returns to the picker,P2,R-089,,unchanged,
+TC-109,Android Back,Text language list open on the confirm page,Press system Back,"The list closes and the language is unchanged
+The confirm page stays",P2,R-089,,unchanged,
+TC-110,Android Back,Edit Room jump dialog shown,Press system Back,"The dialog closes as cancel
+The Edit Room stays",P3,R-089,,unchanged,
+TC-111,Android Back,My AI Artwork opened after Generate,Press system Back,"Record where it goes (the confirm page, the room or the previous page)",P3,R-089,Spec silent (Q-8).,unchanged,

@@ -1,0 +1,24 @@
+{
+  "qr": "QR261113-0020",
+  "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261113-0020",
+  "tr": "TR261111-0042",
+  "created": "2026-11-13 14:50",
+  "template": "Standard Report (QRTemplateID 14830)",
+  "counts": { "OK": 13, "Fail": 0 },
+  "rows": {
+    "PHA252025-0178": "OK", "PHA252025-0179": "OK", "PHA252025-0185": "OK", "PHA252025-0196": "OK",
+    "PHA252025-0230": "OK", "PHA252025-0328": "OK", "PHA252025-0516": "OK", "PHA262026-0335": "OK",
+    "PHA262026-0343": "OK", "PHA262026-0350": "OK", "PHA262026-0409": "OK", "PHA262026P0014": "OK",
+    "PHA262026P0036": "OK"
+  },
+  "readBack": "before Create: every field, State and Reason matched qr-text.txt, PHA262026P0050 left Not Yet Verified; after Create: fields, 13 OK rows, all Notes and Details present on the QR page",
+  "operationSystem": "not ticked: the form lists Android 11-15 only; Details names Android 16",
+  "ticketsAfter": "all 13 Close (verified) about 2 minutes after Create; PHA262026P0050 still TRCreated / NOT verified",
+  "textOnly": true,
+  "filesOnBugs": {
+    "PHA262026P0014": ["20.19.0.202611111946_PHA262026P0014_01_reference_image_page.png", "20.19.0.202611111946_PHA262026P0014_02_result_in_my_ai_artwork.png"],
+    "PHA262026P0036": ["20.19.0.202611111946_PHA262026P0036_01_start_end_samples.png", "20.19.0.202611111946_PHA262026P0036_02_bottom_corners_zoom.png"]
+  },
+  "filesNote": "these two were uploaded before the switch to text only; the Reasons name no files",
+  "mismatches": []
+}

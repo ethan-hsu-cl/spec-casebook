@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261111-0042",
+    "server": "",
+    "version": "20.19.0",
+    "build": "202611111946",
+    "filed_on": "2026-11-18"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0127",
+      "short": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom palette: colour picked with Done is not added to the row as a new circle",
+      "status": "Assigned",
+      "severity": 3,
+      "priority": 3,
+      "belong": "RD",
+      "creator": "WILLY_WU",
+      "created": "2026-11-18T12:04:15",
+      "build": "202611111946",
+      "tr": "TR261111-0042",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": "LEO_CHEN",
+      "handler": "LEO_CHEN",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos on the Launcher\n3. Tap AI Hair Color\n4. Tap Continue on the photo tips sheet\n5. Tap a portrait photo with one clear, front-facing face\n6. Tap Custom in the swatch row\n7. Tap Ombre in Style\n8. Tap the colour wheel in Base Color\n9. Drag the hue slider to blue\n10. Drag the cursor to the square's top right\n11. Tap Done\n12. Check the result\n\nResult:\nThe colour wheel gets the selection ring; no new circle with the blue appears and the recommended colours do not move.\n摘要：調色盤選色後沒有新增色圈，選中的是色輪本身，看不到所選顏色。\n{20.19.0_hcc22_palette_blue.jpg} {20.19.0_hcc22_no_new_circle.jpg}\n\nExpect Result:\nThe blue is added as a new ringed circle right after the colour wheel; the other colours move one place right.\n摘要：所選顏色應新增為色輪右側的色圈並被選中。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16 / PhotoDirector 20.19.0 (versionCode 90201901)\nSpec Link: AI Hair Color Design Figma (Hair, 261005_AI_hair_color page), 4-hair_color_case3 frame (palette colour added) -\nhttps://www.figma.com/design/2VOqiPxBCISkob7wbM9hXD/Hair?node-id=894-2637\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_hcc22_palette_blue.jpg",
+        "20.19.0_hcc22_no_new_circle.jpg"
+      ],
+      "key": "AI-Hair-Color-Custom-R2-07",
+      "iss": "ISS-HCC-22",
+      "feature": "AI-Hair-Color-Custom-R2",
+      "problem_type": "Functional"
+    },
+    {
+      "bugcode": "PHA262026P0128",
+      "short": "PHD-A 20.19.0 - [AIAgent][UX] AI_Hair_Color: Custom panel: tapping the photo closes the panel and applies — PM to decide",
+      "status": "NewCreated",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "WILLY_WU",
+      "created": "2026-11-18T13:08:59",
+      "build": "202611111946",
+      "tr": "TR261111-0042",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "MEG_CHEN",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos on the Launcher\n3. Tap AI Hair Color\n4. Tap Continue on the photo tips sheet\n5. Tap a portrait photo with one clear, front-facing face\n6. Tap Custom in the swatch row\n7. Tap Balayage in Style\n8. Tap the dark brown swatch in Base Color\n9. Tap the sand swatch in Highlight Color\n10. Tap the photo above the panel\n11. Check the result\n\nResult:\nThe panel closes and Custom is applied (swatch row back, Custom selected).\n摘要：點面板上方照片時面板收合並套用；與 2026-11-13 的裁示（不應關閉）不同。\n{20.19.0_hcc23_before_photo_tap.jpg} {20.19.0_hcc23_after_photo_tap.jpg}\n\nExpect Result:\nPM to decide: the panel stays open, nothing applied (ruling), or tap outside applies (D6-08).\n摘要：請 PM 決定點照片時面板是否收合套用。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16 / PhotoDirector 20.19.0 (versionCode 90201901)\nSpec Link: AI Hair Color Custom PM Figma (26 11E AI Hair Color Custom), collapsed_applied (NEW) frame, Spec - UI (D6-08) -\nhttps://www.figma.com/design/vhIp15PMJcwOcWJ6E9Q4JE/AI-Hair?node-id=3330-512\nRelated: REQ-004 (casebook ruling); R1 draft ISS-HCC-09 (held)\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_hcc23_before_photo_tap.jpg",
+        "20.19.0_hcc23_after_photo_tap.jpg"
+      ],
+      "key": "AI-Hair-Color-Custom-R2-08",
+      "iss": "ISS-HCC-23",
+      "feature": "AI-Hair-Color-Custom-R2",
+      "problem_type": "UX"
+    }
+  ],
+  "dispositions": {}
+}

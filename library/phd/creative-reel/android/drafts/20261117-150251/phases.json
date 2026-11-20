@@ -1,0 +1,481 @@
+{
+  "draft": "20261117-150251",
+  "current": [
+    "R1"
+  ],
+  "needs": {
+    "TC-014": [
+      "deeplink"
+    ],
+    "TC-114": [
+      "deeplink"
+    ],
+    "TC-015": [
+      "deeplink"
+    ],
+    "TC-016": [
+      "deeplink"
+    ],
+    "TC-017": [
+      "deeplink"
+    ],
+    "TC-018": [
+      "deeplink"
+    ],
+    "TC-019": [
+      "deeplink"
+    ],
+    "TC-020": [
+      "deeplink"
+    ],
+    "TC-050": [
+      "celebrity-photo"
+    ],
+    "TC-072": [
+      "low-balance"
+    ],
+    "TC-073": [
+      "low-balance",
+      "premium"
+    ],
+    "TC-083": [
+      "credits"
+    ],
+    "TC-074": [
+      "credits"
+    ],
+    "TC-117": [
+      "credits"
+    ],
+    "TC-121": [
+      "credits"
+    ],
+    "TC-143": [
+      "credits"
+    ],
+    "TC-081": [
+      "credits"
+    ],
+    "TC-082": [
+      "credits"
+    ],
+    "TC-096": [
+      "credits"
+    ],
+    "TC-122": [
+      "credits"
+    ],
+    "TC-101": [
+      "credits"
+    ],
+    "TC-076": [
+      "app-language"
+    ],
+    "TC-123": [
+      "app-language"
+    ],
+    "TC-124": [
+      "app-language"
+    ],
+    "TC-125": [
+      "app-language"
+    ],
+    "TC-116": [
+      "system-setting"
+    ],
+    "TC-146": [
+      "system-setting"
+    ],
+    "TC-147": [
+      "system-setting"
+    ],
+    "TC-148": [
+      "system-setting"
+    ],
+    "TC-149": [
+      "system-setting"
+    ],
+    "TC-137": [
+      "disposable-photos"
+    ],
+    "TC-138": [
+      "disposable-photos"
+    ],
+    "TC-139": [
+      "disposable-photos"
+    ]
+  },
+  "unavailable": {
+    "deeplink": "test-data: deeplink URLs (old Cinematic Reel Creator link, Creative / AI Transition / CineStory template GUIDs, a bad GUID, a category link) not supplied (Q-15)",
+    "celebrity-photo": "test-data: no celebrity test photo on the Pixel 8a or this computer"
+  },
+  "notes": {
+    "low-balance": "Below the Generate price. The Pixel had 2000 credits at the probe (Free): the user decides before R1-a whether to pm clear first (credits are tied to the install's UUID, KP-133, so the 2000 are lost and must be topped up again) or to block TC-072 / TC-073 (add \"low-balance\" to unavailable before init)",
+    "premium": "Premium by About › debug dialog 「Set to subscriber」 ON (KP-131), never a sign-in; back OFF (Free) after TC-073",
+    "credits": "Generation rows run; read the balance before and after every generation (pill and Buy Credit › Detail). Rides: TC-085, TC-141, TC-086, TC-142, TC-087, TC-111, TC-118 on TC-074's job; TC-088 on TC-081's; TC-127, TC-119 on TC-096's; TC-120 on TC-101's. Buying credits only after the user's yes in chat, with a test card on Google Play's sheet (fixtures.md)",
+    "system-setting": "Ask the user before this row: TC-146 – TC-149 the phone's dark theme (the Pixel is already dark: read it, switch light / dark only on the go-ahead), TC-116 Developer options › Don't keep activities (off again right after)",
+    "app-language": "launch --lang zh-Hant|ja|ar|de|pt, then a plain launch (per-app language, Android 16)",
+    "disposable-photos": "Each of TC-137 – TC-139 picks 4 pushed copies in /sdcard/Pictures/Casebook-CR/disposable/ and deletes 1 / 2 / 3 of them in the Gallery (one-way; push fresh copies per row)",
+    "deeplink": "Blocked up front (test-data)"
+  },
+  "phases": [
+    {
+      "id": "R1",
+      "name": "Full run of v4 on the Pixel 8a (first run of the table)",
+      "round": true,
+      "note": "Pixel 8a 42201JEKB02229, TR261113-0038 build 20.19.0 (90201901). Free except TC-073. Intro rows run while the intro page still shows; TC-130 ticks 「Don't show again」 after them; TC-021 is the first Preview opened on this install. Rows written on 「Top 5 of My Year」 use the stand-in templates (fixtures.md).",
+      "origin": {
+        "TC-001": "R1",
+        "TC-002": "R1",
+        "TC-003": "R1",
+        "TC-004": "R1",
+        "TC-128": "R1",
+        "TC-129": "R1",
+        "TC-131": "R1",
+        "TC-132": "R1",
+        "TC-130": "R1",
+        "TC-005": "R1",
+        "TC-006": "R1",
+        "TC-007": "R1",
+        "TC-008": "R1",
+        "TC-112": "R1",
+        "TC-009": "R1",
+        "TC-113": "R1",
+        "TC-103": "R1",
+        "TC-021": "R1",
+        "TC-022": "R1",
+        "TC-014": "R1",
+        "TC-114": "R1",
+        "TC-015": "R1",
+        "TC-016": "R1",
+        "TC-017": "R1",
+        "TC-018": "R1",
+        "TC-019": "R1",
+        "TC-020": "R1",
+        "TC-072": "R1",
+        "TC-073": "R1",
+        "TC-023": "R1",
+        "TC-024": "R1",
+        "TC-025": "R1",
+        "TC-115": "R1",
+        "TC-026": "R1",
+        "TC-027": "R1",
+        "TC-028": "R1",
+        "TC-029": "R1",
+        "TC-030": "R1",
+        "TC-031": "R1",
+        "TC-104": "R1",
+        "TC-032": "R1",
+        "TC-033": "R1",
+        "TC-034": "R1",
+        "TC-035": "R1",
+        "TC-036": "R1",
+        "TC-105": "R1",
+        "TC-010": "R1",
+        "TC-011": "R1",
+        "TC-012": "R1",
+        "TC-013": "R1",
+        "TC-110": "R1",
+        "TC-037": "R1",
+        "TC-038": "R1",
+        "TC-039": "R1",
+        "TC-040": "R1",
+        "TC-041": "R1",
+        "TC-136": "R1",
+        "TC-042": "R1",
+        "TC-043": "R1",
+        "TC-044": "R1",
+        "TC-045": "R1",
+        "TC-046": "R1",
+        "TC-047": "R1",
+        "TC-048": "R1",
+        "TC-126": "R1",
+        "TC-049": "R1",
+        "TC-050": "R1",
+        "TC-051": "R1",
+        "TC-135": "R1",
+        "TC-052": "R1",
+        "TC-053": "R1",
+        "TC-106": "R1",
+        "TC-150": "R1",
+        "TC-054": "R1",
+        "TC-133": "R1",
+        "TC-055": "R1",
+        "TC-056": "R1",
+        "TC-107": "R1",
+        "TC-057": "R1",
+        "TC-058": "R1",
+        "TC-059": "R1",
+        "TC-137": "R1",
+        "TC-138": "R1",
+        "TC-139": "R1",
+        "TC-060": "R1",
+        "TC-061": "R1",
+        "TC-134": "R1",
+        "TC-062": "R1",
+        "TC-097": "R1",
+        "TC-063": "R1",
+        "TC-064": "R1",
+        "TC-065": "R1",
+        "TC-066": "R1",
+        "TC-067": "R1",
+        "TC-068": "R1",
+        "TC-069": "R1",
+        "TC-070": "R1",
+        "TC-071": "R1",
+        "TC-108": "R1",
+        "TC-075": "R1",
+        "TC-077": "R1",
+        "TC-078": "R1",
+        "TC-140": "R1",
+        "TC-109": "R1",
+        "TC-079": "R1",
+        "TC-080": "R1",
+        "TC-076": "R1",
+        "TC-123": "R1",
+        "TC-124": "R1",
+        "TC-125": "R1",
+        "TC-083": "R1",
+        "TC-074": "R1",
+        "TC-085": "R1",
+        "TC-141": "R1",
+        "TC-086": "R1",
+        "TC-142": "R1",
+        "TC-087": "R1",
+        "TC-088": "R1",
+        "TC-111": "R1",
+        "TC-118": "R1",
+        "TC-117": "R1",
+        "TC-121": "R1",
+        "TC-143": "R1",
+        "TC-089": "R1",
+        "TC-144": "R1",
+        "TC-145": "R1",
+        "TC-084": "R1",
+        "TC-081": "R1",
+        "TC-082": "R1",
+        "TC-092": "R1",
+        "TC-093": "R1",
+        "TC-094": "R1",
+        "TC-095": "R1",
+        "TC-096": "R1",
+        "TC-127": "R1",
+        "TC-119": "R1",
+        "TC-098": "R1",
+        "TC-099": "R1",
+        "TC-100": "R1",
+        "TC-101": "R1",
+        "TC-120": "R1",
+        "TC-102": "R1",
+        "TC-090": "R1",
+        "TC-091": "R1",
+        "TC-122": "R1",
+        "TC-116": "R1",
+        "TC-146": "R1",
+        "TC-147": "R1",
+        "TC-148": "R1",
+        "TC-149": "R1"
+      },
+      "segments": [
+        {
+          "id": "R1-a",
+          "name": "Room, intro page (「Don't show again」 last), first Preview swipe guide, deeplinks",
+          "cases": [
+            "TC-001",
+            "TC-002",
+            "TC-003",
+            "TC-004",
+            "TC-128",
+            "TC-129",
+            "TC-131",
+            "TC-132",
+            "TC-130",
+            "TC-005",
+            "TC-006",
+            "TC-007",
+            "TC-008",
+            "TC-112",
+            "TC-009",
+            "TC-113",
+            "TC-103",
+            "TC-021",
+            "TC-022",
+            "TC-014",
+            "TC-114",
+            "TC-015",
+            "TC-016",
+            "TC-017",
+            "TC-018",
+            "TC-019",
+            "TC-020"
+          ]
+        },
+        {
+          "id": "R1-b",
+          "name": "Preview, photo tips, Edit Room jump",
+          "cases": [
+            "TC-023",
+            "TC-024",
+            "TC-025",
+            "TC-115",
+            "TC-026",
+            "TC-027",
+            "TC-028",
+            "TC-029",
+            "TC-030",
+            "TC-031",
+            "TC-104",
+            "TC-032",
+            "TC-033",
+            "TC-034",
+            "TC-035",
+            "TC-036",
+            "TC-105",
+            "TC-010",
+            "TC-011",
+            "TC-012",
+            "TC-013",
+            "TC-110"
+          ]
+        },
+        {
+          "id": "R1-c",
+          "name": "Photo picker: ranges, sizes, NSFW, albums, full view, Back",
+          "cases": [
+            "TC-037",
+            "TC-038",
+            "TC-039",
+            "TC-040",
+            "TC-041",
+            "TC-136",
+            "TC-042",
+            "TC-043",
+            "TC-044",
+            "TC-045",
+            "TC-046",
+            "TC-047",
+            "TC-048",
+            "TC-126",
+            "TC-049",
+            "TC-050",
+            "TC-051",
+            "TC-135",
+            "TC-052",
+            "TC-053",
+            "TC-106",
+            "TC-150"
+          ]
+        },
+        {
+          "id": "R1-d",
+          "name": "Picker memory and Import prompt (TC-137 – TC-139 delete disposable Gallery photos)",
+          "cases": [
+            "TC-054",
+            "TC-133",
+            "TC-055",
+            "TC-056",
+            "TC-107",
+            "TC-057",
+            "TC-058",
+            "TC-059",
+            "TC-137",
+            "TC-138",
+            "TC-139",
+            "TC-060",
+            "TC-061",
+            "TC-134",
+            "TC-062",
+            "TC-097"
+          ]
+        },
+        {
+          "id": "R1-e",
+          "name": "Confirm page, Text Language sheet, app languages (no generation)",
+          "cases": [
+            "TC-063",
+            "TC-064",
+            "TC-065",
+            "TC-066",
+            "TC-067",
+            "TC-068",
+            "TC-069",
+            "TC-070",
+            "TC-071",
+            "TC-108",
+            "TC-075",
+            "TC-077",
+            "TC-078",
+            "TC-140",
+            "TC-109",
+            "TC-079",
+            "TC-080",
+            "TC-076",
+            "TC-123",
+            "TC-124",
+            "TC-125"
+          ]
+        },
+        {
+          "id": "R1-f",
+          "name": "Creative generations (credits) and My AI Artwork",
+          "cases": [
+            "TC-083",
+            "TC-074",
+            "TC-085",
+            "TC-141",
+            "TC-086",
+            "TC-142",
+            "TC-087",
+            "TC-088",
+            "TC-111",
+            "TC-118",
+            "TC-117",
+            "TC-121",
+            "TC-143",
+            "TC-089",
+            "TC-144",
+            "TC-145",
+            "TC-084",
+            "TC-081",
+            "TC-082"
+          ]
+        },
+        {
+          "id": "R1-g",
+          "name": "Cinematic Styles and AI Transition (credits), Artwork tab mix; system-setting rows last (ask the user first)",
+          "cases": [
+            "TC-092",
+            "TC-093",
+            "TC-094",
+            "TC-095",
+            "TC-096",
+            "TC-127",
+            "TC-119",
+            "TC-098",
+            "TC-099",
+            "TC-100",
+            "TC-101",
+            "TC-120",
+            "TC-102",
+            "TC-090",
+            "TC-091",
+            "TC-122",
+            "TC-116",
+            "TC-146",
+            "TC-147",
+            "TC-148",
+            "TC-149"
+          ]
+        },
+        {
+          "id": "R1-h",
+          "name": "Below-price rows after pm clear (user, 2026-11-17): adb shell pm clear wipes the 2000 credits (KP-133); first launch consent, then TC-072 on Free, TC-073 with 「Set to subscriber」 ON",
+          "cases": [
+            "TC-072",
+            "TC-073"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "feature": "phd/ai-hair-color-custom",
+  "platform": "android",
+  "title": "AI Hair Color Custom",
+  "version": 4,
+  "approved_at": "2026-11-19T02:51:30.120Z",
+  "draft": "20261118-120459",
+  "spec_folder": "specs/2026-11-17",
+  "spec_files": [
+    {
+      "name": "AI Hair Color - Design Figma 616-9324.md",
+      "sha256": "9040c4d77dd4d8362a2e0f2232a5bae63960998a93a141408db880611b9c5f2f",
+      "bytes": 5565
+    },
+    {
+      "name": "AI Hair Color Custom - PM Figma 3287-89.md",
+      "sha256": "fa8adcf5b355a584fd036fb227924a99820b3bd33d3e04c809b7517a98e2bf3b",
+      "bytes": 20918
+    }
+  ],
+  "spec_set_sha256": "52880ca035adc7c9ec2cb2f747c12be75d22f43a46f9b532470f1156741d78f2",
+  "cases": 87,
+  "history": [
+    {
+      "version": 1,
+      "approved_at": "2026-11-12T02:55:25.706Z",
+      "spec_set_sha256": "f37188d91b9f6ace99ed9e0c30065ff980fc5f25a4ba75456f7ef08c3704813d",
+      "draft": "20261112-100854",
+      "cases": 85,
+      "csv": "history/v1.csv",
+      "requirements": "history/v1-requirements.md"
+    },
+    {
+      "version": 2,
+      "approved_at": "2026-11-13T07:34:20.218Z",
+      "spec_set_sha256": "f37188d91b9f6ace99ed9e0c30065ff980fc5f25a4ba75456f7ef08c3704813d",
+      "draft": "20261113-150700",
+      "cases": 85,
+      "csv": "history/v2.csv",
+      "requirements": "history/v2-requirements.md"
+    },
+    {
+      "version": 3,
+      "approved_at": "2026-11-17T08:44:00.927Z",
+      "spec_set_sha256": "52880ca035adc7c9ec2cb2f747c12be75d22f43a46f9b532470f1156741d78f2",
+      "draft": "20261117-151025",
+      "cases": 87,
+      "csv": "history/v3.csv",
+      "requirements": "history/v3-requirements.md"
+    },
+    {
+      "version": 4,
+      "approved_at": "2026-11-19T02:51:30.120Z",
+      "spec_set_sha256": "52880ca035adc7c9ec2cb2f747c12be75d22f43a46f9b532470f1156741d78f2",
+      "draft": "20261118-120459",
+      "cases": 87,
+      "csv": "cases.csv",
+      "requirements": "requirements.md"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "tr": "TR261118-0070",
+  "product": "PhotoDirector Mobile for Android",
+  "tester": "WILLY_WU",
+  "template": "Standard Report",
+  "testingDate": "2026/11/19",
+  "version": "20.19.0",
+  "build": "202611181947",
+  "buildDay": "1118",
+  "os": "Android 16",
+  "osLanguage": "English",
+  "style": "phd-a",
+  "textOnly": true,
+  "shortDescription": "20.19.0.v202611181947 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R5)",
+  "testResult": "PHD-A - Bug verification [OK=19, Fail=2]",
+  "env": {
+    "device": "Samsung Galaxy S23 (SM-S9110) / Android 16",
+    "server": "Test Server",
+    "account": "Not signed in (Free; Premium by the debug switch where a bug needed it)",
+    "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+    "install": "TR build 20.19.0.v202611181947 (versionCode 90201901, SR PHA261029-01), installed 2026/11/19 over the previous build; app data cleared once on 2026/11/19 16:00 to remove a Swipe Collage draft that crashed on open",
+    "scope": "every eBug on this TR's verify list (PHD-A rule)"
+  },
+  "observations": [
+    "Swipe Collage: after the app was closed with a Swipe Collage canvas open, every later 「Try Swipe Collage!」 crashed the app (ClassCastException in SwipeCollageDraftUseCase load) until the app data was cleared.",
+    "AI Hair Color Custom: the Intensity bar shows on the result only; the panel itself has no Intensity row (today's spec R-041 rests on open question Q-4; the PM comment RD cites draws it on the result).",
+    "AI Hair Color Custom: before a style is chosen the colour-wheel key keeps full colour while disabled.",
+    "Swipe Collage text Color picker: a colour cancelled with Back is still added as a recent swatch."
+  ],
+  "rows": [
+    {
+      "bug": "PHA252025-0128",
+      "title": "PHD-A 19.12.0 - [UX]Artistic_Avatar: There is no place to show the remain credits in the result page",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "The Artistic Avatar result page now shows the remaining credits.",
+      "images": ["screenshots/a_0128_result.png"]
+    },
+    {
+      "bug": "PHA262026-0361",
+      "title": "PHD-A 20.15.0 - AI_Replace: The preview is not change to new image after tapping the [Create More] button",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "After picking another AI Replace artwork, Replace More now opens AI Replace with that artwork's image.",
+      "images": ["screenshots/a_0361_after_replacemore1.png", "screenshots/a_0361_selected_again.png", "screenshots/a_0361_after_replacemore2.png"]
+    },
+    {
+      "bug": "PHA262026-0362",
+      "title": "PHD-A 20.15.0 - My_AI_Artwork: The button is showing \"Create More\" instead of \"Replace More\"",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "The AI Replace tab in My AI Artwork now shows 「Replace More」.",
+      "images": ["screenshots/a_0362_replace_tab.png", "screenshots/a_0362_selected_img1.png"]
+    },
+    {
+      "bug": "PHA262026P0057",
+      "title": "PHD-A 20.19.0 - [AIAgent] Batch_Editing: AI Enhance does not pause in the background; remaining photos fail as Connection lost",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "Batch AI Enhance now pauses while the app is in the background and continues on return until every photo is enhanced.",
+      "images": ["screenshots/b_p0057_r2_before_home.png", "screenshots/b_p0057_r2_return.png", "screenshots/b_p0057_r2_end.png"]
+    },
+    {
+      "bug": "PHA262026P0058",
+      "title": "PHD-A 20.19.0 - [AIAgent] Batch_Editing: System Back does not close the AI Enhance confirm dialog 「Enhance 12 photos?」",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "System Back now closes the 「Enhance 12 photos?」 dialog like Cancel and nothing is processed.",
+      "images": ["screenshots/b_p0058_confirm.png", "screenshots/b_p0058_after_back1.png"]
+    },
+    {
+      "bug": "PHA262026P0059",
+      "title": "PHD-A 20.19.0 - [AIAgent] Batch_Editing: System Back does not close the 「Discard changes?」 dialog opened from Home",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "System Back now closes the 「Discard changes?」 dialog like Keep Editing and the edits are kept.",
+      "images": ["screenshots/b_p0059_discard.png", "screenshots/b_p0059_after_back1.png"]
+    },
+    {
+      "bug": "PHA262026P0060",
+      "title": "PHD-A 20.19.0 - [AIAgent] Batch_Editing: Square crop applied to all saves a 16:9 photo as 1434 x 1435, not square",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "Square crop applied to all now saves the 16:9 photo with equal width and height.",
+      "images": ["screenshots/b_p0060_all.png", "screenshots/b_p0060_save1.png"]
+    },
+    {
+      "bug": "PHA262026P0084",
+      "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: 「Lock」 on the image tool bar does nothing; the photo can still be moved",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "Lock now locks the photo: it can no longer be dragged or zoomed in its frame, and the floating lock unlocks it.",
+      "images": ["screenshots/c_p0084_after_lock.png", "screenshots/c_p0084_after_drag.png", "screenshots/c_p0084_floating_unlock_tapped.png"]
+    },
+    {
+      "bug": "PHA262026P0085",
+      "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: 「Removal」 on the image tool bar opens nothing",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "Removal now opens the Object Removal room with the frame's photo, for both Premium and Free users.",
+      "images": ["screenshots/c_p0085_premium_room.png", "screenshots/e_p0085_free_room.png", "screenshots/e_p0085_free_apply_check.png"]
+    },
+    {
+      "bug": "PHA262026P0089",
+      "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: System Back on the Custom color picker applies the colour instead of cancelling",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "System Back now closes only the Custom color picker and the picked colour is not applied.",
+      "images": ["screenshots/c_p0089_light_red_chosen.png", "screenshots/c_p0089_after_back.png"]
+    },
+    {
+      "bug": "PHA262026P0097",
+      "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages move button selects on a tap; dragging shows no enlarged page or hint",
+      "creator": "WILLY_WU", "severity": "3", "result": "Fail",
+      "summary": "A tap on the Pages move button still selects the page; dragging now lifts the page enlarged and translucent but shows no hint.",
+      "observed": "Tapping the move button under a page still selects that page (orange frame, Insert Left / Insert Right / Delete enabled). Dragging now lifts the page enlarged, tilted and translucent, but no 「Hold ≡ & drag to reorder」 hint appears.",
+      "observedZh": "點頁面下方的移動鈕仍會選取該頁；拖曳時頁面已放大、傾斜、半透明，但沒有出現拖曳提示文字。",
+      "expected": "Tapping the move button should do nothing; only dragging it should reorder the page, with the hint shown.",
+      "expectedZh": "點移動鈕不應選取頁面；只有拖曳才排序，並顯示提示文字。",
+      "images": ["screenshots/c_p0097_pages_before.png", "screenshots/c_p0097_tap_move_page1.png", "recordings/c_p0097_drag2/f-014.png"]
+    },
+    {
+      "bug": "PHA262026P0098",
+      "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages controls overlap from 5 pages; at 10 only the last ••• can be reached",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "At 5 and 10 pages every page's move and ••• buttons are drawn apart and each opens the right page.",
+      "images": ["screenshots/c_p0098_five_pages.png", "screenshots/c_p0098_ten_pages.png", "screenshots/c_p0098_ten_page5_menu.png"]
+    },
+    {
+      "bug": "PHA262026P0099",
+      "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Template cards read 「1 pages」 and Save & Share reads 「1 images」",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "One-page template cards now read 「1 page」 and the one-page Save & Share no longer shows 「1 images」.",
+      "images": ["screenshots/c_p0099_cards_minimalist.png", "screenshots/c_p0099_save_share_premium.png"]
+    },
+    {
+      "bug": "PHA262026P0112",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom panel: colour rows can be picked before any style is chosen",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "Before a style is chosen, the Custom panel's colour rows and Generate are now disabled.",
+      "images": ["screenshots/d_p0112_custom_no_style.png", "screenshots/d_p0112_ombre_enabled.png"]
+    },
+    {
+      "bug": "PHA262026P0113",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom colour palette has no eyedropper key next to the hue slider",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "The Custom colour palette now has an eyedropper key right of the hue slider and it picks a colour from the photo.",
+      "images": ["screenshots/d_p0113_palette.png", "screenshots/d_p0113_picked_candle.png"]
+    },
+    {
+      "bug": "PHA262026P0114",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: System Back in the colour palette leaves AI Hair Color, not just the palette",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "System Back in the colour palette now closes only the palette like Cancel and stays in AI Hair Color.",
+      "images": ["screenshots/d_p0114_green_before_back.png", "screenshots/d_p0114_after_back.png"]
+    },
+    {
+      "bug": "PHA262026P0115",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Collapsing Custom panel keeps Soft Black selected; Generate makes a template",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "Collapsing the Custom panel now keeps Custom selected, and the outer Generate makes a Custom result with the chosen colours.",
+      "images": ["screenshots/d_p0115_collapsed.png", "screenshots/d_p0115_custom_result_orange.png"]
+    },
+    {
+      "bug": "PHA262026P0117",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom result has no Intensity bar, panel open or collapsed",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "The Custom result now shows an Intensity bar at 100 above Retry and it can be dragged.",
+      "images": ["screenshots/d_p0117_result_1.png", "screenshots/d_p0118_intensity_drag.png"]
+    },
+    {
+      "bug": "PHA262026P0118",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: First Custom result shows no one-time My AI Artwork 100% dialog",
+      "creator": "WILLY_WU", "severity": "3", "result": "Fail",
+      "summary": "On a cleared install the first Custom result still shows no one-time My AI Artwork 100% dialog.",
+      "observed": "With the app data cleared, the first Custom result shows with Intensity 100 and no one-time dialog; none appears on dragging Intensity, closing the panel or the second Custom result either.",
+      "observedZh": "清除 App 資料後，第一次 Custom 結果仍沒有出現一次性對話框；拖曳 Intensity、收合面板與第二次結果時也都沒有。",
+      "expected": "A one-time dialog should say My AI Artwork keeps only the 100% version, with Don't show again.",
+      "expectedZh": "應出現一次性對話框說明 My AI Artwork 只保存 100% 版本，並有「不再顯示」。",
+      "images": ["screenshots/e_p0118_first_result.png", "screenshots/e_p0118_intensity_drag.png", "screenshots/e_p0118_after_collapse.png"]
+    },
+    {
+      "bug": "PHA262026P0119",
+      "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Tapping Custom after a template result does not bring back the Custom result",
+      "creator": "WILLY_WU", "severity": "3", "result": "OK",
+      "summary": "After a template result, tapping Custom now brings back the Custom result with no new charge.",
+      "images": ["screenshots/d_p0119_soft_black_result.png", "screenshots/d_p0119_custom_tapped.png"]
+    },
+    {
+      "bug": "PHA262026P0129",
+      "title": "PHD-A 20.19.0 - [UX]Reel_Creator: The mask is not covering the preview below the [Use Template] button",
+      "creator": "WILLY_WU", "severity": "2", "result": "OK",
+      "summary": "In Reel Creator Preview the mask now covers the preview below 「Use Template」.",
+      "images": ["screenshots/a_p0129_preview_cinematic_horror.png", "screenshots/a_p0129_preview_yearend.png"]
+    }
+  ]
+}

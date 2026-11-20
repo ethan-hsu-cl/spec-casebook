@@ -1,16 +1,135 @@
 {
-  "note": "No Figma links in the spec set: arrows are the orange arrows drawn between the PDF mockups (node = board id + counter) plus the flow stated in the notes (Create More).",
+  "note": "Arrows drawn between the PM mockups. Since the 2026-11-17 Figma catch-up (group p1) each carries its Figma node id in `node` (arrow id kept from the PDF read); artwork-a1 (Create More → room) is stated in the notes only, no arrow drawn. Design read 2026-11-17 (groups d1, d2): the Design section 976:11727 draws no arrows; the three arrows of the older PM copy (933:4752) are marked not_flow (superseded).",
   "arrows": [
-    { "arrow": "room-a1", "node": "room-a1", "board": "room", "edge": "Room template card (「點任一 template」)", "expected": "Preview of that template (full-screen 9:16 demo)", "requirement": "R-090" },
-    { "arrow": "preview-a1", "node": "preview-a1", "board": "preview", "edge": "Preview 「View photo tips」", "expected": "Photo tips sheet", "requirement": "R-091" },
-    { "arrow": "preview-a2", "node": "preview-a2", "board": "preview", "edge": "Preview 「Use Template」", "expected": "Photo picker 「Add Photos」", "requirement": "R-092" },
-    { "arrow": "picker-a1", "node": "picker-a1", "board": "picker", "edge": "Picker (photos picked, left) → picker entered again in the same session (「session 內再次進 picker」)", "expected": "Picker with 「Use the 3 photos you picked last time?」 + Import above the tray", "requirement": "R-093" },
-    { "arrow": "picker-a2", "node": "picker-a2", "board": "picker", "edge": "Prompt 「Import」", "expected": "Picker with the 3 photos selected, tray in red 「Select at least 5 photos (2 more)」, Next disabled", "requirement": "R-094" },
-    { "arrow": "picker-a3", "node": "picker-a3", "board": "picker", "edge": "Picker 「Next」 (count in range)", "expected": "Confirm-generate page", "requirement": "R-095" },
-    { "arrow": "confirm-a1", "node": "confirm-a1", "board": "confirm", "edge": "Confirm page: remove photos to below min (「刪到 < min」)", "expected": "Count red (4/15), Generate disabled, tap shows toast 「Please upload at least 5 photos」", "requirement": "R-096" },
-    { "arrow": "text-language-a1", "node": "text-language-a1", "board": "text-language", "edge": "Confirm page 「Generate」", "expected": "My AI Artwork, Reel Creator tab, new card 「Processing…」", "requirement": "R-097" },
-    { "arrow": "artwork-a1", "node": "artwork-a1", "board": "artwork", "edge": "My AI Artwork 「Create More」", "expected": "Reel Creator room", "requirement": "R-098" },
-    { "arrow": "cinematic-a1", "node": "cinematic-a1", "board": "cinematic", "edge": "Cinematic preview 「Use Template」", "expected": "Picker 「Select 1 photo」", "requirement": "R-099" },
-    { "arrow": "cinematic-a2", "node": "cinematic-a2", "board": "cinematic", "edge": "Cinematic picker 「Next」", "expected": "Cinematic confirm page (Your photos 1/1, Generate | 40)", "requirement": "R-100" }
-  ]
+    {
+      "arrow": "room-a1",
+      "node": "7252-463",
+      "board": "room",
+      "edge": "Room template card (「點任一 template」)",
+      "expected": "Preview of that template (full-screen 9:16 demo)",
+      "requirement": "R-090",
+      "figma": true
+    },
+    {
+      "arrow": "preview-a1",
+      "node": "7337-1142",
+      "board": "preview",
+      "edge": "Preview 「View photo tips」",
+      "expected": "Photo tips sheet",
+      "requirement": "R-091",
+      "figma": true
+    },
+    {
+      "arrow": "preview-a2",
+      "node": "7337-1195",
+      "board": "preview",
+      "edge": "Preview 「Use Template」",
+      "expected": "Photo picker 「Add Photos」",
+      "requirement": "R-092",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "picker-a1",
+      "node": "7337-1197",
+      "board": "picker",
+      "edge": "Picker (photos picked, left) → picker entered again in the same session (「session 內再次進 picker」)",
+      "expected": "Picker with 「Use the 3 photos you picked last time?」 + Import above the tray",
+      "requirement": "R-093",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "picker-a2",
+      "node": "7337-1199",
+      "board": "picker",
+      "edge": "Prompt 「Import」",
+      "expected": "Picker with the 3 photos selected, tray in red 「Select at least 5 photos (2 more)」, Next disabled",
+      "requirement": "R-094",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "picker-a3",
+      "node": "7337-1201",
+      "board": "picker",
+      "edge": "Picker 「Next」 (count in range)",
+      "expected": "Confirm-generate page",
+      "requirement": "R-095",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "confirm-a1",
+      "node": "7337-1203",
+      "board": "confirm",
+      "edge": "Confirm page: remove photos to below min (「刪到 < min」)",
+      "expected": "Count red (4/15), Generate disabled, tap shows toast 「Please upload at least 5 photos」",
+      "requirement": "R-096",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "text-language-a1",
+      "node": "7271-490",
+      "board": "text-language",
+      "edge": "Confirm page 「Generate」",
+      "expected": "My AI Artwork, Reel Creator tab, new card 「Processing…」",
+      "requirement": "R-097",
+      "figma": true
+    },
+    {
+      "arrow": "artwork-a1",
+      "node": "artwork-a1",
+      "board": "artwork",
+      "edge": "My AI Artwork 「Create More」",
+      "expected": "Reel Creator room",
+      "requirement": "R-098"
+    },
+    {
+      "arrow": "cinematic-a1",
+      "node": "7337-1205",
+      "board": "cinematic",
+      "edge": "Cinematic preview 「Use Template」",
+      "expected": "Picker 「Select 1 photo」",
+      "requirement": "R-099",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "cinematic-a2",
+      "node": "7337-1207",
+      "board": "cinematic",
+      "edge": "Cinematic picker 「Next」",
+      "expected": "Cinematic confirm page (Your photos 1/1, Generate | 40)",
+      "requirement": "R-100",
+      "figma": true,
+      "flow": true
+    },
+    {
+      "arrow": "933-5092",
+      "node": "933-5092",
+      "edge": "ds-pm-copy: ? → 1. Preview (Reels 式，上下刷)",
+      "expected": "",
+      "source": "figma-inventory",
+      "not_flow": "superseded: older copy of the PM spec inside the Design file (section PHD_spec 933:4752); the current PM page 7238:8623 draws the same edges (R-090 – R-100)"
+    },
+    {
+      "arrow": "933-5133",
+      "node": "933-5133",
+      "edge": "ds-pm-copy: ? → My AI Artwork - Reel Creator tab",
+      "expected": "",
+      "source": "figma-inventory",
+      "not_flow": "superseded: older copy of the PM spec inside the Design file (section PHD_spec 933:4752); the current PM page 7238:8623 draws the same edges (R-090 – R-100)"
+    },
+    {
+      "arrow": "933-5163",
+      "node": "933-5163",
+      "edge": "ds-pm-copy: 1. Preview (Reels 式，上下刷) (automatic) → 2. View photo tips",
+      "expected": "",
+      "source": "figma-inventory",
+      "not_flow": "superseded: older copy of the PM spec inside the Design file (section PHD_spec 933:4752); the current PM page 7238:8623 draws the same edges (R-090 – R-100)"
+    }
+  ],
+  "count": 14
 }

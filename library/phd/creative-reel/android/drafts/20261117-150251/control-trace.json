@@ -1,0 +1,1596 @@
+{
+ "spec_folder": "specs/2026-11-02",
+ "platform": "android",
+ "inventory": "specs/2026-11-02/extracted/inventory.json",
+ "entries": [
+  {
+   "group": "K-db055e",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark",
+    "ds-pm-copy"
+   ],
+   "name": "btn_add_credit",
+   "label": "100",
+   "set": false,
+   "instances": 9,
+   "screens": [
+    "01_Template_List",
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She",
+    "02_Template_Preview_SwipeHint_Peek",
+    "Reel Creator"
+   ],
+   "controls": [
+    "K-fc335c",
+    "K-31db35",
+    "K-dc17b0",
+    "K-f20f08",
+    "K-8a62c4"
+   ],
+   "app": [],
+   "press": "TC-008",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "C-e85bec",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "btn_cancel",
+   "label": "choice of 22",
+   "set": true,
+   "instances": 36,
+   "screens": [
+    "03_Photo_Picker",
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She"
+   ],
+   "controls": [
+    "K-4acae9",
+    "K-de6230",
+    "K-37d9d7",
+    "K-e2bb4d",
+    "K-c2dcf0",
+    "K-87890a",
+    "K-dad267",
+    "K-936793",
+    "K-6469bf",
+    "K-c1dcee",
+    "K-848905",
+    "K-7099cc",
+    "K-e334f7",
+    "K-c952f9",
+    "K-6b647a",
+    "K-c4552f",
+    "K-22c53e",
+    "K-732bfb",
+    "K-0e9c39",
+    "K-593c6d",
+    "K-c3552e",
+    "K-1fc539"
+   ],
+   "app": [],
+   "press": "TC-136, TC-065",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-fa0824",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "btn_credit_primary_1row",
+   "label": "Generate",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She"
+   ],
+   "controls": [
+    "K-5bf320",
+    "K-86faee"
+   ],
+   "app": [],
+   "press": "TC-074, TC-067",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-8b600c",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark",
+    "ds-pm-copy"
+   ],
+   "name": "btn_primary_large",
+   "label": "Create more",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "05_Result_My_AI_Artwork",
+    "My AI Artwork - Reel Creator tab"
+   ],
+   "controls": [
+    "K-73e8f2",
+    "K-950f99",
+    "K-10652d"
+   ],
+   "app": [],
+   "press": "TC-091",
+   "how": "label"
+  },
+  {
+   "group": "K-a5f8a0",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "btn_primary_large",
+   "label": "Use Template",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "02_Template_Preview_SwipeHint_Peek"
+   ],
+   "controls": [
+    "K-0c446b",
+    "K-b6fed5"
+   ],
+   "app": [],
+   "press": "TC-037",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-4fe9cb",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "btn_primary_small",
+   "label": "Next",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "03_Photo_Picker",
+    "03-1_Photo_Picker_Reuse_Last_Photos"
+   ],
+   "controls": [
+    "K-df7f5c",
+    "K-ea7f6d",
+    "K-6b5df0",
+    "K-665de8"
+   ],
+   "app": [],
+   "press": "TC-053, TC-039",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-2d6b08",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "btn_primary_small",
+   "label": "Import",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "03-1_Photo_Picker_Reuse_Last_Photos",
+    "03-2_Toast_Reuse_Last_Photos_3+",
+    "03-3_Toast_Reuse_Last_Photos_2",
+    "03-4_Toast_Reuse_Last_Photos_1"
+   ],
+   "controls": [
+    "K-307976",
+    "K-a3dd34",
+    "K-7e1f20"
+   ],
+   "app": [],
+   "press": "TC-055, TC-137",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-f84bba",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "btn_teritary_outline_small",
+   "label": "Resume to Upload",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "K-c0afc5",
+    "K-9f3f80"
+   ],
+   "app": [],
+   "press": "TC-143",
+   "how": "label"
+  },
+  {
+   "group": "K-a8bd56",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "DownSheet_caption/btn_ok_n",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "03_Photo_Picker",
+    "03-1_Photo_Picker_Reuse_Last_Photos"
+   ],
+   "controls": [
+    "K-e19ff6",
+    "K-f4cda6"
+   ],
+   "app": [],
+   "press": "n/a: an empty layer at the picker's top right; the board image draws nothing there",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-3676ec",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "ic_alert",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "03_Photo_Picker"
+   ],
+   "controls": [
+    "K-772095",
+    "K-19ef35"
+   ],
+   "app": [],
+   "press": "n/a: the 「!」 icon inside the tooltip 「Upload at leat 2 photos」, not a button (tooltip: Q-29)",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-36e23c",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "ic_checked",
+   "label": "1",
+   "set": false,
+   "instances": 14,
+   "screens": [
+    "03_Photo_Picker"
+   ],
+   "controls": [
+    "K-ce1674",
+    "K-096700",
+    "K-5bc793",
+    "K-cb5265",
+    "K-1196e8",
+    "K-f1a77b",
+    "K-09db98",
+    "K-2d5d92",
+    "K-66d147",
+    "K-e40bc7",
+    "K-34c14c",
+    "K-ba9685",
+    "K-68f831",
+    "K-953980"
+   ],
+   "app": [],
+   "press": "TC-038, TC-043",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-fa2ff4",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark",
+    "ds-pm-copy"
+   ],
+   "name": "ic_history",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "01_Template_List",
+    "Reel Creator"
+   ],
+   "controls": [
+    "K-bf7604",
+    "K-db3298",
+    "K-1fdd5c"
+   ],
+   "app": [],
+   "press": "TC-112",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-d0626d",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/button",
+   "label": "Expand photo",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "03_Photo_Picker"
+   ],
+   "controls": [
+    "M-bb411c",
+    "M-37263c"
+   ],
+   "app": [],
+   "press": "TC-135, TC-150",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-a73b60",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/button",
+   "label": "×",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "03-1_Photo_Picker_Reuse_Last_Photos",
+    "03-2_Toast_Reuse_Last_Photos_3+",
+    "03-3_Toast_Reuse_Last_Photos_2",
+    "03-4_Toast_Reuse_Last_Photos_1"
+   ],
+   "controls": [
+    "M-8d534d",
+    "M-e93f14",
+    "M-e9dc27",
+    "M-6e3736",
+    "M-8215c4"
+   ],
+   "app": [],
+   "press": "TC-056",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-286bec",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/button",
+   "label": "Sheet backdrop",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "04-1_Generate_Settings_Text_Language_She",
+    "04_Generate_Settings"
+   ],
+   "controls": [
+    "M-4b2031",
+    "M-f7aa56"
+   ],
+   "app": [],
+   "press": "TC-140",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-4a2301",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/button",
+   "label": "Select",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "M-191f86",
+    "M-0df457"
+   ],
+   "app": [],
+   "press": "TC-144",
+   "how": "label"
+  },
+  {
+   "group": "K-3056bc",
+   "kind": "dropdown",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/dropdown",
+   "label": "Text Language",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "04_Generate_Settings"
+   ],
+   "controls": [
+    "M-9cae15",
+    "M-026b0f"
+   ],
+   "app": [],
+   "press": "TC-075, TC-148",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-56bf54",
+   "kind": "item",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/item",
+   "label": "Template card",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "01_Template_List"
+   ],
+   "controls": [
+    "M-62dbb0",
+    "M-0c7afc"
+   ],
+   "app": [],
+   "press": "TC-023",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-15574a",
+   "kind": "item",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/item",
+   "label": "Photo",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "03_Photo_Picker",
+    "03-1_Photo_Picker_Reuse_Last_Photos"
+   ],
+   "controls": [
+    "M-3bcf41",
+    "M-866caf",
+    "M-8603e0",
+    "M-8556a5"
+   ],
+   "app": [],
+   "press": "TC-038, TC-043",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-c44d9a",
+   "kind": "item",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/item",
+   "label": "Photo tile (long-press drag)",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "04_Generate_Settings"
+   ],
+   "controls": [
+    "M-bc7d95",
+    "M-5cd273"
+   ],
+   "app": [],
+   "press": "TC-064",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-48cd04",
+   "kind": "item",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/item",
+   "label": "Language item",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "04-1_Generate_Settings_Text_Language_She",
+    "04_Generate_Settings"
+   ],
+   "controls": [
+    "M-815824",
+    "M-d203ef"
+   ],
+   "app": [],
+   "press": "TC-078",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-6ecdc6",
+   "kind": "item",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/item",
+   "label": "Artwork card",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "M-814bcd",
+    "M-93e428"
+   ],
+   "app": [],
+   "press": "TC-086",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "C-274035",
+   "kind": "tab",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "manual/tab",
+   "label": "choice of 3: 「Image to Video」 「Reel Creator」 「AI Face Swap」",
+   "set": true,
+   "instances": 6,
+   "screens": [
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "M-738564",
+    "M-8ed93a",
+    "M-264b83",
+    "M-93cc71",
+    "M-a0cb46",
+    "M-5b7d4d"
+   ],
+   "app": [],
+   "press": "TC-089",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-3aeda7",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "round/ic_add",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She"
+   ],
+   "controls": [
+    "K-57c9d8",
+    "K-2e209b"
+   ],
+   "app": [],
+   "press": "TC-068",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-8cad01",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "round/ic_caution",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "K-3f6c86",
+    "K-a55327"
+   ],
+   "app": [],
+   "press": "n/a: status icon on an interrupted card, not a button (TC-143 checks it)",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-00fb1f",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "round/ic_chevron_down",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She"
+   ],
+   "controls": [
+    "K-dfdb87",
+    "K-e620ab"
+   ],
+   "app": [],
+   "press": "TC-075",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-e3f9c3",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "round/ic_image",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She",
+    "02_Template_Preview_SwipeHint_Peek"
+   ],
+   "controls": [
+    "K-b22fde",
+    "K-c1d73a",
+    "K-a2d349",
+    "K-b88d57"
+   ],
+   "app": [],
+   "press": "n/a: icon beside the photo count, decorative",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-2f1a34",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "round/ic_info",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "K-6e4430",
+    "K-5ca9ce"
+   ],
+   "app": [],
+   "press": "TC-145",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-f7cf82",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light"
+   ],
+   "name": "round/ic_ratio",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "04-1_Generate_Settings_Text_Language_She"
+   ],
+   "controls": [
+    "K-6e2020"
+   ],
+   "app": [],
+   "press": "n/a: icon beside 「9:16」, decorative",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-313574",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "round/ic_volume",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "02_Template_Preview_SwipeHint_Peek"
+   ],
+   "controls": [
+    "K-5b02fc",
+    "K-e9d8b7"
+   ],
+   "app": [],
+   "press": "TC-025",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-72e947",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark",
+    "ds-pm-copy"
+   ],
+   "name": "top/ic_back",
+   "label": "",
+   "set": false,
+   "instances": 9,
+   "screens": [
+    "01_Template_List",
+    "04_Generate_Settings",
+    "04-1_Generate_Settings_Text_Language_She",
+    "02_Template_Preview_SwipeHint_Peek",
+    "Reel Creator"
+   ],
+   "controls": [
+    "K-4014b2",
+    "K-8fb12f",
+    "K-cdd64d"
+   ],
+   "app": [],
+   "press": "TC-009, TC-031, TC-071",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-ab50f0",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "top/ic_back_n",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "03_Photo_Picker",
+    "03-1_Photo_Picker_Reuse_Last_Photos",
+    "05_Result_My_AI_Artwork"
+   ],
+   "controls": [
+    "K-2132f3",
+    "K-318030"
+   ],
+   "app": [],
+   "press": "TC-052, TC-088",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-504a32",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "top/ic_back_n",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "02_Template_Preview_SwipeHint_Peek"
+   ],
+   "controls": [
+    "K-fb27fa",
+    "K-0a87b5"
+   ],
+   "app": [],
+   "press": "TC-033",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-6a3aa8",
+   "kind": "button",
+   "board": "ds-light",
+   "boards": [
+    "ds-light",
+    "ds-dark"
+   ],
+   "name": "top/ic_collapse_n",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "03_Photo_Picker",
+    "03-1_Photo_Picker_Reuse_Last_Photos"
+   ],
+   "controls": [
+    "K-142c01",
+    "K-0e28ac"
+   ],
+   "app": [],
+   "press": "TC-051",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-7dd672",
+   "kind": "button",
+   "board": "ds-pm-copy",
+   "boards": [
+    "ds-pm-copy"
+   ],
+   "name": "Nav/Top/Template",
+   "label": "182",
+   "set": false,
+   "instances": 7,
+   "screens": [
+    "1. Preview (Reels 式，上下刷)",
+    "2. View photo tips",
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled ",
+    "8. Text language 下拉選單（Creative）",
+    "C1. Cinematic preview"
+   ],
+   "controls": [
+    "K-c1cf21"
+   ],
+   "app": [],
+   "press": "n/a: superseded: older copy of the PM spec in the Design file (933:4752); the PM page 7238:8623 is read as p1",
+   "how": "by hand 2026-11-17 (Design, REQ-011)"
+  },
+  {
+   "group": "K-a1ff4d",
+   "kind": "button",
+   "board": "pm-artwork",
+   "boards": [
+    "pm-artwork"
+   ],
+   "name": "btn Create More",
+   "label": "Create More",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My AI Artwork - Reel Creator tab"
+   ],
+   "controls": [
+    "K-e836b7"
+   ],
+   "app": [],
+   "press": "TC-091",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-bf07d5",
+   "kind": "item",
+   "board": "pm-artwork",
+   "boards": [
+    "pm-artwork"
+   ],
+   "name": "manual/item",
+   "label": "Artwork card",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My AI Artwork - Reel Creator tab"
+   ],
+   "controls": [
+    "M-727261"
+   ],
+   "app": [],
+   "press": "TC-086",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "C-bb9685",
+   "kind": "tab",
+   "board": "pm-artwork",
+   "boards": [
+    "pm-artwork"
+   ],
+   "name": "manual/tab",
+   "label": "choice of 2: 「Image to Video」 「Reel Creator」",
+   "set": true,
+   "instances": 2,
+   "screens": [
+    "My AI Artwork - Reel Creator tab"
+   ],
+   "controls": [
+    "M-df8d37",
+    "M-595891"
+   ],
+   "app": [],
+   "press": "TC-089",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-060cef",
+   "kind": "item",
+   "board": "pm-cinematic",
+   "boards": [
+    "pm-cinematic"
+   ],
+   "name": "manual/item",
+   "label": "Photo (tap to replace)",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "C3. 確認生成頁（1 張）"
+   ],
+   "controls": [
+    "M-4dbff0"
+   ],
+   "app": [],
+   "press": "TC-095",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-f36f27",
+   "kind": "button",
+   "board": "pm-confirm",
+   "boards": [
+    "pm-confirm",
+    "pm-cinematic"
+   ],
+   "name": "manual/button",
+   "label": "Photo ×",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled ",
+    "C3. 確認生成頁（1 張）"
+   ],
+   "controls": [
+    "M-69f4f5",
+    "M-783723",
+    "M-fc00f8"
+   ],
+   "app": [],
+   "press": "TC-065",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-6973c4",
+   "kind": "button",
+   "board": "pm-confirm",
+   "boards": [
+    "pm-confirm"
+   ],
+   "name": "manual/button",
+   "label": "+",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled "
+   ],
+   "controls": [
+    "M-a79643",
+    "M-691e3a"
+   ],
+   "app": [],
+   "press": "TC-068",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-dfd574",
+   "kind": "button",
+   "board": "pm-confirm",
+   "boards": [
+    "pm-confirm",
+    "pm-cinematic"
+   ],
+   "name": "manual/button",
+   "label": "Generate",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled ",
+    "C3. 確認生成頁（1 張）"
+   ],
+   "controls": [
+    "M-f1c625",
+    "M-088486",
+    "M-0eeff7"
+   ],
+   "app": [],
+   "press": "TC-074, TC-067",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-53954d",
+   "kind": "dropdown",
+   "board": "pm-confirm",
+   "boards": [
+    "pm-confirm"
+   ],
+   "name": "manual/dropdown",
+   "label": "English ▾",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled "
+   ],
+   "controls": [
+    "M-5933ac",
+    "M-ab493b"
+   ],
+   "app": [],
+   "press": "TC-075",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-9f5e22",
+   "kind": "item",
+   "board": "pm-confirm",
+   "boards": [
+    "pm-confirm"
+   ],
+   "name": "manual/item",
+   "label": "Photo tile (long-press drag)",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled "
+   ],
+   "controls": [
+    "M-3c6131",
+    "M-709910"
+   ],
+   "app": [],
+   "press": "TC-064",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-7b4181",
+   "kind": "button",
+   "board": "pm-picker",
+   "boards": [
+    "pm-picker",
+    "pm-cinematic",
+    "pm-artwork"
+   ],
+   "name": "manual/button",
+   "label": "‹",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "3. Photo picker（多選，tray 顯示張數）",
+    "4. Photo picker – 匯入上次選的圖（session 記憶）",
+    "5. 匯入後張數不在範圍 → 紅字，不可 Next",
+    "C2. Photo picker（單選）",
+    "My AI Artwork - Reel Creator tab"
+   ],
+   "controls": [
+    "M-33960f",
+    "M-52fb23",
+    "M-f044ed",
+    "M-6a45fd",
+    "M-89332c"
+   ],
+   "app": [],
+   "press": "TC-052, TC-088",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-185197",
+   "kind": "button",
+   "board": "pm-picker",
+   "boards": [
+    "pm-picker",
+    "pm-cinematic"
+   ],
+   "name": "manual/button",
+   "label": "Next",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "3. Photo picker（多選，tray 顯示張數）",
+    "4. Photo picker – 匯入上次選的圖（session 記憶）",
+    "5. 匯入後張數不在範圍 → 紅字，不可 Next",
+    "C2. Photo picker（單選）"
+   ],
+   "controls": [
+    "M-018f9a",
+    "M-aee2f9",
+    "M-f31a84",
+    "M-f0fd95"
+   ],
+   "app": [],
+   "press": "TC-053, TC-094",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "C-a3ea93",
+   "kind": "button",
+   "board": "pm-picker",
+   "boards": [
+    "pm-picker"
+   ],
+   "name": "manual/button",
+   "label": "choice of 2: 「Import」 「×」",
+   "set": true,
+   "instances": 2,
+   "screens": [
+    "4. Photo picker – 匯入上次選的圖（session 記憶）"
+   ],
+   "controls": [
+    "M-d076be",
+    "M-4af3bc"
+   ],
+   "app": [],
+   "press": "TC-055, TC-056",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-1ad125",
+   "kind": "dropdown",
+   "board": "pm-picker",
+   "boards": [
+    "pm-picker",
+    "pm-cinematic"
+   ],
+   "name": "manual/dropdown",
+   "label": "Recents ▾",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "3. Photo picker（多選，tray 顯示張數）",
+    "4. Photo picker – 匯入上次選的圖（session 記憶）",
+    "5. 匯入後張數不在範圍 → 紅字，不可 Next",
+    "C2. Photo picker（單選）"
+   ],
+   "controls": [
+    "M-4133cd",
+    "M-e39fd1",
+    "M-f82b39",
+    "M-9a090f"
+   ],
+   "app": [],
+   "press": "TC-051",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-cf1192",
+   "kind": "item",
+   "board": "pm-picker",
+   "boards": [
+    "pm-picker",
+    "pm-cinematic"
+   ],
+   "name": "manual/item",
+   "label": "Photo",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "3. Photo picker（多選，tray 顯示張數）",
+    "4. Photo picker – 匯入上次選的圖（session 記憶）",
+    "5. 匯入後張數不在範圍 → 紅字，不可 Next",
+    "C2. Photo picker（單選）"
+   ],
+   "controls": [
+    "M-541d93",
+    "M-cd8332",
+    "M-e9f4c3",
+    "M-16694f"
+   ],
+   "app": [],
+   "press": "TC-038, TC-043",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-745adf",
+   "kind": "button",
+   "board": "pm-preview",
+   "boards": [
+    "pm-preview",
+    "pm-confirm",
+    "pm-text-language",
+    "pm-cinematic"
+   ],
+   "name": "btn_credit",
+   "label": "182",
+   "set": false,
+   "instances": 7,
+   "screens": [
+    "1. Preview (Reels 式，上下刷)",
+    "2. View photo tips",
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled ",
+    "8. Text language 下拉選單（Creative）",
+    "C1. Cinematic preview"
+   ],
+   "controls": [
+    "K-3beb98",
+    "K-24b771",
+    "K-372f03",
+    "K-b4365e"
+   ],
+   "app": [],
+   "press": "TC-008",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-0492e7",
+   "kind": "button",
+   "board": "pm-preview",
+   "boards": [
+    "pm-preview",
+    "pm-cinematic"
+   ],
+   "name": "manual/button",
+   "label": "View photo tips",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1. Preview (Reels 式，上下刷)",
+    "C1. Cinematic preview"
+   ],
+   "controls": [
+    "M-53bc6c",
+    "M-002468"
+   ],
+   "app": [],
+   "press": "TC-033",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-dd6f0f",
+   "kind": "button",
+   "board": "pm-preview",
+   "boards": [
+    "pm-preview",
+    "pm-cinematic"
+   ],
+   "name": "manual/button",
+   "label": "Mute",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1. Preview (Reels 式，上下刷)",
+    "C1. Cinematic preview"
+   ],
+   "controls": [
+    "M-68460f",
+    "M-f600e2"
+   ],
+   "app": [],
+   "press": "TC-025",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-06f1f9",
+   "kind": "button",
+   "board": "pm-preview",
+   "boards": [
+    "pm-preview",
+    "pm-cinematic"
+   ],
+   "name": "manual/button",
+   "label": "Use Template",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "1. Preview (Reels 式，上下刷)",
+    "C1. Cinematic preview"
+   ],
+   "controls": [
+    "M-7d7122",
+    "M-371b14"
+   ],
+   "app": [],
+   "press": "TC-037, TC-092",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-f4b1ee",
+   "kind": "button",
+   "board": "pm-preview",
+   "boards": [
+    "pm-preview"
+   ],
+   "name": "manual/button",
+   "label": "Got it",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "2. View photo tips"
+   ],
+   "controls": [
+    "M-480961"
+   ],
+   "app": [],
+   "press": "TC-034",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-86e6e4",
+   "kind": "button",
+   "board": "pm-preview",
+   "boards": [
+    "pm-preview",
+    "pm-confirm",
+    "pm-text-language",
+    "pm-cinematic"
+   ],
+   "name": "round/ic_chevron_left",
+   "label": "",
+   "set": false,
+   "instances": 7,
+   "screens": [
+    "1. Preview (Reels 式，上下刷)",
+    "2. View photo tips",
+    "6. 確認生成頁（拖曳排序 / 刪除，sync AI Creative Stud",
+    "7. 確認生成頁 – 刪到 < min → Generate disabled ",
+    "8. Text language 下拉選單（Creative）",
+    "C1. Cinematic preview"
+   ],
+   "controls": [
+    "K-970983",
+    "K-7c5ba4",
+    "K-f108f4",
+    "K-e0c672"
+   ],
+   "app": [],
+   "press": "TC-031, TC-071",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-a47c74",
+   "kind": "button",
+   "board": "pm-room",
+   "boards": [
+    "pm-room"
+   ],
+   "name": "btn_add_credit",
+   "label": "100",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Reel Creator"
+   ],
+   "controls": [
+    "K-85d76f"
+   ],
+   "app": [],
+   "press": "TC-008",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-022bfd",
+   "kind": "button",
+   "board": "pm-room",
+   "boards": [
+    "pm-room"
+   ],
+   "name": "ic_history",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Reel Creator"
+   ],
+   "controls": [
+    "K-5b8461"
+   ],
+   "app": [],
+   "press": "TC-112",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-82899a",
+   "kind": "item",
+   "board": "pm-room",
+   "boards": [
+    "pm-room"
+   ],
+   "name": "manual/item",
+   "label": "Template card",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Reel Creator"
+   ],
+   "controls": [
+    "M-6410c7"
+   ],
+   "app": [],
+   "press": "TC-023",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-e2c544",
+   "kind": "button",
+   "board": "pm-room",
+   "boards": [
+    "pm-room"
+   ],
+   "name": "top/ic_back",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Reel Creator"
+   ],
+   "controls": [
+    "K-cb6087"
+   ],
+   "app": [],
+   "press": "TC-009",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-d202d0",
+   "kind": "item",
+   "board": "pm-text-language",
+   "boards": [
+    "pm-text-language"
+   ],
+   "name": "manual/item",
+   "label": "Language item",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "8. Text language 下拉選單（Creative）"
+   ],
+   "controls": [
+    "M-a0f7e8"
+   ],
+   "app": [],
+   "press": "TC-078",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-7ddfeb",
+   "kind": "button",
+   "board": "pm-tutorial",
+   "boards": [
+    "pm-tutorial"
+   ],
+   "name": "manual/button",
+   "label": "Try Now",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Tutorial"
+   ],
+   "controls": [
+    "M-3ee885"
+   ],
+   "app": [],
+   "press": "TC-129, TC-130",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-478cb6",
+   "kind": "toggle",
+   "board": "pm-tutorial",
+   "boards": [
+    "pm-tutorial"
+   ],
+   "name": "manual/toggle",
+   "label": "Don’t show again",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Tutorial"
+   ],
+   "controls": [
+    "M-bc7854"
+   ],
+   "app": [],
+   "press": "TC-130",
+   "how": "label",
+   "carried_from": "20261117-114254"
+  },
+  {
+   "group": "K-7a3631",
+   "kind": "button",
+   "board": "pm-tutorial",
+   "boards": [
+    "pm-tutorial"
+   ],
+   "name": "top/ic_back_n",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Tutorial"
+   ],
+   "controls": [
+    "K-8d5830"
+   ],
+   "app": [],
+   "press": "TC-131",
+   "how": "by hand 2026-11-17",
+   "carried_from": "20261117-114254"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-11-17",
+  "how": "Catch-up of the PDF-only analysis (user, 2026-11-17, REQ-008). PM page 7238:8623 「26 11E Reel Creator (Cinestory + AI Transition + Creative Reel)」, section 「spec」 (7340:961) listed with get_metadata (figma-pm, qa1) and read in one inventory call (group p1) as nine region boards named after the PDF boards plus pm-tutorial. The section is the source of Creative Reel.pdf (pdf point = figma point + (1317, 487)). No dated frames or labels. Texts the PDF lacks: three clauses added to the 【 4–5. Picker 記憶上次選的圖 】 note (only templates with photo input > 1 show the prompt; 「last picked」 = the set last applied with Next; leaving the room ends the session and clears the memory), and a new board: the 「Tutorial」 phone (Reel Creator intro, Try Now, Don't show again) with the note 【 Demo video 調整】 • 文案同左. The Design file (qdzVXIFZeYwcsa6fipmcLH, node 976:11727) is not shared with qa-dm: create_session returned 「Figma could not access the requested file」 (Q-23). Design caught up 2026-11-17 (REQ-011): access granted to qa-dm; Design file qdzVXIFZeYwcsa6fipmcLH listed (pages 261109_AI_transition_feature, result page, 20260907, 20260826, 260817, draft). Page 933:4528 「261109_AI_transition_feature」 (the second link the user sent) holds three nodes: section 「Design」 976:11727 (the first link; 17 iPhone screens and 3 toasts, light and dark), section 「PHD_spec」 933:4752 (a copy of the PM 「spec」 section made before the PM added the intro page and resolved the picker-memory 待確認: older, superseded by PM page 7238:8623) and frame 「PDR_SPEC」 936:1971 (PowerDirector, another product: not read). Read in one inventory call (groups d1 = regions ds-light / ds-dark of 976:11727, d2 = region ds-pm-copy of 933:4752); board images cut from one section screenshot each. The older dated pages (20260907, 20260826, 260817, draft, result page) are earlier rounds of the same file, superseded by the 261109 page and not read.",
+  "pm_checked_at": "2026-11-17",
+  "files": {
+    "pm": {
+      "fileKey": "m0AHKf3UhHVYlf8kcXPoU0",
+      "page": "7238:8623",
+      "url": "https://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7340-961",
+      "account": "qa1@cyberlink.com (Dev seat, PM Workspace)",
+      "pdf": "Creative Reel.pdf",
+      "pdf_offset": [
+        1317,
+        487
+      ]
+    },
+    "design": {
+      "fileKey": "qdzVXIFZeYwcsa6fipmcLH",
+      "page": "933:4528",
+      "url": "https://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=976-11727",
+      "urls": [
+        "https://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=976-11727",
+        "https://www.figma.com/design/qdzVXIFZeYwcsa6fipmcLH/Cinematic-Reel-Creator--CineStory-?node-id=933-4528"
+      ],
+      "account": "qa-dm@cyberlink.com (Dev seat, CyberLink DC)",
+      "boards": {
+        "ds-light": "976:11727 light screens",
+        "ds-dark": "976:11727 dark screens",
+        "ds-pm-copy": "933:4752 older copy of the PM spec (superseded)"
+      },
+      "excluded": {
+        "936:1971": "PDR_SPEC: PowerDirector spec, another product"
+      }
+    }
+  },
+  "frames": [
+    {
+      "label": "Tutorial / 【 Demo video 調整】 (undated, not in the PDF)",
+      "node": "7567:15085",
+      "in_pdf": false,
+      "read": "pm-tutorial"
+    },
+    {
+      "label": "【 4–5. Picker 記憶上次選的圖 】 three added clauses (undated, not in the PDF)",
+      "node": "7337:1220",
+      "in_pdf": false,
+      "read": "pm-picker"
+    },
+    {
+      "label": "261109_AI_transition_feature (Design page, dated 2026-11-09; not in the PDF)",
+      "node": "933:4528",
+      "in_pdf": false,
+      "read": "ds-light, ds-dark"
+    },
+    {
+      "label": "20260907 (older Design page)",
+      "node": "352:3482",
+      "in_pdf": false,
+      "read": "older: superseded by page 261109_AI_transition_feature (933:4528)"
+    },
+    {
+      "label": "20260826 (older Design page)",
+      "node": "223:3355",
+      "in_pdf": false,
+      "read": "older: superseded by page 261109_AI_transition_feature (933:4528)"
+    },
+    {
+      "label": "260817 (older Design page)",
+      "node": "0:1",
+      "in_pdf": false,
+      "read": "older: superseded by page 261109_AI_transition_feature (933:4528)"
+    }
+  ],
+  "design_checked_at": "2026-11-17"
+}

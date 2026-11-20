@@ -1,0 +1,42 @@
+Filing as Creator: WILLY_WU
+  Creator verified — last filed PHA262026P0119 on 2026-11-13
+Format check: PHD-A 20.19.0
+
+1 bug(s) checked — 0 error(s), 0 warning(s)
+Format OK — clear to file.
+
+[Batch-Edit-T38-01] created PHA262026P0120
+  PHA262026P0120  sev 3  RD  NewCreated  build 202611132003  by WILLY_WU
+
+created 1 · skipped 0 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  PHA262026P0120  sev 3  RD  NewCreated  build 202611132003  by WILLY_WU
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).
+Filing as Creator: WILLY_WU
+  Creator verified — last filed PHA262026P0120 on 2026-11-17
+Format check: PHD-A 20.19.0
+⚠ WARN  Batch-Edit-T38-08  Severity 1 is crash / data loss / flow-blocking only — confirm it clears that bar
+
+6 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.
+
+[Batch-Edit-T38-01] already filed as PHA262026P0120 — skipping
+[Batch-Edit-T38-02] created PHA262026P0121
+  PHA262026P0121  sev 3  PM  NewCreated  build 202611132003  by WILLY_WU
+[Batch-Edit-T38-03] created PHA262026P0122
+[Batch-Edit-T38-04] created PHA262026P0123
+[Batch-Edit-T38-07] created PHA262026P0124
+[Batch-Edit-T38-08] created PHA262026P0125
+
+created 5 · skipped 1 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  PHA262026P0121  sev 3  PM  NewCreated  build 202611132003  by WILLY_WU
+  PHA262026P0122  sev 3  PM  NewCreated  build 202611132003  by WILLY_WU
+  PHA262026P0123  sev 3  PM  NewCreated  build 202611132003  by WILLY_WU
+  PHA262026P0124  sev 3  PM  NewCreated  build 202611132003  by WILLY_WU
+  PHA262026P0125  sev 1  RD  NewCreated  build 202611132003  by WILLY_WU
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).

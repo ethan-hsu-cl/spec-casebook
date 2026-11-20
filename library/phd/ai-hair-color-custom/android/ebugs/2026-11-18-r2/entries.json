@@ -1,0 +1,83 @@
+{
+ "ISS-HCC-16": {
+  "cases": [
+   "TC-092"
+  ],
+  "why": "Photo guide and picker labels differ from the Design"
+ },
+ "ISS-HCC-17": {
+  "cases": [
+   "TC-009"
+  ],
+  "why": "No-face dialog reads 「A face is required」, not the spec's 「Face is required」"
+ },
+ "ISS-HCC-18": {
+  "cases": [
+   "TC-015"
+  ],
+  "why": "Edit Room's Quick Action row has no 「Hair Color」 tool"
+ },
+ "ISS-HCC-19": {
+  "cases": [
+   "TC-024",
+   "TC-029"
+  ],
+  "why": "PM decision: with Solid the Highlight row disappears (PM) or stays greyed (Design)?"
+ },
+ "ISS-HCC-20": {
+  "cases": [
+   "TC-026"
+  ],
+  "why": "PM decision: two-colour style with Base only keeps Generate disabled (ruling REQ-003 says it must generate)"
+ },
+ "ISS-HCC-21": {
+  "cases": [
+   "TC-027"
+  ],
+  "why": "Highlight-only Generate shows no 「Select both a base and highlight color.」 toast"
+ },
+ "ISS-HCC-22": {
+  "cases": [
+   "TC-032"
+  ],
+  "why": "A palette colour is not added to the row as a new circle"
+ },
+ "ISS-HCC-23": {
+  "cases": [
+   "TC-039"
+  ],
+  "why": "PM decision: tapping the photo above the panel closes it and applies (ruling REQ-004 says it stays open)"
+ },
+ "ISS-HCC-24": {
+  "cases": [
+   "TC-045",
+   "TC-047"
+  ],
+  "why": "Generate in the panel collapses the panel instead of keeping it open"
+ },
+ "ISS-HCC-25": {
+  "cases": [
+   "TC-079",
+   "TC-088"
+  ],
+  "why": "✕ and system Back on a result ask 「Discard changes?」 and land in the Edit Room"
+ },
+ "ISS-HCC-26": {
+  "cases": [
+   "TC-071"
+  ],
+  "why": "Subscriber without credits sees 「Get Credit Refilled!」 / 「GET CREDITS」, not 「More Credits Required!」 / 「Get Credit」"
+ },
+ "ISS-HCC-27": {
+  "cases": [
+   "TC-017"
+  ],
+  "why": "PM decision: the first Solid template is 「Soft Black」, not the spec's 「Platinum」"
+ },
+ "ISS-HCC-28": {
+  "cases": [
+   "TC-022"
+  ],
+  "why": "PM decision: the two split-dye styles have photo thumbnails, not plain-colour ones"
+ }
+}

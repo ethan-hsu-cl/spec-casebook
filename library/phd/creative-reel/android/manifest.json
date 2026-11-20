@@ -2,9 +2,9 @@
   "feature": "phd/creative-reel",
   "platform": "android",
   "title": "Creative Reel",
-  "version": 2,
-  "approved_at": "2026-11-12T01:38:23.910Z",
-  "draft": "edit-20261112-093823",
+  "version": 4,
+  "approved_at": "2026-11-17T08:53:11.662Z",
+  "draft": "20261117-150251",
   "spec_folder": "specs/2026-11-02",
   "spec_files": [
     {
@@ -14,7 +14,7 @@
     }
   ],
   "spec_set_sha256": "2c1d72489c9244b7fe3d72d0d6a754cafedca8402829b7bb81e301516fa39cee",
-  "cases": 127,
+  "cases": 150,
   "history": [
     {
       "version": 1,
@@ -31,6 +31,24 @@
       "spec_set_sha256": "2c1d72489c9244b7fe3d72d0d6a754cafedca8402829b7bb81e301516fa39cee",
       "draft": "edit-20261112-093823",
       "cases": 127,
+      "csv": "history/v2.csv",
+      "requirements": "history/v2-requirements.md"
+    },
+    {
+      "version": 3,
+      "approved_at": "2026-11-17T06:44:39.824Z",
+      "spec_set_sha256": "2c1d72489c9244b7fe3d72d0d6a754cafedca8402829b7bb81e301516fa39cee",
+      "draft": "20261117-114254",
+      "cases": 134,
+      "csv": "history/v3.csv",
+      "requirements": "history/v3-requirements.md"
+    },
+    {
+      "version": 4,
+      "approved_at": "2026-11-17T08:53:11.662Z",
+      "spec_set_sha256": "2c1d72489c9244b7fe3d72d0d6a754cafedca8402829b7bb81e301516fa39cee",
+      "draft": "20261117-150251",
+      "cases": 150,
       "csv": "cases.csv",
       "requirements": "requirements.md"
     }

@@ -16,11 +16,48 @@ existing eBugs, and only when the user asks for it in chat. Never add eBug comme
 ## Inputs
 
 - The TR (`ecl_query.py tr <TR>`): product, build, the verify list and its creators. "My bugs" = rows whose
-  Creator is the tester, unless the user names another relation.
+  Creator is the tester, unless the user names another relation. **PhotoDirector Android (PHD-A) TRs only:** every
+  bug on the verify list, whoever created it (*PHD-A QR*, below).
 - A verification run with a verdict, screenshots and logs per bug (`library/<product>/<feature>/<platform>/runs/<date>-<tr>-verify/`,
   `result*.md`). Every verdict must have been seen on the TR's build; a bug never checked is not on the report.
 - The QRs other testers already filed on the TR (links in the TR's 「QA Report」 list): read one or two for the
   team's current wording before drafting.
+
+## PHD-A QR (user, 2026-11-13; PhotoDirector Android TRs only)
+
+On a PhotoDirector Mobile for Android TR, follow the team's template QR261102-0081 exactly; everything else in this
+skill (other products and platforms) keeps its own format below.
+
+- **Scope:** verify every bug on the TR's verify list, whoever created it (Creator ALBERT_CHANG, WILLY_WU, …); the
+  bug rows keep their own Creator.
+- **Draft:** `"style": "phd-a"`, `"textOnly": true`, `"shortDescription"` = the TR's Short Description copied
+  verbatim (e.g. `20.19.0.v202611111946 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, …) (R3)`).
+  `qa-report.ts check` enforces these.
+- **Form fields:** Short Description (the TR's), Test Result `PHD-A - Bug verification [OK=n, Fail=n]`, Testing
+  Date. Test Result Details is that same Test Result line only (no lettered list). Product Version, Build Day,
+  Build No., Operation System and OS Language stay empty. No attachments, no uploads to the eBugs.
+- **OK Reason** (the row's `summary` is the middle sentence, ending with a full stop):
+  ```
+  Verified OK with 202611111946 build.
+  AI Hair Color template names now stay on one line and are no longer truncated.
+  Risk test: n/a
+  ```
+- **Fail Reason** (`observed` / `expected` in English, `observedZh` / `expectedZh` the 摘要 in Traditional Chinese):
+  ```
+  Verified Fail with 202611111946 build.
+
+  Result:
+  Small triangles still show at the bottom corners of the First and Last Frame sample photos.
+  摘要：首尾影格範例圖下方兩角仍出現小三角形。
+
+  Expected Result:
+  The sample photos should show no triangles at their bottom corners.
+  摘要：範例圖下方兩角不應出現三角形。
+
+  Risk test: n/a
+  ```
+- The build in a Reason is the build number alone (`202611111946`, no version, no device). The *Wording* section's
+  Short Description, Test Result prefix, lettered Details and Account line do not apply to PHD-A.
 
 ## Verify first (user, 2026-11-05, REQ-093)
 
@@ -138,13 +175,18 @@ The first time the form is filled on a new template, record the field names you 
 - Account (user, 2026-11-05, REQ-100): the account the phone is signed in to, as the app's menu shows it (Launcher ☰,
   the account at the top), with its tier: `Account: cltqauiap2@gmail.com (Premium)`. Read it from the menu at the start
   of the verify run (it changes when someone signs in another account) and write it in the run's `result.md`; never
-  copy it from an earlier run.
+  copy it from an earlier run. When the app is not signed in and the bugs need no account, write that with the tier
+  (`Account: Not signed in (Free)`); signing in only for the QR is not needed (user, 2026-11-13).
 - Reasons in English, short, no test IDs, tool names, timestamps or retry history; the detail lives in the run
   folder. Never write a `.zip` file name in a Reason (ECL links it as a web address). The last line is
   `Evidence: {file.png} {file_log.txt}`, the names of the files on that eBug, like a description (OK rows too).
   Details end with `Evidence: screenshots and logs are attached to each eBug and named in its Reason.`
 
 ## Evidence on each eBug (user, 2026-11-05, REQ-099 / REQ-101)
+
+**Text only (user, 2026-11-13): this section is on hold.** The QR is filled with text alone: set `"textOnly": true`
+in the draft, so Reasons and Details name no files and `upload` refuses; the screenshots stay in the run folder for
+the review page. Old-ASP bugs (`PHA252025-…`) cannot take API uploads anyway.
 
 A QR's Reason reaches every linked bug, so each bug's evidence goes on that bug, and the QR carries no ZIP (others
 check the bug and the files there; `pack` refuses per-bug drafts):
@@ -158,6 +200,12 @@ file stays on the ticket. This is part of the QR exception to overlay rule 6: fi
 never a comment.
 
 ## Form notes (first filing, QR261103-0039, 2026-11-03)
+
+- **PhotoDirector Android (QR261113-0020, 2026-11-13).** Standard Report is `QRTemplateID=14830` on the PHD-A TRs
+  (read from the TR page's QA Report Create button with `window.open` stubbed). Operation System lists Android 11–15
+  only: an Android 16 phone leaves it unticked (Details names the OS). Test Result reads `PHD-A - …` (set
+  `testResult` in the draft; the script's default is PDR). The TR's verify list and the tickets moved to Close about
+  two minutes after Create, not at once. `PHA25…` / `PHA262026-…` bugs are old ASP: no API uploads.
 
 - **Create.** The TR page's 「Create QA Report」 › Standard Report › **Create** opens a new tab, which the browser pane
   blocks; open its URL instead: `https://ecl.cyberlink.com/IF3/qr/BPM/Start/Request/NewCreated?QRTemplateID=14564&TRCode=<TR>`

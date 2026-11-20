@@ -1,0 +1,263 @@
+{
+  "draft": "20261118-120459",
+  "current": [
+    "R3"
+  ],
+  "needs": {
+    "TC-075": [
+      "failure-fixture"
+    ],
+    "TC-076": [
+      "failure-fixture"
+    ],
+    "TC-081": [
+      "deeplink"
+    ],
+    "TC-082": [
+      "deeplink"
+    ],
+    "TC-084": [
+      "cms"
+    ]
+  },
+  "unavailable": {
+    "failure-fixture": "observability: no fault switch forces a server failure on PhotoDirector Android",
+    "deeplink": "RD has not given the Custom deeplink format (Q-11)",
+    "cms": "the CMS list of PhDM_AIHairColor_CustomStyle was not provided (Q-13)"
+  },
+  "phases": [
+    {
+      "id": "R3",
+      "name": "Full run of v4 on the Pixel 8a (build 20.19.0 / 90201901)",
+      "round": true,
+      "origin": {
+        "TC-001": "R2",
+        "TC-090": "R2",
+        "TC-003": "R2",
+        "TC-002": "R2",
+        "TC-004": "R2",
+        "TC-092": "R2",
+        "TC-093": "R2",
+        "TC-005": "R2",
+        "TC-006": "R2",
+        "TC-087": "R2",
+        "TC-007": "R2",
+        "TC-008": "R2",
+        "TC-009": "R2",
+        "TC-010": "R2",
+        "TC-011": "R2",
+        "TC-012": "R2",
+        "TC-013": "R2",
+        "TC-014": "R2",
+        "TC-015": "R2",
+        "TC-016": "R2",
+        "TC-017": "R2",
+        "TC-018": "R2",
+        "TC-019": "R2",
+        "TC-020": "R2",
+        "TC-030": "R2",
+        "TC-022": "R2",
+        "TC-021": "R2",
+        "TC-023": "R2",
+        "TC-024": "R2",
+        "TC-025": "R2",
+        "TC-026": "R2",
+        "TC-027": "R2",
+        "TC-028": "R2",
+        "TC-029": "R2",
+        "TC-031": "R2",
+        "TC-032": "R2",
+        "TC-033": "R2",
+        "TC-034": "R2",
+        "TC-035": "R2",
+        "TC-086": "R2",
+        "TC-038": "R2",
+        "TC-039": "R2",
+        "TC-041": "R2",
+        "TC-042": "R2",
+        "TC-043": "R2",
+        "TC-085": "R2",
+        "TC-077": "R2",
+        "TC-045": "R2",
+        "TC-057": "R2",
+        "TC-046": "R2",
+        "TC-047": "R2",
+        "TC-050": "R2",
+        "TC-040": "R2",
+        "TC-048": "R2",
+        "TC-053": "R2",
+        "TC-049": "R2",
+        "TC-054": "R2",
+        "TC-055": "R2",
+        "TC-056": "R2",
+        "TC-079": "R2",
+        "TC-088": "R2",
+        "TC-089": "R2",
+        "TC-078": "R2",
+        "TC-051": "R2",
+        "TC-052": "R2",
+        "TC-036": "R2",
+        "TC-037": "R2",
+        "TC-062": "R2",
+        "TC-063": "R2",
+        "TC-061": "R2",
+        "TC-060": "R2",
+        "TC-058": "R2",
+        "TC-059": "R2",
+        "TC-064": "R2",
+        "TC-065": "R2",
+        "TC-066": "R2",
+        "TC-067": "R2",
+        "TC-068": "R2",
+        "TC-069": "R2",
+        "TC-073": "R2",
+        "TC-070": "R2",
+        "TC-071": "R2",
+        "TC-075": "R2",
+        "TC-076": "R2",
+        "TC-081": "R2",
+        "TC-082": "R2",
+        "TC-084": "R2"
+      },
+      "note": "Pixel 8a (adb 42201JEKB02229), CASEBOOK_SERIAL set; coordinates are this phone's pixels (1080 x 2400). Account with credits; read the credit chip before and after every generation (6 credits each, R-040).",
+      "segments": [
+        {
+          "id": "R3-a",
+          "name": "Intro Demo and photo guide",
+          "note": "Pixel 8a: if the Intro Demo shows (feature never opened on this phone), run its rows; if not, Blocked --as test-data (app data may not be cleared). TC-092 (v4): app-wide 「Recommendation」 heading, items per feature, album-name tab. TC-093 ticks 「Don't show again.」 and runs last (one-way).",
+          "cases": [
+            "TC-001",
+            "TC-090",
+            "TC-003",
+            "TC-002",
+            "TC-004",
+            "TC-092",
+            "TC-093"
+          ]
+        },
+        {
+          "id": "R3-b",
+          "name": "Entry checks",
+          "note": "Photos in /sdcard/Pictures/HairColor on the Pixel 8a (copied from the S23, fixtures.md). TC-005 rechecks PHA262026P0110. v4: TC-009 accepts either no-face wording; TC-015 enters through Portrait › Hair › AI Hair Color (no Quick Action tool).",
+          "cases": [
+            "TC-005",
+            "TC-006",
+            "TC-087",
+            "TC-007",
+            "TC-008",
+            "TC-009",
+            "TC-010",
+            "TC-011",
+            "TC-012",
+            "TC-013",
+            "TC-014",
+            "TC-015",
+            "TC-016"
+          ]
+        },
+        {
+          "id": "R3-c",
+          "name": "Custom cell, panel, style, palette and collapse (no credits)",
+          "note": "hc_portrait_4x5.jpg. Nothing generated. v4: Solid hides the Highlight row (TC-024, TC-029); Base only and Highlight only both keep Generate disabled, no toast required (TC-026, TC-027). Rechecks P0115 (TC-038).",
+          "cases": [
+            "TC-017",
+            "TC-018",
+            "TC-019",
+            "TC-020",
+            "TC-030",
+            "TC-022",
+            "TC-021",
+            "TC-023",
+            "TC-024",
+            "TC-025",
+            "TC-026",
+            "TC-027",
+            "TC-028",
+            "TC-029",
+            "TC-031",
+            "TC-032",
+            "TC-033",
+            "TC-034",
+            "TC-035",
+            "TC-086",
+            "TC-038",
+            "TC-039",
+            "TC-041",
+            "TC-042",
+            "TC-043",
+            "TC-085",
+            "TC-077"
+          ]
+        },
+        {
+          "id": "R3-d",
+          "name": "Generate, wait and result (credits)",
+          "note": "Pexels portrait (recipes/pick-pexels-portrait*.steps; the hc_* photos are rejected as content). TC-057 rides on the first result (TC-045). v4: TC-079 / TC-088 land in the Edit Room; record whether 「Discard changes?」 shows (Q-22). Rechecks P0116 (TC-045), P0118 (TC-057). About 10 generations.",
+          "cases": [
+            "TC-045",
+            "TC-057",
+            "TC-046",
+            "TC-047",
+            "TC-050",
+            "TC-040",
+            "TC-048",
+            "TC-053",
+            "TC-049",
+            "TC-054",
+            "TC-055",
+            "TC-056",
+            "TC-079",
+            "TC-088",
+            "TC-089",
+            "TC-078",
+            "TC-051",
+            "TC-052",
+            "TC-036",
+            "TC-037"
+          ]
+        },
+        {
+          "id": "R3-e",
+          "name": "Every style generated (credits)",
+          "note": "One generation per style, 11 in all. Crowned styles need Premium: 「Set to subscriber」 ON first (KP-131), record the tier, leave it ON for R3-f to switch off.",
+          "cases": [
+            "TC-062",
+            "TC-063",
+            "TC-061",
+            "TC-060",
+            "TC-058",
+            "TC-059",
+            "TC-064",
+            "TC-065",
+            "TC-066",
+            "TC-067",
+            "TC-068"
+          ]
+        },
+        {
+          "id": "R3-f",
+          "name": "Free and low balance",
+          "note": "「Set to subscriber」 OFF (Free) for TC-069. TC-070 / TC-071 / TC-073 need a balance under 6: run them only if it already is; otherwise Blocked --as test-data with the balance seen (no credit reset without the user).",
+          "cases": [
+            "TC-069",
+            "TC-073",
+            "TC-070",
+            "TC-071"
+          ]
+        },
+        {
+          "id": "R3-x",
+          "name": "Parked fixtures",
+          "note": "Recorded Blocked at init from `unavailable`.",
+          "cases": [
+            "TC-075",
+            "TC-076",
+            "TC-081",
+            "TC-082",
+            "TC-084"
+          ]
+        }
+      ]
+    }
+  ]
+}

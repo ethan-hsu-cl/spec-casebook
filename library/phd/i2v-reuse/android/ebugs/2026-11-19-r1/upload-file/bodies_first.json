@@ -1,0 +1,26 @@
+{
+ "I2V-Reuse-R1-01": {
+  "entry": 1,
+  "iss": "ISS-IR-01",
+  "title": "No 「Settings applied」 toast after Reuse",
+  "feature": "I2V-Reuse-R1",
+  "type": "Functional",
+  "sev": 3,
+  "belong": "RD",
+  "out": 4,
+  "times": 4,
+  "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: No 「Settings applied」 toast when Reuse opens the Custom page",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Tap AI Photos\n3. Tap My Artwork\n4. Tap the All categories button\n5. Tap Image to Video\n6. Tap a finished Custom video made with Kling 2.6 (10s, Pro, Sound on)\n7. Tap Reuse\n8. Watch the Custom page for 8 seconds\n9. Check the result\n\nResult:\nThe Custom page opens with the video's settings and prompt, but the toast 「Settings applied」 never shows.\n摘要：Reuse 進入 Custom 頁設定已帶入，但沒有出現「Settings applied」toast。\n{20.19.0_ir01_reuse_room_no_toast.jpg} {20.19.0_ir01_recording_frames_no_toast.jpg} {20.19.0_ir01_start_end_room_no_toast.jpg} {20.19.0_ir01_log.txt}\n\nExpect Result:\nOn entering the Custom page the toast 「Settings applied」 shows (PM D1-04).\n摘要：進入 Custom 頁時應顯示 toast「Settings applied」。\n\nNote:\nDevice: Google Pixel 8a / Android 16, Test Server, Free account (build 20.19.0.v202611181947)\nSpec Link: Image to Video Reuse PM Figma (page 26'11/E support to reuse model settings in My artwork), Spec - UI board (From Save & Share Reuse, D1-04 / D1-04b toast 「Settings applied」) -\nhttps://www.figma.com/design/lSk4JUgbXG3DjauMLS9Et7/Image-to-Video?node-id=6366-5664\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_ir01_reuse_room_no_toast.jpg",
+   "20.19.0_ir01_recording_frames_no_toast.jpg",
+   "20.19.0_ir01_start_end_room_no_toast.jpg",
+   "20.19.0_ir01_log.txt"
+  ],
+  "images_dir": "C:\\Users\\willy_wu\\Desktop\\Agent\\spec-casebook\\library\\phd\\i2v-reuse\\android\\ebugs\\2026-11-19-r1\\20261119_eBug_drafts_I2V-Reuse-R1_20.19.0_images/01_ISS-IR-01",
+  "qa_note": "R-025 / R-026 (PM Spec - UI, From Save & Share Reuse D1-04 / D1-04b: entering the reused Custom page shows the toast 「Settings applied」). Reuse fills the room correctly (model, Start/End, prompt, empty photo; TC-010 / TC-013 / TC-012 Pass), but no toast: screenshots at ~0.6 s and ~2.6 s, a 9 s recording at 2 fps (TC-010), an 8 s recording (TC-015) and waitfor 「Settings applied」 7 s (TC-010, TC-013) found none. Seen on video A (Kling 2.6) and video C (Kling 3.0, Start/End). Blocks TC-016 (toast over a panel) and TC-046. The PM drew the toast only; no Design frame for it (PM-only).",
+  "ux": false,
+  "basis": "",
+  "ux_check": "—"
+ }
+}

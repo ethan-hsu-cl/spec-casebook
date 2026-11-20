@@ -1,0 +1,31 @@
+# ISS-IR-07 Mixpanel lines at Reuse and Generate
+# PhotoDirector Android 20.19.0 (90201901) v202611181947, Google Pixel 8a / Android 16, logcat of the app captured by the casebook run
+# Mixpanel, credit and job lines only (balance shown only when it changes); tokens and IDs dropped.
+
+## TC-023 Reuse and Generate (2026-11-19 14:29:30–14:30:16)
+2026-11-19 14:29:36.170 [PHD-A][Mixpanel]: logEvent name=Artwork_Reuse_Click
+2026-11-19 14:29:36.170 [PHD-A][Mixpanel]: [setCurFrom] from = artwork_reuse
+2026-11-19 14:29:37.316 CreditSystem: totalRemain=1273
+2026-11-19 14:30:14.457 CreditSystem: totalRemain=1193
+2026-11-19 14:30:14.462 AIEditorPreferenceUtil: addNewPack credit_action_id=genvideo_1_sec_kling_custom_2.6pro_enable_single_1080p credit_total_credit=80
+2026-11-19 14:30:14.752 AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-19 14:30:15.348 AIEditorPreferenceUtil: updatePackItems column value: 1795069815346
+2026-11-19 14:30:15.361 AIEditorPreferenceUtil: updatePackItems column value: 1795070835346
+2026-11-19 14:30:15.369 AIEditorPreferenceUtil: updatePackItems column value: 1
+2026-11-19 14:30:15.391 AIEditorPreferenceUtil: updatePackItems column value: Apply
+2026-11-19 14:30:15.402 [PHD-A][Mixpanel]: ImageToVideo_Result_Generate:{"duration":"10s","mode":"1_solo_photo","used_style":"custom","bgm":"on","model":"Model_Kling-2.6","from":"artwork_reuse","input_mode":"single","prompt":"Fixture A: the woman smiles and waves at the camera, gentle breeze in her hair","quality":"pro","free_quantity":"false"}
+2026-11-19 14:30:16.261 ImageToVideoActivity: [onDestroy]
+
+## TC-039 Reuse from Recent (2026-11-19 14:36:15–14:36:47)
+2026-11-19 14:36:21.299 [PHD-A][Mixpanel]: logEvent name=Artwork_Reuse_Click
+2026-11-19 14:36:21.299 [PHD-A][Mixpanel]: [setCurFrom] from = artwork_reuse
+2026-11-19 14:36:22.511 CreditSystem: totalRemain=1168
+2026-11-19 14:36:45.969 CreditSystem: totalRemain=1143
+2026-11-19 14:36:45.972 AIEditorPreferenceUtil: addNewPack credit_action_id=genvideo_1_sec_kling_custom_2.6pro_none_single_1080p credit_total_credit=25
+2026-11-19 14:36:46.201 AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-19 14:36:46.830 AIEditorPreferenceUtil: updatePackItems column value: 1795070206829
+2026-11-19 14:36:46.851 AIEditorPreferenceUtil: updatePackItems column value: 1795070806829
+2026-11-19 14:36:46.862 AIEditorPreferenceUtil: updatePackItems column value: 1
+2026-11-19 14:36:46.876 AIEditorPreferenceUtil: updatePackItems column value: Apply
+2026-11-19 14:36:46.893 [PHD-A][Mixpanel]: ImageToVideo_Result_Generate:{"duration":"5s","mode":"1_solo_photo","used_style":"custom","bgm":"off","model":"Model_Kling-2.6","from":"artwork_reuse","input_mode":"single","prompt":"Fixture A: the woman smiles and waves at the camera, gentle breeze in her hair","quality":"pro","free_quantity":"false"}
+2026-11-19 14:36:47.787 ImageToVideoActivity: [onDestroy]

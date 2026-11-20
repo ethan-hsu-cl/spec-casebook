@@ -79,6 +79,7 @@
 // The build comes from the run's run-state.md (or --build).
 // settle: the same verdict on both passes stands; any disagreement, or an item one pass skipped, becomes `question`;
 // a user decision already in findings.json is kept.
+import { PY } from './lib/python.ts';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { appendFileSync, copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
@@ -830,7 +831,7 @@ function ocrPass(dark: Map<string, boolean | null>, jobs: { cap: any; scr: any; 
   if (process.platform !== 'darwin') { console.error(`  OCR: ${todo.length} image(s) not read (macOS only): lines, size and hidden texts fall back to the view boxes`); return got; }
   const tmp = join(designDir, '.ocr'); mkdirSync(tmp, { recursive: true });
   // the images as read: a board screenshot cut to the screen, a Figma crop scaled up; the app's as they are
-  const prep = spawnSync('python3', ['-c', String.raw`
+  const prep = spawnSync(PY, ['-c', String.raw`
 import json, sys
 from PIL import Image
 jobs = json.load(sys.stdin); out = []
@@ -993,7 +994,7 @@ for sh in job["sheets"]:
             d.rectangle((tx, ty, tx + tw, ty + 28), fill=col); d.text((tx + 7, ty + 1), str(i), fill="white", font=FONT)
     p = sh["sheet"]; os.makedirs(os.path.dirname(p), exist_ok=True); out.save(p); res["sheets"].append(p)
 print(json.dumps(res))`;
-  const r = spawnSync('python3', ['-I', '-c', code], { input: JSON.stringify(input), encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  const r = spawnSync(PY, ['-I', '-c', code], { input: JSON.stringify(input), encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
   if (r.status !== 0) { console.error(`python3 (Pillow) failed: ${r.stderr.trim().split('\n').slice(-3).join(' ')}`); return {}; }
   return JSON.parse(r.stdout);
 }

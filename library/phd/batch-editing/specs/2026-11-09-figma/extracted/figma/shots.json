@@ -599,5 +599,12 @@
     "hash": null,
     "source_hash": "37e22bec",
     "captured_at": "2026-11-13T05:15:27.006Z"
+  },
+  "design-launcher.png": {
+    "board": "225:3699",
+    "group": "d-entry",
+    "hash": "c42693b5",
+    "overlay": "",
+    "captured_at": "2026-11-18T02:06:41.281Z"
   }
 }

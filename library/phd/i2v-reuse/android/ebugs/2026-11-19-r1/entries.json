@@ -1,0 +1,66 @@
+{
+ "ISS-IR-01": {
+  "cases": [
+   "TC-010",
+   "TC-013",
+   "TC-015"
+  ],
+  "why": "No 「Settings applied」 toast after Reuse"
+ },
+ "ISS-IR-02": {
+  "cases": [
+   "TC-015"
+  ],
+  "why": "Reuse skips the Image to Video explanation sheet"
+ },
+ "ISS-IR-03": {
+  "cases": [
+   "TC-020",
+   "TC-043"
+  ],
+  "why": "‹ and system Back in the reused room skip the Save & Share page"
+ },
+ "ISS-IR-04": {
+  "cases": [
+   "TC-006",
+   "TC-024"
+  ],
+  "why": "Quality chip is lower case: 「pro」 / 「std」"
+ },
+ "ISS-IR-05": {
+  "cases": [
+   "TC-049"
+  ],
+  "why": "Save & Share order: 「Prompts & Settings」 right under 「Save」, no 「More Video Editing Tools」"
+ },
+ "ISS-IR-06": {
+  "cases": [
+   "TC-028"
+  ],
+  "why": "PM: Create more placeholder and counter differ from the Reuse spec mockup"
+ },
+ "ISS-IR-07": {
+  "cases": [
+   "TC-037"
+  ],
+  "why": "Reuse sends Artwork_Reuse_Click without model, not ImageToVideo_Reuse_Click"
+ },
+ "ISS-IR-08": {
+  "cases": [
+   "O-1"
+  ],
+  "why": "Switching the system theme on Save & Share drops the page to the Launcher"
+ },
+ "ISS-IR-09": {
+  "cases": [
+   "O-2"
+  ],
+  "why": "Reuse transition draws the room rotated for a moment"
+ },
+ "ISS-IR-10": {
+  "cases": [
+   "O-5"
+  ],
+  "why": "PM: first tap in a reused prompt selects the whole prompt"
+ }
+}

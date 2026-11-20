@@ -1,0 +1,86 @@
+
+0 of 21 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Reel-Creator-R1-01] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-02] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Room shows no 「Reel Creator」 title in its top bar
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-05] PHD-A 20.19.0 - [AIAgent] Reel_Creator: No Reel Creator template row on the Launcher — PM to confirm
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-06] PHD-A 20.19.0 - [AIAgent] Reel_Creator: No Year-End Recap; Creative templates have raw names, one demo — PM to confirm
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-07] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Preview: no photo tips entry on Creative; ⓘ vs 「View photo tips」 — PM to decide
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-09] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Photo picker: no 「Add photos」 title; tray wording differs from Design
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-11] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker: imported count out of range shows no red tray text
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-12] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker Import: imported photos unticked; tapping one adds it twice
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-14] PHD-A 20.19.0 - [AIAgent][UX] Reel_Creator: Import prompt for one remembered photo: Design shows it, app does not — PM
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-15] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: no 「9:16」, no reorder hint, 「+」 last
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-16] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Creative confirm page has no 「Text Language」 bar
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-17] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: count below min (14/40) is not red
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-18] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Creative 70 / 90 and AI Transition 48 credits vs drawn 60 — PM to confirm
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-19] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Micro Cinema shows and charges 48 credits instead of 40
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-20] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Credit Detail names every Reel Creator use 「Reel Creator」 — PM to decide
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-21] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Picker, Import prompt and confirm strings stay English in zh-Hant / ja / de / pt
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-23] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Creative card shows 「Almost Done」 at once, no remaining time
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-25] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Wi-Fi lost during upload: 70 charged, 「Credits refunded」 but no refund
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-26] PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: My AI Artwork: 「Image to Video」 / 「Reel Creator」 not first and second
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-27] PHD-A 20.19.0 - [AIAgent] Reel_Creator: Micro Cinema reel is 1244 × 1660 (3:4), not 9:16
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate
+
+[Reel-Creator-R1-29] PHD-A 20.19.0 - [AIAgent] Reel_Creator: 「Don’t keep activities」: confirm page lost, 「Next」 lands on the room
+      feature='Reel_Creator'  searched 6 candidate(s)
+      no likely duplicate

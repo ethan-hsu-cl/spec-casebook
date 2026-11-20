@@ -44,13 +44,11 @@ lines; put the full rule in the skill or reference file that applies it and poin
 - **Dedupe per OS (user, 2026-10-28).** A ticket on the other OS never makes a finding a duplicate; a same-OS match is
   left off the drafts and review page (kept only in `dedupe.txt`), unless that ticket is **closed** and the bug is
   back: then it is a new card naming the closed ticket (overlay, *Dedupe per OS*).
-- **eBug owner and type (RD, 2026-10-21 — replaces the 2026-10-20 rule; revertible).** Casebook findings are
-  `[AIAgent]` Functional or `[UI]`, owner RD, never `[UX]`; RD forwards to PM when it wants a ruling. A
-  finding with no spec basis is filed to PM for a decision (2026-11-11, below). Exploration (`[AIFound]`) keeps filing `[UX]`.
-  **Revert** — the user may restore the 2026-10-20 rule: "A UX problem goes to PM (BugBelong PM), who decides before
-  handing it to RD. A problem that plainly needs an RD fix (performance, waits, missing behaviour) is Functional,
-  owner RD, with no `[UX]` tag." Put that text back here, then follow the revert steps in overlay rule 5
-  (`--allow-agent-ux` / `ALLOW_AGENT_UX=1`).
+- **eBug owner and type (user, 2026-11-13 — the 2026-10-20 rule restored; replaces RD's 2026-10-21 no-`[UX]` rule).**
+  A UX problem goes to PM (BugBelong PM), who decides before handing it to RD. A problem that plainly needs an RD fix
+  (performance, waits, missing behaviour) is Functional, owner RD, with no `[UX]` tag. Casebook UX findings file as
+  `[AIAgent][UX]` (`check_ebug_format.py --allow-agent-ux`, `ALLOW_AGENT_UX=1 verify_ebug_drafts.py`; overlay rule 5).
+  Restored on AI Hair Color Custom ISS-HCC-10 (TR261111-0042). Exploration (`[AIFound]`) keeps filing `[UX]`.
 - **Text bugs go to RD or PM (user, 2026-11-11).** Text that differs from the spec is RD when the spec states it and
   the app shows something else (fix the app's text), PM when the spec's own text must change (wrong, unclear, two
   sheets disagree, or none states it); never Doc (`ebug-draft-generator` › Owner, overlay rule 5).
@@ -159,7 +157,15 @@ lines; put the full rule in the skill or reference file that applies it and poin
   each eBug*). The one exception to *No comments on existing eBugs*: files only, never a comment.
 - **QR account line (user, 2026-11-05, REQ-100).** A QR's Details name the phone's signed-in account as the app's menu
   shows it, with its tier (`Account: cltqauiap2@gmail.com (Premium)`), read from the menu at each verify run
-  (`qa-report/SKILL.md` › *Wording*).
+  (`qa-report/SKILL.md` › *Wording*). An app not signed in is written `Not signed in (Free)`; no sign-in just for
+  the QR (user, 2026-11-13).
+- **QR text only (user, 2026-11-13).** A QR is filled with text only: no screenshots or logs uploaded to the eBugs
+  and no file names in the Reasons (draft `"textOnly": true`); evidence stays in the local run folder. Replaces
+  *Evidence on each eBug* (REQ-099) until the user asks for files again.
+- **PHD-A QRs (user, 2026-11-13).** On PhotoDirector Android TRs only: verify every bug on the verify list whoever
+  created it, and write the QR exactly like the team template QR261102-0081 (TR's Short Description, Details = the
+  Test Result line, `Verified OK with <build> build.` + one sentence + `Risk test: n/a`); `qa-report/SKILL.md` ›
+  *PHD-A QR*, draft `"style": "phd-a"`.
 - **Bug verify against today's spec (user, 2026-11-05, REQ-091).** Before verifying a bug, check its Expect Result
   against the current spec in the repo (ticket comments, row, `requirements.md` changes and open questions, newer
   frames in `extracted/`), then judge the build's current behaviour against that. An open question means Hold
@@ -236,6 +242,8 @@ lines; put the full rule in the skill or reference file that applies it and poin
   one platform (`SKILL.md` step 0).
 - **A Figma link is the spec (user, 2026-11-04).** When the user sends a Figma link and no PDF, read the spec from
   Figma directly; do not ask for a PDF export (`reading-the-spec.md`, *Figma-only spec*).
+- **Kanban links (user, 2026-11-19).** In a Kanban item, `SPEC:` is the PM spec (`figma-pm`) and `Guideline:` the
+  Design spec (`figma-design`) (`reading-the-spec.md`, *Figma-only spec*).
 - **Build downloads (user, 2026-11-05).** The build under test from a TR's OneDrive folder is always downloaded
   without asking; say the file name and size in chat, then check the MD5 (`run-android.md`, `fixtures.md`).
 - **Phone fixtures (2026-10-27).** What a run needs on the phone or account is in
@@ -297,6 +305,9 @@ lines; put the full rule in the skill or reference file that applies it and poin
   sign-in stays the user's when the agent cannot log in (the agent never types passwords); where a phone signs in with
   its Google account button and no password (the SM-A5360, `fixtures.md`), the agent does it. Every permission the app
   asks for (notifications, photos, microphone…) is allowed (user, 2026-11-04).
+- **PHD Premium by the backdoor (user, 2026-11-12).** A PhotoDirector Android run never waits for a Premium sign-in:
+  the agent turns 「Set to subscriber」 on (Premium) or off (Free) in Settings › About's debug dialog itself
+  (`run-android.md`, KP-131).
 - **Android sign-in: the phone's Google account first (user, 2026-11-18).** On Android the agent signs the app in with
   the Google account already on the phone (its account button, no password) before asking the user for anything; on
   the Sony that is acda.test7. When the app's Google button opens Chrome, the agent may tap 「Continue as <name>」,

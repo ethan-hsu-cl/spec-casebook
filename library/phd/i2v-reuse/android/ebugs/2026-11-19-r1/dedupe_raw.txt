@@ -1,0 +1,50 @@
+
+7 of 10 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[I2V-Reuse-R1-01] PHD-A 20.19.0 - [AIAgent] Image_to_Video: No 「Settings applied」 toast when Reuse opens the Custom page
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 29%  OPEN      PHA262026P0038  PHD-A 20.18.0 - [UX]Image_to_Video: The page is not moving when sliding the Custom page 
+              shares phrase "custom page"
+      43%  OPEN      PHA262026P0126  PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share withou
+
+[I2V-Reuse-R1-02] PHD-A 20.19.0 - [AIAgent] Image_to_Video: Reuse opens Custom without the Image to Video explanation sheet shown elsewhere
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 20%  closed    PHA252025-0566  PHD-A 20.5.0 - [UX]My_AI_Artwork: Category "Image to Video" is selected after entering M
+              shares label "image to video"
+
+[I2V-Reuse-R1-03] PHD-A 20.19.0 - [AIAgent] Image_to_Video: ‹ / Back in the room opened by Reuse go to My AI Artwork, not Save & Share
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 29%  OPEN      PHA262026P0126  PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share withou
+              shares phrase "save share"
+
+[I2V-Reuse-R1-04] PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Save & Share: quality chip reads lower-case 「pro」 / 「std」 (Design 「Pro」)
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 20%  OPEN      PHA262026P0126  PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share withou
+              shares phrase "save share"
+
+[I2V-Reuse-R1-05] PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Save & Share: 「Prompts & Settings」 sits under 「Save」; no 「More Video Editing Tools」
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 40%  OPEN      PHA262026P0126  PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share withou
+              shares phrase "prompts settings", phrase "save share"
+
+[I2V-Reuse-R1-06] PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Create more: placeholder and 「0/2500」 differ from the PM mockup — PM to confirm
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 29%  closed    PHA262026-0413  PHD-A 20.17.0 - [AIFound][UX]Image_to_Video: 'Create More' resets the entire Image to Vi
+              shares label "create more"
+
+[I2V-Reuse-R1-07] PHD-A 20.19.0 - [AIAgent] Image_to_Video: Tracking: Reuse logs Artwork_Reuse_Click without model, not ImageToVideo_Reuse_Click
+      feature='Image_to_Video'  searched 125 candidate(s)
+      no likely duplicate
+
+[I2V-Reuse-R1-08] PHD-A 20.19.0 - [AIAgent] Image_to_Video: Save & Share: changing the system theme sends the app back to the Launcher
+      feature='Image_to_Video'  searched 125 candidate(s)
+    ! 22%  OPEN      PHA262026P0126  PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share withou
+              shares phrase "save share"
+
+[I2V-Reuse-R1-09] PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Reuse: Custom room flashes rotated (landscape) before settling portrait
+      feature='Image_to_Video'  searched 125 candidate(s)
+      no likely duplicate
+
+[I2V-Reuse-R1-10] PHD-A 20.19.0 - [AIAgent][UX] Image_to_Video: Reused room: first tap selects the whole prompt (one key erases it) — PM to decide
+      feature='Image_to_Video'  searched 125 candidate(s)
+      no likely duplicate

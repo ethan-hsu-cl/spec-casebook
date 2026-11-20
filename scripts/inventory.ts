@@ -15,7 +15,8 @@
 //            (an annotation arrow that starts off-screen)
 // --sync-arrows adds every flow/auto arrow missing from specs/<set>/extracted/arrows.json (edge text from the
 // inventory, "expected" left for the analysis to write) and marks listed arrows that are annotation pointers with
-// "not_flow"; check.ts then asks for a requirement per added arrow.
+// "not_flow" (an entry the analysis set `flow: true` keeps its flow status: a PM arrow drawn tail-first in the gap
+// between two phones looks like a pointer, 2026-11-17); check.ts then asks for a requirement per added arrow.
 // --file merges only the groups of those Figma files (e.g. the Design file while a PM / MX extraction is unfinished).
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -286,8 +287,9 @@ if (process.argv.includes('--sync-arrows')) {
   }
   const pointers = new Set(arrows.filter(a => a.kind === 'pointer').map(a => a.id));
   for (const a of doc.arrows) {
-    if (pointers.has(a.node) && !a.not_flow) { a.not_flow = 'annotation pointer (default layer name, starts off-screen; figma-inventory)'; marked++; }
-    else if (!pointers.has(a.node) && /figma-inventory/.test(a.not_flow ?? '')) delete a.not_flow;
+    // `flow: true` = checked by hand: a flow arrow drawn tail-first in the gap between two phones (PM boards, 2026-11-17)
+    if (pointers.has(a.node) && !a.not_flow && !a.flow) { a.not_flow = 'annotation pointer (default layer name, starts off-screen; figma-inventory)'; marked++; }
+    else if ((a.flow || !pointers.has(a.node)) && /figma-inventory/.test(a.not_flow ?? '')) delete a.not_flow;
   }
   doc.count = doc.arrows.filter((a: any) => !a.not_flow).length;
   writeJson(path, doc);

@@ -6,7 +6,8 @@ TC-002,照片挑選器,"1. 從「Edit」開啟照片挑選器，先前選過「B
 TC-003,照片挑選器,從「Edit」開啟的照片挑選器，在「Single」分頁,點選一張照片,開啟現有的單張 Edit Room，帶入該照片（完整 Edit Room 工具列，流程不變）,P1,R-011,,未變更,
 TC-004,照片挑選器,從「Edit」開啟的照片挑選器，在「Single」分頁,試著選第二張照片,「Single」只能選一張（第一次點選就進入 Edit Room；不能多選）,P2,R-013,,未變更,
 TC-005,照片挑選器,從「Edit」開啟的照片挑選器,點「Batch」，查看分頁與底部列,"「Batch」分頁反白
-底部列顯示提示「Select 1 to 20 photos to continue. (0/20)」與「Next」",P1,"R-012, R-015",採 Design 文案；PM 畫板為「Select 1 to 20 photos.」／「n selected (max 20)」與「Done」（Q-1）：請記下選照片前後顯示的字串。,未變更,
+底部列顯示提示「Select 1 to 20 photos to continue. (0/20)」與「Next」
+「Next」是灰色（尚未選照片）",P1,"R-012, R-015",採 Design 文案（REQ-004）。依 REQ-021 判定（Q-1、Q-13）：選到照片前「Next」都是灰色。,修改,REQ-021 判定：沒選照片時「Next」是灰色，選了一張就會亮（Q-1、Q-13）
 TC-006,照片挑選器,"1. 以 PhotoDirector Premium 帳號登入
 2. 相簿中至少有 25 張直橫混合的照片",在 Launcher 點「AI Enhance」捷徑,開啟照片挑選器，上方有相同的「Single」／「Batch」分頁，預設選在「Single」,P1,"R-012, R-010, R-214",,未變更,
 TC-007,照片挑選器,照片挑選器在「Batch」分頁,依序點選 3 張照片,"每張被選的縮圖顯示點選順序 1、2、3
@@ -15,15 +16,17 @@ TC-007,照片挑選器,照片挑選器在「Batch」分頁,依序點選 3 張照
 「Next」可點",P1,"R-013, R-014, R-015, R-019",,未變更,
 TC-008,照片挑選器,照片挑選器在「Batch」分頁，依序選了 A、B、C 三張,點「Next」，查看 Batch Edit Room 的縮圖列,縮圖列依點選順序排列 A、B、C（不是相簿順序）,P1,R-014,,未變更,
 TC-009,照片挑選器,照片挑選器在「Batch」分頁，已選 3 張（1、2、3）,再點一次第 2 張，取消選取,"第 2 張取消選取
-記錄第 3 張是否重新編號為 2、張數是否變成 2",P3,R-014,規格沒寫取消選取（Q-13）。,未變更,
+第 3 張改編為 2
+提示結尾為「(2/20)」",P2,R-014,依 REQ-021 判定（Q-13）。,修改,REQ-021 判定：取消選取後，後面照片的編號依序往前（Q-13；原本只記錄）
 TC-150,照片挑選器,照片挑選器在「Batch」分頁，已選第 1、2、3 張,在底部列下方的托盤點第 2 張的 ✕,"第 2 張離開托盤，縮圖上的編號消失
 提示結尾為「(2/20)」
-記錄第 3 張是否改編為 2",P2,"R-019, R-014",規格沒寫編號是否重排（Q-13）。,未變更,
+第 3 張在縮圖和托盤上都改編為 2",P2,"R-019, R-014",依 REQ-021 判定（Q-13）。,修改,REQ-021 判定：取消選取後，後面照片的編號依序往前（Q-13）
 TC-151,照片挑選器,照片挑選器在「Batch」分頁，未選任何照片,"1. 點某張縮圖右下角的放大圖示
-2. 關閉開啟的畫面","照片放大顯示但沒有被選取
-關閉後回到挑選器，仍未選任何照片",P3,R-233,Design 只畫了圖示（Q-13）：請記錄開啟了什麼。,未變更,
-TC-010,照片挑選器,照片挑選器在「Batch」分頁，未選任何照片,點「Next」,"記錄：「Next」為停用或沒有反應
-不會在沒有照片時開啟 Batch Edit Room",P3,R-015,規格沒寫（Q-13）。,未變更,
+2. 關閉開啟的畫面","開啟相簿選擇畫面
+關閉後回到挑選器，仍未選任何照片",P3,R-233,依 REQ-021 判定（Q-13）：展開圖示會開啟相簿選擇畫面。,修改,REQ-021 判定：縮圖上的展開圖示會開啟相簿選擇畫面（Q-13；原本假設是放大顯示照片）
+TC-010,照片挑選器,照片挑選器在「Batch」分頁，未選任何照片,點「Next」,"「Next」是灰色
+點了沒有反應
+不會開啟 Batch Edit Room",P2,R-015,依 REQ-021 判定（Q-13）。,修改,REQ-021 判定：沒選照片時「Next」是灰色（Q-13；原本只記錄）
 TC-011,照片挑選器,"1. 以 PhotoDirector Premium 帳號登入
 2. 照片挑選器在「Batch」分頁
 3. 相簿中至少有 25 張直橫混合的照片",選 20 張照片,"20 張都能選取（編號 1–20）
@@ -48,7 +51,11 @@ TC-019,入口,"1. 以 PhotoDirector Premium 帳號登入
 2. 從「AI Enhance」捷徑開啟的照片挑選器在「Batch」分頁，已選 3 張（「(3/20)」）",點「Next」,直接開在 Batch Edit Room 的 AI Enhance 頁（「Enhance」按鈕、3 張照片的縮圖列）,P1,"R-021, R-001, R-215",,未變更,
 TC-020,入口,單張 Edit Room 已開啟一張照片，未編輯,點 Replace photo，把挑選器切到「Batch」，選 3 張後點「Next」,挑選器可以切到「Batch」分頁，「Next」開啟帶 3 張照片的 Batch Edit Room,P1,"R-017, R-219",,未變更,
 TC-021,入口,已開啟單張 Edit Room,查看 Edit Room 每個工具分頁（Quick Action、Edit、Enhance、Portrait…）,Edit Room 本身沒有 Batch Edit 工具或入口,P3,R-002,,未變更,
-TC-022,入口,在 Launcher,在 Launcher（捷徑列與「View all」）尋找 Batch Edit 捷徑；有的話點它,記錄是否有這個捷徑（icon 仍在設計中）、點了會到哪裡（預期：照片挑選器的「Batch」分頁）,P3,R-022,UI UX flow 2 規劃了捷徑與 deeplink（TC-152）；落點沒寫（Q-15）。,未變更,
+TC-022,入口,"1. 已登入 PhotoDirector Premium 帳號
+2. 停在 Launcher","1. 在 Launcher 看「Features」區的功能格
+2. 點「Batch Edit」","Step 1：「Batch Edit」帶著自己的圖示，位在 Features 區第二排，介於「AI Removal」和「Beautify」之間
+Step 2：Batch Edit 開啟
+Step 2：記錄它開到哪一頁（假設是照片挑選器的「Batch」分頁，Q-15）",P2,R-022,Design 的 Launcher 畫面 225:3699（2026-11-18 讀取）畫出了這個捷徑，名稱是「Batch Edit」；UI UX flow 2 仍寫圖示待設計。圖上沒有從它拉出的箭頭，開到哪裡仍是 Q-15。Deeplink 見 TC-152。,修改,REQ-019：Design 現在把 Launcher 的「Batch Edit」捷徑畫在 Features 區（R-022）；已有畫面，優先度由 P3 調為 P2
 TC-152,入口,"1. 以 PhotoDirector Premium 帳號登入
 2. 手機已接 USB","開啟 deeplink phd://navigate/page?name=batch_edit（adb shell am start -a android.intent.action.VIEW -d ""phd://navigate/page?name=batch_edit""）","PhotoDirector 開到 Batch Edit 入口
 記錄落點（預期：照片挑選器的「Batch」分頁）",P2,R-022,落點沒寫（Q-15）。,未變更,
@@ -59,15 +66,15 @@ TC-024,Batch Edit Room 主畫面,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯",查看上方列,"左側為 Home 與 Replace photo
 右側為回饋按鈕（對話框加 !）、Save（下載圖示，與 Edit Room 相同）與 Setting",P2,R-031,回饋按鈕只有 Design 畫（Q-21）：沒有的話請記錄。,未變更,
 TC-025,Batch Edit Room 主畫面,"1. 以 PhotoDirector Premium 帳號登入
-2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯",點 Setting 按鈕,"記錄開啟了什麼
-關閉後回到 Batch Edit Room，沒有任何變更",P3,R-039,規格沒寫 Setting 會到哪裡（Q-3）。,未變更,
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯",點 Setting 按鈕,"開啟和單張 Edit Room 的 Setting 相同的設定頁
+關閉後回到 Batch Edit Room，沒有任何變更",P3,R-039,依 REQ-021 判定（Q-3）。,修改,REQ-021 判定：Setting 開啟的頁面和 Edit Room 的 Setting 一樣（Q-3；原本只記錄開了什麼）
 TC-154,Batch Edit Room 主畫面,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯",點上方列的回饋按鈕（對話框加 !）,"記錄開啟了什麼
 關閉後回到 Batch Edit Room，沒有任何變更",P3,R-031,只有 Design 畫（Q-21）。,未變更,
 TC-026,Batch Edit Room 主畫面,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片，第 1 張已裁成 Square 並按 ✓ 回到主畫面","1. 在照片上按住比較按鈕
 2. 放開","按住時顯示第 1 張原圖
-放開後回到編輯後的樣子（與 Edit Room 相同）",P3,R-039,比較按鈕行為比照 Edit Room（Q-4）。,未變更,
+放開後回到編輯後的樣子（與 Edit Room 相同）",P3,R-039,依 REQ-021 判定（Q-4）：按住顯示原圖，和 Edit Room 一樣。,修改,REQ-021 判定：確認比較鈕和 Edit Room 一樣（Q-4；原本是假設）
 TC-027,Batch Edit Room 主畫面,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯",在縮圖列依序點第 5、12、1 張,"大圖切換成點選的照片
 縮圖列反白目前那張",P1,R-032,,未變更,
@@ -288,10 +295,34 @@ TC-069,調整,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯",點「Adjustment」,在目前照片上開啟 Adjustment room,P1,"R-030, R-205",,未變更,
 TC-070,調整,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
-3. 已在第 1 張開啟 Adjustment room",查看 room：Light／Color／Details 分頁與每個工具,"與 26'10/E Adjustment room 相同
-沒有 Subject Detection、沒有 AI Exposure
-右上有「Apply to all」（圖示加「All」，半透明深色膠囊）
-底部有批次縮圖列",P2,"R-090, R-091, R-097",Design 畫面在「Exposure」與「Contrast」之間畫了「AI Exposure」（Q-18）：請記錄 App 有沒有。,未變更,
+3. 已在第 1 張開啟 Adjustment room",查看 room：Light／Color／Details 分頁與每個工具,"與 26'10/E 的 Adjustment room 相同
+沒有 Subject Detection
+工具列在「Exposure」和「Contrast」之間有「AI Exposure」（依 Design）
+右上角是「Apply to all」（圖示＋「All」，半透明深色膠囊）
+左上角有 ⓘ
+底部是批次縮圖列",P2,"R-090, R-091, R-097, R-239",Design 每一張 Adjustment 畫面都畫了「AI Exposure」；PM DR-06 寫沒有（Q-18）：測項依 Design（Design 優先，2026-11-13）。,修改,REQ-020：Android 改以 Figma 為準；Design 在批次 Adjustment room 畫了「AI Exposure」和 ⓘ（R-090、R-239；原本依 PM：沒有 AI Exposure）
+TC-175,調整,"1. 以 PhotoDirector Premium 帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已在第 1 張開啟 Adjustment room",點左上角的 ⓘ,"開啟現有的 Adjustment 說明
+關閉後回到批次 Adjustment room，什麼都沒變",P3,R-239,只有 Design 畫了這個圖示；規格沒寫它會開什麼（Q-23）。,新增,REQ-020：Design 在批次 Adjustment room 畫了 ⓘ（top/ic_info），原本沒有測項去按它
+TC-172,調整,"1. 以 PhotoDirector Premium 帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已在第 1 張開啟 Adjustment room","1. 在「Light」依序點 Exposure、Contrast、Highlight，每個都拉動滑桿
+2. 點「AI Exposure」","Step 1：每個工具都只改變第 1 張
+Step 1：每個工具都會讓「All」變成可按
+Step 2：Premium 使用者看到「Try it」對話框，點「Try it」會開啟 AI Exposure 畫面（KP-014）
+Step 2：記錄用過 AI Exposure 之後批次 room 的狀態（結果有沒有帶回第 1 張）",P2,"R-090, R-095",批次裡的 AI Exposure 只有 Design 畫（Q-18）；Android 的付費入口規則見 KP-014。,新增,REQ-020：Design 畫了 Exposure、AI Exposure、Contrast、Highlight，原本沒有測項逐一按這些工具
+TC-173,調整,"1. 以 Free（非 Premium）帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已在第 1 張開啟 Adjustment room",點「AI Exposure」,"跳出「Upgrade to VIP」對話框（沒有 Try Before Buy）
+點「Upgrade」會開啟 IAP 頁
+關掉 IAP 頁後回到批次 Adjustment room",P2,R-090,TC-172 的 Free 版本（KP-014）；批次的裁切與調整仍然免費（TC-082）。,新增,REQ-020：AI Exposure 依 Design 顯示；在 Android 上它只限付費（KP-014），所以 Free 版本另立一列
+TC-174,調整,"1. 以 PhotoDirector Premium 帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已在第 1 張開啟 Adjustment room","1. 點「Auto」
+2. 點「All」","Step 1：Auto 自動調整第 1 張
+Step 2：出現 toast「Applied to 11 photos」
+Step 2：縮圖列中其他每張都套用了相同設定",P2,"R-240, R-092, R-093",,新增,REQ-020：Design 和 PM 都把「Auto」（魔術棒）畫在工具列第一個，原本沒有測項去按它
 TC-159,調整,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
 3. 已在第 1 張開啟 Adjustment room","1. 開「Color」分頁並開啟 HSL
@@ -309,7 +340,7 @@ TC-169,調整,"1. 以 PhotoDirector Premium 帳號登入
 3. 點 ﹀ 收合面板
 4. 點 ︿ 再次展開","步驟 3：面板收合時，照片仍保持加強後的紅色
 步驟 4：仍選取紅色色版
-步驟 4：曲線上的控制點仍在剛才拖曳的位置",P2,"R-230, R-238",收合只是把面板藏起來（隱含條款，REQ-013）。規格沒有寫重新展開後應選取哪個色版／顏色；若選取被重設，開給 PM 決定。,新增,REQ-013：第 10b 輪，收合面板後數值與選取應保留（Figma Agent 比較）
+步驟 4：曲線上的控制點仍在剛才拖曳的位置",P2,"R-230, R-238",收合只是把面板藏起來（隱含條款，REQ-013）。規格沒有寫重新展開後應選取哪個色版／顏色；若選取被重設，開給 PM 決定。,未變更,REQ-013：第 10b 輪，收合面板後數值與選取應保留（Figma Agent 比較）
 TC-170,調整,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟有 12 張照片的 Batch Edit Room（Launcher「Edit」›「Batch」），尚未編輯
 3. 已在第 1 張開啟 Adjustment
@@ -318,7 +349,15 @@ TC-170,調整,"1. 以 PhotoDirector Premium 帳號登入
 3. 點 ﹀ 收合面板
 4. 點 ︿ 再次展開","步驟 3：面板收合時，照片仍保持綠色的調整
 步驟 4：仍選取綠色色點
-步驟 4：顯示「Hue」+30、「Saturation」-20、「Lightness」+10",P2,"R-230, R-238",收合只是把面板藏起來（隱含條款，REQ-013）。規格沒有寫重新展開後應選取哪個色版／顏色；若選取被重設，開給 PM 決定。,新增,REQ-013：第 10b 輪，收合面板後數值與選取應保留（Figma Agent 比較）
+步驟 4：顯示「Hue」+30、「Saturation」-20、「Lightness」+10",P2,"R-230, R-238",收合只是把面板藏起來（隱含條款，REQ-013）。規格沒有寫重新展開後應選取哪個色版／顏色；若選取被重設，開給 PM 決定。,未變更,REQ-013：第 10b 輪，收合面板後數值與選取應保留（Figma Agent 比較）
+TC-176,調整,"1. 以 PhotoDirector Premium 帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已在第 1 張開啟 Adjustment room
+4. 已開啟 Color › Curve，RGB 曲線中段已往上拉","1. 按住照片上的比較鈕
+2. 放開
+3. 點重設鈕","Step 1：按住時照片顯示套用曲線前的樣子
+Step 2：曲線效果再次出現
+Step 3：曲線回到直線，第 1 張回到套用曲線前的樣子",P3,R-230,,新增,REQ-020：Design 的 Curve 畫面畫了比較鈕（btn_BA）和重設鈕（ic_mask）；TC-159 只有看，沒有按
 TC-166,調整,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
 3. 已在第 1 張開啟 Adjustment room","1. 點「Color」
@@ -452,6 +491,11 @@ TC-092,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
 縮圖列也顯示
 按鈕變成「Enhanced」停用
 點數餘額不變",P1,"R-114, R-116, R-004, R-119",,未變更,
+TC-177,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已開啟 AI Enhance 頁","1. 點「Enhance」›「Start」，等整批跑完
+2. 點 ✓","Step 2：回到 Batch Edit Room
+Step 2：縮圖列中每張都顯示 Enhance 後的結果",P1,R-241,,新增,REQ-020：Design 的流程箭頭 16:13763（AI Enhance ✓ → Batch Edit Room）原本沒有 Android 測項
 TC-093,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
 3. 已在第 1 張開啟 AI Enhance 頁，尚未 Enhance 任何照片
@@ -485,10 +529,12 @@ TC-097,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
 TC-157,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
 2. Batch Edit Room 共 3 張，已在同一次 AI Enhance 中全部 Enhance，回到主畫面","1. 再點一次「AI Enhance」
 2. 點「Enhance」
-3. 點「Start」","這次進入時按鈕為「Enhance」（可點）
-對話框為「Enhance 3 photos?」
-3 張都從已 Enhance 的結果再 Enhance 一次
-完成後按鈕為「Enhanced」灰掉",P1,"R-229, R-116",UI UX flow 2（原本：每張只能一次）。,未變更,
+3. 點「Start」
+4. 點「Enhanced」","Step 1：這次進入時按鈕顯示「Enhance」（可按）
+Step 2：對話框顯示「Enhance 3 photos?」
+Step 3：3 張都以已 Enhance 的結果再 Enhance 一次
+Step 3：之後按鈕顯示灰色的「Enhanced」
+Step 4：沒有任何反應（不跳對話框、不開始處理）",P1,"R-229, R-116",UI UX flow 2（原本：每張只能一次）。,修改,REQ-020：Figma（pm-ui-5）畫的灰色「Enhanced」按鈕現在也會被按
 TC-098,AI Enhance,"1. 以 Free（非 Premium）帳號登入
 2. Batch Edit Room 共 5 張
 3. 在 AI Enhance 頁",點「Enhance」,直接開啟既有的 Premium IAP 頁（沒有確認對話框、沒有試做一張、沒有處理任何照片）,P1,"R-119, R-217",,未變更,
@@ -497,7 +543,12 @@ TC-099,AI Enhance,"1. 以 Free（非 Premium）帳號登入
 TC-100,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
 3. 已在第 1 張開啟 AI Enhance 頁，尚未 Enhance 任何照片
-4. Enhance 已完成",點 ✕,回到 Batch Edit Room 主畫面，Enhance 結果保留,P1,"R-130, R-114, R-213",Design 把 Discard Dialog 畫在 AI Enhance 頁上（Q-19）：如果 ✕ 會先詢問請記錄。,未變更,
+4. Enhance 已完成",點 ✕,"跳出 Discard Dialog：「Discard changes?」（整批 Enhance 也算編輯）
+請記錄「Discard」和「Keep Editing」各自會回到哪裡",P1,"R-130, R-114, R-213",依 REQ-018 判定（Q-19 已回答）：有做過編輯時，按 ✕ 要先詢問。,未變更,REQ-018 對 Q-19 的判定：有編輯後按 ✕ 會跳 Discard Dialog（原本是不跳視窗、保留結果直接返回）
+TC-171,AI Enhance,"1. 以 PhotoDirector Premium 帳號登入
+2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
+3. 已在第 1 張開啟 AI Enhance 頁，尚未 Enhance 任何照片",點 ✕,"立刻回到 Batch Edit Room 主畫面
+不會跳出 Discard Dialog",P2,R-130,依 REQ-018 判定：沒有任何編輯時不跳視窗。,未變更,REQ-018 判定：沒有編輯時按 ✕ 直接返回（TC-100 那條規則的另一半）
 TC-101,AI Enhance 失敗,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
 3. 已在第 1 張開啟 AI Enhance 頁，尚未 Enhance 任何照片
@@ -625,7 +676,7 @@ TC-141,Android 返回鍵,"1. 以 PhotoDirector Premium 帳號登入
 TC-142,Android 返回鍵,"1. 以 PhotoDirector Premium 帳號登入
 2. 已開啟 Batch Edit Room，共 12 張照片（Launcher「Edit」›「Batch」），尚未做任何編輯
 3. 已在第 1 張開啟 AI Enhance 頁，尚未 Enhance 任何照片
-4. Enhance 已完成",按系統返回鍵,與 ✕ 相同：回到 Batch Edit Room，結果保留,P2,"R-170, R-130",Design 把 Discard Dialog 畫在 AI Enhance 頁上（Q-19）：如果返回鍵會先詢問請記錄。,未變更,
+4. Enhance 已完成",按系統返回鍵,與 ✕ 相同：跳出 Discard Dialog（「Discard changes?」）,P2,"R-170, R-130",依 REQ-018 判定（Q-19 已回答）：有做過編輯時，按返回鍵要先詢問。,未變更,REQ-018 對 Q-19 的判定：有編輯後按返回鍵會跳 Discard Dialog，與 ✕ 相同
 TC-143,Android 返回鍵,批次 Enhance 處理中,按系統返回鍵,"處理不會被中斷或取消
 畫面仍在遮罩下",P1,"R-170, R-121, R-122",,未變更,
 TC-144,Android 返回鍵,已開啟確認對話框,按系統返回鍵,與「Cancel」相同：對話框關閉，不處理任何照片,P2,"R-170, R-137",,未變更,

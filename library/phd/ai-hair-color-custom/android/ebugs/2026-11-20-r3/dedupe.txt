@@ -1,0 +1,26 @@
+# Dedupe — AI Hair Color Custom R3 (Android, Pixel 8a, 90201901 = 20.19.0.v202611181947), 2026-11-20, read-only
+# ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" (Android pool only; dedupe per OS). Raw: dedupe_raw.txt
+# Pool: 16 Android AI_Hair_Color tickets (ecl_query.py bugs --text AI_Hair_Color), statuses read 2026-11-20.
+# Result: no same-OS duplicate among the 6 drafts; candidates judged unrelated:
+R3-04 ISS-HCC-34 (template wait ~35 s)    vs PHA262026P0115 (closed) — shares only "soft black"
+R3-05 ISS-HCC-35 (first template)         vs PHA262026P0115 (closed) / P0110 — shares only "soft black" / "colour page"
+R3-03 ISS-HCC-33 (Custom cell unset look) vs PHA262026P0115 (Close 2026-11-19 to 202611181947): P0115 fixed the selection and the
+      Custom generation (R3 confirms); its own QA note left the cell's look to Q-2, so ISS-HCC-33 is the open question, not P0115 back.
+# Dropped before the review page (same-OS ticket, open) — no card, no comment (AGENTS.md No comments on existing eBugs):
+R2 ISS-HCC-24 / R3 TC-045, TC-047 (panel collapses on Generate) = PHA262026P0149 (NewCreated, PM, TR261118-0070, filed 2026-11-19)
+# Same-OS filed tickets matched by this round's rows (no card, no comment):
+PHA262026P0110 Propose Postpone  still failing   TC-005, TC-012, TC-015 (TC-006 / TC-087 / TC-007 Blocked upstream)
+PHA262026P0116 NewCreated (PM)   still failing   TC-045, TC-046, TC-040
+PHA262026P0118 Assigned          still failing   TC-057
+PHA262026P0128 NewCreated (PM)   unchanged       TC-039
+PHA262026P0149 NewCreated (PM)   unchanged       TC-045, TC-047
+# Rechecked, fixed or not a finding (information only):
+PHA262026P0111 RDResolved   no ⌄ on the Pixel (handle only; Q-17 assumes the Design) — TC-019 Pass
+PHA262026P0112 Close        rows drawn disabled before a style, as the Design — TC-019 / TC-021 Pass
+PHA262026P0113 Close        fixed — TC-031, TC-035
+PHA262026P0114 Close        fixed — TC-086
+PHA262026P0115 Close        fixed (selection, Custom generation) — TC-038 / TC-040 / TC-041; cell look = ISS-HCC-33 (Q-2)
+PHA262026P0117 Close        fixed — TC-047, TC-048, TC-049, TC-053
+PHA262026P0119 Close        fixed — TC-054
+PHA262026P0127 RDResolved   fixed — TC-032 Pass (picked colour added as a ringed circle)
+PHA262026P0150 Assigned     not judged — no R3 row checks the wheel key's brightness

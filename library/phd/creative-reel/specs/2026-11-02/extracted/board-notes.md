@@ -68,3 +68,25 @@ correctly; `pdf-text.txt`, `annot-lines.txt` with positions) and renders of the 
 
 ## Controls (PDF-read)
 See requirements.md › Controls (PDF-read) → rows.
+
+## Design — Figma only (read 2026-11-17, REQ-011)
+File qdzVXIFZeYwcsa6fipmcLH, page 933:4528 「261109_AI_transition_feature」 (dated 2026-11-09), through figma-design
+(qa-dm). Screens only: no notes, no arrows.
+- **ds-light** (section 「Design」 976:11727, left row): 01_Template_List (「Cinematic Styles 🎬」, 「Year-End Recap 🎉」,
+  「Cool Transition 🎞️」; Cinematic cards with an inset photo; top bar ‹, credit pill 「100 ⊕」, History),
+  02_Template_Preview_SwipeHint_Peek (‹, ⓘ, credit pill; hand with up arrows; mute right; 「Micro Cinema」,
+  「Dreamy close-ups build a cinematic visual story」, 「1 Photo」 with image icon, 「Use Template」), 03_Photo_Picker
+  (「Add photos」, 「Recent ⌄」, orange badges 1–7 and frames, expand icon on every photo, tooltip 「Upload at leat 2
+  photos」, tray 「Select 5 to 10 photos to continue.」 + 「Next」 + thumbnails with 「×」), 03-1 (empty picker, grey
+  Next, prompt card: thumbnails with 「+5」, 「Use the 8 photos you picked last time?」, 「×」, 「Import」), 03-2 – 03-4
+  prompt cards for 3, 2 and 1 photo (「Use the photo you picked last time?」), 04_Generate_Settings (thumbnail,
+  「Micro Cinema」, 「1 Photo」, divider, 「Your photos (7/15)」, 「Long-press to reorder · tap × to remove」, 「+」 tile
+  first, photos with 「×」, 「Text Language」 bar 「English ⌄」, 「Generate | ◆ 60」), 04-1 (adds 「9:16」; bottom sheet:
+  「English Device Language ✓」, 「繁體中文 Chinese (Traditional)」 … 「Deutsch German」), 05_Result_My_AI_Artwork (‹,
+  「My AI Artwork」, ⓘ; tabs 「Image to Video」, 「Reel Creator」, 「AI Face Swap」, 「AI …」; 「Select」; cards
+  「Processing...」 + 「9 minutes remaining ...」 + bar, 「Almost done」, finished with 「Expires on 2025/05/10」, ⚠ with
+  「Resume to Upload」; 「Create more」). Hidden: 02_Template_Preview (older), a 「Cloud backup expired …」 banner.
+- **ds-dark**: the same seven screens in dark.
+- **ds-pm-copy** (section 「PHD_spec」 933:4752): an older copy of the PM 「spec」 section (待確認 lines still open, no
+  intro page): superseded by PM page 7238:8623.
+- Not read: frame 「PDR_SPEC」 936:1971 (PowerDirector); older pages 20260907, 20260826, 260817, draft, result page.

@@ -1,0 +1,1082 @@
+{
+ "spec_folder": "specs/2026-11-17",
+ "skip": [],
+ "skip_reason": "",
+ "grouping": {
+  "x_tolerance": 120,
+  "y_gap": 140
+ },
+ "blocks": [
+  {
+   "id": "ds-hair-a@2214,31",
+   "board": "ds-hair-a",
+   "x": 2214,
+   "y": 31,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-a@2461,76",
+   "board": "ds-hair-a",
+   "x": 2461,
+   "y": 76,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@2281,570",
+   "board": "ds-hair-a",
+   "x": 2281,
+   "y": 570,
+   "low": false,
+   "text": "[phone] Solid / [phone] Highlights / [phone] Cancel / [phone] Platinum / [phone] Custom",
+   "trace": "R-033"
+  },
+  {
+   "id": "ds-hair-a@2433,570",
+   "board": "ds-hair-a",
+   "x": 2433,
+   "y": 570,
+   "low": false,
+   "text": "[phone] Ombré / [phone] Done / [phone] Champagne / [phone] Periwinkle / [phone] Sakura / [phone] Generate / [phone] 6",
+   "trace": "R-033"
+  },
+  {
+   "id": "ds-hair-a@219,965",
+   "board": "ds-hair-a",
+   "x": 219,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-a@618,965",
+   "board": "ds-hair-a",
+   "x": 618,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41 / [phone] AI Enhance / [phone] HOT / [phone] Edit / [phone] AI Magic",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-a@1017,965",
+   "board": "ds-hair-a",
+   "x": 1017,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41 / [phone] Photo / [phone] Recents / [phone] Sample  Photos / [phone] For the best results, we recommend photos with the following: / [phone] Recommend",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-a@1416,965",
+   "board": "ds-hair-a",
+   "x": 1416,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41 / [phone] Photo / [phone] Recents / [phone] Sample  Photos",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-a@1815,965",
+   "board": "ds-hair-a",
+   "x": 1815,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-a@2214,965",
+   "board": "ds-hair-a",
+   "x": 2214,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-a@2613,965",
+   "board": "ds-hair-a",
+   "x": 2613,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-a@2062,1010",
+   "board": "ds-hair-a",
+   "x": 2062,
+   "y": 1010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@2461,1010",
+   "board": "ds-hair-a",
+   "x": 2461,
+   "y": 1010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@2860,1010",
+   "board": "ds-hair-a",
+   "x": 2860,
+   "y": 1010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@1237,1053",
+   "board": "ds-hair-a",
+   "x": 1237,
+   "y": 1053,
+   "low": false,
+   "text": "[phone] Stock / [phone] Favorites / [phone] Instagram",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-a@1636,1053",
+   "board": "ds-hair-a",
+   "x": 1636,
+   "y": 1053,
+   "low": false,
+   "text": "[phone] Stock / [phone] Favorites / [phone] Instagram",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-a@861,1074",
+   "board": "ds-hair-a",
+   "x": 861,
+   "y": 1074,
+   "low": false,
+   "text": "[phone] Camera",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-a@618,1349",
+   "board": "ds-hair-a",
+   "x": 618,
+   "y": 1349,
+   "low": false,
+   "text": "[phone] AI Expand",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-a@794,1349",
+   "board": "ds-hair-a",
+   "x": 794,
+   "y": 1349,
+   "low": false,
+   "text": "[phone] Fashion Outfit",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-a@2213,1354",
+   "board": "ds-hair-a",
+   "x": 2213,
+   "y": 1354,
+   "low": false,
+   "text": "[phone] Style / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-a@1026,1404",
+   "board": "ds-hair-a",
+   "x": 1026,
+   "y": 1404,
+   "low": false,
+   "text": "[phone] Photo of One Female / [phone] Full Upper Body / [phone] Avoid / [phone] Face Coverings / [phone] Face too small / [phone] Continue",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-a@1262,1404",
+   "board": "ds-hair-a",
+   "x": 1262,
+   "y": 1404,
+   "low": false,
+   "text": "[phone] Clear Face",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-a@2360,1445",
+   "board": "ds-hair-a",
+   "x": 2360,
+   "y": 1445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@2501,1445",
+   "board": "ds-hair-a",
+   "x": 2501,
+   "y": 1445,
+   "low": false,
+   "text": "[phone] Ombre / [phone] Intensity / [phone] Ombré / [phone] Periwinkle / [phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-052"
+  },
+  {
+   "id": "ds-hair-a@2915,1457",
+   "board": "ds-hair-a",
+   "x": 2915,
+   "y": 1457,
+   "low": false,
+   "text": "[phone] 33 / [phone] Ombré / [phone] Periwinkle / [phone] Sakura / [phone] 6 / [phone] 0",
+   "trace": "R-052"
+  },
+  {
+   "id": "ds-hair-a@1882,1504",
+   "board": "ds-hair-a",
+   "x": 1882,
+   "y": 1504,
+   "low": false,
+   "text": "[phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Custom",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-a@2034,1504",
+   "board": "ds-hair-a",
+   "x": 2034,
+   "y": 1504,
+   "low": false,
+   "text": "[phone] Ombré / [phone] Champagne / [phone] Periwinkle / [phone] Sakura / [phone] Generate / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-a@2680,1504",
+   "board": "ds-hair-a",
+   "x": 2680,
+   "y": 1504,
+   "low": false,
+   "text": "[phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Custom / [phone] 1 Free Trial",
+   "trace": "Q-7"
+  },
+  {
+   "id": "ds-hair-a@621,1522",
+   "board": "ds-hair-a",
+   "x": 621,
+   "y": 1522,
+   "low": false,
+   "text": "[phone] AI Face Swap / [phone] Cutout / [phone] Business Outfit / [phone] Home",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@794,1525",
+   "board": "ds-hair-a",
+   "x": 794,
+   "y": 1525,
+   "low": false,
+   "text": "[phone] Hair Color",
+   "trace": "R-090"
+  },
+  {
+   "id": "ds-hair-a@207,1651",
+   "board": "ds-hair-a",
+   "x": 207,
+   "y": 1651,
+   "low": false,
+   "text": "[phone] AI Agent / [phone] Beautify / [phone] Quick Action",
+   "trace": "ui: Edit Room tool row of other features (Hair Color itself is R-089)"
+  },
+  {
+   "id": "ds-hair-a@330,1651",
+   "board": "ds-hair-a",
+   "x": 330,
+   "y": 1651,
+   "low": false,
+   "text": "[phone] Hairstyle / [phone] Hair Color / [phone] Edit / [phone] Enhance",
+   "trace": "R-089"
+  },
+  {
+   "id": "ds-hair-a@486,1653",
+   "board": "ds-hair-a",
+   "x": 486,
+   "y": 1653,
+   "low": false,
+   "text": "[phone] AI Art / [phone] Portrait / [phone] Effect",
+   "trace": "ui: Edit Room tool row of other features (Hair Color itself is R-089)"
+  },
+  {
+   "id": "ds-hair-a@797,1698",
+   "board": "ds-hair-a",
+   "x": 797,
+   "y": 1698,
+   "low": false,
+   "text": "[phone] AI Headshot / [phone] AI Videos / [phone] AI Photos / [phone] MIne",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-a@1150,1699",
+   "board": "ds-hair-a",
+   "x": 1150,
+   "y": 1699,
+   "low": false,
+   "text": "[phone] Don’t show again.",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-a@2189,1902",
+   "board": "ds-hair-a",
+   "x": 2189,
+   "y": 1902,
+   "low": false,
+   "text": "(1) No style selected / [phone] 9:41",
+   "trace": "R-023"
+  },
+  {
+   "id": "ds-hair-a@2589,1902",
+   "board": "ds-hair-a",
+   "x": 2589,
+   "y": 1902,
+   "low": false,
+   "text": "(2) Base Color only / [phone] 9:41",
+   "trace": "R-029"
+  },
+  {
+   "id": "ds-hair-a@2989,1902",
+   "board": "ds-hair-a",
+   "x": 2989,
+   "y": 1902,
+   "low": false,
+   "text": "(2-1) Tap Generate → Toast / [phone] 9:41",
+   "trace": "R-085"
+  },
+  {
+   "id": "ds-hair-a@3393,1902",
+   "board": "ds-hair-a",
+   "x": 3393,
+   "y": 1902,
+   "low": false,
+   "text": "(3) Custom color selected / [phone] 9:41",
+   "trace": "R-086"
+  },
+  {
+   "id": "ds-hair-a@3822,1965",
+   "board": "ds-hair-a",
+   "x": 3822,
+   "y": 1965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-a@2461,2010",
+   "board": "ds-hair-a",
+   "x": 2461,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@2861,2010",
+   "board": "ds-hair-a",
+   "x": 2861,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@3261,2010",
+   "board": "ds-hair-a",
+   "x": 3261,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@3665,2010",
+   "board": "ds-hair-a",
+   "x": 3665,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@4069,2010",
+   "board": "ds-hair-a",
+   "x": 4069,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-a@3063,2277",
+   "board": "ds-hair-a",
+   "x": 3063,
+   "y": 2277,
+   "low": false,
+   "text": "[phone] Select both a base and highlight color. / [phone] Style / [phone] Face / [phone] Bangs / [phone] Highlight / [phone] Solid / [phone] Platinum",
+   "trace": "R-085"
+  },
+  {
+   "id": "ds-hair-a@2213,2354",
+   "board": "ds-hair-a",
+   "x": 2213,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-a@2613,2354",
+   "board": "ds-hair-a",
+   "x": 2613,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Ombre / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-a@3417,2354",
+   "board": "ds-hair-a",
+   "x": 3417,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-a@3821,2354",
+   "board": "ds-hair-a",
+   "x": 3821,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Ombre / [phone] Bangs / [phone] Highlight / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-a@2360,2445",
+   "board": "ds-hair-a",
+   "x": 2360,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Ombré / [phone] Platinum / [phone] Champagne / [phone] Periwinkle / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@2760,2445",
+   "board": "ds-hair-a",
+   "x": 2760,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@2901,2445",
+   "board": "ds-hair-a",
+   "x": 2901,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Ombre / [phone] Base Color / [phone] Ombré / [phone] Highlight Color / [phone] Periwinkle / [phone] Sakura / [phone] Custom / [phone] 6 / [phone] 6",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-a@3228,2445",
+   "board": "ds-hair-a",
+   "x": 3228,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Balayage / [phone] Ombre / [phone] Highlights / [phone] Ombré / [phone] Champagne / [phone] Periwinkle / [phone] Sakura / [phone] Generate / [phone] 6 / [phone] Generate / [phone] 6",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@3564,2445",
+   "board": "ds-hair-a",
+   "x": 3564,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Ombré / [phone] Platinum / [phone] Champagne / [phone] Periwinkle / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@3968,2445",
+   "board": "ds-hair-a",
+   "x": 3968,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Balayage / [phone] Ombre / [phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-a@4113,2445",
+   "board": "ds-hair-a",
+   "x": 4113,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Solid / [phone] Ombré / [phone] Periwinkle / [phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-a@2485,2606",
+   "board": "ds-hair-a",
+   "x": 2485,
+   "y": 2606,
+   "low": false,
+   "text": "[phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-a@3689,2606",
+   "board": "ds-hair-a",
+   "x": 3689,
+   "y": 2606,
+   "low": false,
+   "text": "[phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-b@2042,31",
+   "board": "ds-hair-b",
+   "x": 2042,
+   "y": 31,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-b@2289,76",
+   "board": "ds-hair-b",
+   "x": 2289,
+   "y": 76,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@2109,570",
+   "board": "ds-hair-b",
+   "x": 2109,
+   "y": 570,
+   "low": false,
+   "text": "[phone] Solid / [phone] Highlights / [phone] Cancel / [phone] Platinum / [phone] Custom",
+   "trace": "R-033"
+  },
+  {
+   "id": "ds-hair-b@2261,570",
+   "board": "ds-hair-b",
+   "x": 2261,
+   "y": 570,
+   "low": false,
+   "text": "[phone] Ombré / [phone] Done / [phone] Champagne / [phone] Periwinkle / [phone] Sakura / [phone] Generate / [phone] 6",
+   "trace": "R-033"
+  },
+  {
+   "id": "ds-hair-b@47,965",
+   "board": "ds-hair-b",
+   "x": 47,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-b@446,965",
+   "board": "ds-hair-b",
+   "x": 446,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41 / [phone] AI Enhance / [phone] HOT / [phone] Edit / [phone] AI Magic",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-b@845,965",
+   "board": "ds-hair-b",
+   "x": 845,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41 / [phone] Photo / [phone] Recents / [phone] Sample  Photos / [phone] For the best results, we recommend photos with the following: / [phone] Recommend",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-b@1244,965",
+   "board": "ds-hair-b",
+   "x": 1244,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41 / [phone] Photo / [phone] Recents / [phone] Sample  Photos",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-b@1643,965",
+   "board": "ds-hair-b",
+   "x": 1643,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-b@2042,965",
+   "board": "ds-hair-b",
+   "x": 2042,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-b@2441,965",
+   "board": "ds-hair-b",
+   "x": 2441,
+   "y": 965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-b@1890,1010",
+   "board": "ds-hair-b",
+   "x": 1890,
+   "y": 1010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@2289,1010",
+   "board": "ds-hair-b",
+   "x": 2289,
+   "y": 1010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@2688,1010",
+   "board": "ds-hair-b",
+   "x": 2688,
+   "y": 1010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@1065,1053",
+   "board": "ds-hair-b",
+   "x": 1065,
+   "y": 1053,
+   "low": false,
+   "text": "[phone] Stock / [phone] Favorites / [phone] Instagram",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-b@1464,1053",
+   "board": "ds-hair-b",
+   "x": 1464,
+   "y": 1053,
+   "low": false,
+   "text": "[phone] Stock / [phone] Favorites / [phone] Instagram",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-b@689,1074",
+   "board": "ds-hair-b",
+   "x": 689,
+   "y": 1074,
+   "low": false,
+   "text": "[phone] Camera",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-b@446,1349",
+   "board": "ds-hair-b",
+   "x": 446,
+   "y": 1349,
+   "low": false,
+   "text": "[phone] AI Expand",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-b@622,1349",
+   "board": "ds-hair-b",
+   "x": 622,
+   "y": 1349,
+   "low": false,
+   "text": "[phone] Fashion Outfit",
+   "trace": "ui: Launcher cards and tabs of other features"
+  },
+  {
+   "id": "ds-hair-b@2041,1354",
+   "board": "ds-hair-b",
+   "x": 2041,
+   "y": 1354,
+   "low": false,
+   "text": "[phone] Style / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-b@854,1404",
+   "board": "ds-hair-b",
+   "x": 854,
+   "y": 1404,
+   "low": false,
+   "text": "[phone] Photo of One Female / [phone] Full Upper Body / [phone] Avoid / [phone] Face Coverings / [phone] Face too small / [phone] Continue",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-b@1090,1404",
+   "board": "ds-hair-b",
+   "x": 1090,
+   "y": 1404,
+   "low": false,
+   "text": "[phone] Clear Face",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-b@2188,1445",
+   "board": "ds-hair-b",
+   "x": 2188,
+   "y": 1445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@2329,1445",
+   "board": "ds-hair-b",
+   "x": 2329,
+   "y": 1445,
+   "low": false,
+   "text": "[phone] Ombre / [phone] Intensity / [phone] Ombré / [phone] Periwinkle / [phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-052"
+  },
+  {
+   "id": "ds-hair-b@2743,1457",
+   "board": "ds-hair-b",
+   "x": 2743,
+   "y": 1457,
+   "low": false,
+   "text": "[phone] 33 / [phone] Ombré / [phone] Periwinkle / [phone] Sakura / [phone] 6 / [phone] 0",
+   "trace": "R-052"
+  },
+  {
+   "id": "ds-hair-b@1710,1504",
+   "board": "ds-hair-b",
+   "x": 1710,
+   "y": 1504,
+   "low": false,
+   "text": "[phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Custom",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-b@1862,1504",
+   "board": "ds-hair-b",
+   "x": 1862,
+   "y": 1504,
+   "low": false,
+   "text": "[phone] Ombré / [phone] Champagne / [phone] Periwinkle / [phone] Sakura / [phone] Generate / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-b@2508,1504",
+   "board": "ds-hair-b",
+   "x": 2508,
+   "y": 1504,
+   "low": false,
+   "text": "[phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Custom / [phone] 1 Free Trial",
+   "trace": "Q-7"
+  },
+  {
+   "id": "ds-hair-b@449,1522",
+   "board": "ds-hair-b",
+   "x": 449,
+   "y": 1522,
+   "low": false,
+   "text": "[phone] AI Face Swap / [phone] Cutout / [phone] Business Outfit / [phone] Home",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@622,1525",
+   "board": "ds-hair-b",
+   "x": 622,
+   "y": 1525,
+   "low": false,
+   "text": "[phone] Hair Color",
+   "trace": "R-090"
+  },
+  {
+   "id": "ds-hair-b@35,1651",
+   "board": "ds-hair-b",
+   "x": 35,
+   "y": 1651,
+   "low": false,
+   "text": "[phone] AI Agent / [phone] Beautify / [phone] Quick Action",
+   "trace": "ui: Edit Room tool row of other features (Hair Color itself is R-089)"
+  },
+  {
+   "id": "ds-hair-b@158,1651",
+   "board": "ds-hair-b",
+   "x": 158,
+   "y": 1651,
+   "low": false,
+   "text": "[phone] Hairstyle / [phone] Hair Color / [phone] Edit / [phone] Enhance",
+   "trace": "R-089"
+  },
+  {
+   "id": "ds-hair-b@314,1653",
+   "board": "ds-hair-b",
+   "x": 314,
+   "y": 1653,
+   "low": false,
+   "text": "[phone] AI Art / [phone] Portrait / [phone] Effect",
+   "trace": "ui: Edit Room tool row of other features (Hair Color itself is R-089)"
+  },
+  {
+   "id": "ds-hair-b@625,1698",
+   "board": "ds-hair-b",
+   "x": 625,
+   "y": 1698,
+   "low": false,
+   "text": "[phone] AI Headshot / [phone] AI Videos / [phone] AI Photos / [phone] MIne",
+   "trace": "ui: the shared photo picker tabs and albums"
+  },
+  {
+   "id": "ds-hair-b@978,1699",
+   "board": "ds-hair-b",
+   "x": 978,
+   "y": 1699,
+   "low": false,
+   "text": "[phone] Don’t show again.",
+   "trace": "R-088"
+  },
+  {
+   "id": "ds-hair-b@2017,1902",
+   "board": "ds-hair-b",
+   "x": 2017,
+   "y": 1902,
+   "low": false,
+   "text": "(1) No style selected / [phone] 9:41",
+   "trace": "R-023"
+  },
+  {
+   "id": "ds-hair-b@2417,1902",
+   "board": "ds-hair-b",
+   "x": 2417,
+   "y": 1902,
+   "low": false,
+   "text": "(2) Base Color only / [phone] 9:41",
+   "trace": "R-029"
+  },
+  {
+   "id": "ds-hair-b@2817,1902",
+   "board": "ds-hair-b",
+   "x": 2817,
+   "y": 1902,
+   "low": false,
+   "text": "(2-1) Tap Generate → Toast / [phone] 9:41",
+   "trace": "R-085"
+  },
+  {
+   "id": "ds-hair-b@3221,1902",
+   "board": "ds-hair-b",
+   "x": 3221,
+   "y": 1902,
+   "low": false,
+   "text": "(3) Custom color selected / [phone] 9:41",
+   "trace": "R-086"
+  },
+  {
+   "id": "ds-hair-b@3650,1965",
+   "board": "ds-hair-b",
+   "x": 3650,
+   "y": 1965,
+   "low": false,
+   "text": "[phone] 9:41",
+   "trace": "ui: status bar time"
+  },
+  {
+   "id": "ds-hair-b@2289,2010",
+   "board": "ds-hair-b",
+   "x": 2289,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@2689,2010",
+   "board": "ds-hair-b",
+   "x": 2689,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@3089,2010",
+   "board": "ds-hair-b",
+   "x": 3089,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@3493,2010",
+   "board": "ds-hair-b",
+   "x": 3493,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@3897,2010",
+   "board": "ds-hair-b",
+   "x": 3897,
+   "y": 2010,
+   "low": false,
+   "text": "[phone] 100",
+   "trace": "R-067"
+  },
+  {
+   "id": "ds-hair-b@2891,2277",
+   "board": "ds-hair-b",
+   "x": 2891,
+   "y": 2277,
+   "low": false,
+   "text": "[phone] Select both a base and highlight color. / [phone] Style / [phone] Face / [phone] Bangs / [phone] Highlight / [phone] Solid / [phone] Platinum",
+   "trace": "R-085"
+  },
+  {
+   "id": "ds-hair-b@2041,2354",
+   "board": "ds-hair-b",
+   "x": 2041,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-b@2441,2354",
+   "board": "ds-hair-b",
+   "x": 2441,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Ombre / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-b@3245,2354",
+   "board": "ds-hair-b",
+   "x": 3245,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Face / [phone] Bangs / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-b@3649,2354",
+   "board": "ds-hair-b",
+   "x": 3649,
+   "y": 2354,
+   "low": false,
+   "text": "[phone] Style / [phone] Ombre / [phone] Bangs / [phone] Highlight / [phone] Base Color / [phone] Highlight Color / [phone] Custom",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-b@2188,2445",
+   "board": "ds-hair-b",
+   "x": 2188,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Ombré / [phone] Platinum / [phone] Champagne / [phone] Periwinkle / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@2588,2445",
+   "board": "ds-hair-b",
+   "x": 2588,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@2729,2445",
+   "board": "ds-hair-b",
+   "x": 2729,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Ombre / [phone] Base Color / [phone] Ombré / [phone] Highlight Color / [phone] Periwinkle / [phone] Sakura / [phone] Custom / [phone] 6 / [phone] 6",
+   "trace": "R-019"
+  },
+  {
+   "id": "ds-hair-b@3056,2445",
+   "board": "ds-hair-b",
+   "x": 3056,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Balayage / [phone] Ombre / [phone] Highlights / [phone] Ombré / [phone] Champagne / [phone] Periwinkle / [phone] Sakura / [phone] Generate / [phone] 6 / [phone] Generate / [phone] 6",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@3392,2445",
+   "board": "ds-hair-b",
+   "x": 3392,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Highlight / [phone] Balayage / [phone] Solid / [phone] Highlights / [phone] Ombré / [phone] Platinum / [phone] Champagne / [phone] Periwinkle / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@3796,2445",
+   "board": "ds-hair-b",
+   "x": 3796,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Balayage / [phone] Ombre / [phone] Solid / [phone] Highlights / [phone] Platinum / [phone] Champagne / [phone] Generate / [phone] Generate",
+   "trace": "R-024"
+  },
+  {
+   "id": "ds-hair-b@3941,2445",
+   "board": "ds-hair-b",
+   "x": 3941,
+   "y": 2445,
+   "low": false,
+   "text": "[phone] Solid / [phone] Ombré / [phone] Periwinkle / [phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-b@2313,2606",
+   "board": "ds-hair-b",
+   "x": 2313,
+   "y": 2606,
+   "low": false,
+   "text": "[phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "ds-hair-b@3517,2606",
+   "board": "ds-hair-b",
+   "x": 3517,
+   "y": 2606,
+   "low": false,
+   "text": "[phone] Sakura / [phone] 6 / [phone] 6",
+   "trace": "R-016"
+  },
+  {
+   "id": "pm-ui@2430,626",
+   "board": "pm-ui",
+   "x": 2430,
+   "y": 626,
+   "low": false,
+   "text": "#5A3E2B / #A88B70 / #B8AE98 / #E3DCCB / #66735A / #5B6E85 / #C9918A / #B5562A",
+   "trace": "R-022"
+  }
+ ]
+}

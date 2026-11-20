@@ -1,0 +1,153 @@
+[
+ {
+  "iss": "ISS-CR-01",
+  "verdict": "STILL",
+  "observed": "The Launcher shortcut (page 2) and the AI Videos card both still read 'Cinematic Reel Creator'.",
+  "shots": [
+   "cr01_launcher_shortcut.png",
+   "cr01_ai_videos_card.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-02",
+  "verdict": "STILL",
+  "observed": "The room's top bar shows only '‹', the credit pill and the history icon; no 'Reel Creator' title.",
+  "shots": [
+   "cr02_room_top.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-03",
+  "verdict": "FIXED",
+  "observed": "Section titles now read 'Cinematic Styles 📽️', 'Year-End Recap ✏️' and 'Cool Transitions 🎞️'; no raw ReelCreator_Category_ keys (emojis differ slightly from Design, wording matches the PM).",
+  "shots": [
+   "cr03_room_titles.png",
+   "cr03_room_bottom.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-04",
+  "verdict": "FIXED",
+  "observed": "Every Cinematic Styles card now carries a small inset photo at its bottom left.",
+  "shots": [
+   "cr02_room_top.png",
+   "cr04_cine_row_left.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-05",
+  "verdict": "STILL",
+  "observed": "Launcher template rows are still New Hair Colors, Your Best Look Yet, Meme Generator, Cute Pet Moments, ID Photo, Minimalist Collage; no Reel Creator row.",
+  "shots": [
+   "cr05_launcher_bottom.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-06",
+  "verdict": "STILL",
+  "observed": "A 'Year-End Recap' section now exists, but it holds only 'single-color-fastcut' and 'cinematic-grade' (raw names, no description, no 'Top 5 of My Year'); swiping up plays the same MY YEAR QUEST demo.",
+  "shots": [
+   "cr06_creative_preview.png",
+   "cr06_swipe.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-07",
+  "verdict": "STILL",
+  "observed": "Cinestory Previews now show an ⓘ (Design) that opens the app-wide guide with 'Continue', but Creative Previews (single-color-fastcut, cinematic-grade) still have no tips entry.",
+  "shots": [
+   "cr07_horror_preview.png",
+   "cr07_tips_sheet.png",
+   "cr06_creative_preview.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-08",
+  "verdict": "FIXED",
+  "observed": "The count line shows an image icon and '1 Photo' (Creative: icon + '1 – 30 Photos').",
+  "shots": [
+   "cr07_horror_preview.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-09",
+  "verdict": "STILL",
+  "observed": "The tray now reads 'Select 15 to 40 photos to continue.' (as Design), but the picker still has no 'Add photos' title (only '‹' and the camera icon).",
+  "shots": [
+   "cr09_picker.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-10",
+  "verdict": "FIXED",
+  "observed": "Every tray thumbnail has an '×'; tapping the second one unpicked that photo (16 → 15 picked).",
+  "shots": [
+   "cr10_tray_16.png",
+   "cr10_after_x.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-13",
+  "verdict": "FIXED",
+  "observed": "With 7 remembered photos the prompt 'Use the 7 photos you picked last time?' shows three thumbnails, the third dimmed with '+4'. Note: the prompt appeared only when re-entering from the Preview; after ‹ three times (out of the room to the Launcher) and back in, no prompt showed, even after an app relaunch.",
+  "shots": [
+   "cr13_prompt_plus4.png",
+   "cr13_prompt.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-15",
+  "verdict": "STILL",
+  "observed": "The header now has the count icon, the counter reads 'Your photos (7/30)' and '+' is first, but there is still no '9:16' and no reorder hint.",
+  "shots": [
+   "cr15_creative_confirm.png",
+   "cr17_confirm_15.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-16",
+  "verdict": "STILL",
+  "observed": "The single-color-fastcut confirm page (English, 7 photos) still has no Text Language bar above Generate, nor anywhere else on the page.",
+  "shots": [
+   "cr15_creative_confirm.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-17",
+  "verdict": "STILL",
+  "observed": "cinematic-grade, 15 → 14 photos: 'Your photos (14/40)' stays white (not red); Generate is disabled.",
+  "shots": [
+   "cr17_count_14.png",
+   "cr17_count_crop.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-21",
+  "verdict": "STILL",
+  "observed": "zh-Hant and de: the tray ('選取 4 張相片以繼續作業。' / 'Wählen Sie 4 Fotos aus…') and the count ('4 張相片' / '4 Fotos') are now translated, but 'Use Template', 'Your photos (N/4)' and the prompt 'Use the 4 photos you picked last time?' stay English; ja / pt not rechecked.",
+  "shots": [
+   "cr21_zh_tray.png",
+   "cr21_zh_confirm.png",
+   "cr21_zh_prompt.png",
+   "cr21_de_confirm.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-22",
+  "verdict": "FIXED",
+  "observed": "In German the Import prompt button reads 'Importieren' in full, no truncation.",
+  "shots": [
+   "cr22_de_import.png",
+   "cr22_de_import_crop.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-26",
+  "verdict": "STILL",
+  "observed": "My AI Artwork tabs start 'Recent', 'AI Anime Video', 'AI Art', 'AI Background' …; 'Image to Video' and 'Reel Creator' sit later (after Character Motion Swap).",
+  "shots": [
+   "cr26_tabs_entry.png",
+   "cr26_tabs_start.png"
+  ]
+ }
+]

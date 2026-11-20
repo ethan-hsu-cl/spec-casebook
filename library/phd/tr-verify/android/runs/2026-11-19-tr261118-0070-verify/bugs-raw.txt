@@ -1,0 +1,313 @@
+==============================================================================
+PHA252025-0128  —  PHD-A 19.12.0 - [UX]Artistic_Avatar: There is no place to show the remain credits in the result page
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    19.12.0 / build 202502212012   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2025-02-24T14:06:42
+  TR         TR250224-006
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter Artistic Avatar
+3. Generate an image
+4. Check the result page
+
+Result:
+There is no place to show the remain credits in the result page
+
+Expect Result:
+Should show the remain credits in the result page
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by ARCHER_CHEN  2026-11-12T12:01:07
+  Root cause: ui modify
+  Solution:   add credit number at result page
+  Changeset:  https://github.com/CyberLink-Team/photodirector-android-app/commit/5b32706e
+5b32706e
+
+--- Attachments -------------------------------------------------------------
+  artistic avatar generate image no show remain credit.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1382902
+
+==============================================================================
+PHA262026-0361  —  PHD-A 20.15.0 - AI_Replace: The preview is not change to new image after tapping the [Create More] button
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.15.0 / build 202608071942   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 1   BugBelong RD
+  Creator    WILLY_WU   2026-08-11T11:57:29
+  TR         TR260807-075
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Replace
+3. Generate an image
+4. Select another image in Artwork
+5. Tap the [Create More] button
+6. Check the preview
+
+Result:
+The preview is not change to new image after tapping the [Create More] button
+
+Expect Result:
+Should change to new image
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- RD resolution -----------------------------------------------------------
+  by ARCHER_CHEN  2026-11-11T15:37:37
+  Root cause: Place of checking if need to reset source image is in onCreate(), but in case of AIReplaceActivity -> artwork -> gallery -> create more -> AIReplaceActivity, it use a deep link to bypass image and deep link will enter onResume(), but not enter onCreate()
+  Solution:   1.Extract checking if need to reset source image to handleLaunchIntent() and call in onCreate() and onNewIntent()
+2.Deep link from artwork then will enter onNewIntent() and enter handleLaunchIntent() to reset source image
+  Changeset:  https://github.com/CyberLink-Team/photodirector-android-app/commit/bd243597
+bd243597
+
+--- Attachments -------------------------------------------------------------
+  ai replace create more.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1488555
+
+==============================================================================
+PHA262026-0362  —  PHD-A 20.15.0 - My_AI_Artwork: The button is showing "Create More" instead of "Replace More"
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.15.0 / build 202608071942   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 1   BugBelong RD
+  Creator    WILLY_WU   2026-08-11T14:04:35
+  TR         TR260807-075
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter MY AI Artwork
+3. Select [AI Replace] tab
+4. Select an image
+5. Check the [Create More] button
+
+Result:
+The button is showing "Create More" instead of "Replace More"
+
+Expect Result:
+Should change to "Replace More"
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- RD resolution -----------------------------------------------------------
+  by ARCHER_CHEN  2026-11-11T15:33:17
+  Root cause: uxmodify
+  Solution:   ux modify
+  Changeset:  https://github.com/CyberLink-Team/photodirector-android-app/commit/9baa185e
+9baa185e
+
+--- Attachments -------------------------------------------------------------
+  ai replace create more.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1488582
+
+==============================================================================
+PHA262026P0057  —  PHD-A 20.19.0 - [AIAgent] Batch_Editing: AI Enhance does not pause in the background; remaining photos fail as Connection lost
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611061839   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-10T16:28:48
+  TR         TR261106-0051
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0058  —  PHD-A 20.19.0 - [AIAgent] Batch_Editing: System Back does not close the AI Enhance confirm dialog 「Enhance 12 photos?」
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611061839   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-10T16:28:51
+  TR         TR261106-0051
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0059  —  PHD-A 20.19.0 - [AIAgent] Batch_Editing: System Back does not close the 「Discard changes?」 dialog opened from Home
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611061839   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-10T16:28:54
+  TR         TR261106-0051
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0060  —  PHD-A 20.19.0 - [AIAgent] Batch_Editing: Square crop applied to all saves a 16:9 photo as 1434 x 1435, not square
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611061839   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-10T16:28:56
+  TR         TR261106-0051
+  Reproduce  1/1   previous build: Unknown
+
+==============================================================================
+PHA262026P0084  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: 「Lock」 on the image tool bar does nothing; the photo can still be moved
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:48
+  TR         TR261111-0042
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0085  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: 「Removal」 on the image tool bar opens nothing
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:51
+  TR         TR261111-0042
+  Reproduce  5/5   previous build: Unknown
+
+==============================================================================
+PHA262026P0089  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: System Back on the Custom color picker applies the colour instead of cancelling
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:02
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+==============================================================================
+PHA262026P0097  —  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages move button selects on a tap; dragging shows no enlarged page or hint
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:26
+  TR         TR261111-0042
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0098  —  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages controls overlap from 5 pages; at 10 only the last ••• can be reached
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:29
+  TR         TR261111-0042
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0099  —  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Template cards read 「1 pages」 and Save & Share reads 「1 images」
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:31
+  TR         TR261111-0042
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0112  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom panel: colour rows can be picked before any style is chosen
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:02:55
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+==============================================================================
+PHA262026P0113  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom colour palette has no eyedropper key next to the hue slider
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:02:59
+  TR         TR261111-0042
+  Reproduce  2/2   previous build: Unknown
+
+==============================================================================
+PHA262026P0114  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: System Back in the colour palette leaves AI Hair Color, not just the palette
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:03:03
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+==============================================================================
+PHA262026P0115  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Collapsing Custom panel keeps Soft Black selected; Generate makes a template
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:03:07
+  TR         TR261111-0042
+  Reproduce  5/5   previous build: Unknown
+
+==============================================================================
+PHA262026P0117  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom result has no Intensity bar, panel open or collapsed
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:03:16
+  TR         TR261111-0042
+  Reproduce  4/4   previous build: Unknown
+
+==============================================================================
+PHA262026P0118  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: First Custom result shows no one-time My AI Artwork 100% dialog
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:03:20
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+==============================================================================
+PHA262026P0119  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Tapping Custom after a template result does not bring back the Custom result
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:03:24
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+==============================================================================
+PHA262026P0129  —  PHD-A 20.19.0 - [UX]Reel_Creator: The mask is not covering the preview below the [Use Template] button
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611132003   fixed in 20.19.0.v202611181947
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-18T15:27:47
+  TR         TR261113-0038
+  Reproduce  3/3   previous build: Unknown
+

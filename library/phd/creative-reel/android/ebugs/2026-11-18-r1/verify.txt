@@ -1,0 +1,1 @@
+verify_ebug_drafts.py: not run to completion — hangs on Windows in _find_idx() (walks parents until '/', never reached on C:\), killed after 30 s (same as AI Hair Color Custom R2).

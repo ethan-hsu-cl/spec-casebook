@@ -10,6 +10,8 @@ rules the PM boards; where the two disagree on a rule the question is open and t
 are iPhone frames; Android differences are in "System back". The Design Figma was read from PDF exports, not through
 Figma (quota ran out mid read: `figma-pending.json`, Q-12). Request ledger: REQ-001 (this table), REQ-003 (this update), REQ-004 (UI copy follows the Design), REQ-011 (v5).
 
+**Re-read 2026-11-18 (REQ-019):** the Figma change check found the PM page unchanged and one new Design board, 225:3699 「launcher · Light · orange · rest」, with the 「Batch Edit」 shortcut in the Launcher Features grid (R-022, Q-15).
+
 **Also read (REQ-011, 2026-11-11):** the PM and Design Figma pages themselves (PM page 0:1, Design page 12:2321), as the
 text snapshot of spec set 2026-11-09-figma (re-read 2026-11-11). `[PMF:<board>; <rule IDs>]` = a PM Figma board
 (`specs/2026-11-09-figma/extracted/figma-inventory-pm-*.json`). The PDF export 「UI UX flow 2.pdf」 is an older state
@@ -29,9 +31,9 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 - R-012 [PM:picker-single; DR-01b, D0-04b] The Launcher 「Edit」 picker and the 「AI Enhance」 shortcut picker carry the same 「Single」 / 「Batch」 tabs.
 - R-013 [PM:picker-batch, pm-decisions; DR-01, D5-01b] Only the 「Batch」 tab allows several photos; at most 20 for Free and Premium users alike, with no IAP at any count (Q2 decided 10/30: no Premium lock day-1, not Meitu's IAP at the 13th photo), and the same on both platforms, so Android is not held to a lower cap.
 - R-014 [PM:picker-batch; D2-01] Selected thumbnails show their selection order 1, 2, 3 …; Batch Edit Room lists the photos in that order.
-- R-015 [PM:picker-batch, entry-enhance-shortcut; DR-01; DS:ds-photo-picker] The bottom bar of the Batch tab shows the hint with the count, 「Select 1 to 20 photos to continue. (n/20)」, and 「Next」 (Design copy; PM draws 「n selected (max 20)」 and 「Done」: Q-1).
-- R-019 [DS:ds-photo-picker] On the Batch tab a tray under the bottom bar lists the selected photos in selection order, each with ✕; ✕ deselects that photo (the tile loses its number, the count drops).
-- R-233 [DS:ds-photo-picker] Every picker tile carries an expand icon at its bottom right that opens the photo large without selecting it (Design draws the icon only; what opens is not stated: Q-13).
+- R-015 [PM:picker-batch, entry-enhance-shortcut; DR-01; DS:ds-photo-picker; ruling REQ-021] The bottom bar of the Batch tab shows the hint with the count, 「Select 1 to 20 photos to continue. (n/20)」, and 「Next」 (Design copy; PM draws 「n selected (max 20)」 and 「Done」); 「Next」 is grey with no photo selected and lights up as soon as one is selected (Q-1, Q-13 answered).
+- R-019 [DS:ds-photo-picker; ruling REQ-021] On the Batch tab a tray under the bottom bar lists the selected photos in selection order, each with ✕; ✕ (or tapping the tile again) deselects that photo: the tile loses its number, the count drops and the numbers of the photos after it move up in order (Q-13 answered).
+- R-233 [DS:ds-photo-picker; ruling REQ-021] Every picker tile carries an expand icon at its bottom right; it opens the album selection screen (Q-13 answered).
 - R-016 [PM:picker-batch-one, batch-one; DR-01b] On the 「Batch」 tab, 「Next」 with only one photo selected opens the single-photo Edit Room.
 - R-017 [PM:picker-batch-one, batch-one; D1-08c, DR-13] In the single-photo Edit Room, Replace photo opens the Photo Picker, where switching to 「Batch」 and choosing several photos goes to Batch Edit Room.
 - R-018 [PM:picker-over-max; DR-01] Selecting a 21st photo is blocked with the toast 「Please pick at most 20 photos.」.
@@ -39,7 +41,7 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 ## Entry
 - R-020 [PM:entry-edit; D1-01] From the Launcher 「Edit」 picker, Batch tab → 「Next」 lands on the Batch Edit Room main screen.
 - R-021 [PM:entry-enhance-shortcut, enhance-default; DR-02] From the Launcher 「AI Enhance」 shortcut picker, Batch tab with several photos → 「Next」 lands directly on the Batch Edit Room AI Enhance page.
-- R-022 [PM:entry-batch-shortcut] A Launcher Batch Edit shortcut is planned (its icon is still to be designed, after Meitu); the Launcher drawn has none yet. The deeplink `phd://navigate/page?name=batch_edit` opens Batch Edit; where it lands is not stated (Q-15).
+- R-022 [PM:entry-batch-shortcut; DS:design-launcher 225:3699] The Launcher has a Batch Edit shortcut: the Design Figma (read 2026-11-18) draws 「Batch Edit」 with its own icon in the Launcher 「Features」 grid, second row between 「AI Removal」 and 「Beautify」 (UI UX flow 2: icon still to be designed, after Meitu; Design first). The deeplink `phd://navigate/page?name=batch_edit` opens Batch Edit; where the shortcut and the deeplink land is not stated (Q-15).
 
 ## Batch Edit Room
 - R-030 [PM:room-default; D1-11, D1-01] The main screen looks like the current Edit Room; its bottom bar has only three buttons, in the order 「Crop & Rotate」 → 「Adjustment」 → 「AI Enhance」, each opening a room like the current feature room.
@@ -51,7 +53,7 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 - R-036 [PM:room-default; DR-05, DR-05d] The main screen's Undo / Redo keeps one history per photo and acts only on the current photo; one visit to a room ended with ✓ is one step in each changed photo's history.
 - R-037 [PM:room-default, enhance-done; DR-10b, DR-12e] On the main screen, Undo on an enhanced photo returns only that photo to its pre-Enhance state; Redo brings the Enhance result back.
 - R-038 [PM:room-default; DR-10b, DR-12e] After an Enhance was undone, any other edit to that photo clears the Redo: the Enhance result cannot be brought back, but the photo can be enhanced again from the AI Enhance room (R-229).
-- R-039 [PM:room-default] The Setting button's target is not stated (Q-3); the compare button drawn on the photo works as in Edit Room (Q-4).
+- R-039 [PM:room-default; ruling REQ-021] The Setting button opens the same Setting page as the single-photo Edit Room (Q-3 answered); the compare button drawn on the photo works as in Edit Room: hold shows the original (Q-4 answered).
 
 ## Crop & Rotate room
 - R-050 [PM:crop-default; D1-11, DR-03; DS:ds-3, ds-main-down-tool-box] The room matches the current Crop & Rotate room (Rotate, Flip, Flip Vertically, Original, Custom, Square, 2:3, 3:2, 3:4 and more ratios, angle slider, ✕ / undo / redo / ✓), with no title above the tool panel. Its top bar has ‹ at the left, the current photo's pixel size 「W x H」 with a pencil (manual pixel input, R-066) in the middle and 「All」 at the right (‹ beside ✕: Q-22).
@@ -67,7 +69,7 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 - R-058 [S3:meitu-conclusion] The current (source) photo keeps the box the user adjusted (size and position unchanged).
 - R-059 [S3:meitu-conclusion, meitu-summary] Every other photo gets the largest box of that ratio (one side flush with its original, only the part outside the ratio cut); the box size is not synced (Meitu syncs relative size, PhD does not).
 - R-060 [S3:meitu-conclusion] The largest box of each other photo is placed at the source's relative position: horizontal = left margin ÷ (width − box width), vertical = top margin ÷ (height − box height); 0 = left / top, 0.5 = centre, 1 = right / bottom.
-- R-061 [S3:meitu-conclusion] Only a direction in which a photo's box has room to move takes the relative position; a direction with no room is centred, and a source direction with no room counts as 0.5 (centred). (DR-07 says boxes default to centred on each photo: Q-5.)
+- R-061 [S3:meitu-conclusion] Only a direction in which a photo's box has room to move takes the relative position; a direction with no room is centred, and a source direction with no room counts as 0.5 (centred). (DR-07's 「boxes default to centred」 is superseded by the 「✅ 結論」 board: ruling REQ-021, Q-5 answered.)
 - R-062 [S3:meitu-conclusion] Output size is computed from each original, so the saved photos' pixel sizes differ; this is expected.
 - R-063 [S3:meitu-conclusion] 「Free」 counts as a custom ratio: its ratio and relative position are applied, other photos get the largest box of that ratio.
 - R-064 [S3:meitu-conclusion] 「Original」 applied to all returns each photo to its own original ratio, uncropped.
@@ -94,8 +96,10 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 - R-087 [PM:crop-applied; DR-05b; S3:meitu-conclusion] Apply to all is one step of the room history: one Undo takes it back on all photos, one Redo restores it on all (Section 3 「Undo」 rule; whether it also means the main screen: Q-9).
 
 ## Adjustment room
-- R-090 [PM:adjust-default; D1-11, DR-03, DR-06] The room matches the 26'10/E Adjustment room (Light / Color / Details), without Subject Detection and without AI Exposure (the Design frames draw 「AI Exposure」 in the tool list: Q-18; rows follow PM).
+- R-090 [PM:adjust-default; D1-11, DR-03, DR-06; DS:design-light-adjust 「adjust」 41:923; REQ-020] The room matches the 26'10/E Adjustment room (Light / Color / Details), without Subject Detection; the tool row has 「AI Exposure」 between 「Exposure」 and 「Contrast」 as every Design Adjustment frame draws (PM DR-06 says none: Q-18; Design first). On Android AI Exposure keeps its paid-only entry (KP-014).
 - R-230 [DS:ds-9-adjust-hsl, ds-9-adjust-curve, ds-9-adjust-hsl-collapse, ds-9-adjust-curve-collapse; PM:adjust-guideline-note] The Color tab has an HSL panel (「Hue」 / 「Saturation」 / 「Lightness」 sliders and eight colour dots: red, orange, yellow, green, cyan, blue, purple, magenta) and a Curve panel (channel buttons RGB / red / green / blue beside the tone curve), as the current Adjustment room; each panel folds down with a chevron (﹀) and opens again with ︿, and reset and compare sit on the photo.
+- R-239 [DS:design-light-adjust 41:923 「top/ic_info」; REQ-020] ⓘ at the top left of the batch Adjustment room opens the existing help for Adjustment (Design-only; what it opens: Q-23).
+- R-240 [DS:design-light-adjust 「adjust」 「ic_magic_wand」; PMF:pm-flow-2 「Auto」; REQ-020] The first tool, 「Auto」, adjusts the current photo automatically; like any setting of the room, 「All」 copies it to every other photo (R-092).
 - R-231 [PM:adjust-default; DR-04, DR-04c; DS:ds-9-adjust-hsl, ds-9-adjust-curve] 「All」 carries the HSL and Curve values with the rest of the set (the whole set of the room, R-092).
 - R-232 [PM:adjust-guideline-note] PM asks Design for the HSL / Curve layout with the thumbnail strip (the photo gets small) and prefers the proposal 「Adjustment 縮圖列（draft）」: A. thumbnails 50→40 px, strip 62→48 px; B. the strip fades out while a finger holds a slider or a curve point and fades back on release. — NOT TESTABLE: direction only, not drawn yet (Q-17). Decided in the PM Figma (D1-12): R-237, R-238.
 - R-237 [PMF:pm-ui-4 D1-12; DS:9_Adjust_curve, 9_Adjust_HSL] Opening Color › Curve or HSL fades the batch thumbnail strip out; it cannot be tapped (the panel lies over the photo); 「All」 stays shown at the top right.
@@ -138,7 +142,7 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 - R-127 [PM:enhance-network, enhance-offline; D1-05] 「Retry Failed (x)」 reruns the unfinished photos; tapped while still offline it shows the toast 「No internet connection」 and does not start.
 - R-128 [PM:enhance-network, server-task-notes; D1-05, D1-10] If the app is killed, Batch Edit Room is gone and finished AI Enhance results are not kept (Standard results are not saved to My AI Artwork).
 - R-129 [PM:server-task-notes; D1-05] Sending the app to the background pauses processing; it continues on return.
-- R-130 [PM:flow-ai-enhance] ✕ on the AI Enhance page returns to Batch Edit Room with the finished Enhance results kept (results are applied when done, R-114). (The Design draws the Discard Dialog over the AI Enhance page: Q-19.)
+- R-130 [PM:flow-ai-enhance; DS: Discard Dialog over the AI Enhance page; ruling REQ-018] ✕ (and Android Back) on the AI Enhance page asks 「Discard changes?」 once an edit has been made (a finished Enhance counts); with no edit it returns straight to Batch Edit Room (user ruling 2026-11-17, Q-19).
 
 ## AI Enhance Confirm Dialog
 - R-135 [PM:confirm-dialog; D1-02, D1-03] Copy (as drawn, confirmed with RD): 「Enhance {xx} photos?」 / 「Processing takes a moment and cannot be canceled once started.」 / 「Cancel」 / 「Start」; {xx} = the photos to enhance.
@@ -169,21 +173,22 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 - R-170 [Rule: Android system Back, REQ-051] Android system Back on every screen of the feature does what the screen's own back / close does (listed under "System back"); where the spec draws none, the row records what Back does (Q-11).
 
 ## Open questions
-- Q-1 Picker bottom copy: the Design draws 「Select 1 to 20 photos to continue. (10/20)」 and 「Next」 (the light frame without the space before 「(10/20)」 and with 「Next」 grey although 10 photos are selected); the PM boards still draw 「Select 1 to 20 photos.」 / 「3 selected (max 20)」 and 「Done」. Assumption: the Design copy, 「Next」 enabled once a photo is selected. (R-015, TC-005, TC-007)
-- Q-3 Where does the Setting button in Batch Edit Room's top bar lead (Edit Room settings, save quality)? (R-039)
-- Q-4 The compare button on the photo is drawn but not described: same as Edit Room (hold to see the original)? (R-039)
-- Q-5 DR-07 says the crop box defaults to centred on each photo, while Section 3 「✅ 結論」 places other photos' boxes at the source's relative position. Rows follow Section 3 (more specific, marked 結論); confirm. (R-061, R-073)
 - Q-6 PhD toast copy for a manual pixel value out of range (Meitu: 「Width and height exceed the range」). (R-066)
 - Q-9 Section 3 「Undo（Apply to all 後回到編輯頁按 Undo）」 says one Undo reverts the application on all photos. If 「編輯頁」 means the main screen, it conflicts with D1/DR-05d (main-screen Undo per photo). Rows: in the room all photos (R-087), on the main screen per photo (R-036). Confirm.
 - Q-10 「Maximize detaill and clarity with advanced AI.」 has 「detaill」; the Crop panel shows 「Squre」 and Adjustment 「Hightlight」. Typos in the mockups or in the app strings? Rows expect correct spelling.
 - Q-11 Android system Back is not specified for Batch Edit Room main (Home or Replace photo behaviour?), the rooms, the processing mask and the saving dialog. Rows record what Back does.
-- Q-12 The Design Figma (file qZXJfrM5gb5g4tFoCIS1YU) was read from per-frame PDF exports, not through Figma: the source read stopped on the Figma quota and four boards it had planned (67:10037, 67:10070, 67:10377, 67:10838) are gone from the file. Frames carry no dates, controls are read by eye, and no Figma inventory exists yet. Assumption: the exported frames are the current Design.
-- Q-13 What happens to the selected photos when the user deselects one on the Batch tab, by tapping the tile or the tray ✕ (do the numbers renumber?), is 「Next」 disabled with none selected, and what does a tile's expand icon open? Spec silent; rows record it. Assumption: the numbers close up. (R-019, R-233, TC-009, TC-010, TC-150, TC-151)
 - Q-14 Does 「‹」 on the Batch Save page return to an editable Batch Edit Room (edits kept, Save again saves another N new files)? Spec only says it returns. (R-154)
 
 ## Answered questions
+- Q-1 (「Next」 state on the picker) — answered by the user, 2026-11-18 (REQ-021): 「Next」 lights up once a photo is selected; the copy stays the Design's (REQ-004): R-015; TC-005, TC-007.
+- Q-3 (Setting in the Batch Edit Room) — answered by the user, 2026-11-18 (REQ-021): the same Setting as the Edit Room: R-039; TC-025.
+- Q-4 (compare on the photo) — answered by the user, 2026-11-18 (REQ-021): hold shows the original: R-039; TC-026.
+- Q-5 (crop Apply to all placement) — answered by the user, 2026-11-18 (REQ-021): follow the 「✅ 結論」 board (largest box at the current photo's relative position), not DR-07's 「centred」: R-060, R-061, R-073; TC-047, TC-051, TC-052, TC-053.
+- Q-13 (deselect, empty 「Next」, the tile's expand icon) — answered by the user, 2026-11-18 (REQ-021): the numbers move up in order, 「Next」 is grey with nothing selected, expand opens the album selection screen: R-015, R-019, R-233; TC-009, TC-010, TC-150, TC-151.
+- Q-12 (Design read from PDF exports, not through Figma) — answered by REQ-020, 2026-11-18: the table is based on the Figma spec set 2026-11-09-figma, read through Figma (inventory of 102 control groups, all traced in control-trace.json); the four boards the old read missed are gone from the file.
 - Q-16 (when 「All」 is greyed) — answered by the PM Figma DR-04 【NEW】 list (REQ-011): R-234, R-236; TC-042, TC-153, TC-162, TC-163, TC-059, TC-062, TC-063, TC-075, TC-076, TC-164, TC-165.
 - Q-17 (the strip in HSL / Curve) — answered by the PM Figma D1-12 rule: the strip hides while the panel is open (REQ-011): R-237, R-238; TC-166, TC-167, TC-168.
+- Q-19 (✕ / Back on the AI Enhance page) — answered by the user, 2026-11-17 (REQ-018): with edits made it asks 「Discard changes?」, with none it goes straight back: R-130; TC-100, TC-142, TC-171.
 
 ## Added 2026-10-30 (updated 2026-11-09) — coverage passes and standing inputs
 
@@ -245,6 +250,8 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 | R-004 | Free user (Crop / Adjustment free) | TC-082 |
 | R-004 | Premium user (AI Enhance without credits) | TC-093 |
 | R-013 | Free user, 20 photos (no IAP at any count) | TC-156 |
+| R-090 | Premium user, AI Exposure (「Try it」, KP-014) | TC-172 |
+| R-090 | Free user, AI Exposure (「Upgrade to VIP」, KP-014) | TC-173 |
 | R-013 | Premium user, 20 photos | TC-011 |
 | R-234 | Crop & Rotate room | TC-153, TC-162, TC-042, TC-062, TC-063 |
 | R-234 | Adjustment room | TC-164, TC-075, TC-076, TC-165 |
@@ -263,37 +270,38 @@ and has DR-05g before its 2026-11-11 change (KF-005). Where the two differ, the 
 
 ### Flow arrows walked by existing rows
 
-The PDF has no Figma links, so arrows are read from the drawn flows (`arrows.json`, node = `<board>-a<n>`).
-- R-200 [PM:entry-edit flow arrow entry-edit-a1 ] Launcher 「Edit」 → Photo Picker (Single by default). Walked by: TC-001.
-- R-201 [PM:entry-edit flow arrow entry-edit-a2 ] Picker Batch 「Done」 → Batch Edit Room main. Walked by: TC-018.
-- R-202 [PM:entry-edit flow arrow entry-edit-a3 ] Main 「Crop & Rotate」 → Crop & Rotate room. Walked by: TC-029.
-- R-203 [PM:entry-edit flow arrow entry-edit-a4 ] Picker ‹ → Launcher. Walked by: TC-016.
-- R-204 [PM:entry-edit flow arrow entry-edit-a5 ] Crop & Rotate ✓ → main. Walked by: TC-068.
-- R-205 [PM:flow-adjustment flow arrow flow-adjustment-a1 ] Main 「Adjustment」 → Adjustment room. Walked by: TC-069.
-- R-206 [PM:flow-adjustment flow arrow flow-adjustment-a2 ] 「All」 → 「Applied to 11 photos」. Walked by: TC-071.
-- R-207 [PM:flow-adjustment flow arrow flow-adjustment-a3 ] Adjustment ✓ → main. Walked by: TC-081.
-- R-208 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a1 ] Main 「AI Enhance」 → AI Enhance page. Walked by: TC-083.
-- R-209 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a2 ] 「Enhance」 → Confirm Dialog. Walked by: TC-086.
-- R-210 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a3 ] 「Start」 → processing. Walked by: TC-089.
-- R-211 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a4 ] processing → result summary. Walked by: TC-101.
-- R-212 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a5 ] 「Cancel」 → AI Enhance page. Walked by: TC-087.
+Read first from the PDF's drawn flows (node = `<board>-a<n>`); since REQ-020 each also names the Figma arrow it repeats (`DS: flow arrow <node>`, spec set 2026-11-09-figma `arrows.json`).
+- R-200 [PM:entry-edit flow arrow entry-edit-a1 ; DS: flow arrow 16:10599 ] Launcher 「Edit」 → Photo Picker (Single by default). Walked by: TC-001.
+- R-201 [PM:entry-edit flow arrow entry-edit-a2 ; DS: flow arrow 16:10603 ] Picker Batch 「Done」 → Batch Edit Room main. Walked by: TC-018.
+- R-202 [PM:entry-edit flow arrow entry-edit-a3 ; DS: flow arrow 16:10607 ] Main 「Crop & Rotate」 → Crop & Rotate room. Walked by: TC-029.
+- R-203 [PM:entry-edit flow arrow entry-edit-a4 ; DS: flow arrow 16:10611 ] Picker ‹ → Launcher. Walked by: TC-016.
+- R-204 [PM:entry-edit flow arrow entry-edit-a5 ; DS: flow arrow 16:10615 ] Crop & Rotate ✓ → main. Walked by: TC-068.
+- R-205 [PM:flow-adjustment flow arrow flow-adjustment-a1 ; DS: flow arrow 16:11038 ] Main 「Adjustment」 → Adjustment room. Walked by: TC-069.
+- R-206 [PM:flow-adjustment flow arrow flow-adjustment-a2 ; DS: flow arrow 297:3116 ] 「All」 → 「Applied to 11 photos」. Walked by: TC-071.
+- R-207 [PM:flow-adjustment flow arrow flow-adjustment-a3 ; DS: flow arrow 16:11042 ] Adjustment ✓ → main. Walked by: TC-081.
+- R-208 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a1 ; DS: flow arrow 16:11813 ] Main 「AI Enhance」 → AI Enhance page. Walked by: TC-083.
+- R-209 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a2 ; DS: flow arrow 31:1858 ] 「Enhance」 → Confirm Dialog. Walked by: TC-086.
+- R-210 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a3 ; DS: flow arrow 16:11821 ] 「Start」 → processing. Walked by: TC-089.
+- R-211 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a4 ; DS: flow arrow 31:1863 ] processing → result summary. Walked by: TC-101.
+- R-212 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a5 ; DS: flow arrow 16:11829 ] 「Cancel」 → AI Enhance page. Walked by: TC-087.
 - R-213 [PM:flow-ai-enhance flow arrow flow-ai-enhance-a6 ] AI Enhance ✕ → main. Walked by: TC-100.
-- R-214 [PM:entry-enhance-shortcut flow arrow entry-enhance-shortcut-a1 ] Launcher 「AI Enhance」 → Picker. Walked by: TC-006.
-- R-215 [PM:entry-enhance-shortcut flow arrow entry-enhance-shortcut-a2 ] Picker Batch 「Done」 → AI Enhance page. Walked by: TC-019.
-- R-216 [PM:entry-enhance-shortcut flow arrow entry-enhance-shortcut-a3 ] Picker ‹ → Launcher. Walked by: TC-017.
-- R-217 [PM:free-user-iap flow arrow free-user-iap-a1 ] Free user 「Enhance」 → Premium IAP. Walked by: TC-098.
-- R-218 [PM:batch-one flow arrow batch-one-a1 ] Batch 「Done」 with 1 photo → single Edit Room. Walked by: TC-014.
-- R-219 [PM:batch-one flow arrow batch-one-a2 ] Single Edit Room Replace photo → Picker (Batch available). Walked by: TC-020.
-- R-220 [PM:save-flow flow arrow save-flow-a1 ] Save → 「Saving k / N」. Walked by: TC-122.
-- R-221 [PM:save-flow flow arrow save-flow-a2 ] Saving → Batch Save page. Walked by: TC-128.
-- R-222 [PM:save-flow flow arrow save-flow-a3 ] Save page ‹ → Batch Edit Room. Walked by: TC-131.
-- R-223 [PM:save-flow flow arrow save-flow-a4 ] Save page Home → Launcher. Walked by: TC-132.
-- R-224 [PM:save-flow flow arrow save-flow-a5 ] 「Edit Next Batch」 → Picker Batch tab, nothing selected. Walked by: TC-133.
-- R-225 [PM:leave-flow flow arrow leave-flow-a1 ] Picker 「Done」 → main. Walked by: TC-018.
-- R-226 [PM:leave-flow flow arrow leave-flow-a2 ] Home / Replace photo after an edit → Discard Dialog. Walked by: TC-115, TC-117.
-- R-227 [PM:leave-flow flow arrow leave-flow-a3 ] 「Discard」 from Replace photo → Picker Batch tab, photos still selected. Walked by: TC-117.
-- R-228 [PM:leave-flow flow arrow leave-flow-a4 ] 「Keep Editing」 → Batch Edit Room. Walked by: TC-118.
-- R-235 [PM:leave-flow flow arrow leave-flow-a5 ] Photo Picker ‹ (opened by 「Edit Next Batch」) → Batch Edit Room main with the edits (red arrow new in UI UX flow 2). Walked by: TC-134, TC-148.
+- R-214 [PM:entry-enhance-shortcut flow arrow entry-enhance-shortcut-a1 ; DS: flow arrow 16:12859 ] Launcher 「AI Enhance」 → Picker. Walked by: TC-006.
+- R-215 [PM:entry-enhance-shortcut flow arrow entry-enhance-shortcut-a2 ; DS: flow arrow 16:12863 ] Picker Batch 「Done」 → AI Enhance page. Walked by: TC-019.
+- R-216 [PM:entry-enhance-shortcut flow arrow entry-enhance-shortcut-a3 ; DS: flow arrow 16:12867 ] Picker ‹ → Launcher. Walked by: TC-017.
+- R-217 [PM:free-user-iap flow arrow free-user-iap-a1 ; DS: flow arrow 151:2352 ] Free user 「Enhance」 → Premium IAP. Walked by: TC-098.
+- R-218 [PM:batch-one flow arrow batch-one-a1 ; DS: flow arrow 16:13109 ] Batch 「Done」 with 1 photo → single Edit Room. Walked by: TC-014.
+- R-219 [PM:batch-one flow arrow batch-one-a2 ; DS: flow arrow 137:4368 ] Single Edit Room Replace photo → Picker (Batch available). Walked by: TC-020.
+- R-220 [PM:save-flow flow arrow save-flow-a1 ; DS: flow arrow 16:13426 ] Save → 「Saving k / N」. Walked by: TC-122.
+- R-221 [PM:save-flow flow arrow save-flow-a2 ; DS: flow arrow 16:13430 ] Saving → Batch Save page. Walked by: TC-128.
+- R-222 [PM:save-flow flow arrow save-flow-a3 ; DS: flow arrow 141:2038 ] Save page ‹ → Batch Edit Room. Walked by: TC-131.
+- R-223 [PM:save-flow flow arrow save-flow-a4 ; DS: flow arrow 141:2042 ] Save page Home → Launcher. Walked by: TC-132.
+- R-224 [PM:save-flow flow arrow save-flow-a5 ; DS: flow arrow 141:2046 ] 「Edit Next Batch」 → Picker Batch tab, nothing selected. Walked by: TC-133.
+- R-225 [PM:leave-flow flow arrow leave-flow-a1 ; DS: flow arrow 16:13746 ] Picker 「Done」 → main. Walked by: TC-018.
+- R-226 [PM:leave-flow flow arrow leave-flow-a2 ; DS: flow arrow 16:13750 ; flow arrow 37:2034 ] Home / Replace photo after an edit → Discard Dialog. Walked by: TC-115, TC-117.
+- R-227 [PM:leave-flow flow arrow leave-flow-a3 ; DS: flow arrow 16:13754 ] 「Discard」 from Replace photo → Picker Batch tab, photos still selected. Walked by: TC-117.
+- R-228 [PM:leave-flow flow arrow leave-flow-a4 ; DS: flow arrow 16:13758 ] 「Keep Editing」 → Batch Edit Room. Walked by: TC-118.
+- R-235 [PM:leave-flow flow arrow leave-flow-a5 ; DS: flow arrow 357:2620 ] Photo Picker ‹ (opened by 「Edit Next Batch」) → Batch Edit Room main with the edits (red arrow new in UI UX flow 2). Walked by: TC-134, TC-148.
+- R-241 [DS: flow arrow 16:13763 ; REQ-020] AI Enhance ✓ → Batch Edit Room: ✓ returns with every photo enhanced. Walked by: TC-177.
 
 ### Domain rules
 
@@ -301,7 +309,7 @@ The PDF has no Figma links, so arrows are read from the drawn flows (`arrows.jso
 |---|---|
 | KP-134 | R-104 |
 | KP-012 | n/a (batch has no paid mode split: Free and Premium are R-004, R-013, R-119) |
-| KP-014 | n/a (PM: no AI Exposure in the batch Adjustment room, R-090; Design draws it: Q-18) |
+| KP-014 | R-090 (AI Exposure shown per the Design: Premium 「Try it」 TC-172, Free 「Upgrade to VIP」 TC-173) |
 | KP-015 | n/a (no purchase in this feature) |
 | KP-016 | n/a (no free trial in batch, R-119) |
 | KP-017 | n/a (batch AI Enhance deducts no credits, R-004) |
@@ -310,7 +318,7 @@ The PDF has no Figma links, so arrows are read from the drawn flows (`arrows.jso
 | KP-020 | n/a (the batch AI Enhance page shows no credit count, R-113; a pill drawn on the Discard frame: Q-19) |
 | KP-021 | n/a (no chat) |
 | KP-024 | n/a (spec: Standard batch results are not saved to My AI Artwork, R-143) |
-| KP-025 | n/a (no AI Exposure in batch, R-090) |
+| KP-025 | n/a (where an AI Exposure result from the batch room goes is recorded by TC-172; batch saves go to the gallery, R-150) |
 | KP-026 | n/a (no History button drawn in the batch AI Enhance room; Q-19 notes one on the Discard frame) |
 | KP-027 | n/a (batch results are not artworks, R-143) |
 | KP-028 | n/a (no Artwork filter) |
@@ -346,9 +354,12 @@ The PDF has no Figma links, so arrows are read from the drawn flows (`arrows.jso
 | REQ-011 | R-051, R-103, R-104, R-232, R-234, R-236, R-237, R-238 (PM Figma rules the PDF lacks; spec agent comparison) |
 | REQ-010 | every requirement of this table (kept over main's Android v1 when the branch merged main, re-saved as v4) |
 | REQ-013 | R-238 (hidden clause: folding the Curve / HSL panel keeps its values and selection; TC-169, TC-170) |
-- Q-15 The PM entry board now plans a Launcher Batch Edit shortcut (icon to be designed after Meitu) and the deeplink `phd://navigate/page?name=batch_edit`, while D0-04 still says Batch Edit appears only in the two pickers. Where do the shortcut and the deeplink land (Photo Picker on 「Batch」?), and is the shortcut in 26'11/E? Assumption: the deeplink opens the Photo Picker on 「Batch」; rows record it. (R-022, TC-022, TC-152)
-- Q-18 PM (re-exported 2026-11-09) says the Adjustment room shows no AI Exposure; every Design Adjustment frame draws 「AI Exposure」 between 「Exposure」 and 「Contrast」. Which holds? Assumption: PM (no AI Exposure); the row records what the app shows. (R-090, TC-070)
-- Q-19 The Design draws the Discard Dialog over the AI Enhance page (with a credit pill 「100」 and a history icon at the top right), while PM says ✕ on that page returns to Batch Edit Room keeping the results and the dialog comes from Home / Replace photo. Does ✕ (or Back) on the AI Enhance page ask to discard, and does that page show a credit pill? Assumption: PM (no dialog, results kept). (R-130, TC-100, TC-142)
+| REQ-019 | R-022 (Design Launcher board 225:3699 draws the 「Batch Edit」 shortcut; TC-022) |
+| REQ-020 | R-090, R-116, R-230, R-239, R-240, R-241 (Figma as the base: every Figma control and flow arrow traced; TC-070, TC-157 modified, TC-172 – TC-177 new) |
+- Q-15 Where do the Launcher 「Batch Edit」 shortcut and the deeplink `phd://navigate/page?name=batch_edit` land (Photo Picker on 「Batch」?), and is the shortcut in 26'11/E? The Design Launcher board 225:3699 (2026-11-18) now draws the shortcut in the Features grid but no arrow from it, while D0-04 still says Batch Edit appears only in the two pickers. Assumption: both open the Photo Picker on 「Batch」; rows record it. (R-022, TC-022, TC-152)
+- Q-18 PM (DR-06, also in the re-exported PDF) says the Adjustment room shows no AI Exposure; every Design Adjustment frame draws 「AI Exposure」 between 「Exposure」 and 「Contrast」. Which holds? Assumption (REQ-020, Design first): AI Exposure is shown, with its Android paid entry (KP-014); the rows record what the app shows. (R-090, TC-070, TC-172, TC-173)
+- Q-19 The Design's Discard Dialog frame over the AI Enhance page shows a credit pill 「100」 and a history icon at the top right, which batch AI Enhance does not otherwise draw. Does the page show a credit pill? Assumption: not asserted. (Whether ✕ / Back asks first is answered: REQ-018, R-130.)
 - Q-20 Batch Save page title: Design 「Save 12 photos」, PM 「Saved 12 photos」 (D1-07). Assumption: the Design copy. (R-153, TC-128)
 - Q-21 The Design adds a feedback button (speech bubble with !) to the Batch Edit Room top bar; PM lists only Home, Replace photo, Save and Setting. Is it in the batch room, and what does it open? Assumption: present; rows record what opens. (R-031, TC-024, TC-154)
 - Q-22 The Design Crop & Rotate room has ‹ at the top left as well as ✕ at the bottom. Is ‹ the same as ✕ (drop the room's changes) or as ✓? Assumption: same as ✕; rows record it. (R-050, TC-155)
+- Q-23 The Design draws ⓘ at the top left of the batch Adjustment room; PM does not mention it. Does it open the existing Adjustment help? Assumption: yes; the row records what opens. (R-239, TC-175)

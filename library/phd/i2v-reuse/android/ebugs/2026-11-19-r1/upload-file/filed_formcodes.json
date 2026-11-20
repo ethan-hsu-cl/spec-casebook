@@ -1,0 +1,44 @@
+{
+  "I2V-Reuse-R1-01": {
+    "FormCode": "PHA262026P0141",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0141",
+    "JobID": 23296943893,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: No 「Settings applied」 toast when Reuse opens the Custom page",
+    "at": "2026-11-19T15:49:09"
+  },
+  "I2V-Reuse-R1-02": {
+    "FormCode": "PHA262026P0142",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0142",
+    "JobID": 23296949525,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: Reuse opens Custom without the Image to Video explanation sheet shown elsewhere",
+    "at": "2026-11-19T15:49:31"
+  },
+  "I2V-Reuse-R1-03": {
+    "FormCode": "PHA262026P0143",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0143",
+    "JobID": 23296950293,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: ‹ / Back in the room opened by Reuse go to My AI Artwork, not Save & Share",
+    "at": "2026-11-19T15:49:35"
+  },
+  "I2V-Reuse-R1-07": {
+    "FormCode": "PHA262026P0144",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0144",
+    "JobID": 23296951317,
+    "short": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: Tracking: Reuse logs Artwork_Reuse_Click without model, not ImageToVideo_Reuse_Click",
+    "at": "2026-11-19T15:49:38"
+  },
+  "I2V-Reuse-R1-09": {
+    "FormCode": "PHA262026P0145",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0145",
+    "JobID": 23296952085,
+    "short": "PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Reuse: Custom room flashes rotated (landscape) before settling portrait",
+    "at": "2026-11-19T15:49:41"
+  },
+  "I2V-Reuse-R1-10": {
+    "FormCode": "PHA262026P0146",
+    "Href": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/PHA262026P0146",
+    "JobID": 23296953109,
+    "short": "PHD-A 20.19.0 - [AIAgent][UX] Image_to_Video: Reused room: first tap selects the whole prompt (one key erases it) — PM to decide",
+    "at": "2026-11-19T15:49:45"
+  }
+}

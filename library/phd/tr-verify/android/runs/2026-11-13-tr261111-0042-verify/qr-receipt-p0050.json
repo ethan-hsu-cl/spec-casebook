@@ -1,0 +1,13 @@
+{
+  "qr": "QR261113-0023",
+  "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261113-0023",
+  "tr": "TR261111-0042",
+  "created": "2026-11-13",
+  "style": "phd-a (template QR261102-0081)",
+  "counts": { "OK": 1, "Fail": 0 },
+  "rows": { "PHA262026P0050": "OK" },
+  "verifiedBy": "WILLY_WU (by hand on Samsung Galaxy S23); the agent wrote and filed the QR only",
+  "readBack": "before Create: Short Description = the TR's, Test Result and Details = the Test Result line, Product Version / Build Day / Build No. / OS empty, the only row PHA262026P0050 OK with the approved Reason; after Create: all present on the QR page",
+  "ticketsAfter": "PHA262026P0050 Close (verified) about 30 s after Create; all 14 verify-list bugs on the TR now verified",
+  "mismatches": []
+}

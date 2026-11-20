@@ -1,0 +1,82 @@
+[
+ {
+  "iss": "ISS-CR-18",
+  "verdict": "STILL",
+  "observed": "single-color-fastcut still reads 「Generate | 70」 and charges a flat 70 (503 → 433 with 5 photos in the tray; 385 → 315 with 6 later); Detail lists 「Reel Creator -70」. The price question for PM is unchanged.",
+  "shots": [
+   "cr18_generate_button.png",
+   "cr18_detail.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-19",
+  "verdict": "STILL",
+  "observed": "Micro Cinema (1 photo, opened from Create More) still shows 「Generate | 48」 and charges 48 (433 → 385); Detail shows 「Reel Creator -48」.",
+  "shots": [
+   "cr19_generate_button.png",
+   "cr18_detail.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-20",
+  "verdict": "STILL",
+  "observed": "Credit Detail still lists the Creative (-70, twice) and Micro Cinema (-48) uses all as 「Reel Creator / PhotoDirector (Android)」, so the features cannot be told apart.",
+  "shots": [
+   "cr18_detail.png",
+   "cr25_detail.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-23",
+  "verdict": "STILL",
+  "observed": "Creative card reads 「Processing… / Almost Done」 with no remaining time, at once and still at 1 min and 3 min (retried job, 11:48–11:51); the pack's estimated_time is set to about 3.6 s after creation. Micro Cinema cards do show 「14 minutes remaining…」.",
+  "shots": [
+   "cr25_after_retry.png",
+   "cr23_card_1min.png",
+   "cr23_card_3min.png",
+   "cr28_after_generate.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-24",
+  "verdict": "FIXED",
+  "observed": "Home after Generate; 「Reel Creator Ready!」 arrived 11:24:39 (FCM push). Tapping it opened My AI Artwork with the card still 「Processing… / Almost Done」 for about 12 s, then the same page updated itself to the finished reel at 11:25:05 (status Done), with no reopen needed. On the old build it stayed stale for 2.5 min until reopened.",
+  "shots": [
+   "cr24_notification.png",
+   "cr24_after_tap.png",
+   "cr24_after_tap_25s.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-25",
+  "verdict": "STILL",
+  "observed": "Wi-Fi cut 67 ms after the pack reached UploadFile (applyEffect then failed with UnknownHostException). The dialog still reads 「Error / Unsuccessful, please try again. Credits refunded.」, but 70 stays charged (server balance 315 → 245, a new 「Reel Creator -70」 row in Detail, no refund row; the room pill still read 315 until reopened). After Wi-Fi came back, Retry on the ⚠ card only logged 「longTask retry click」: no upload or applyEffect followed and the card stayed 「Processing… / Almost Done」 for 8.5 min with no reel and no second charge. Earlier tries for comparison: a cut 0.13 s after Generate failed the credit check (「Network Error」, nothing charged); a cut ~56 s after the job was submitted gave a ⚠ Retry card whose Retry finished the reel with one charge.",
+  "shots": [
+   "cr25b_dialog.png",
+   "cr25b_detail.png",
+   "cr25b_retry_card.png",
+   "cr25b_after_retry.png",
+   "cr25b_after_9min.png",
+   "cr25b_detail_after_retry.png",
+   "cr25_error_dialog.png",
+   "cr25_done_card.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-27",
+  "verdict": "STILL",
+  "observed": "The saved Micro Cinema reel (DCIM/PhotoDirector/Video/2026-11-19-11-43-32-558.mp4) is 1176 × 1760 by ffprobe (about 2:3, not 9:16); the Save & Share preview is the same portrait-but-not-9:16 box.",
+  "shots": [
+   "cr27_saved.png"
+  ]
+ },
+ {
+  "iss": "ISS-CR-28",
+  "verdict": "FIXED",
+  "observed": "Not reproduced: Micro Cinema started from My AI Artwork › Create More downloaded normally (Done 11:42:36, no SocketTimeout or DOWNLOAD_FAILED) and the card shows the reel. 「Reel Creator Ready!」 arrived at 11:32:53, about 10 min before the app polled and marked it Done (the card still read 「3 minutes remaining…」 at 11:39). The original failure was seen once.",
+  "shots": [
+   "cr28_after_generate.png",
+   "cr28_done_card.png"
+  ]
+ }
+]

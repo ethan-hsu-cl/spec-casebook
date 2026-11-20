@@ -1,0 +1,64 @@
+
+4 of 13 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[AI-Hair-Color-Custom-R2-01] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Photo guide reads 「Recommendation」, 「Face Too Small」, adds 「Accessories」 vs the Design
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-02] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: No-face dialog reads 「A face is required」, not 「Face is required」
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-03] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Edit Room Quick Action row has no 「Hair Color」 tool
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+    ! 25%  OPEN      PHA262026P0116  PHD-A 20.19.0 - [AIAgent][UX] AI_Hair_Color: Custom generation wait shows no 「Applying y
+              shares phrase "hair color"
+    ! 25%  OPEN      PHA262026P0114  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: System Back in the colour palette leaves AI Hai
+              shares phrase "hair color"
+    ! 25%  closed    PHA262026P0005  PHD-A 20.18.0 - [AIAgent] AI_Hair_Color: The generated image is not applied to Edit Room
+              shares phrase "edit room"
+
+[AI-Hair-Color-Custom-R2-04] PHD-A 20.19.0 - [AIAgent][UX] AI_Hair_Color: Custom panel: Solid hides the Highlight Color row; Design greys it, PM hides it — which?
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-05] PHD-A 20.19.0 - [AIAgent][UX] AI_Hair_Color: Custom panel: two-colour style with only Base Color keeps Generate disabled — PM to decide
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-06] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom panel: tapping grey Generate with Highlight only shows no 「Select both…」 toast
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-07] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom palette: colour picked with Done is not added to the row as a new circle
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-08] PHD-A 20.19.0 - [AIAgent][UX] AI_Hair_Color: Custom panel: tapping the photo closes the panel and applies — PM to decide
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-09] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom panel collapses as soon as Generate is tapped in it; it should stay open
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      38%  OPEN      PHA262026P0117  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom result has no Intensity bar, panel open 
+      38%  OPEN      PHA262026P0115  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Collapsing Custom panel keeps Soft Black select
+
+[AI-Hair-Color-Custom-R2-10] PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: ✕ on a result asks 「Discard changes?」, then opens Edit Room, not the Launcher
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+    ! 25%  closed    PHA262026P0005  PHD-A 20.18.0 - [AIAgent] AI_Hair_Color: The generated image is not applied to Edit Room
+              shares phrase "edit room"
+
+[AI-Hair-Color-Custom-R2-11] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Subscriber out of credits sees 「Get Credit Refilled!」, not 「More Credits Required!」
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate
+
+[AI-Hair-Color-Custom-R2-12] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Colour page: first Solid template is 「Soft Black」, no 「Platinum」 — PM to confirm
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+    ! 33%  OPEN      PHA262026P0115  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Collapsing Custom panel keeps Soft Black select
+              shares phrase "soft black"
+    ! 22%  OPEN      PHA262026P0110  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: No slanted-face warning: a face tilted 45° open
+              shares phrase "colour page"
+
+[AI-Hair-Color-Custom-R2-13] PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Custom panel: split-dye styles show photo thumbnails, not plain-colour ones — PM to confirm
+      feature='AI_Hair_Color'  searched 12 candidate(s)
+      no likely duplicate

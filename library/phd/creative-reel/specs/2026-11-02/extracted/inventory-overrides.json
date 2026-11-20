@@ -1,0 +1,928 @@
+{
+ "add": [
+  {
+   "screen": "7245:8672",
+   "label": "Template card",
+   "box": [
+    16,
+    160,
+    120,
+    200
+   ],
+   "kind": "item",
+   "why": "template thumbnails in each section row (image cards, no layer name)"
+  },
+  {
+   "screen": "7336:618",
+   "label": "View photo tips",
+   "box": [
+    16,
+    100,
+    128,
+    26
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:618",
+   "label": "Mute",
+   "box": [
+    331,
+    560,
+    26,
+    26
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:618",
+   "label": "Use Template",
+   "box": [
+    20,
+    682,
+    335,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:889",
+   "label": "View photo tips",
+   "box": [
+    16,
+    100,
+    128,
+    26
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:889",
+   "label": "Mute",
+   "box": [
+    331,
+    560,
+    26,
+    26
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:889",
+   "label": "Use Template",
+   "box": [
+    20,
+    682,
+    335,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:643",
+   "label": "Got it",
+   "box": [
+    16,
+    725,
+    343,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:704",
+   "label": "‹",
+   "box": [
+    12,
+    48,
+    28,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:704",
+   "label": "Recents ▾",
+   "box": [
+    16,
+    100,
+    70,
+    17
+   ],
+   "kind": "dropdown",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:704",
+   "label": "Photo",
+   "box": [
+    4,
+    130,
+    120,
+    120
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:704",
+   "label": "Next",
+   "box": [
+    310,
+    668,
+    56,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:785",
+   "label": "‹",
+   "box": [
+    12,
+    48,
+    28,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:785",
+   "label": "Recents ▾",
+   "box": [
+    16,
+    100,
+    70,
+    17
+   ],
+   "kind": "dropdown",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:785",
+   "label": "Photo",
+   "box": [
+    4,
+    130,
+    120,
+    120
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:785",
+   "label": "Next",
+   "box": [
+    310,
+    668,
+    56,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:859",
+   "label": "‹",
+   "box": [
+    12,
+    48,
+    28,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:859",
+   "label": "Recents ▾",
+   "box": [
+    16,
+    100,
+    70,
+    17
+   ],
+   "kind": "dropdown",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:859",
+   "label": "Photo",
+   "box": [
+    4,
+    130,
+    120,
+    120
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:859",
+   "label": "Next",
+   "box": [
+    310,
+    668,
+    56,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:955",
+   "label": "‹",
+   "box": [
+    12,
+    48,
+    28,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:955",
+   "label": "Recents ▾",
+   "box": [
+    16,
+    100,
+    70,
+    17
+   ],
+   "kind": "dropdown",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:955",
+   "label": "Photo",
+   "box": [
+    4,
+    130,
+    120,
+    120
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:955",
+   "label": "Next",
+   "box": [
+    310,
+    668,
+    56,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:785",
+   "label": "Import",
+   "box": [
+    270,
+    612,
+    56,
+    28
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:785",
+   "label": "×",
+   "box": [
+    336,
+    612,
+    24,
+    28
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:931",
+   "label": "Photo ×",
+   "box": [
+    72,
+    226,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:931",
+   "label": "Photo tile (long-press drag)",
+   "box": [
+    16,
+    226,
+    80,
+    80
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:931",
+   "label": "+",
+   "box": [
+    296,
+    322,
+    48,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:931",
+   "label": "English ▾",
+   "box": [
+    270,
+    656,
+    90,
+    32
+   ],
+   "kind": "dropdown",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:931",
+   "label": "Generate",
+   "box": [
+    20,
+    720,
+    335,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:989",
+   "label": "Photo ×",
+   "box": [
+    72,
+    226,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:989",
+   "label": "Photo tile (long-press drag)",
+   "box": [
+    16,
+    226,
+    80,
+    80
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:989",
+   "label": "+",
+   "box": [
+    296,
+    322,
+    48,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:989",
+   "label": "English ▾",
+   "box": [
+    270,
+    656,
+    90,
+    32
+   ],
+   "kind": "dropdown",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7336:989",
+   "label": "Generate",
+   "box": [
+    20,
+    720,
+    335,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:804",
+   "label": "Language item",
+   "box": [
+    120,
+    220,
+    240,
+    30
+   ],
+   "kind": "item",
+   "why": "language list rows (a choice set)"
+  },
+  {
+   "screen": "7271:352",
+   "label": "‹",
+   "box": [
+    12,
+    48,
+    28,
+    32
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7271:352",
+   "label": "Image to Video",
+   "box": [
+    16,
+    104,
+    100,
+    17
+   ],
+   "kind": "tab",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7271:352",
+   "label": "Reel Creator",
+   "box": [
+    138,
+    104,
+    86,
+    17
+   ],
+   "kind": "tab",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7271:352",
+   "label": "Artwork card",
+   "box": [
+    16,
+    149,
+    343,
+    144
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:1042",
+   "label": "Photo (tap to replace)",
+   "box": [
+    16,
+    240,
+    80,
+    80
+   ],
+   "kind": "item",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:1042",
+   "label": "Photo ×",
+   "box": [
+    72,
+    245,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7337:1042",
+   "label": "Generate",
+   "box": [
+    20,
+    720,
+    335,
+    48
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7567:15085",
+   "label": "Try Now",
+   "box": [
+    19,
+    684,
+    333,
+    46
+   ],
+   "kind": "button",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "7567:15085",
+   "label": "Don’t show again",
+   "box": [
+    126,
+    720,
+    120,
+    26
+   ],
+   "kind": "toggle",
+   "why": "plain frame or text in the PM mockup the extractor skipped (by hand 2026-11-17, box from the Figma text layer)"
+  },
+  {
+   "screen": "934:622",
+   "label": "Template card",
+   "box": [
+    16,
+    158,
+    130,
+    222
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:4328",
+   "label": "Template card",
+   "box": [
+    16,
+    158,
+    130,
+    222
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "950:5298",
+   "label": "Photo",
+   "box": [
+    16,
+    148,
+    113,
+    113
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:4703",
+   "label": "Photo",
+   "box": [
+    16,
+    148,
+    113,
+    113
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "950:5298",
+   "label": "Expand photo",
+   "box": [
+    111,
+    231,
+    24,
+    24
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:4703",
+   "label": "Expand photo",
+   "box": [
+    111,
+    231,
+    24,
+    24
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "957:5859",
+   "label": "Photo",
+   "box": [
+    16,
+    148,
+    113,
+    113
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:4978",
+   "label": "Photo",
+   "box": [
+    16,
+    148,
+    113,
+    113
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "957:5859",
+   "label": "×",
+   "box": [
+    330,
+    560,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:4978",
+   "label": "×",
+   "box": [
+    330,
+    560,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "961:6760",
+   "label": "Photo tile (long-press drag)",
+   "box": [
+    86,
+    342,
+    64,
+    64
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5260",
+   "label": "Photo tile (long-press drag)",
+   "box": [
+    86,
+    342,
+    64,
+    64
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "961:6760",
+   "label": "Text Language",
+   "box": [
+    16,
+    672,
+    343,
+    44
+   ],
+   "kind": "dropdown",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5260",
+   "label": "Text Language",
+   "box": [
+    16,
+    672,
+    343,
+    44
+   ],
+   "kind": "dropdown",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "977:4343",
+   "label": "Language item",
+   "box": [
+    16,
+    396,
+    343,
+    46
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5658",
+   "label": "Language item",
+   "box": [
+    16,
+    396,
+    343,
+    46
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "977:4343",
+   "label": "Sheet backdrop",
+   "box": [
+    0,
+    100,
+    375,
+    250
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5658",
+   "label": "Sheet backdrop",
+   "box": [
+    0,
+    100,
+    375,
+    250
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "970:4457",
+   "label": "Image to Video",
+   "box": [
+    16,
+    118,
+    105,
+    30
+   ],
+   "kind": "tab",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5879",
+   "label": "Image to Video",
+   "box": [
+    16,
+    118,
+    105,
+    30
+   ],
+   "kind": "tab",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "970:4457",
+   "label": "Reel Creator",
+   "box": [
+    140,
+    118,
+    90,
+    30
+   ],
+   "kind": "tab",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5879",
+   "label": "Reel Creator",
+   "box": [
+    140,
+    118,
+    90,
+    30
+   ],
+   "kind": "tab",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "970:4457",
+   "label": "AI Face Swap",
+   "box": [
+    245,
+    118,
+    100,
+    30
+   ],
+   "kind": "tab",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5879",
+   "label": "AI Face Swap",
+   "box": [
+    245,
+    118,
+    100,
+    30
+   ],
+   "kind": "tab",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "970:4457",
+   "label": "Select",
+   "box": [
+    326,
+    160,
+    45,
+    30
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5879",
+   "label": "Select",
+   "box": [
+    326,
+    160,
+    45,
+    30
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "970:4457",
+   "label": "Artwork card",
+   "box": [
+    28,
+    450,
+    343,
+    150
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "996:5879",
+   "label": "Artwork card",
+   "box": [
+    28,
+    450,
+    343,
+    150
+   ],
+   "kind": "item",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark) (dark twin)"
+  },
+  {
+   "screen": "960:6570",
+   "label": "×",
+   "box": [
+    318,
+    11,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "960:6628",
+   "label": "×",
+   "box": [
+    318,
+    11,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  },
+  {
+   "screen": "960:6686",
+   "label": "×",
+   "box": [
+    318,
+    11,
+    20,
+    20
+   ],
+   "kind": "button",
+   "why": "Design control the extractor skipped (image card, plain frame or text; by hand 2026-11-17, box from the board image ds-light / ds-dark)"
+  }
+ ]
+}

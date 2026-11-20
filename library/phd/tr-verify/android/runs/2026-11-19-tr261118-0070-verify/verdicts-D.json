@@ -1,0 +1,59 @@
+[
+  {
+    "bug": "PHA262026P0112",
+    "verdict": "FIXED",
+    "observed": "Pexels hat portrait, Custom tapped with no style chosen: every Base Color and Highlight Color swatch and the colour-wheel key are disabled in the page source and the swatches are drawn dimmed; Generate is disabled. Tapping the dark brown base swatch, a highlight swatch and the colour wheel does nothing (no ring, no palette). After tapping Ombre the swatches turn bright and selectable.",
+    "shots": ["d_p0112_custom_no_style.png", "d_p0112_after_taps.png", "d_p0112_ombre_enabled.png"],
+    "sideEffects": "The colour-wheel key keeps full colour while disabled (only the plain swatches are dimmed), so it looks tappable before a style; it does nothing when tapped. Nothing clipped; Style row unchanged.",
+    "other": "The highlight row no longer has a purple swatch (the bug's step 11); pink and orange were used."
+  },
+  {
+    "bug": "PHA262026P0113",
+    "verdict": "FIXED",
+    "observed": "Ombre › colour wheel opens the palette with Cancel / Done, the colour square, the hue slider and an eyedropper key (hslColorDropper) right of the slider. Eyedropper tapped, then the candle on the photo: the square and hue slider jump to that orange (handle moved from red to orange).",
+    "shots": ["d_p0113_palette.png", "d_p0113_dropper_on.png", "d_p0113_picked_candle.png"],
+    "sideEffects": "The eyedropper key is a round dark button aligned with the slider, not clipped. Arming it shows no visible change (no loupe or highlighted key) until the photo is tapped; the hue handle's fill stays a pale beige rather than the picked colour.",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0114",
+    "verdict": "FIXED",
+    "observed": "In the palette (from the eyedropper orange) the hue slider was dragged to green, then system Back: only the palette closes; the Custom panel stays with Ombre selected, no colour applied (no base swatch ringed, colour-wheel cell unchanged), still inside AI Hair Color.",
+    "shots": ["d_p0114_green_before_back.png", "d_p0114_after_back.png"],
+    "sideEffects": "None seen: panel layout, Style row and Generate (still disabled, no colours) as before the palette opened.",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0117",
+    "verdict": "FIXED",
+    "observed": "Ombre, dark brown base, pink highlight, Generate in the panel (15:49:55, is_customize TRUE, 207 → 201): the panel collapses as the generation starts and the result shows with an Intensity row at 100 directly above the tabs and 「Retry」 6. Dragging it to 53 weakens the colour. After collapsing a second Custom result (15:53:38) the Intensity row is again at 100 above Retry. Reopening the panel (tap Custom) shows no Intensity row inside the panel.",
+    "shots": ["d_p0117_panel_ready.png", "d_p0117_generating.png", "d_p0117_result_1.png", "d_p0118_intensity_drag.png", "d_p0117_panel_reopened.png", "d_p0115_custom_result_orange.png"],
+    "sideEffects": "Intensity row is legible, not clipped, value and slider match (100 / 53). Intensity is kept at 53 when the panel is opened and collapsed again without generating, and resets to 100 on the next generation (R-054).",
+    "other": "The panel-open half of the bug can no longer happen as written: the panel now collapses on Generate (P0116 area, R2 TC-047), and the PM comment RD cites for P0118 (Figma 3287-93: panel first → close → Intensity) puts Intensity after the panel closes; with the panel reopened there is no Intensity row, consistent with that comment. R-041 (in-panel Intensity row) rests on open question Q-4."
+  },
+  {
+    "bug": "PHA262026P0118",
+    "verdict": "HOLD",
+    "observed": "No one-time 「My AI Artwork keeps only the 100% version」 dialog appeared on the TR build: not when the first Custom result of this segment showed (collapsed, 15:50:48), not on the first Intensity drag (100 → 53), not after reopening and collapsing the panel, not on the second Custom result or the Soft Black template result.",
+    "expectedNote": "Hold, not judged: this is not the first result of this install. dumpsys shows firstInstallTime 2026-11-18 09:43:36 and lastUpdateTime 2026-11-19 10:30:23 (the TR APK was an update with data kept), and the install's first results were generated on 2026-11-18 (casebook R2-d, 90201901, no dialog either). The first-result moment cannot be reproduced on the TR build without clearing app data, which is not allowed. 「Don't show again」 was never seen or tapped on this install.",
+    "shots": ["d_p0117_result_1.png", "d_p0118_intensity_drag.png", "d_p0115_custom_result_orange.png", "d_p0119_soft_black_result.png"],
+    "sideEffects": "n/a",
+    "other": "To settle: a fresh install (or a device without earlier AI Hair Color results) of the TR build, first Custom result → collapse → Intensity, per the PM comment (Figma 3287-93)."
+  },
+  {
+    "bug": "PHA262026P0115",
+    "verdict": "FIXED",
+    "observed": "With a Custom result on screen the panel was reopened, Highlight changed to orange and the panel collapsed by dragging the handle down: the template row shows the Custom cell selected (Soft Black not selected) and the outer button reads 「Generate」 6. Outer Generate (15:52:43, is_customize TRUE, style Style_010_Custom_HairColor, 201 → 195) produced a Custom brown-to-orange ombre result, Intensity 100, 「Retry」.",
+    "shots": ["d_p0115_orange_set.png", "d_p0115_collapsed.png", "d_p0115_outer_generating.png", "d_p0115_custom_result_orange.png"],
+    "sideEffects": "Result keeps face, hat, background and clothes; only the hair changes. Nothing clipped in the collapsed row.",
+    "other": "The Custom cell still shows the generic gradient with a wand icon, not the two chosen colours (R-044; drawing is open question Q-2, so not filed). Collapse was done with the grab handle (Q-17)."
+  },
+  {
+    "bug": "PHA262026P0119",
+    "verdict": "FIXED",
+    "observed": "After the Custom orange result, Soft Black + Generate made a template result (15:54:16, is_customize FALSE, 195 → 189). Tapping Custom opens the panel (Ombre, dark brown, orange kept, 「Retry」) and the photo already shows the Custom orange result again; collapsing shows it with Intensity 100 and 「Retry」. Credits stay 189; logcat has no generation after 15:54:35. Tapping Soft Black again brings back the Soft Black result, still 189.",
+    "shots": ["d_p0119_soft_black_selected.png", "d_p0119_soft_black_result.png", "d_p0119_custom_tapped.png", "d_p0119_custom_collapsed.png", "d_p0119_back_to_soft_black.png"],
+    "sideEffects": "None seen: the recalled result is the same image as before, Intensity row back, no flicker of the template result.",
+    "other": "The Soft Black template result shows no Intensity row at all (also noted in R1 for templates); 10/E table scope, not checked against the 10/E spec here."
+  }
+]

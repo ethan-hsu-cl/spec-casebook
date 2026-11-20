@@ -33,6 +33,7 @@
 // Folder: specs/<set>/extracted/figma-source/<role>/ — responses/, hashes.json and scope.json are committed (no one
 // reads an unchanged board again), with the board images in extracted/figma/; calls/ and out/ are local and rebuilt
 // from them by merge and crop (design.ts does that by itself after a pull).
+import { PY } from './lib/python.ts';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { basename, join } from 'node:path';
@@ -187,7 +188,7 @@ const coveringShot = (b: any) => { const [x, y, w, h] = b.box;
   }
   return null; };
 // 256 colours and no dithering, as figma-check.ts --shot does: about a fifth of the size, still 1 px = 1 pt
-const shrink = (png: string) => spawnSync('python3', ['-c', `import sys; from PIL import Image
+const shrink = (png: string) => spawnSync(PY, ['-c', `import sys; from PIL import Image
 im = Image.open(sys.argv[1]); a = im.getchannel('A').getextrema()[0] if im.mode in ('RGBA', 'LA') else 255
 if im.mode != 'P': (im.convert('RGBA') if a < 255 else im.convert('RGB')).quantize(256, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE).save(sys.argv[1], optimize=True)`, png], { encoding: 'utf8' }).status === 0;
 
@@ -730,7 +731,7 @@ for j in json.load(sys.stdin):
         im.crop((round((x - cx) * s), round((y - cy) * s), round((x - cx + w) * s), round((y - cy + h) * s))).save(os.path.join(j['out'], sc['id'].replace(':', '-').replace(';', '-') + '.png')); n += 1
     res.append({'png': j['png'], 'size': [W, H], 'scale': round(s, 4), 'origin': [cx, cy], 'crops': n})
 print(json.dumps(res))`;
-  const r = spawnSync('python3', ['-c', py], { input: JSON.stringify(jobs), encoding: 'utf8' });
+  const r = spawnSync(PY, ['-c', py], { input: JSON.stringify(jobs), encoding: 'utf8' });
   if (r.status !== 0) { console.error(r.stderr || 'python3 with Pillow is needed: pip3 install pillow'); process.exit(1); }
   const done = JSON.parse(r.stdout).map((d: any) => ({ ...d, png: rel(d.png) }));
   writeJson(join(outDir, 'crops.json'), [...done, ...report]);

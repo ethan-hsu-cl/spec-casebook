@@ -1,0 +1,17 @@
+# ISS-CR-19 Micro Cinema charge 48
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-S9110 / Android 16, logcat of the app captured by the casebook run
+# Lines about the job, its status, credits (balance shown only when it changes) and notifications; tokens and IDs dropped.
+
+## Generate tapped 14:58:32 (2026-11-18 14:58:25–14:58:45)
+2026-11-18 14:58:35.756 CreditSystem: totalRemain=842
+2026-11-18 14:58:36.996 AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_AICinematicShorts_1794985112995]
+2026-11-18 14:58:36.997 AIEditorPreferenceUtil: updatePackItems column value: UploadFile
+2026-11-18 14:58:37.769 CreditSystem: totalRemain=794
+2026-11-18 14:58:37.908 AIEditorPreferenceUtil: updatePackItems column: created_time packIds: [credit_create_AICinematicShorts_1794985112995]
+2026-11-18 14:58:37.908 AIEditorPreferenceUtil: updatePackItems column value: 1794985117908
+2026-11-18 14:58:37.914 AIEditorPreferenceUtil: updatePackItems column: estimated_time packIds: [credit_create_AICinematicShorts_1794985112995]
+2026-11-18 14:58:37.914 AIEditorPreferenceUtil: updatePackItems column value: 1794985957908
+2026-11-18 14:58:37.916 AIEditorPreferenceUtil: updatePackItems column: task_id packIds: [credit_create_AICinematicShorts_1794985112995]
+2026-11-18 14:58:37.916 AIEditorPreferenceUtil: updatePackItems column value: 1
+2026-11-18 14:58:37.918 AIEditorPreferenceUtil: updatePackItems column: status packIds: [credit_create_AICinematicShorts_1794985112995]
+2026-11-18 14:58:37.918 AIEditorPreferenceUtil: updatePackItems column value: Apply

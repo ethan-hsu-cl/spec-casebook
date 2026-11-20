@@ -1,0 +1,22 @@
+{
+ "Reel-Creator-R1-01": {
+  "entry": 1,
+  "iss": "ISS-CR-01",
+  "title": "Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」",
+  "feature": "Reel-Creator-R1",
+  "type": "UI",
+  "sev": 3,
+  "belong": "RD",
+  "out": 1,
+  "times": 1,
+  "short": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Launcher shortcut and AI Videos card still read 「Cinematic Reel Creator」",
+  "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher shortcut grid left to page 2\n3. Read the room's shortcut label\n4. Tap the AI Videos tab\n5. Read the room's card label\n6. Check the result\n\nResult:\nThe Launcher shortcut and the AI Videos card both still read 「Cinematic Reel Creator」.\n摘要：Launcher 捷徑與 AI Videos 卡片仍顯示舊名 Cinematic Reel Creator。\n{20.19.0_cr01_launcher_shortcut.jpg} {20.19.0_cr01_ai_videos_card.jpg}\n\nExpect Result:\nBoth entries read 「Reel Creator」 (the room is renamed).\n摘要：兩個入口都應顯示「Reel Creator」。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server\nSpec Link: Reel Creator PM Figma (26 11E Reel Creator, section spec = Creative Reel.pdf), Reel Creator room frame (rename notes, room board) -\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7245-8672\n<Claude Reviewed>",
+  "files": [
+   "20.19.0_cr01_launcher_shortcut.jpg",
+   "20.19.0_cr01_ai_videos_card.jpg"
+  ],
+  "qa_note": "R-003 / R-005 (TC-002 / TC-004 / TC-113). Recheck on 20.19.0.v202611181947 (S23, 2026-11-19): STILL, both entries read 「Cinematic Reel Creator」.",
+  "ux": false,
+  "basis": ""
+ }
+}

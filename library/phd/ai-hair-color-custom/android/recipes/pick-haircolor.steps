@@ -1,0 +1,10 @@
+# Pick a photo from the HairColor album in the AI Hair Color picker by grid cell (Pixel 8a pixels, 1080 x 2400).
+# Starts: the AI Hair Color picker with the HairColor album chosen (All ⌄ > scroll the list > HairColor, kept after).
+# Ends: whatever the photo opens (dialog or colour page). Args: $1 $2 = cell centre.
+# Grid (alphabetical, 3 per row): cols x 194 / 539 / 884; rows y 574 / 920 / 1266 / 1612.
+#   r1: closeup, closeup_tilted30, pano21x9_noface  r2: pano21x9_tilted, portrait_4x5, smallface
+#   r3: tilted30, tilted45, wide16x9                r4: wide2x1, wide4x1
+# Written 2026-11-20 on 20.19.0 (90201901), Pixel 8a. Charges nothing.
+expect HairColor
+tap $1 $2
+wait 5

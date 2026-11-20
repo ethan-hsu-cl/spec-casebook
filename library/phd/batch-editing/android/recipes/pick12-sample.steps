@@ -1,0 +1,26 @@
+# From the Batch picker with the 「Sample Photos」 album open (R3-b, S23): pick its 8 photos, open the album list,
+# choose 「00PHDa_Testing_Material」 and pick its tiles 2, 3, 4, 5 (red hair, red sweater, dog bed, dog in the office).
+# Photo 1 = three women 1067-wide portrait, 12 photos in all. Ends on Batch Edit Room main screen.
+tap 194 686
+tap 540 686
+tap 885 686
+tap 194 1031
+tap 540 1031
+tap 885 1031
+tap 194 1376
+tap 540 1376
+expect (8/20)
+# The album list scrolls unevenly (scrollto cannot find album names there). R3-e: the album names were missing from the
+# page source and `fingerdrag 600 1650 600 700` was taken as a tap; what worked: `tap 300 284`, `fingerdrag 700 1600 700 900 20`
+# (00PHDa_Testing_Material then sits about y 1014-1492: screenshot and tap it by position), then go on from the waitfor.
+tap 300 284
+fingerdrag 600 1650 600 700
+lbl 00PHDa_Testing_Material
+waitfor "(8/20)" --timeout 5
+tap 540 686
+tap 885 686
+tap 194 1031
+tap 540 1031
+expect (12/20)
+lbl Next
+waitfor "Crop & Rotate" --timeout 15

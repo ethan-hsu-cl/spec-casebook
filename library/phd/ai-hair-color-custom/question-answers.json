@@ -1,0 +1,11 @@
+{
+  "Q-19": {
+    "question": "With a two-colour style and only a Base Color, the user ruled that Generate works (REQ-003, 2026-11-13), but the Design draws Generate grey and the toast 「Select both a base and highlight color.」 (cases 2 and 2-1). Which is right? Assumption: the ruling stands. R-029, R-085, TC-026.",
+    "answer": "只選Base應該也要可以生成",
+    "by": "",
+    "at": "2026-11-17T08:45:39.831Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "Confirms REQ-003 over the Design (REQ-007): R-029 and R-085 wording updated in requirements.md; no row changed (TC-026 already expects Generate to work with Base only)."
+  }
+}

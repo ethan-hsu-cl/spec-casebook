@@ -1,0 +1,4 @@
+{
+  "TC-081": { "group": "upstream", "note": "No Text Language bar on the Creative confirm page (TC-075 Fail): 「日本語」 cannot be chosen; no credits spent." },
+  "TC-082": { "group": "upstream", "note": "No Text Language bar on the Creative confirm page (TC-075 Fail): 「繁體中文」 cannot be chosen; no credits spent." }
+}

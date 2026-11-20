@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-11-17T07:04:55.050Z",
+  "set": "2026-11-02",
+  "boards": [
+    {
+      "board": "ds-light",
+      "id": "976:11727/ds-light",
+      "group": "d1",
+      "baseline": "none"
+    },
+    {
+      "board": "ds-dark",
+      "id": "976:11727/ds-dark",
+      "group": "d1",
+      "baseline": "none"
+    },
+    {
+      "board": "ds-pm-copy",
+      "id": "933:4752/ds-pm-copy",
+      "group": "d2",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-room",
+      "id": "7340:961/pm-room",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-deeplink",
+      "id": "7340:961/pm-deeplink",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-preview",
+      "id": "7340:961/pm-preview",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-picker",
+      "id": "7340:961/pm-picker",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-confirm",
+      "id": "7340:961/pm-confirm",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-text-language",
+      "id": "7340:961/pm-text-language",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-artwork",
+      "id": "7340:961/pm-artwork",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-cinematic",
+      "id": "7340:961/pm-cinematic",
+      "group": "p1",
+      "baseline": "none"
+    },
+    {
+      "board": "pm-tutorial",
+      "id": "7340:961/pm-tutorial",
+      "group": "p1",
+      "baseline": "none"
+    }
+  ],
+  "no_texts": []
+}

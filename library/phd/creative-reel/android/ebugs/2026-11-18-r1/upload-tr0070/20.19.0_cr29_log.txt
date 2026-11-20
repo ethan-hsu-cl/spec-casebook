@@ -1,0 +1,16 @@
+PhotoDirector Android 20.19.0.v202611181947 - Samsung Galaxy S23 (SM-S9110) / Android 16, Test Server - 2026-11-19
+ISS-CR-29 - logcat excerpt, Developer options 「Don't keep activities」 ON. Opening the picker (10:59:23) stops and detaches
+ReelCreatorActivity (window @5a49d50); Next (11:00:00) closes the picker and a NEW ReelCreatorActivity window (@acfdce6) is
+created, which shows the Reel Creator room instead of the confirm page. One content-check line (photo 706 flagged CELEBRITY)
+is logged during the picks; the screen after Next shows the room with no message.
+
+2026-11-19 10:59:23.630 16378 16378 I LibraryPickerActivity: onCreate
+2026-11-19 10:59:23.715 16378 16378 I LibraryPickerActivity: onResume
+2026-11-19 10:59:24.223 16378 16378 I VRI[ReelCreatorActivity]@5a49d50: stopped(true) old = false
+2026-11-19 10:59:24.271 16378 16378 I VRI[ReelCreatorActivity]@5a49d50: dispatchDetachedFromWindow
+2026-11-19 10:59:54.883 16378 16378 D LibraryPickerActivity: [startReelCreatorContentCheck] 706 failed: CELEBRITY
+2026-11-19 11:00:00.959 16378 16378 I LibraryPickerActivity: onPause
+2026-11-19 11:00:01.053 16378 16378 I VRI[ReelCreatorActivity]@acfdce6: setView = com.android.internal.policy.DecorView@2072240 IsHRR=false mFlingFrameRateChange=0 TM=true
+2026-11-19 11:00:01.113 16378 16552 D wr7     : ReelCreatorTemplateCategories_en_US: not modified
+2026-11-19 11:00:01.123 16378 16552 D wr7     : ReelCreatorTemplateContents_en_US: not modified
+2026-11-19 11:00:01.527 16378 16378 I LibraryPickerActivity: onDestroy

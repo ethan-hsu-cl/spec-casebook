@@ -284,13 +284,13 @@ def _ledger_path(bodies_path):
 
 def _load_ledger(p):
     if os.path.exists(p):
-        with open(p) as f:
+        with open(p, encoding="utf-8") as f:
             return json.load(f)
     return {}
 
 
 def _save_ledger(p, led):
-    with open(p, "w") as f:
+    with open(p, "w", encoding="utf-8") as f:
         json.dump(led, f, indent=2, ensure_ascii=False)
 
 
@@ -313,7 +313,7 @@ def _verify_creator(login):
 
 
 def cmd_create(a):
-    with open(a.bodies) as f:
+    with open(a.bodies, encoding="utf-8") as f:
         bodies = json.load(f)
 
     print(f"Filing as Creator: {a.creator}"
@@ -356,6 +356,8 @@ def cmd_create(a):
         cmd = [sys.executable, checker, a.bodies, "--product", short_product,
                "--version", a.version,
                "--upload-dir", os.path.dirname(os.path.abspath(a.bodies))]
+        if os.environ.get("ALLOW_AGENT_UX") == "1":   # casebook: UX rule restored 2026-11-13 (overlay rule 5)
+            cmd.append("--allow-agent-ux")
         print(f"Format check: {short_product} {a.version}", flush=True)
         if subprocess.call(cmd) != 0:
             raise ECLError(
@@ -768,7 +770,7 @@ def cmd_export_filing(a):
     Every field is READ BACK from the server, never copied from the draft."""
     entries = []            # (key, bugcode)
     if a.ledger:
-        with open(a.ledger) as f:
+        with open(a.ledger, encoding="utf-8") as f:
             led = json.load(f)
         entries += [(k, v["FormCode"]) for k, v in sorted(led.items())]
     for pair in a.map or []:
@@ -779,7 +781,7 @@ def cmd_export_filing(a):
 
     bodies = {}
     if a.bodies:
-        with open(a.bodies) as f:
+        with open(a.bodies, encoding="utf-8") as f:
             bodies = json.load(f)
 
     bugs, wrong_creator = [], []
@@ -810,9 +812,9 @@ def cmd_export_filing(a):
            "bugs": bugs,
            "dispositions": {}}
     if a.dispositions:
-        with open(a.dispositions) as f:
+        with open(a.dispositions, encoding="utf-8") as f:
             doc["dispositions"] = json.load(f)
-    with open(a.out, "w") as f:
+    with open(a.out, "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=2, ensure_ascii=False)
     print(f"\nwrote {a.out} — {len(bugs)} bug(s), Creator read back: {', '.join(creators)}")
     if wrong_creator:

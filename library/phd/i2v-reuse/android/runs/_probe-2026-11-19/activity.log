@@ -1,0 +1,20 @@
+2026-11-19T02:58:26.003Z restart 42201JEKB02229
+2026-11-19T02:58:35.640Z build 
+2026-11-19T02:58:39.662Z tapif Get Started
+2026-11-19T02:58:40.252Z texts 
+2026-11-19T02:58:41.108Z shot probe-launcher
+2026-11-19T02:58:49.983Z lbl AI Photos
+2026-11-19T02:58:52.689Z els 
+2026-11-19T02:58:58.013Z els 
+2026-11-19T02:59:01.662Z lbl Later
+2026-11-19T02:59:03.113Z els 
+2026-11-19T02:59:07.685Z id go_to_my_art_work_activity_btn
+2026-11-19T02:59:10.162Z tapif Image to Video
+2026-11-19T02:59:12.723Z shot probe-artwork-i2v
+2026-11-19T02:59:13.826Z els 
+2026-11-19T02:59:18.826Z id all_categories_btn
+2026-11-19T02:59:21.375Z texts 
+2026-11-19T02:59:25.986Z scrollto Image to Video
+2026-11-19T02:59:28.263Z lbl Image to Video
+2026-11-19T02:59:31.976Z shot probe-i2v-tab
+2026-11-19T02:59:33.345Z els 

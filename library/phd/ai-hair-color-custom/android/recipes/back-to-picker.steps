@@ -1,0 +1,13 @@
+# From the AI Hair Color colour page back to the AI Hair Color photo picker (via the Edit Room and the Launcher).
+# Starts: the colour page. Ends: the AI Hair Color picker; the album last chosen (e.g. HairColor) is kept.
+# X lands in the Edit Room, Back there opens the general picker (Single / Batch), Back again the Launcher.
+# Written 2026-11-20 on 20.19.0 (90201901), Pixel 8a. Photo guide and Intro Demo already dismissed. Charges nothing.
+id closeBtn
+wait 2
+back
+wait 2
+back
+wait 2
+lbl "AI Hair Color"
+wait 3
+expect Stock

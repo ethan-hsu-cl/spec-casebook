@@ -4,8 +4,8 @@ What a run needs on the phone or the account, because none of it can be committe
 a new row that needs a new video or account state adds it here in the same draft.
 
 ## Phone, build and account
-- Phone: Samsung SM-A5360 (adb serial R5CTB22S05Y), on USB, Stay awake on, no PIN.
-- Build: PhotoDirector for Android from the TR's OneDrive folder (TR261106-0051: 20.19.0.v202611061839), installed
+- Phone: Google Pixel 8a (adb serial 42201JEKB02229) from 2026-11-19 (R1); earlier the Samsung SM-A5360 (R5CTB22S05Y). On USB, Stay awake on, no PIN.
+- Build: PhotoDirector for Android from the TR's OneDrive folder (TR261118-0070: 20.19.0.v202611181947, R1), installed
   with `adb install -r` over the installed app (keeps its data); the agent downloads it without asking, says the file
   name and size, and checks the MD5.
 - Account: the team's QA account (never typed by the agent).

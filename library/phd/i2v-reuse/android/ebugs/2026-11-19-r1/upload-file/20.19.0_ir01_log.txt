@@ -1,0 +1,19 @@
+# ISS-IR-01 Reuse tap and the room opening (no toast line)
+# PhotoDirector Android 20.19.0 (90201901) v202611181947, Google Pixel 8a / Android 16, logcat of the app captured by the casebook run
+# Mixpanel, credit and job lines only (balance shown only when it changes); tokens and IDs dropped.
+
+## TC-010 Reuse on video A (2026-11-19 14:05:30–14:06:30)
+2026-11-19 14:05:30.269 [PHD-A][Mixpanel]: logEvent name=Artwork_Reuse_Click
+2026-11-19 14:05:30.269 [PHD-A][Mixpanel]: [setCurFrom] from = artwork_reuse
+2026-11-19 14:05:31.722 CreditSystem: totalRemain=1273
+2026-11-19 14:05:46.440 ImageToVideoActivity: [onDestroy]
+2026-11-19 14:05:56.355 [PHD-A][Mixpanel]: [setCurFrom] from = Artwork
+2026-11-19 14:05:56.384 [PHD-A][Mixpanel]: SavePage_Media_Appear:{"social_media":"instagram"}
+2026-11-19 14:05:56.385 [PHD-A][Mixpanel]: SavePage_Media_Appear:{"social_media":"snapchat"}
+2026-11-19 14:05:56.385 [PHD-A][Mixpanel]: SavePage_Media_Appear:{"social_media":"tiktok"}
+2026-11-19 14:05:56.385 [PHD-A][Mixpanel]: SavePage_Media_Appear:{"social_media":"pinterest"}
+2026-11-19 14:05:56.385 [PHD-A][Mixpanel]: SavePage_Media_Appear:{"social_media":"facebook"}
+2026-11-19 14:05:56.385 [PHD-A][Mixpanel]: SavePage_Media_Appear:{"social_media":"more"}
+2026-11-19 14:05:56.385 [PHD-A][Mixpanel]: SavePage_Xpromo_Appear:{"pdrm_install":"TRUE"}
+2026-11-19 14:06:01.749 [PHD-A][Mixpanel]: logEvent name=Artwork_Reuse_Click
+2026-11-19 14:06:01.749 [PHD-A][Mixpanel]: [setCurFrom] from = artwork_reuse

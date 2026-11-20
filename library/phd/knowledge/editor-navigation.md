@@ -59,3 +59,11 @@ Settings › About shows Version, SR (e.g. 「DailyBuild」) and Build.
 
 In the macOS mirrored window a plain click or a 1 s hold does not navigate (1 s reads as a long press): bring the app
 to the front, then mouse down, wait about 0.15 s, mouse up. Text fields take typing after a double-click.
+
+## KP-141 The app follows the phone's theme, and a theme switch drops the open page
+- kind: quirk · platform: android · use: analysis, run · tags: theme, dark-mode, lifecycle, navigation
+- source: i2v-reuse run 2026-11-19-r1 O-1 (TC-050, Pixel 8a) · verified: 20.19.0.v202611181947 (2026-11-19)
+
+PhotoDirector Android follows the phone's dark / light theme. Switching the phone theme while a page is open (seen on
+Image to Video's Save & Share) recreates the app on the Launcher's AI Videos tab and the page is lost; a dark / light
+comparison opens the page again after the switch.

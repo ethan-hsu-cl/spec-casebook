@@ -1,0 +1,31 @@
+
+1 of 7 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Batch-Edit-R3-01] PHD-A 20.19.0 - [AIAgent] Batch_Editing: 「All」 stays enabled on a photo with no change of its own after switching photos
+      feature='Batch_Editing'  searched 5 candidate(s)
+      no likely duplicate
+
+[Batch-Edit-R3-02] PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: One Undo after an edit and 「All」 keeps the current photo's own edit
+      feature='Batch_Editing'  searched 5 candidate(s)
+      no likely duplicate
+
+[Batch-Edit-R3-03] PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: Crop sizes use a 2560 px copy and a 147 px minimum, not Section 3's range
+      feature='Batch_Editing'  searched 5 candidate(s)
+      no likely duplicate
+
+[Batch-Edit-R3-04] PHD-A 20.19.0 - [AIAgent][UI] Batch_Editing: Custom resolution out-of-range toast names only the width
+      feature='Batch_Editing'  searched 5 candidate(s)
+      no likely duplicate
+
+[Batch-Edit-R3-05] PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: ✕ after batch AI Enhance asks 「Discard changes?」, not keep the results
+      feature='Batch_Editing'  searched 5 candidate(s)
+    ! 29%  OPEN      PHA262026P0059  PHD-A 20.19.0 - [AIAgent] Batch_Editing: System Back does not close the 「Discard changes
+              shares phrase "discard changes"
+
+[Batch-Edit-R3-06] PHD-A 20.19.0 - [AIAgent][UI] Batch_Editing: Batch Save title 「Saved 12 photos」 differs from Design 「Save 12 photos」
+      feature='Batch_Editing'  searched 5 candidate(s)
+      no likely duplicate
+
+[Batch-Edit-R3-07] PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: Free user Batch Save page has no native ad card, unlike single save
+      feature='Batch_Editing'  searched 5 candidate(s)
+      no likely duplicate

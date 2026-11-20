@@ -1,0 +1,11 @@
+# ISS-CR-29 Activity re-created
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-S9110 / Android 16, logcat of the app captured by the casebook run
+# Lines about the job, its status, credits (balance shown only when it changes) and notifications; tokens and IDs dropped.
+
+## Don't keep activities ON (2026-11-18 15:10:00–15:18:30)
+2026-11-18 15:15:16.907 VRI[AICineStoryActivity]@b563b7c: dispatchDetachedFromWindow
+2026-11-18 15:15:17.029 VRI[AICineStoryActivity]@b49bd29: setView (new window)
+2026-11-18 15:15:22.938 VRI[AICineStoryActivity]@b49bd29: dispatchDetachedFromWindow
+2026-11-18 15:15:28.036 VRI[AICineStoryActivity]@228e3eb: setView (new window)
+2026-11-18 15:15:51.520 VRI[AICineStoryActivity]@228e3eb: dispatchDetachedFromWindow
+2026-11-18 15:16:25.795 VRI[AICineStoryActivity]@8b79b16: setView (new window)

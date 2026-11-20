@@ -1,0 +1,29 @@
+Dedupe — Batch Editing Android, run 2026-11-13-r3 (phase R3, table v7, full run), PhotoDirector 20.19.0.v202611111946
+(90201900, SR PHA261029-01, TR261111-0042). Read-only; Android pool only (product "PhotoDirector Mobile for Android";
+dedupe per OS, user 2026-10-28). 2026-11-13. Statuses read with ecl_query.py bug (read-only); nothing commented.
+
+Same-OS matches left off the drafts and the review page (none closed, so none becomes a new card):
+| Case(s) | Finding on this build | Ticket | Status |
+|---|---|---|---|
+| TC-012 | 21st-photo toast 「You can only select 20 photos.」, not the spec copy 「Please pick at most 20 photos.」 | PHA262026P0061 | Assigned |
+| TC-060 | Square applied to all saves the 16:9 stand-in as 1434 x 1435 | PHA262026P0060 | RDResolved — still reproduces |
+| TC-110 | AI Enhance does not pause in the background: 「3 completed, 9 failed」 after Home 30 s (UnknownHostException) | PHA262026P0057 | RDResolved — still reproduces |
+| TC-144 | System Back leaves 「Enhance 12 photos?」 open | PHA262026P0058 | RDResolved — still reproduces |
+| TC-145 | System Back leaves 「Discard changes?」 (from Home) open | PHA262026P0059 | RDResolved — still reproduces |
+| TC-142 (2nd Back only) | A second Back leaves the 「Discard changes?」 dialog after AI Enhance open | PHA262026P0059 | same behaviour; the dialog appearing at all is ISS-BEA-17 |
+
+Four RDResolved tickets still fail on this build: information for the tester's TR261111-0042 verification (no comment
+posted, team rule).
+
+1. ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" --limit 600 (raw in
+   dedupe-raw.txt) → 1 of 7 flagged: ISS-BEA-17 vs PHA262026P0059 (29 %, shared phrase "discard changes"). Read: P0059 is
+   system Back not closing the dialog opened from Home; ISS-BEA-17 asks whether ✕ / Back after a finished AI Enhance
+   should open that dialog at all (Q-19). Different finding, kept as a card, P0059 named as related.
+2. Earlier batches: R2's ISS-BEA-12 (narrowed to the per-photo part, TC-162 / TC-164) and ISS-BEA-14 were never
+   filed and are carried forward under the same IDs; ISS-BEA-13 (strip in Curve / HSL) is fixed (TC-166 / TC-168 Pass).
+   R1's held PM questions (TC-049/057/058, TC-100/142, TC-128, TC-135) were never filed: drafted now as ISS-BEA-15…19
+   (open questions go to PM, user 2026-11-11). No user ruling or ticket answers Q-6, Q-19, Q-20 or O-19.
+
+verify_ebug_drafts.py not used for the gate: it looks for a Figma/_index folder by walking up to '/', which never ends
+on Windows (stopped after 2 min); check_ebug_format.py --product PHD-A --allow-agent-ux (0 errors, 0 warnings,
+check.txt) is the gate, as in R1 / R2.

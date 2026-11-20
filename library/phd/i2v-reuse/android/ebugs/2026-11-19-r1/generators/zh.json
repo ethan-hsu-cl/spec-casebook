@@ -1,0 +1,52 @@
+{
+ "ISS-IR-01": {
+  "t": "Reuse 之後沒有出現「Settings applied」toast",
+  "w": "PM spec（D1-04）寫明：按 Reuse 進到 Custom 頁時要跳出「Settings applied」toast。設定都有正確帶入，但 toast 一直沒出現。",
+  "s": "看到：Custom 頁的模型、開始／結束畫面開關、prompt 都帶入了，照片欄是空的，跟預期一樣；但截圖（約 0.6 秒、2.6 秒）、9 秒和 8 秒的錄影、等 7 秒的 waitfor 都沒抓到 toast。影片 A（Kling 2.6）和影片 C（Kling 3.0、有開始／結束畫面）都一樣。\n預期：進到 Custom 頁時出現「Settings applied」toast（PM D1-04）。\n備註：toast 只有 PM 畫，Design 沒有對應畫面。TC-016（toast 疊在面板上）和 TC-046 因此沒辦法測。"
+ },
+ "ISS-IR-02": {
+  "t": "Reuse 會跳過 Image to Video 的說明頁",
+  "w": "PM spec（D1-04b）寫明：如果 Image to Video 平常會先出說明頁，Reuse 也要照常先出，再進 Custom 頁。目前 Reuse 一律直接進 Custom 頁。",
+  "s": "看到：從 AI Videos 或 My AI Artwork 的「Create More」進 Image to Video，都還會出現「Image To Video」說明頁（Try now／Don't show again）和「Steps」頁，表示「Don't show again」沒被按過；但按「Reuse」每次都直接進 Custom 頁，三段測試都一樣。\n預期：該出說明頁時，Reuse 也先出說明頁，再進 Custom 頁（PM D1-04b）。\n備註：TC-046（在說明頁按 Back）因此沒辦法測。"
+ },
+ "ISS-IR-03": {
+  "t": "Reuse 開的 Custom 頁按 ‹ 或系統 Back，會跳過 Save & Share 頁",
+  "w": "PM spec（D1-05）寫明：從 Reuse 進的 Custom 頁按 ‹，要回到該影片的 Save & Share 頁；系統 Back 要跟 ‹ 一樣。目前兩者都回到 My AI Artwork 的影片列表。",
+  "s": "看到：按 ‹（top_back_btn）或系統 Back，都回到 My AI Artwork › Image to Video 的列表，不是影片的 Save & Share 頁。\n預期：‹ 和系統 Back 都回到該影片的 Save & Share 頁（PM D1-05）。\n備註：R1-a 先記成觀察 O-3，R1-b 的 TC-020（‹）和 TC-043（系統 Back）確認。"
+ },
+ "ISS-IR-04": {
+  "t": "畫質 chip 是小寫：「pro」／「std」",
+  "w": "Design 的 Save & Share 畫面上，畫質 chip 寫的是「Pro」，Custom 頁裡的選項也是「Pro」／「Standard」。App 顯示小寫，屬於 spec 有寫、App 顯示不同的文字問題，給 RD。",
+  "s": "看到：影片 A 和用它 Reuse 生成的影片（TC-024）顯示「pro」；影片 B、C（Standard）顯示「std」。\n預期：照 Design 顯示「Pro」；Standard 也用同樣的大寫方式（例如跟 Custom 頁一樣寫「Standard」）。\n備註：Q-13 問過每種畫質的 chip 寫法；Pro 有 Design 範例，Standard 沒有，所以 Standard 的寫法只在 Expect 裡提出。"
+ },
+ "ISS-IR-05": {
+  "t": "Save & Share 的順序不對：「Prompts & Settings」緊接在「Save」下面，也沒有「More Video Editing Tools」標題",
+  "w": "Design 的 Save & Share 畫面（淺色和深色）順序是：Save、More Video Editing Tools、Add Text／Sticker／Music、Prompts & Settings、Share to。App 的順序和標題都不同。",
+  "s": "看到：「Prompts & Settings」卡片在「Save」正下方，在編輯按鈕上面；沒有「More Video Editing Tools」標題；編輯按鈕和「Share to」之間還有「Make It Reel-Ready」（Design 沒畫，屬於別的功能）。\n預期：照 Design 的順序：Save → More Video Editing Tools → Add Text／Sticker／Music → Prompts & Settings → Share to。"
+ },
+ "ISS-IR-06": {
+  "t": "請 PM 確認：Create More 的 placeholder 和字數計數器跟 Reuse spec 的 mockup 不同",
+  "w": "PM spec 的 mockup 畫的 placeholder 和計數器格式跟 App 不同。這個功能本來不該改到 Create More，mockup 可能只是沿用舊文字，所以交給 PM 確認哪個才是現行文字（文字規則：spec 本身的文字要改時給 PM）。",
+  "s": "看到：placeholder 是「Describe the subject and how they move in the scene, e.g. A dancer spins and jumps under stage lights.」，計數器是「0/2500」。\n預期：請 PM 確認。mockup 畫的是「Describe the subject, action, and overall scene, e.g. A woman walking in a park on a sunny afternoon.」和「0/2,500」（Reuse 的 mockup 也寫「58/2,500」）。"
+ },
+ "ISS-IR-07": {
+  "t": "Reuse 送出的是 Artwork_Reuse_Click 而且沒有 model，不是 ImageToVideo_Reuse_Click",
+  "w": "PM 的【Tracking Event】（D4-05）要求新增事件 ImageToVideo_Reuse_Click，帶參數 model。從 logcat 的 Mixpanel 紀錄看，App 送的事件名稱不同，也沒有參數。",
+  "s": "看到：每次按「Reuse」都記錄「logEvent name=Artwork_Reuse_Click」（沒有參數的事件才是這個格式；有參數的會印 JSON）和「[setCurFrom] from = artwork_reuse」，共三次（14:29:36、14:32:52、14:36:21）。\n預期：送出 ImageToVideo_Reuse_Click，參數 model = 該影片的模型值（PM D4-05）。\n備註：Reuse 後按 Generate 送的 ImageToVideo_Result_Generate（from = artwork_reuse）和 Create More 的 from = Artwork 都正確（TC-038～040 Pass）。"
+ },
+ "ISS-IR-08": {
+  "t": "在 Save & Share 頁切換系統主題，App 會跳回 Launcher",
+  "w": "觀察 O-1（準備 TC-050 時發現）。系統設定改變造成畫面重建時，應該留在使用者原本的頁面，而不是丟掉 Save & Share 頁。",
+  "s": "看到：開著影片 A 的 Save & Share 頁時，把手機系統主題從深色切到淺色，App 重建後顯示 Launcher 的 AI Videos 分頁（淺色），Save & Share 頁不見了。\n預期：Save & Share 頁保持開著，並換成新主題的樣式。\n備註：只看到一次（切換主題是系統設定，測完已切回深色）。"
+ },
+ "ISS-IR-09": {
+  "t": "Reuse 轉場時，Custom 頁會短暫以旋轉（橫向）畫面出現",
+  "w": "觀察 O-2（TC-010 看到，TC-015 再次看到）。手機是直的、自動旋轉沒改，畫面卻閃了一下橫向版面。",
+  "s": "看到：按「Reuse」的 9 秒錄影中，Custom 頁有一到兩格畫面被畫成旋轉 90°（橫向版面），之後才變成直向（錄影格子的第 3～4 格）。\n預期：Custom 頁直接以直向開啟，不出現旋轉的畫面。"
+ },
+ "ISS-IR-10": {
+  "t": "請 PM 決定：Reuse 後第一次點 prompt 會全選整段文字",
+  "w": "觀察 O-5（TC-045、TC-032）。spec 沒有規定點 prompt 時要不要全選；R-022 只寫 prompt 會帶回來讓使用者編輯。全選後按一個鍵整段就沒了，屬於使用體驗的決定，依 2026-11-11 的規則交給 PM。",
+  "s": "看到：在 Reuse 開的 Custom 頁第一次點 prompt 欄位，整段帶回來的 prompt 被選取；接著按刪除鍵或打一個字，整段就被取代。\n預期：請 PM 決定：點擊時放游標（保留 prompt），還是刻意全選。"
+ }
+}
